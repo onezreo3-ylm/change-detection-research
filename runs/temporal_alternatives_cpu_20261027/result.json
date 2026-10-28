@@ -1,0 +1,61 @@
+{
+  "status": "passed_synthetic_CPU_temporal_alternative_composition",
+  "engineering_only": true,
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "seed": 20261027,
+  "original_decoder_channels": 64,
+  "original_GN_groups": 8,
+  "actual_forwards": {
+    "encoder": 2,
+    "adapter": 4,
+    "decoder": 264
+  },
+  "actual_assignments_checked": 256,
+  "all256_exact": true,
+  "maximum_outside_changed_positions": 0,
+  "nonzero_single_changed_positions": {
+    "3:1": 6084,
+    "3:2": 6084,
+    "3:3": 6084,
+    "2:1": 6084,
+    "2:2": 6084,
+    "2:3": 6084,
+    "1:1": 6084,
+    "1:2": 6084,
+    "1:3": 6084,
+    "0:1": 6084,
+    "0:2": 6084,
+    "0:3": 6084
+  },
+  "both_output_cannot_recover_A_B_by_support_pasting_max_abs": [
+    0.057942986488342285,
+    0.05927681922912598,
+    0.05927455425262451,
+    0.05750638246536255,
+    0.061336636543273926,
+    0.06183117628097534,
+    0.07479539513587952,
+    0.06868807971477509
+  ],
+  "temporal_exchange_correspondence": {
+    "noop": true,
+    "A_matches_swapped_B": true,
+    "B_matches_swapped_A": true,
+    "both": true
+  },
+  "model_state_unchanged": true,
+  "hooks_removed": true,
+  "real_data_or_checkpoint": false,
+  "optimizer_updates": 0,
+  "method_novelty_verified": false,
+  "method_effectiveness": false,
+  "GPU_FP16_validated": false,
+  "speed_advantage_measured": false,
+  "elapsed_seconds": 14.107488399997237,
+  "comparison_decoder_views_per_observed_pair": {
+    "all_three_variants_after_baseline": 4,
+    "selected_variant_after_baseline": 2
+  },
+  "cost_caveat": "Variants may be batched or share sparse computation. Calls are not a latency/FLOP lower bound."
+}

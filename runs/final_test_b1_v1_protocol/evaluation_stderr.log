@@ -1,0 +1,16 @@
+E:\Download\anaconda3\envs\geosa-basa\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\new research\detection\scripts\final_test_b1_v1.py", line 849, in <module>
+    main()
+  File "E:\new research\detection\scripts\final_test_b1_v1.py", line 842, in main
+    result = run(job)
+             ^^^^^^^^
+  File "E:\new research\detection\scripts\final_test_b1_v1.py", line 808, in run
+    "summary_sha256": _sha((job.output / "summary.json").read_bytes()),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\scripts\final_test_b1_v1.py", line 76, in _sha
+    raise ValueError("Expected lowercase SHA256")
+ValueError: Expected lowercase SHA256

@@ -1,0 +1,166 @@
+{
+  "date": "2026-09-13",
+  "kind": "evaluator_engineering_acceptance_and_clean_validation_compatibility",
+  "tests": {
+    "passed": 112,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 59.293,
+    "command": "python -m unittest discover -s tests -v",
+    "log": "E:/new research/detection/runs/validation_evaluator_unittest_20260913.log",
+    "sha256": "6cb502814c11588981a69686435c3460da8f9f1819f1c583f8fe48c5c358d36e"
+  },
+  "cuda_smoke": {
+    "status": "passed",
+    "kind": "smoke",
+    "conditions": 45,
+    "instances": 90,
+    "actual_condition_files": 45,
+    "device": "cuda",
+    "amp": true,
+    "memory_format": "channels_last",
+    "num_workers": 0,
+    "worker_setting_scope": "synthetic smoke only; real validation keeps 4 workers",
+    "two_spawn_worker_regression": "passed on explicit CPU synthetic fixtures",
+    "test_directory_exists": false,
+    "run": "E:/new research/detection/runs/smoke_validation_evaluator_20260913/evaluation",
+    "log_sha256": "3608b8abfda29b5887838d4a00eb6ca19b628d56e50583775664eaa98270cdd7"
+  },
+  "real_clean_validation": {
+    "status": "completed_clean_only",
+    "checkpoint_epoch": 69,
+    "samples": 1024,
+    "pixels": 67108864,
+    "metrics": {
+      "precision": 0.9135744391099121,
+      "recall": 0.8985018418056868,
+      "f1": 0.9059754545786541,
+      "iou": 0.82811254863549,
+      "oa": 0.9921735227108002,
+      "foreground_recall": 0.8985018418056868,
+      "background_fpr": 0.003723305289569379,
+      "foreground_fn_rate": 0.10149815819431317
+    },
+    "counts": {
+      "tn": 64053225,
+      "fp": 239381,
+      "fn": 285845,
+      "tp": 2530413
+    },
+    "loop_seconds": 23.110000000000582,
+    "all_four_counts_and_five_metrics_match_reference": true,
+    "tracked_validation_source_files": 192,
+    "tracked_inputs": 216,
+    "log_sha256": "a19b8774c02cf1e5c7c2acbbd14f3cc7e20e7d038fbcb625dfcf36cf91305388"
+  },
+  "immutable_inputs": {
+    "checkpoint_sha256": "033a0aa14becabc97c60b368b6d7c2e49bc8b386daa61dcc77e761c81ae747f3",
+    "baseline_yaml_sha256": "48edeabc313e97bc06c6073f435e16be794879e44bfbe5e7ce6fbdc327201e41",
+    "manifest_sha256": "951e1498f2d538d55be91ea2629ddde7edf1af6651bf97184db18ce2b7bc0039",
+    "instances_sha256": "01c6864811e6f20832dda13a754b5ed524d7be8b7e0d43cd33c41c3e022c4f2c",
+    "preparation_source_files_unchanged": 15,
+    "current_evaluator_and_snapshot_files_match": [
+      {
+        "path": "pcdc/__init__.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/__main__.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/benchmark.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/config.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/corruption_protocol.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/data.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/engine.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/evaluate_corruptions.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/frozen_validation.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/inspect_labels.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/losses.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/metrics.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/model.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/perturbations.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/prepare_corruptions.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/runtime.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "pcdc/smoke.py",
+        "live_matches": true,
+        "snapshot_matches": true
+      }
+    ]
+  },
+  "review": {
+    "status": "pending",
+    "visual_review_completed": false,
+    "reason": "Image content is still unavailable to the assistant; no user statement confirming visual acceptance has been received.",
+    "acceptance_file": "E:/new research/detection/configs/corruption_v1_acceptance.yaml"
+  },
+  "real_corruption_scoring_run": false,
+  "real_test_accessed": false,
+  "new_research_training_started": false,
+  "new_correction_or_gate_models_implemented": false,
+  "limitations": [
+    "45-condition smoke scores are synthetic engineering values, not LEVIR robustness results.",
+    "Clean validation repeats the fixed epoch69 baseline, not a new method result.",
+    "Real 45-condition validation remains blocked pending explicit severity acceptance."
+  ],
+  "next_action": "Obtain explicit review/acceptance of unchanged v1 severity samples before real corruption validation; retain fixed parameters and no test access."
+}

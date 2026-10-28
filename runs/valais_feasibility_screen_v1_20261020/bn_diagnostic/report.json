@@ -1,0 +1,1094 @@
+{
+  "status": "completed_train_only_bn_diagnostic",
+  "engineering_only": false,
+  "models": {
+    "b0e": {
+      "original": {
+        "calibration_sources": 0,
+        "calibration_steps": 0,
+        "only_bn_buffers_changed": true,
+        "changed_buffer_keys": [],
+        "state_sha256": "5db77d9067ff8d99e6ed297562f83babb6ec6a29465c1c0f65a9664adf9f3d6d",
+        "probe": {
+          "sources": 64,
+          "counts": {
+            "tn": 4157274,
+            "fp": 12204,
+            "fn": 7581,
+            "tp": 17245
+          },
+          "metrics": {
+            "precision": 0.5855886447757139,
+            "recall": 0.6946346572142109,
+            "f1": 0.6354675264854905,
+            "iou": 0.46570348366189573,
+            "oa": 0.9952828884124756,
+            "fpr": 0.002926985104610217,
+            "pixels": 4194304
+          },
+          "empty_fpr": 0.00032265981038411457,
+          "by_area": {
+            "empty": {
+              "counts": {
+                "tn": 3144713,
+                "fp": 1015,
+                "fn": 0,
+                "tp": 0
+              }
+            },
+            "1-64": {
+              "counts": {
+                "tn": 262049,
+                "fp": 0,
+                "fn": 95,
+                "tp": 0
+              }
+            },
+            "65-256": {
+              "counts": {
+                "tn": 194205,
+                "fp": 1956,
+                "fn": 447,
+                "tp": 0
+              }
+            },
+            "257-1024": {
+              "counts": {
+                "tn": 193906,
+                "fp": 532,
+                "fn": 993,
+                "tp": 1177
+              }
+            },
+            "1025-4096": {
+              "counts": {
+                "tn": 187692,
+                "fp": 2708,
+                "fn": 1669,
+                "tp": 4539
+              }
+            },
+            ">4096": {
+              "counts": {
+                "tn": 174709,
+                "fp": 5993,
+                "fn": 4377,
+                "tp": 11529
+              }
+            }
+          }
+        }
+      },
+      "uniform_clean": {
+        "calibration_sources": 256,
+        "calibration_steps": 64,
+        "only_bn_buffers_changed": true,
+        "changed_buffer_keys": [
+          "encoder.stem.1.running_mean",
+          "encoder.stem.1.running_var",
+          "encoder.stem.1.num_batches_tracked",
+          "encoder.stages.0.0.bn1.running_mean",
+          "encoder.stages.0.0.bn1.running_var",
+          "encoder.stages.0.0.bn1.num_batches_tracked",
+          "encoder.stages.0.0.bn2.running_mean",
+          "encoder.stages.0.0.bn2.running_var",
+          "encoder.stages.0.0.bn2.num_batches_tracked",
+          "encoder.stages.0.1.bn1.running_mean",
+          "encoder.stages.0.1.bn1.running_var",
+          "encoder.stages.0.1.bn1.num_batches_tracked",
+          "encoder.stages.0.1.bn2.running_mean",
+          "encoder.stages.0.1.bn2.running_var",
+          "encoder.stages.0.1.bn2.num_batches_tracked",
+          "encoder.stages.1.0.bn1.running_mean",
+          "encoder.stages.1.0.bn1.running_var",
+          "encoder.stages.1.0.bn1.num_batches_tracked",
+          "encoder.stages.1.0.bn2.running_mean",
+          "encoder.stages.1.0.bn2.running_var",
+          "encoder.stages.1.0.bn2.num_batches_tracked",
+          "encoder.stages.1.0.downsample.1.running_mean",
+          "encoder.stages.1.0.downsample.1.running_var",
+          "encoder.stages.1.0.downsample.1.num_batches_tracked",
+          "encoder.stages.1.1.bn1.running_mean",
+          "encoder.stages.1.1.bn1.running_var",
+          "encoder.stages.1.1.bn1.num_batches_tracked",
+          "encoder.stages.1.1.bn2.running_mean",
+          "encoder.stages.1.1.bn2.running_var",
+          "encoder.stages.1.1.bn2.num_batches_tracked",
+          "encoder.stages.2.0.bn1.running_mean",
+          "encoder.stages.2.0.bn1.running_var",
+          "encoder.stages.2.0.bn1.num_batches_tracked",
+          "encoder.stages.2.0.bn2.running_mean",
+          "encoder.stages.2.0.bn2.running_var",
+          "encoder.stages.2.0.bn2.num_batches_tracked",
+          "encoder.stages.2.0.downsample.1.running_mean",
+          "encoder.stages.2.0.downsample.1.running_var",
+          "encoder.stages.2.0.downsample.1.num_batches_tracked",
+          "encoder.stages.2.1.bn1.running_mean",
+          "encoder.stages.2.1.bn1.running_var",
+          "encoder.stages.2.1.bn1.num_batches_tracked",
+          "encoder.stages.2.1.bn2.running_mean",
+          "encoder.stages.2.1.bn2.running_var",
+          "encoder.stages.2.1.bn2.num_batches_tracked",
+          "encoder.stages.3.0.bn1.running_mean",
+          "encoder.stages.3.0.bn1.running_var",
+          "encoder.stages.3.0.bn1.num_batches_tracked",
+          "encoder.stages.3.0.bn2.running_mean",
+          "encoder.stages.3.0.bn2.running_var",
+          "encoder.stages.3.0.bn2.num_batches_tracked",
+          "encoder.stages.3.0.downsample.1.running_mean",
+          "encoder.stages.3.0.downsample.1.running_var",
+          "encoder.stages.3.0.downsample.1.num_batches_tracked",
+          "encoder.stages.3.1.bn1.running_mean",
+          "encoder.stages.3.1.bn1.running_var",
+          "encoder.stages.3.1.bn1.num_batches_tracked",
+          "encoder.stages.3.1.bn2.running_mean",
+          "encoder.stages.3.1.bn2.running_var",
+          "encoder.stages.3.1.bn2.num_batches_tracked"
+        ],
+        "state_sha256": "a2057f8aede56c597f122800fa22961e73c1f7b29d6a47a82d1fc1f6af7a7952",
+        "probe": {
+          "sources": 64,
+          "counts": {
+            "tn": 4158368,
+            "fp": 11110,
+            "fn": 7932,
+            "tp": 16894
+          },
+          "metrics": {
+            "precision": 0.6032709612912441,
+            "recall": 0.6804962539273343,
+            "f1": 0.6395608555744842,
+            "iou": 0.470113535173642,
+            "oa": 0.995460033416748,
+            "fpr": 0.0026646021396443394,
+            "pixels": 4194304
+          },
+          "empty_fpr": 0.00031503041585286457,
+          "by_area": {
+            "empty": {
+              "counts": {
+                "tn": 3144737,
+                "fp": 991,
+                "fn": 0,
+                "tp": 0
+              }
+            },
+            "1-64": {
+              "counts": {
+                "tn": 262049,
+                "fp": 0,
+                "fn": 95,
+                "tp": 0
+              }
+            },
+            "65-256": {
+              "counts": {
+                "tn": 194232,
+                "fp": 1929,
+                "fn": 447,
+                "tp": 0
+              }
+            },
+            "257-1024": {
+              "counts": {
+                "tn": 194003,
+                "fp": 435,
+                "fn": 1176,
+                "tp": 994
+              }
+            },
+            "1025-4096": {
+              "counts": {
+                "tn": 188121,
+                "fp": 2279,
+                "fn": 1808,
+                "tp": 4400
+              }
+            },
+            ">4096": {
+              "counts": {
+                "tn": 175226,
+                "fp": 5476,
+                "fn": 4406,
+                "tp": 11500
+              }
+            }
+          }
+        }
+      },
+      "stratified_clean": {
+        "calibration_sources": 256,
+        "calibration_steps": 64,
+        "only_bn_buffers_changed": true,
+        "changed_buffer_keys": [
+          "encoder.stem.1.running_mean",
+          "encoder.stem.1.running_var",
+          "encoder.stem.1.num_batches_tracked",
+          "encoder.stages.0.0.bn1.running_mean",
+          "encoder.stages.0.0.bn1.running_var",
+          "encoder.stages.0.0.bn1.num_batches_tracked",
+          "encoder.stages.0.0.bn2.running_mean",
+          "encoder.stages.0.0.bn2.running_var",
+          "encoder.stages.0.0.bn2.num_batches_tracked",
+          "encoder.stages.0.1.bn1.running_mean",
+          "encoder.stages.0.1.bn1.running_var",
+          "encoder.stages.0.1.bn1.num_batches_tracked",
+          "encoder.stages.0.1.bn2.running_mean",
+          "encoder.stages.0.1.bn2.running_var",
+          "encoder.stages.0.1.bn2.num_batches_tracked",
+          "encoder.stages.1.0.bn1.running_mean",
+          "encoder.stages.1.0.bn1.running_var",
+          "encoder.stages.1.0.bn1.num_batches_tracked",
+          "encoder.stages.1.0.bn2.running_mean",
+          "encoder.stages.1.0.bn2.running_var",
+          "encoder.stages.1.0.bn2.num_batches_tracked",
+          "encoder.stages.1.0.downsample.1.running_mean",
+          "encoder.stages.1.0.downsample.1.running_var",
+          "encoder.stages.1.0.downsample.1.num_batches_tracked",
+          "encoder.stages.1.1.bn1.running_mean",
+          "encoder.stages.1.1.bn1.running_var",
+          "encoder.stages.1.1.bn1.num_batches_tracked",
+          "encoder.stages.1.1.bn2.running_mean",
+          "encoder.stages.1.1.bn2.running_var",
+          "encoder.stages.1.1.bn2.num_batches_tracked",
+          "encoder.stages.2.0.bn1.running_mean",
+          "encoder.stages.2.0.bn1.running_var",
+          "encoder.stages.2.0.bn1.num_batches_tracked",
+          "encoder.stages.2.0.bn2.running_mean",
+          "encoder.stages.2.0.bn2.running_var",
+          "encoder.stages.2.0.bn2.num_batches_tracked",
+          "encoder.stages.2.0.downsample.1.running_mean",
+          "encoder.stages.2.0.downsample.1.running_var",
+          "encoder.stages.2.0.downsample.1.num_batches_tracked",
+          "encoder.stages.2.1.bn1.running_mean",
+          "encoder.stages.2.1.bn1.running_var",
+          "encoder.stages.2.1.bn1.num_batches_tracked",
+          "encoder.stages.2.1.bn2.running_mean",
+          "encoder.stages.2.1.bn2.running_var",
+          "encoder.stages.2.1.bn2.num_batches_tracked",
+          "encoder.stages.3.0.bn1.running_mean",
+          "encoder.stages.3.0.bn1.running_var",
+          "encoder.stages.3.0.bn1.num_batches_tracked",
+          "encoder.stages.3.0.bn2.running_mean",
+          "encoder.stages.3.0.bn2.running_var",
+          "encoder.stages.3.0.bn2.num_batches_tracked",
+          "encoder.stages.3.0.downsample.1.running_mean",
+          "encoder.stages.3.0.downsample.1.running_var",
+          "encoder.stages.3.0.downsample.1.num_batches_tracked",
+          "encoder.stages.3.1.bn1.running_mean",
+          "encoder.stages.3.1.bn1.running_var",
+          "encoder.stages.3.1.bn1.num_batches_tracked",
+          "encoder.stages.3.1.bn2.running_mean",
+          "encoder.stages.3.1.bn2.running_var",
+          "encoder.stages.3.1.bn2.num_batches_tracked"
+        ],
+        "state_sha256": "9c603bacfeac5618fd19d3fa73407e381b9b2fc3ea8a72397293fba830ce0000",
+        "probe": {
+          "sources": 64,
+          "counts": {
+            "tn": 4159666,
+            "fp": 9812,
+            "fn": 8047,
+            "tp": 16779
+          },
+          "metrics": {
+            "precision": 0.6310029709300139,
+            "recall": 0.675864013534198,
+            "f1": 0.6526635159577572,
+            "iou": 0.48441018534557423,
+            "oa": 0.9957420825958252,
+            "fpr": 0.002353292186695793,
+            "pixels": 4194304
+          },
+          "empty_fpr": 0.00030485788981119793,
+          "by_area": {
+            "empty": {
+              "counts": {
+                "tn": 3144769,
+                "fp": 959,
+                "fn": 0,
+                "tp": 0
+              }
+            },
+            "1-64": {
+              "counts": {
+                "tn": 262049,
+                "fp": 0,
+                "fn": 95,
+                "tp": 0
+              }
+            },
+            "65-256": {
+              "counts": {
+                "tn": 194314,
+                "fp": 1847,
+                "fn": 447,
+                "tp": 0
+              }
+            },
+            "257-1024": {
+              "counts": {
+                "tn": 194061,
+                "fp": 377,
+                "fn": 1213,
+                "tp": 957
+              }
+            },
+            "1025-4096": {
+              "counts": {
+                "tn": 188601,
+                "fp": 1799,
+                "fn": 1901,
+                "tp": 4307
+              }
+            },
+            ">4096": {
+              "counts": {
+                "tn": 175872,
+                "fp": 4830,
+                "fn": 4391,
+                "tp": 11515
+              }
+            }
+          }
+        }
+      },
+      "original_restored": true
+    },
+    "cs": {
+      "original": {
+        "calibration_sources": 0,
+        "calibration_steps": 0,
+        "only_bn_buffers_changed": true,
+        "changed_buffer_keys": [],
+        "state_sha256": "a86e31331c858641b7dcdcae95233310c5f4d3454c712563a304a73237cec65c",
+        "probe": {
+          "sources": 64,
+          "counts": {
+            "tn": 4164777,
+            "fp": 4701,
+            "fn": 7805,
+            "tp": 17021
+          },
+          "metrics": {
+            "precision": 0.7835834637694503,
+            "recall": 0.6856118585354064,
+            "f1": 0.7313310990805191,
+            "iou": 0.5764554475564737,
+            "oa": 0.9970183372497559,
+            "fpr": 0.0011274792671888423,
+            "pixels": 4194304
+          },
+          "empty_fpr": 0.00036652882893880207,
+          "by_area": {
+            "empty": {
+              "counts": {
+                "tn": 3144575,
+                "fp": 1153,
+                "fn": 0,
+                "tp": 0
+              }
+            },
+            "1-64": {
+              "counts": {
+                "tn": 262040,
+                "fp": 9,
+                "fn": 59,
+                "tp": 36
+              }
+            },
+            "65-256": {
+              "counts": {
+                "tn": 194730,
+                "fp": 1431,
+                "fn": 389,
+                "tp": 58
+              }
+            },
+            "257-1024": {
+              "counts": {
+                "tn": 194143,
+                "fp": 295,
+                "fn": 673,
+                "tp": 1497
+              }
+            },
+            "1025-4096": {
+              "counts": {
+                "tn": 190087,
+                "fp": 313,
+                "fn": 1530,
+                "tp": 4678
+              }
+            },
+            ">4096": {
+              "counts": {
+                "tn": 179202,
+                "fp": 1500,
+                "fn": 5154,
+                "tp": 10752
+              }
+            }
+          }
+        }
+      },
+      "uniform_clean": {
+        "calibration_sources": 256,
+        "calibration_steps": 64,
+        "only_bn_buffers_changed": true,
+        "changed_buffer_keys": [
+          "encoder.stem.1.running_mean",
+          "encoder.stem.1.running_var",
+          "encoder.stem.1.num_batches_tracked",
+          "encoder.stages.0.0.bn1.running_mean",
+          "encoder.stages.0.0.bn1.running_var",
+          "encoder.stages.0.0.bn1.num_batches_tracked",
+          "encoder.stages.0.0.bn2.running_mean",
+          "encoder.stages.0.0.bn2.running_var",
+          "encoder.stages.0.0.bn2.num_batches_tracked",
+          "encoder.stages.0.1.bn1.running_mean",
+          "encoder.stages.0.1.bn1.running_var",
+          "encoder.stages.0.1.bn1.num_batches_tracked",
+          "encoder.stages.0.1.bn2.running_mean",
+          "encoder.stages.0.1.bn2.running_var",
+          "encoder.stages.0.1.bn2.num_batches_tracked",
+          "encoder.stages.1.0.bn1.running_mean",
+          "encoder.stages.1.0.bn1.running_var",
+          "encoder.stages.1.0.bn1.num_batches_tracked",
+          "encoder.stages.1.0.bn2.running_mean",
+          "encoder.stages.1.0.bn2.running_var",
+          "encoder.stages.1.0.bn2.num_batches_tracked",
+          "encoder.stages.1.0.downsample.1.running_mean",
+          "encoder.stages.1.0.downsample.1.running_var",
+          "encoder.stages.1.0.downsample.1.num_batches_tracked",
+          "encoder.stages.1.1.bn1.running_mean",
+          "encoder.stages.1.1.bn1.running_var",
+          "encoder.stages.1.1.bn1.num_batches_tracked",
+          "encoder.stages.1.1.bn2.running_mean",
+          "encoder.stages.1.1.bn2.running_var",
+          "encoder.stages.1.1.bn2.num_batches_tracked",
+          "encoder.stages.2.0.bn1.running_mean",
+          "encoder.stages.2.0.bn1.running_var",
+          "encoder.stages.2.0.bn1.num_batches_tracked",
+          "encoder.stages.2.0.bn2.running_mean",
+          "encoder.stages.2.0.bn2.running_var",
+          "encoder.stages.2.0.bn2.num_batches_tracked",
+          "encoder.stages.2.0.downsample.1.running_mean",
+          "encoder.stages.2.0.downsample.1.running_var",
+          "encoder.stages.2.0.downsample.1.num_batches_tracked",
+          "encoder.stages.2.1.bn1.running_mean",
+          "encoder.stages.2.1.bn1.running_var",
+          "encoder.stages.2.1.bn1.num_batches_tracked",
+          "encoder.stages.2.1.bn2.running_mean",
+          "encoder.stages.2.1.bn2.running_var",
+          "encoder.stages.2.1.bn2.num_batches_tracked",
+          "encoder.stages.3.0.bn1.running_mean",
+          "encoder.stages.3.0.bn1.running_var",
+          "encoder.stages.3.0.bn1.num_batches_tracked",
+          "encoder.stages.3.0.bn2.running_mean",
+          "encoder.stages.3.0.bn2.running_var",
+          "encoder.stages.3.0.bn2.num_batches_tracked",
+          "encoder.stages.3.0.downsample.1.running_mean",
+          "encoder.stages.3.0.downsample.1.running_var",
+          "encoder.stages.3.0.downsample.1.num_batches_tracked",
+          "encoder.stages.3.1.bn1.running_mean",
+          "encoder.stages.3.1.bn1.running_var",
+          "encoder.stages.3.1.bn1.num_batches_tracked",
+          "encoder.stages.3.1.bn2.running_mean",
+          "encoder.stages.3.1.bn2.running_var",
+          "encoder.stages.3.1.bn2.num_batches_tracked"
+        ],
+        "state_sha256": "c64bc81f86da89b9f05d8d7989ccfa6e3eec41cfc3c9e7931c1a08391ea90fc7",
+        "probe": {
+          "sources": 64,
+          "counts": {
+            "tn": 4163879,
+            "fp": 5599,
+            "fn": 7955,
+            "tp": 16871
+          },
+          "metrics": {
+            "precision": 0.7508233199821985,
+            "recall": 0.679569805848707,
+            "f1": 0.7134218538565629,
+            "iou": 0.5545110928512736,
+            "oa": 0.9967684745788574,
+            "fpr": 0.0013428539495831374,
+            "pixels": 4194304
+          },
+          "empty_fpr": 0.0005947748819986979,
+          "by_area": {
+            "empty": {
+              "counts": {
+                "tn": 3143857,
+                "fp": 1871,
+                "fn": 0,
+                "tp": 0
+              }
+            },
+            "1-64": {
+              "counts": {
+                "tn": 261980,
+                "fp": 69,
+                "fn": 25,
+                "tp": 70
+              }
+            },
+            "65-256": {
+              "counts": {
+                "tn": 194714,
+                "fp": 1447,
+                "fn": 385,
+                "tp": 62
+              }
+            },
+            "257-1024": {
+              "counts": {
+                "tn": 194138,
+                "fp": 300,
+                "fn": 689,
+                "tp": 1481
+              }
+            },
+            "1025-4096": {
+              "counts": {
+                "tn": 190081,
+                "fp": 319,
+                "fn": 1564,
+                "tp": 4644
+              }
+            },
+            ">4096": {
+              "counts": {
+                "tn": 179109,
+                "fp": 1593,
+                "fn": 5292,
+                "tp": 10614
+              }
+            }
+          }
+        }
+      },
+      "stratified_clean": {
+        "calibration_sources": 256,
+        "calibration_steps": 64,
+        "only_bn_buffers_changed": true,
+        "changed_buffer_keys": [
+          "encoder.stem.1.running_mean",
+          "encoder.stem.1.running_var",
+          "encoder.stem.1.num_batches_tracked",
+          "encoder.stages.0.0.bn1.running_mean",
+          "encoder.stages.0.0.bn1.running_var",
+          "encoder.stages.0.0.bn1.num_batches_tracked",
+          "encoder.stages.0.0.bn2.running_mean",
+          "encoder.stages.0.0.bn2.running_var",
+          "encoder.stages.0.0.bn2.num_batches_tracked",
+          "encoder.stages.0.1.bn1.running_mean",
+          "encoder.stages.0.1.bn1.running_var",
+          "encoder.stages.0.1.bn1.num_batches_tracked",
+          "encoder.stages.0.1.bn2.running_mean",
+          "encoder.stages.0.1.bn2.running_var",
+          "encoder.stages.0.1.bn2.num_batches_tracked",
+          "encoder.stages.1.0.bn1.running_mean",
+          "encoder.stages.1.0.bn1.running_var",
+          "encoder.stages.1.0.bn1.num_batches_tracked",
+          "encoder.stages.1.0.bn2.running_mean",
+          "encoder.stages.1.0.bn2.running_var",
+          "encoder.stages.1.0.bn2.num_batches_tracked",
+          "encoder.stages.1.0.downsample.1.running_mean",
+          "encoder.stages.1.0.downsample.1.running_var",
+          "encoder.stages.1.0.downsample.1.num_batches_tracked",
+          "encoder.stages.1.1.bn1.running_mean",
+          "encoder.stages.1.1.bn1.running_var",
+          "encoder.stages.1.1.bn1.num_batches_tracked",
+          "encoder.stages.1.1.bn2.running_mean",
+          "encoder.stages.1.1.bn2.running_var",
+          "encoder.stages.1.1.bn2.num_batches_tracked",
+          "encoder.stages.2.0.bn1.running_mean",
+          "encoder.stages.2.0.bn1.running_var",
+          "encoder.stages.2.0.bn1.num_batches_tracked",
+          "encoder.stages.2.0.bn2.running_mean",
+          "encoder.stages.2.0.bn2.running_var",
+          "encoder.stages.2.0.bn2.num_batches_tracked",
+          "encoder.stages.2.0.downsample.1.running_mean",
+          "encoder.stages.2.0.downsample.1.running_var",
+          "encoder.stages.2.0.downsample.1.num_batches_tracked",
+          "encoder.stages.2.1.bn1.running_mean",
+          "encoder.stages.2.1.bn1.running_var",
+          "encoder.stages.2.1.bn1.num_batches_tracked",
+          "encoder.stages.2.1.bn2.running_mean",
+          "encoder.stages.2.1.bn2.running_var",
+          "encoder.stages.2.1.bn2.num_batches_tracked",
+          "encoder.stages.3.0.bn1.running_mean",
+          "encoder.stages.3.0.bn1.running_var",
+          "encoder.stages.3.0.bn1.num_batches_tracked",
+          "encoder.stages.3.0.bn2.running_mean",
+          "encoder.stages.3.0.bn2.running_var",
+          "encoder.stages.3.0.bn2.num_batches_tracked",
+          "encoder.stages.3.0.downsample.1.running_mean",
+          "encoder.stages.3.0.downsample.1.running_var",
+          "encoder.stages.3.0.downsample.1.num_batches_tracked",
+          "encoder.stages.3.1.bn1.running_mean",
+          "encoder.stages.3.1.bn1.running_var",
+          "encoder.stages.3.1.bn1.num_batches_tracked",
+          "encoder.stages.3.1.bn2.running_mean",
+          "encoder.stages.3.1.bn2.running_var",
+          "encoder.stages.3.1.bn2.num_batches_tracked"
+        ],
+        "state_sha256": "1eae1cfe722ab4249a82e3dbd6b42d3349ef18c030b218e53ce7661532c16199",
+        "probe": {
+          "sources": 64,
+          "counts": {
+            "tn": 4164859,
+            "fp": 4619,
+            "fn": 7708,
+            "tp": 17118
+          },
+          "metrics": {
+            "precision": 0.7875051755071997,
+            "recall": 0.6895190526061388,
+            "f1": 0.7352619032278848,
+            "iou": 0.5813550687722873,
+            "oa": 0.997061014175415,
+            "fpr": 0.0011078125367252208,
+            "pixels": 4194304
+          },
+          "empty_fpr": 0.00031948089599609375,
+          "by_area": {
+            "empty": {
+              "counts": {
+                "tn": 3144723,
+                "fp": 1005,
+                "fn": 0,
+                "tp": 0
+              }
+            },
+            "1-64": {
+              "counts": {
+                "tn": 262041,
+                "fp": 8,
+                "fn": 59,
+                "tp": 36
+              }
+            },
+            "65-256": {
+              "counts": {
+                "tn": 194736,
+                "fp": 1425,
+                "fn": 389,
+                "tp": 58
+              }
+            },
+            "257-1024": {
+              "counts": {
+                "tn": 194149,
+                "fp": 289,
+                "fn": 673,
+                "tp": 1497
+              }
+            },
+            "1025-4096": {
+              "counts": {
+                "tn": 190080,
+                "fp": 320,
+                "fn": 1548,
+                "tp": 4660
+              }
+            },
+            ">4096": {
+              "counts": {
+                "tn": 179130,
+                "fp": 1572,
+                "fn": 5039,
+                "tp": 10867
+              }
+            }
+          }
+        }
+      },
+      "original_restored": true
+    },
+    "as": {
+      "original": {
+        "calibration_sources": 0,
+        "calibration_steps": 0,
+        "only_bn_buffers_changed": true,
+        "changed_buffer_keys": [],
+        "state_sha256": "bffce98cbc2afbd2bfcc1d646e6d94d36f9bfa66a4e238e80aa468e39e279866",
+        "probe": {
+          "sources": 64,
+          "counts": {
+            "tn": 4163435,
+            "fp": 6043,
+            "fn": 10308,
+            "tp": 14518
+          },
+          "metrics": {
+            "precision": 0.7060940615728807,
+            "recall": 0.5847901393700153,
+            "f1": 0.6397426575891775,
+            "iou": 0.4703100197609252,
+            "oa": 0.9961016178131104,
+            "fpr": 0.0014493420998983567,
+            "pixels": 4194304
+          },
+          "empty_fpr": 0.00034809112548828125,
+          "by_area": {
+            "empty": {
+              "counts": {
+                "tn": 3144633,
+                "fp": 1095,
+                "fn": 0,
+                "tp": 0
+              }
+            },
+            "1-64": {
+              "counts": {
+                "tn": 262049,
+                "fp": 0,
+                "fn": 95,
+                "tp": 0
+              }
+            },
+            "65-256": {
+              "counts": {
+                "tn": 194136,
+                "fp": 2025,
+                "fn": 425,
+                "tp": 22
+              }
+            },
+            "257-1024": {
+              "counts": {
+                "tn": 194155,
+                "fp": 283,
+                "fn": 920,
+                "tp": 1250
+              }
+            },
+            "1025-4096": {
+              "counts": {
+                "tn": 189657,
+                "fp": 743,
+                "fn": 1940,
+                "tp": 4268
+              }
+            },
+            ">4096": {
+              "counts": {
+                "tn": 178805,
+                "fp": 1897,
+                "fn": 6928,
+                "tp": 8978
+              }
+            }
+          }
+        }
+      },
+      "uniform_clean": {
+        "calibration_sources": 256,
+        "calibration_steps": 64,
+        "only_bn_buffers_changed": true,
+        "changed_buffer_keys": [
+          "encoder.stem.1.running_mean",
+          "encoder.stem.1.running_var",
+          "encoder.stem.1.num_batches_tracked",
+          "encoder.stages.0.0.bn1.running_mean",
+          "encoder.stages.0.0.bn1.running_var",
+          "encoder.stages.0.0.bn1.num_batches_tracked",
+          "encoder.stages.0.0.bn2.running_mean",
+          "encoder.stages.0.0.bn2.running_var",
+          "encoder.stages.0.0.bn2.num_batches_tracked",
+          "encoder.stages.0.1.bn1.running_mean",
+          "encoder.stages.0.1.bn1.running_var",
+          "encoder.stages.0.1.bn1.num_batches_tracked",
+          "encoder.stages.0.1.bn2.running_mean",
+          "encoder.stages.0.1.bn2.running_var",
+          "encoder.stages.0.1.bn2.num_batches_tracked",
+          "encoder.stages.1.0.bn1.running_mean",
+          "encoder.stages.1.0.bn1.running_var",
+          "encoder.stages.1.0.bn1.num_batches_tracked",
+          "encoder.stages.1.0.bn2.running_mean",
+          "encoder.stages.1.0.bn2.running_var",
+          "encoder.stages.1.0.bn2.num_batches_tracked",
+          "encoder.stages.1.0.downsample.1.running_mean",
+          "encoder.stages.1.0.downsample.1.running_var",
+          "encoder.stages.1.0.downsample.1.num_batches_tracked",
+          "encoder.stages.1.1.bn1.running_mean",
+          "encoder.stages.1.1.bn1.running_var",
+          "encoder.stages.1.1.bn1.num_batches_tracked",
+          "encoder.stages.1.1.bn2.running_mean",
+          "encoder.stages.1.1.bn2.running_var",
+          "encoder.stages.1.1.bn2.num_batches_tracked",
+          "encoder.stages.2.0.bn1.running_mean",
+          "encoder.stages.2.0.bn1.running_var",
+          "encoder.stages.2.0.bn1.num_batches_tracked",
+          "encoder.stages.2.0.bn2.running_mean",
+          "encoder.stages.2.0.bn2.running_var",
+          "encoder.stages.2.0.bn2.num_batches_tracked",
+          "encoder.stages.2.0.downsample.1.running_mean",
+          "encoder.stages.2.0.downsample.1.running_var",
+          "encoder.stages.2.0.downsample.1.num_batches_tracked",
+          "encoder.stages.2.1.bn1.running_mean",
+          "encoder.stages.2.1.bn1.running_var",
+          "encoder.stages.2.1.bn1.num_batches_tracked",
+          "encoder.stages.2.1.bn2.running_mean",
+          "encoder.stages.2.1.bn2.running_var",
+          "encoder.stages.2.1.bn2.num_batches_tracked",
+          "encoder.stages.3.0.bn1.running_mean",
+          "encoder.stages.3.0.bn1.running_var",
+          "encoder.stages.3.0.bn1.num_batches_tracked",
+          "encoder.stages.3.0.bn2.running_mean",
+          "encoder.stages.3.0.bn2.running_var",
+          "encoder.stages.3.0.bn2.num_batches_tracked",
+          "encoder.stages.3.0.downsample.1.running_mean",
+          "encoder.stages.3.0.downsample.1.running_var",
+          "encoder.stages.3.0.downsample.1.num_batches_tracked",
+          "encoder.stages.3.1.bn1.running_mean",
+          "encoder.stages.3.1.bn1.running_var",
+          "encoder.stages.3.1.bn1.num_batches_tracked",
+          "encoder.stages.3.1.bn2.running_mean",
+          "encoder.stages.3.1.bn2.running_var",
+          "encoder.stages.3.1.bn2.num_batches_tracked"
+        ],
+        "state_sha256": "02c0e7ed0eba431243f48be47a5843caa27f995cac289e9d3efd5bae284ef1a3",
+        "probe": {
+          "sources": 64,
+          "counts": {
+            "tn": 4159708,
+            "fp": 9770,
+            "fn": 8869,
+            "tp": 15957
+          },
+          "metrics": {
+            "precision": 0.6202433241341782,
+            "recall": 0.6427535648110851,
+            "f1": 0.6312978458251736,
+            "iou": 0.4612382934443288,
+            "oa": 0.995556116104126,
+            "fpr": 0.002343218983287596,
+            "pixels": 4194304
+          },
+          "empty_fpr": 0.0006580352783203125,
+          "by_area": {
+            "empty": {
+              "counts": {
+                "tn": 3143658,
+                "fp": 2070,
+                "fn": 0,
+                "tp": 0
+              }
+            },
+            "1-64": {
+              "counts": {
+                "tn": 262049,
+                "fp": 0,
+                "fn": 95,
+                "tp": 0
+              }
+            },
+            "65-256": {
+              "counts": {
+                "tn": 193900,
+                "fp": 2261,
+                "fn": 409,
+                "tp": 38
+              }
+            },
+            "257-1024": {
+              "counts": {
+                "tn": 193946,
+                "fp": 492,
+                "fn": 693,
+                "tp": 1477
+              }
+            },
+            "1025-4096": {
+              "counts": {
+                "tn": 188480,
+                "fp": 1920,
+                "fn": 1707,
+                "tp": 4501
+              }
+            },
+            ">4096": {
+              "counts": {
+                "tn": 177675,
+                "fp": 3027,
+                "fn": 5965,
+                "tp": 9941
+              }
+            }
+          }
+        }
+      },
+      "stratified_clean": {
+        "calibration_sources": 256,
+        "calibration_steps": 64,
+        "only_bn_buffers_changed": true,
+        "changed_buffer_keys": [
+          "encoder.stem.1.running_mean",
+          "encoder.stem.1.running_var",
+          "encoder.stem.1.num_batches_tracked",
+          "encoder.stages.0.0.bn1.running_mean",
+          "encoder.stages.0.0.bn1.running_var",
+          "encoder.stages.0.0.bn1.num_batches_tracked",
+          "encoder.stages.0.0.bn2.running_mean",
+          "encoder.stages.0.0.bn2.running_var",
+          "encoder.stages.0.0.bn2.num_batches_tracked",
+          "encoder.stages.0.1.bn1.running_mean",
+          "encoder.stages.0.1.bn1.running_var",
+          "encoder.stages.0.1.bn1.num_batches_tracked",
+          "encoder.stages.0.1.bn2.running_mean",
+          "encoder.stages.0.1.bn2.running_var",
+          "encoder.stages.0.1.bn2.num_batches_tracked",
+          "encoder.stages.1.0.bn1.running_mean",
+          "encoder.stages.1.0.bn1.running_var",
+          "encoder.stages.1.0.bn1.num_batches_tracked",
+          "encoder.stages.1.0.bn2.running_mean",
+          "encoder.stages.1.0.bn2.running_var",
+          "encoder.stages.1.0.bn2.num_batches_tracked",
+          "encoder.stages.1.0.downsample.1.running_mean",
+          "encoder.stages.1.0.downsample.1.running_var",
+          "encoder.stages.1.0.downsample.1.num_batches_tracked",
+          "encoder.stages.1.1.bn1.running_mean",
+          "encoder.stages.1.1.bn1.running_var",
+          "encoder.stages.1.1.bn1.num_batches_tracked",
+          "encoder.stages.1.1.bn2.running_mean",
+          "encoder.stages.1.1.bn2.running_var",
+          "encoder.stages.1.1.bn2.num_batches_tracked",
+          "encoder.stages.2.0.bn1.running_mean",
+          "encoder.stages.2.0.bn1.running_var",
+          "encoder.stages.2.0.bn1.num_batches_tracked",
+          "encoder.stages.2.0.bn2.running_mean",
+          "encoder.stages.2.0.bn2.running_var",
+          "encoder.stages.2.0.bn2.num_batches_tracked",
+          "encoder.stages.2.0.downsample.1.running_mean",
+          "encoder.stages.2.0.downsample.1.running_var",
+          "encoder.stages.2.0.downsample.1.num_batches_tracked",
+          "encoder.stages.2.1.bn1.running_mean",
+          "encoder.stages.2.1.bn1.running_var",
+          "encoder.stages.2.1.bn1.num_batches_tracked",
+          "encoder.stages.2.1.bn2.running_mean",
+          "encoder.stages.2.1.bn2.running_var",
+          "encoder.stages.2.1.bn2.num_batches_tracked",
+          "encoder.stages.3.0.bn1.running_mean",
+          "encoder.stages.3.0.bn1.running_var",
+          "encoder.stages.3.0.bn1.num_batches_tracked",
+          "encoder.stages.3.0.bn2.running_mean",
+          "encoder.stages.3.0.bn2.running_var",
+          "encoder.stages.3.0.bn2.num_batches_tracked",
+          "encoder.stages.3.0.downsample.1.running_mean",
+          "encoder.stages.3.0.downsample.1.running_var",
+          "encoder.stages.3.0.downsample.1.num_batches_tracked",
+          "encoder.stages.3.1.bn1.running_mean",
+          "encoder.stages.3.1.bn1.running_var",
+          "encoder.stages.3.1.bn1.num_batches_tracked",
+          "encoder.stages.3.1.bn2.running_mean",
+          "encoder.stages.3.1.bn2.running_var",
+          "encoder.stages.3.1.bn2.num_batches_tracked"
+        ],
+        "state_sha256": "e57f8ea8c38e163721666f091f369b69dc79894d694a8f5f4fdf061379a0ff0a",
+        "probe": {
+          "sources": 64,
+          "counts": {
+            "tn": 4162157,
+            "fp": 7321,
+            "fn": 9772,
+            "tp": 15054
+          },
+          "metrics": {
+            "precision": 0.672804469273743,
+            "recall": 0.6063804076371546,
+            "f1": 0.637867841783013,
+            "iou": 0.46828630976451924,
+            "oa": 0.995924711227417,
+            "fpr": 0.0017558552893191905,
+            "pixels": 4194304
+          },
+          "empty_fpr": 0.0003903706868489583,
+          "by_area": {
+            "empty": {
+              "counts": {
+                "tn": 3144500,
+                "fp": 1228,
+                "fn": 0,
+                "tp": 0
+              }
+            },
+            "1-64": {
+              "counts": {
+                "tn": 262049,
+                "fp": 0,
+                "fn": 95,
+                "tp": 0
+              }
+            },
+            "65-256": {
+              "counts": {
+                "tn": 194057,
+                "fp": 2104,
+                "fn": 418,
+                "tp": 29
+              }
+            },
+            "257-1024": {
+              "counts": {
+                "tn": 194077,
+                "fp": 361,
+                "fn": 747,
+                "tp": 1423
+              }
+            },
+            "1025-4096": {
+              "counts": {
+                "tn": 189322,
+                "fp": 1078,
+                "fn": 1938,
+                "tp": 4270
+              }
+            },
+            ">4096": {
+              "counts": {
+                "tn": 178152,
+                "fp": 2550,
+                "fn": 6574,
+                "tp": 9332
+              }
+            }
+          }
+        }
+      },
+      "original_restored": true
+    }
+  },
+  "parameter_training": false,
+  "batchnorm_recalibration": true,
+  "new_val_inference": false,
+  "test_accessed": false,
+  "train_only": true,
+  "environment": {
+    "created_utc": "2026-10-20T11:47:54.427682+00:00",
+    "python": "3.11.14 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 18:30:03) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+    "platform": "Windows-10-10.0.26100-SP0",
+    "torch": "2.0.1",
+    "torchvision": "0.15.2",
+    "numpy": "1.26.4",
+    "pillow": "12.0.0",
+    "pyyaml": "6.0.3",
+    "cuda_runtime": "11.7",
+    "cudnn": 8500,
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "seed": 42,
+    "deterministic": true,
+    "num_threads": 4,
+    "cublas_workspace_config": ":4096:8",
+    "source_config": "E:\\new research\\detection\\runs\\valais_b0e_fp32_seed42_v1_20261002\\base_config.yaml"
+  },
+  "records": 576,
+  "pair_views": 3666,
+  "elapsed_seconds": 211.32800000000861,
+  "maximum_observed_temperature_c": 62
+}

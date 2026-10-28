@@ -1,0 +1,12 @@
+schema_version: 1
+parent_config: valais_c5r5_40ep_seed42_v1_20261020.yaml
+output_dir: ../runs/valais_c5r5_speed_pilot_v1_20261020
+steps_per_variant: 16
+warmup_steps: 4
+maximum_seconds_per_role: 600
+minimum_speedup_fraction_each_role: 0.03
+orders:
+  c5: [reference, candidate]
+  r5: [candidate, reference]
+engineering_only: true
+no_validation_scoring: true

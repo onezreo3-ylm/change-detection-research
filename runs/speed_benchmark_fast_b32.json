@@ -1,0 +1,86 @@
+{
+  "kind": "engineering_throughput_benchmark_not_research_results",
+  "warning": "Uses real train/val tiles for speed only; test was not opened and metrics are not research results.",
+  "config": "E:\\new research\\detection\\configs\\levir_speed_b32.yaml",
+  "protocol_signature": "245f12b4a85fd2c2cf4fe8c9e709eabe56cda200c806d053aac08bc7fb982581",
+  "settings": {
+    "batch_size": 32,
+    "eval_batch_size": 32,
+    "num_workers": 4,
+    "amp": true,
+    "memory_format": "channels_last",
+    "warmup_steps": 5,
+    "train_steps": 50,
+    "eval_steps": 20
+  },
+  "inventory": {
+    "train": {
+      "split": "train",
+      "tile_size": 256,
+      "source_pairs": 445,
+      "tiles": 7120,
+      "inventory_sha256": "fe7a40fec81168fa7289880bbcc17c39642b6aec2028a3e42ba98a7abe1a7f8b"
+    },
+    "val": {
+      "split": "val",
+      "tile_size": 256,
+      "source_pairs": 64,
+      "tiles": 1024,
+      "inventory_sha256": "c9a73b42f1c12fb00e1f6e60c18d0d37a975e2e40a9efaa915087f7b9e4691d8"
+    }
+  },
+  "train": {
+    "seconds": 35.06199999999808,
+    "samples": 1600,
+    "steps_per_second": 1.4260452911985266,
+    "samples_per_second": 45.63344931835285,
+    "cuda_peak": {
+      "allocated_mib": 2379.193359375,
+      "reserved_mib": 2552.0
+    }
+  },
+  "val": {
+    "seconds": 8.907000000002881,
+    "samples": 640,
+    "steps_per_second": 2.2454249466704312,
+    "samples_per_second": 71.8535982934538,
+    "cuda_peak": {
+      "allocated_mib": 1141.80078125,
+      "reserved_mib": 2552.0
+    }
+  },
+  "environment": {
+    "created_utc": "2026-09-11T11:52:22.154651+00:00",
+    "python": "3.11.14 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 18:30:03) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+    "platform": "Windows-10-10.0.26100-SP0",
+    "torch": "2.0.1",
+    "torchvision": "0.15.2",
+    "numpy": "1.26.4",
+    "pillow": "12.0.0",
+    "pyyaml": "6.0.3",
+    "cuda_runtime": "11.7",
+    "cudnn": 8500,
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "seed": 42,
+    "deterministic": true,
+    "num_threads": 1,
+    "cublas_workspace_config": ":4096:8",
+    "source_config": "E:\\new research\\detection\\configs\\levir_speed_b32.yaml"
+  },
+  "source_sha256": {
+    "pcdc/__init__.py": "0297caa54f1b6236d4bd3b0320066b4b305db85b4c401c3ae59f6522413b8f31",
+    "pcdc/__main__.py": "bdaf64a7541d8b22cf0d163aaaf05936da513fb920afc9b7e0d205a7d198f4d7",
+    "pcdc/benchmark.py": "1d55fb76c3d2f2b9c5a243d343e49a7381d7536af31b5080521d211f955af941",
+    "pcdc/config.py": "454697912f98e051468a0390a824c4b7552b68d5f4d7d58a49e1fa9b56bfc082",
+    "pcdc/data.py": "f220463d3170704b97163324c69578c43269efb959c5824c0f69eea04bb03594",
+    "pcdc/engine.py": "613fc8fbe6f7977ac982ba04cdad773a8a2ae7a3c0f43615211b33214421cb2f",
+    "pcdc/inspect_labels.py": "90cad8f41dbbca8b9acc6003aa4dda5ab65c7a01ae1a62b8416f56de8f2f43b4",
+    "pcdc/losses.py": "a663686b4b4ef83e81685f26f1e55ea209c1b3d491b7f3afbd1ebf725fc3b2cb",
+    "pcdc/metrics.py": "e84f2e3062b2ee97cbeddd54ea875bd3ac61d158a84dbf60992ea7ec1083c55e",
+    "pcdc/model.py": "6964aa3b8ef4c593a7a6e61e2d01ebdec0b69054eacd34c814af3f1f14a6573f",
+    "pcdc/runtime.py": "60fc6429ac113a00f5d067d1c8d12d8435c56691fb331b73f7825a4f9aa216f5",
+    "pcdc/smoke.py": "ba4aceee4068e67a36d4c61f6112306986af6efe26561713e82c0eee062be4dd"
+  }
+}

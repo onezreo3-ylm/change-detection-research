@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "workspace_root": "..",
+  "base_config": "runs/phase2_protocol_v1_20260913/base_config.yaml",
+  "protocol": "docs/LEVIR_REGION_DIAGNOSTIC_PROTOCOL_2026-10-24.md",
+  "output_dir": "runs/levir_region_diagnostic_20261024",
+  "managed_run_dir": "runs/managed_continuation_20261024",
+  "train_source_count": 16,
+  "train_selection_salt": "levir_region_diagnostic_20261024",
+  "validation_source_count": 64,
+  "models": {
+    "b0e": {
+      "job_config": "configs/evaluate_candidate_b0e_val_v1_seed42.yaml",
+      "seed": 42,
+      "mode": "b0e"
+    },
+    "b1_42": {
+      "job_config": "configs/evaluate_candidate_b1_val_v1_seed42.yaml",
+      "seed": 42,
+      "mode": "b1"
+    },
+    "b1_43": {
+      "job_config": "configs/r1e_evaluate_b1_seed43.yaml",
+      "seed": 43,
+      "mode": "b1"
+    },
+    "b1_44": {
+      "job_config": "configs/r1e_evaluate_b1_seed44.yaml",
+      "seed": 44,
+      "mode": "b1"
+    }
+  },
+  "connectivities": [
+    4,
+    8
+  ],
+  "primary_connectivity": 8,
+  "primary_min_area": 64,
+  "primary_max_area": 1023,
+  "primary_exclude_source_edge": true,
+  "primary_exclude_tile_grid": true,
+  "area_bin_upper_bounds": [
+    15,
+    63,
+    255,
+    1023
+  ],
+  "resource_gate": {
+    "minimum_common_missed_regions": 8,
+    "minimum_sources_with_common_misses": 4,
+    "minimum_common_miss_fraction": 0.05,
+    "comparison_models": [
+      "b1_42",
+      "b1_43",
+      "b1_44"
+    ],
+    "passing_only_admits_ordinary_control_protocol_preparation": true
+  },
+  "max_wall_seconds": 900,
+  "temperature_guard": {
+    "schema_version": 1,
+    "nvidia_smi": "C:/Windows/System32/nvidia-smi.exe",
+    "gpu_index": 0,
+    "gpu_uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+    "poll_seconds": 2,
+    "confirmation_seconds": 1,
+    "confirmed_pause_c": 85,
+    "immediate_pause_c": 86,
+    "confirmation_samples": 3,
+    "max_sensor_failures": 3,
+    "sensor_timeout_seconds": 1
+  },
+  "test_access": false,
+  "new_training": false,
+  "new_method_admitted": false
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "completed_utc": "2026-10-25T06:59:46.008707+00:00",
+  "status": "inference_core_verified_supervision_adapter_pending",
+  "full_unittest_final_count": 493,
+  "full_unittest_final_seconds": 102.514,
+  "full_unittest_exit_code": 0,
+  "new_targeted_test_count": 22,
+  "cpu_original_architecture_synthetic_smoke": {
+    "status": "passed",
+    "synthetic_only": true,
+    "device": "cpu",
+    "amp": false,
+    "same_resnet18_fpn_width": 64,
+    "arms": {
+      "grid32": {
+        "pair_predictions": 8,
+        "finite_common_support": true,
+        "coverage_verified": true,
+        "uncovered_pixels_not_scored": true
+      },
+      "alternate32": {
+        "pair_predictions": 2,
+        "finite_common_support": true,
+        "coverage_verified": true,
+        "uncovered_pixels_not_scored": true
+      },
+      "overlap32": {
+        "pair_predictions": 18,
+        "finite_common_support": true,
+        "coverage_verified": true,
+        "uncovered_pixels_not_scored": true
+      },
+      "context64": {
+        "pair_predictions": 2,
+        "finite_common_support": true,
+        "coverage_verified": true,
+        "uncovered_pixels_not_scored": true
+      }
+    },
+    "pair_predictions": 30,
+    "model_state_unchanged": true,
+    "optimizer_updates": 0,
+    "real_cuda_or_archive_replay_claim": false
+  },
+  "first_cpu_smoke_failure_preserved": true,
+  "diagnosed_cpu_fix": "Explicit CPU FP32 uses nullcontext; original real CUDA FP16 autocast unchanged.",
+  "original_pcdc_source_files_unchanged": 28,
+  "selected_train_files_hashed_headers_checked": 48,
+  "original_train_masks_replayed_exactly": 16,
+  "cpu_checkpoint_identities_verified": [
+    "b0e",
+    "b1_42"
+  ],
+  "raw_validation_test_or_martigny_opened": false,
+  "research_model_forwards": 0,
+  "real_cuda_archive_replay_verified": false,
+  "new_pilot_or_probe_executed": false,
+  "new_optimizer_updates": 0,
+  "runtime_supervision_pending": true,
+  "gpu_execution_authorized": false,
+  "new_probe_gpu_process_seconds": 0,
+  "synthetic_cuda_test_time_not_separately_measured": true,
+  "conservative_charge_this_engineering_seconds": 216.6832618999979,
+  "shared_ledger_total_seconds": 30924.785894500004,
+  "shared_original_upper_bound_seconds": 172800,
+  "prepared": "runs/levir_tiling_context_probe_20261025/prepared.json",
+  "next_action": "Implement and verify a separate CPU owner/independent guard/watchdog adapter; then seal the bounded train-only runtime before pilot/main.",
+  "report": "docs/LEVIR_TILING_CONTEXT_ENGINEERING_2026-10-25.md"
+}

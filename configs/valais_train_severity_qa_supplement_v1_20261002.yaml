@@ -1,0 +1,15 @@
+schema_version: 1
+kind: train_only_direction_balance_supplement
+status: candidate_pending_visual_review
+base_candidate: valais_train_severity_qa_candidate_v1_20261002.yaml
+base_candidate_sha256: 23d202a635491109b8e090bf09573ab6a3cd347c10666d44badd9f37752ca08f
+base_report: ../runs/valais_train_severity_qa_candidate_v1_20261002/train_visual_qa.json
+base_report_sha256: eff75730e6e2d2c2565fd1f9c9ddb5a5acdaa76849e54b3066bedb29efbdc5e4
+output_dir: ../runs/valais_train_severity_qa_supplement_v1_20261002
+selection:
+  seed: 810208
+  positive_tiles: 4
+  empty_tiles: 4
+  exclude_base_sources: true
+  row_order: balanced_direction_parity
+seeds: {train: 510945, val: 510946, test: 510947}

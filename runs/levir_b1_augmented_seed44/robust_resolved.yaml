@@ -1,0 +1,29 @@
+schema_version: 1
+name: levir_b1_augmented_seed44
+mode: b1
+base_config: E:\new research\detection\configs\r1_base_seed44.yaml
+protocol_config: E:\new research\detection\configs\r1_corruption_train_seed44.yaml
+protocol_sha256: 60eeda10a1844d2b64ff6ac3ca9418cf758eb897e538b7b2162606ee8deeec2c
+severity_review: E:\new research\detection\configs\r1_corruption_acceptance_seed44.yaml
+output_dir: E:\new research\detection\runs\levir_b1_augmented_seed44
+expected_source_tiles: 7120
+expected_batches_per_epoch: 1780
+views:
+  primary: clean
+  secondary: perturbed
+  views_per_source: 2
+  concat_order:
+  - clean
+  - secondary
+  optimizer_steps_per_source_batch: 1
+  batchnorm_update: single_forward_clean_then_secondary_then_temporal_concat
+corruption:
+  stream: train
+  view: 0
+  selection: uniform_family_level_direction_date_spatial_per_sample_epoch_view
+consistency:
+  kind: none
+  weight: 0.0
+  space: probability
+  gradient_flow: symmetric
+selection: clean_val_f1

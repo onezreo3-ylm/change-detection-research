@@ -1,0 +1,42 @@
+schema_version: 1
+date: '2026-10-25'
+timezone: Asia/Shanghai
+workspace_root: ..
+output_dir: runs/research_question_screen_20261025
+user_direction: 筛选不依赖对应表的新研究问题
+scope: literature_static_code_and_saved_train_predictions_only
+prior_artifact_dir: runs/levir_region_diagnostic_20261024
+prepared_inventory: runs/levir_region_diagnostic_20261024/prepared.json
+cached_split: train
+expected_source_count: 16
+models: [b0e, b1_42, b1_43, b1_44]
+map_size: 1024
+original_tile_size: 256
+packing: numpy_packbits_axis1_big_endian
+profile:
+  source_outer_margin: 32
+  internal_seams: [256, 512, 768]
+  primary_band_half_width: 16
+  secondary_band_half_width: 32
+  core_minimum_distance: 32
+  control_lines: [128, 384, 640, 896]
+  distance_reference: boundary_between_pixel_centers
+  empty_denominator: null
+  unit_of_description: original_source_pair
+  inference_from_pixel_or_source_independence: false
+  causal_or_method_effect_claim: false
+  original_region_gate_reopened: false
+candidates:
+  - native_resolution_tiling_context_stability
+  - limited_label_budget_change_detection
+  - identical_date_no_change_anchors
+limits:
+  max_analysis_wall_seconds: 90
+  gpu_seconds: 0
+  model_loads: 0
+  optimizer_updates: 0
+  raw_images_or_labels_read: false
+  new_validation_scores: false
+  heldout_test_or_martigny_access: false
+  new_training_admitted: false
+  external_messages_authorized: false

@@ -1,0 +1,54 @@
+schema_version: 1
+kind: replacement_question_feasibility_proposal
+status: diagnostic_screen_completed_independent_annotation_pending
+question: natural_clean_change_region_omissions_with_annotation_and_tile_edge_controls
+is_confirmed_method_innovation: false
+primary_report: ../docs/DIRECTION_SCREEN_2026-10-22.md
+screen_evidence: ../runs/research_direction_screen_20261022/saved_count_screen.json
+saved_audit: ../runs/research_direction_screen_20261022/independent_saved_audit.json
+review_images: ../runs/research_direction_screen_20261022/train_review_native
+blind_review_sheet: ../runs/research_direction_screen_20261022/review_blind.csv
+sample_scope:
+  source_pool: original_fixed_sion_train_probe
+  positive_sources: 16
+  empty_sources: 8
+  all_positive_probe_sources_retained: true
+  does_not_estimate_population_frequency: true
+  independent_instances_or_geography_not_established: true
+review:
+  model_counts_visible_to_reviewer: false
+  verdicts:
+    - observable_change_consistent_with_label
+    - suspected_image_label_timing_or_extent_disagreement
+    - tile_edge_context_insufficient
+    - insufficient_visual_evidence
+    - unchanged_consistent_with_empty_label
+  independent_reviewer: not_yet_assigned
+  independent_annotation_verdict: pending
+  confirmed_label_noise_rate: null
+  original_labels_modified: false
+candidate_baseline_controls:
+  - original_bce_dice
+  - ordinary_false_negative_false_positive_tradeoff
+  - published_instance_balanced_loss
+  - published_prediction_component_false_positive_control
+  - independent_lightweight_architecture_feasibility_not_yet_verified
+decision_rules:
+  - no_new_method_from_two_internal_missed_training_tiles
+  - component_is_not_a_certified_building_instance
+  - boundary_contact_does_not_establish_cropping_as_cause
+  - prediction_disagreement_does_not_establish_label_error
+  - stop_if_independent_supervision_cannot_be_validated
+  - stop_method_candidate_if_ordinary_controls_explain_or_remove_failure
+  - require_a_specific_difference_from_blob_loss_bicc_and_noisy_label_neighbours
+execution_boundaries:
+  new_long_training: false
+  new_research_inference: false
+  new_architecture_implementation: false
+  raw_validation_images_or_labels: false
+  held_out_test: false
+  foundation_models: false
+  geometric_perturbations: false
+  new_external_data_download: false
+  old_automation_reactivated: false
+  further_training_budget: not_admitted

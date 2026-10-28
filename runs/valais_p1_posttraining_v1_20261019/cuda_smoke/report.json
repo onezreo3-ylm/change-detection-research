@@ -1,0 +1,61 @@
+{
+  "status": "passed_train_only_p1_cuda_smoke",
+  "train_only": true,
+  "val_accessed": false,
+  "test_accessed": false,
+  "training": false,
+  "gradients_enabled": false,
+  "amp": false,
+  "smoke_only": true,
+  "manifest_sha256": "2c32e831bb2b5cf82c19ee91ba4e45d46f5c1dbca19f758426d57d8a3659a4fe",
+  "review_sha256": "c3c3721e9faf325fcb8790e769733c40a65aa917ba36a72d15bde34332cca8a8",
+  "models": {
+    "cs": {
+      "checkpoint": "E:\\new research\\detection\\runs\\valais_cs_fp32_seed42_v1_20261014\\best.pt",
+      "checkpoint_sha256": "dc1fbc43fb31154de6f73fbff89fd2b0f8d71c85a5b95ad9f5ad8b2a5d918da9",
+      "training_signature": "057fdaa4975a55fbf00a4becbb3fef071b11402843e56b43eacfc776abfea159",
+      "sampling_identity": {
+        "proposal_sha256": "8ea26222d715b0d6657b730336772508b7a3436b196a79a04a548c3ae5923acb",
+        "train_label_report_sha256": "687861cb1107ba76ce78af144ee1f82c3f4ceae13ba3c152fa955b8dfbfe7991",
+        "captured_data_audit_sha256": "670d7d29361125e291d637f9fb9be44df31b67912dc2af837d719f6c4ae2cd87",
+        "flavor": "stratified_two_view_baseline_v1"
+      },
+      "model_state_sha256": "a86e31331c858641b7dcdcae95233310c5f4d3454c712563a304a73237cec65c",
+      "model_state_unchanged": true
+    },
+    "as": {
+      "checkpoint": "E:\\new research\\detection\\runs\\valais_as_fp32_seed42_v1_20261014\\best.pt",
+      "checkpoint_sha256": "cea40a786e7ebd7592b11497d89f282160137752ea1f04f36279b03b44c72724",
+      "training_signature": "cd6e54f73ce31220e6d811ff4698d0e6310cefb307f1efd3adfe46b63976cbe6",
+      "sampling_identity": {
+        "proposal_sha256": "8ea26222d715b0d6657b730336772508b7a3436b196a79a04a548c3ae5923acb",
+        "train_label_report_sha256": "687861cb1107ba76ce78af144ee1f82c3f4ceae13ba3c152fa955b8dfbfe7991",
+        "captured_data_audit_sha256": "670d7d29361125e291d637f9fb9be44df31b67912dc2af837d719f6c4ae2cd87",
+        "flavor": "stratified_two_view_baseline_v1"
+      },
+      "model_state_sha256": "bffce98cbc2afbd2bfcc1d646e6d94d36f9bfa66a4e238e80aa468e39e279866",
+      "model_state_unchanged": true
+    }
+  },
+  "research_result": false,
+  "predictions": 102,
+  "main_predictions": 98,
+  "records": 0,
+  "self_checks": [
+    {
+      "model": "cs",
+      "repeat_bitwise_equal": true,
+      "temporal_swap_allclose": true,
+      "max_swap_abs_error": 0.0
+    },
+    {
+      "model": "as",
+      "repeat_bitwise_equal": true,
+      "temporal_swap_allclose": true,
+      "max_swap_abs_error": 0.0
+    }
+  ],
+  "elapsed_seconds": 23.360000000000582,
+  "budget_seconds": 21600,
+  "maximum_observed_temperature_c": 45
+}

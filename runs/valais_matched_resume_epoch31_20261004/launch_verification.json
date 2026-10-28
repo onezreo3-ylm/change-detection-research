@@ -1,0 +1,62 @@
+{
+  "status": "resumed_training_step_and_guard_verified",
+  "observed_utc": "2026-10-03T16:30:31.364633+00:00",
+  "observed_beijing": "2026-10-04T00:30:31.364633+08:00",
+  "queue_status": {
+    "status": "running",
+    "stage": "b0e_training_resume",
+    "updated_utc": "2026-10-03T16:25:33.261775+00:00",
+    "test_accessed": false,
+    "automatic_resume": false,
+    "resume_session": "E:\\new research\\detection\\runs\\valais_matched_resume_epoch31_20261004",
+    "resume_epoch": 32
+  },
+  "processes": [
+    {
+      "ProcessId": 29748,
+      "ParentProcessId": 30824,
+      "CreationTimeUtc": "2026-10-03T16:25:27.9886520Z",
+      "CommandLine": "\"E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe\" -u -m scripts.resume_valais_matched_study run --config \"E:\\new research\\detection\\configs\\valais_matched_resume_epoch31_20261004.yaml\" "
+    },
+    {
+      "ProcessId": 25540,
+      "ParentProcessId": 29748,
+      "CreationTimeUtc": "2026-10-03T16:25:33.2738270Z",
+      "CommandLine": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe -u -m scripts.resume_valais_matched_study train-stage --config \"E:\\new research\\detection\\configs\\valais_matched_resume_epoch31_20261004.yaml\""
+    }
+  ],
+  "task_state": "Running",
+  "original_task_enabled": false,
+  "resume_epoch": 32,
+  "latest_progress_lines": [
+    "b0e/epoch=32/train step=1/2757 loss=0.000147",
+    "b0e/epoch=32/train step=275/2757 loss=0.104913",
+    "b0e/epoch=32/train step=550/2757 loss=0.106721"
+  ],
+  "guard": {
+    "path": "E:\\new research\\detection\\runs\\valais_b0e_fp32_seed42_v1_20261002\\temperature_guard_resumes\\session_0001\\temperature_guard_state.json",
+    "status": "monitoring",
+    "decision": "ok",
+    "temperature_c": 77,
+    "sensor_failures": 0,
+    "observation_age_seconds": 1.631797
+  },
+  "bound_files_checked": 140,
+  "bound_files_changed": [],
+  "authorization_sha256": "a7ee2d7a3bc7fa58b8f26e3520a878fc40c06b90129a549b40f3fb68306e9ad7",
+  "unit_tests": {
+    "count": 282,
+    "passed": true,
+    "skipped": 0,
+    "seconds": 65.703
+  },
+  "real_cuda_fp32_smoke_passed": true,
+  "new_held_out_test_access": false,
+  "complete_matched_research_result": false,
+  "next_stages": [
+    "B0-E remaining epochs through 100",
+    "frozen clean/45-condition validation",
+    "actual source order, initialization, exposure and guard checks",
+    "frozen descriptive comparison"
+  ]
+}

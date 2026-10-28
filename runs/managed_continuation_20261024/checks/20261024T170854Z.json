@@ -1,0 +1,105 @@
+{
+  "automation_id": "levir-cd",
+  "trigger_utc": "2026-10-24T17:08:54.855Z",
+  "checked_utc": "2026-10-24T17:09:31.225750+00:00",
+  "decision": "DONT_NOTIFY",
+  "assessment": "healthy_training_progress_no_new_action_required",
+  "worker": {
+    "pid": 11252,
+    "creation_time_ticks": 134373339547696568,
+    "active": true,
+    "exit_code": null,
+    "training_flavor": "b1_secondary_empirical_tail_v1"
+  },
+  "supervision": {
+    "owner": {
+      "pid": 3304,
+      "creation_time_ticks": 134373339538919093,
+      "active": true,
+      "status": "running",
+      "heartbeat_utc": "2026-10-24T17:09:31.049437+00:00"
+    },
+    "guard": {
+      "pid": 22856,
+      "creation_time_ticks": 134373339551558587,
+      "active": true,
+      "status": "monitoring",
+      "heartbeat_utc": "2026-10-24T17:09:31.045432+00:00",
+      "decision": "ok",
+      "sensor_error": null
+    },
+    "watchdog": {
+      "pid": 32092,
+      "creation_time_ticks": 134373339555115385,
+      "active": true,
+      "status": "monitoring",
+      "heartbeat_utc": "2026-10-24T17:09:31.084483+00:00"
+    }
+  },
+  "progress": {
+    "stage": "candidate_train",
+    "epoch": 5,
+    "step": 1603,
+    "steps_in_stage": 1780,
+    "completed_training_attempts": 8723,
+    "amp_skips_in_stage": 2,
+    "consecutive_amp_skips": 0,
+    "amp_scale": 8192,
+    "numeric_alert": false,
+    "updated_utc": "2026-10-24T17:09:31.179941+00:00"
+  },
+  "committed_training": {
+    "epoch": 4,
+    "epochs": 100,
+    "best_epoch": 3,
+    "best_val_f1": 0.8482877585252095,
+    "successful_optimizer_updates": 7116,
+    "amp_skipped_steps": 4,
+    "updated_utc": "2026-10-24T17:05:22.924096+00:00"
+  },
+  "progression_from_previous_check": {
+    "previous_epoch": 2,
+    "previous_step": 435,
+    "previous_committed_epochs": 1,
+    "actual_attempts_advanced": true,
+    "checkpoint_advanced": true,
+    "logs_advanced": true
+  },
+  "checkpoints": {
+    "best": {
+      "bytes": 137321283,
+      "modified_unix": 1792861232.9098692
+    },
+    "last": {
+      "bytes": 137333635,
+      "modified_unix": 1792861522.903811
+    }
+  },
+  "gpu": {
+    "uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+    "temperature_c": 74,
+    "utilization_percent": 97,
+    "memory_used_mib": 2943,
+    "guard_maximum_observed_temperature_c": 76
+  },
+  "budget": {
+    "shared_charged_seconds": 2004.3046325999974,
+    "batch_upper_bound_seconds": 172800,
+    "active_worker_charged_seconds": 1417.0310000000027,
+    "active_worker_upper_bound_seconds": 86352.09400000001,
+    "prior_discarded_prefix_seconds": 47.9059999999954,
+    "prior_discarded_prefix_updates": 201,
+    "original_candidate_24h_cap_retained": true
+  },
+  "operations": {
+    "monitor_only": true,
+    "new_gpu_worker_started": false,
+    "model_loaded": false,
+    "tests_or_smoke_rerun": false,
+    "full_hash_repeated": false,
+    "source_changed": false,
+    "held_out_test_or_martigny_opened": false
+  },
+  "next_action": "Keep the single guarded worker running. Next hourly compact check; only after successful100 epochs perform explicit risk-flavor validation and fixed gates. No additional automatic recovery.",
+  "creation_time_ticks_recorded_as": "exact Python integers from the creation-bound attachment; avoid V8 floating point rounding"
+}

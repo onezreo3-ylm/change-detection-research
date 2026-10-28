@@ -1,0 +1,249 @@
+# Research proposal only. This is not a runnable trainer configuration.
+schema_version: 1
+status: proposal_prepared_not_implemented_not_launched
+date: '2026-10-04'
+name: valais_clean_referenced_foreground_background_update_constraints
+plan_document: ../docs/NEW_INNOVATION_EXPERIMENT_PLAN_2026-10-04.md
+current_request_scope: research_plan
+training_started: false
+new_model_inference: false
+test_accessed: false
+mechanism_implemented: false
+innovation_status: candidate_requires_prior_art_and_matched_incremental_evidence
+evidence:
+  completion_audit:
+    path: ../runs/valais_matched_completion_audit_20261004/audit.json
+    sha256: 2bedb7cfca880f29c730836c0cdc22d03632e3d43b61ff5553fd109eb55c4eb2
+  corrected_error_report:
+    path: ../runs/valais_matched_error_review_20261004/report.json
+    sha256: 5ef1456de930a65196e4189f17cbb6bd31941537cdd41f0bee263c80cdc5d197
+  train_label_balance:
+    path: ../runs/valais_class_balance_20260930/report.json
+    sha256: 687861cb1107ba76ce78af144ee1f82c3f4ceae13ba3c152fa955b8dfbfe7991
+  clean_parent_config:
+    path: ../runs/valais_corruption_protocol_v1_20261002/base_config.yaml
+    sha256: 795cbe8d8b05722b044f0b4ff8b634a3caf3be08ecd311de006d5c140472d768
+  corruption_protocol:
+    path: ../runs/valais_corruption_protocol_v1_20261002/candidate_resolved.yaml
+    file_sha256: ef08f2144b799bc616f3a01d24ff987cc989c47e2c922f54da83f40fd4b9a5ac
+    protocol_fingerprint: aa16a00382be46d2e6d9f1918d072f86fbee1ccef0a3eb70da462cdad52c4416
+  sampling_proposal:
+    path: valais_b0es_candidate_proposal_20261004.yaml
+    sha256: 8ea26222d715b0d6657b730336772508b7a3436b196a79a04a548c3ae5923acb
+  historical_timing:
+    path: ../runs/valais_b1_fp32_seed42_v1_20261002/history.json
+    sha256: 91c9760fa25edf3541fbbd217e39b68261edf21166fc883705af3e67a2d0cb30
+    train_and_clean_validation_hours: 18.128818888888823
+    timing_excludes: [checkpoint_io, corruption_scoring, pauses, proposed_extra_backward_calls]
+reuse_boundaries:
+  existing_results: exploratory_hypothesis_evidence
+  existing_checkpoints: train_only_diagnostic_scratch_copies
+  new_full_runs: same_random_initialization_within_seed_not_old_checkpoint_warmstarts
+  archived_source_code_and_seals: unchanged
+  diagnostic_training_state: never_committed_to_archived_runs
+  split: original_Sion_train_Sierre_development_val_Martigny_sealed_test
+  val_is_independent_confirmation: false
+  spatial_source_ids_available: false
+  tile_bootstrap_allowed: false
+  levir_test_reuse_allowed: false
+fixed_full_run_settings:
+  epochs: 100
+  successful_updates: 275700
+  source_draws: 1102500
+  pair_views: 2205000
+  dtype: fp32
+  source_batch_size: 4
+  eval_batch_size: 32
+  model: existing_shared_random_resnet18_absdiff_fpn_decoder64
+  threshold: 0.5
+  selection: first_highest_clean_val_f1
+  learning_rate: 0.001
+  min_learning_rate: 0.000001
+  optimizer: AdamW
+  adam_betas: [0.9, 0.999]
+  weight_decay: 0.0001
+  grad_clip_norm: 1.0
+  batchnorm_update: single_joint_forward_clean_secondary_temporal_concat
+  sampling: exact_b0es_proposal_with_same_stream_within_seed
+  augmentation: existing_uniform_train_corruption_stream_with_independent_rng
+  evaluation_conditions: unchanged_all_45
+seeds:
+  development_screen: 42
+  subsequent_training_randomness_confirmation: [43, 44]
+  new_seeds_establish_new_city_independence: false
+diagnostic:
+  split: train_only
+  positive_tiles: 64
+  empty_tiles: 192
+  area_bins: ['1..64', '65..256', '257..1024', '1025..4096', '>4096']
+  positive_quotas: [13, 13, 13, 13, 12]
+  source_selection_hash_template: 'valais-evidence-diag-v1|{name}'
+  insufficient_bin_policy: take_all_then_fill_from_remaining_positives_by_same_hash
+  complete_batch: {positive: 1, empty: 3}
+  total_batches: 64
+  inference: clean_and_all_45_conditions_for_archived_b0e_b1_best
+  joint_transitions: [tp_to_fn, fn_to_tp, tn_to_fp, fp_to_tn]
+  gradient_batches: 8
+  probe_batches_not_used_for_gradient: 8
+  gradient_levels: [1, 3, 5]
+  gradient_families: all_existing_9
+  nominal_gradient_contexts: 432
+  diagnostic_learning_rate: 0.0001
+  diagnostic_optimizer_moments: original_checkpoint_state_or_stop_no_silent_substitution
+  batchnorm_modes: [joint_training_with_state_restore, frozen_running_statistics]
+  maximum_gpu_hours: 8
+  exceeded_budget_status: incomplete_not_a_pass
+  statistically_independent_population_sample: false
+  proposed_gates:
+    minimum_masked_conflict_fraction_each_checkpoint: 0.10
+    minimum_actual_foreground_excess_harm_reduction: 0.30
+    maximum_background_mean_excess_vs_clean_reference: 0.000001
+    probe_foreground_direction: same_as_gradient_batch_aggregate
+    maximum_probe_background_risk_increase_vs_nominal: 0.000001
+    minimum_mean_retained_augmentation_increment_norm_ratio: 0.25
+    frozen_bn_conflict_reduction_to_prioritize_normalization: 0.80
+mechanism:
+  candidate_id: M
+  nominal_loss: half_clean_bce_dice_plus_half_perturbed_bce_dice
+  clean_reference: clean_loss_same_joint_bn_forward_same_old_adamw_state
+  reference_equals_two_clean_view_control_update: false
+  risks:
+    foreground: conditional_mean_softplus_negative_clean_logit
+    background: conditional_mean_softplus_clean_logit
+  constrained_parameters: all_trainable_parameters
+  virtual_steps: [nominal_adamw_increment, clean_reference_adamw_increment]
+  includes_clip_momentum_bias_correction_second_moment_decay: true
+  projection_objective: euclidean_distance_to_nominal_actual_increment
+  constraints: [foreground_linearized_effect_no_worse_than_clean_reference, background_linearized_effect_no_worse_than_clean_reference]
+  slack: 0.0
+  committed_moments: nominal_gradient_one_step_only
+  committed_parameter_increment: projected_actual_increment
+  missing_or_zero_gradient_class: omit_constraint_and_log
+  nonlinear_recall_or_fpr_guarantee: false
+  inference: original_detector_single_forward_no_labels_clean_reference_or_metadata
+  implementation_requires_separate_optimizer_state_resume_verification: true
+stages:
+  - id: A
+    action: finite_train_only_diagnostic_and_engineering_checks
+    auto_launch: false
+  - id: B
+    action: matched_ordinary_sampling_controls
+    full_runs: [C-S, A-S]
+    auto_launch: false
+    gate_before_mechanism: residual_harm_plus_diagnostic_supported_under_new_sampling
+  - id: C_first
+    action: nearest_matched_mechanism_controls
+    full_runs: [M, Q-total, P-FB]
+    auto_launch: false
+    continue_if: candidate_passes_protection_and_incremental_gates
+  - id: C_complete
+    action: complete_ordinary_loss_consistency_and_gradient_controls
+    full_runs: [L, K, P]
+    auto_launch: false
+  - id: D_attribution
+    action: constraint_ablations_and_optimizer_aware_primary_neighbor
+    full_runs: [M-foreground-only, M-background-only, P-FB-MAdam]
+    auto_launch: false
+  - id: D_confirmation
+    action: paired_new_seed_runs_after_method_freeze
+    full_runs_per_seed: [C-S, A-S, M, best_eligible_ordinary]
+    deduplicate_identical_rows: true
+    seeds: [43, 44]
+    auto_launch: false
+  - id: external
+    action: independent_data_provenance_and_spatial_split_protocol_then_frozen_method_evaluation
+    candidate: WHU_building_change_subset_subject_to_file_and_provenance_review
+    data_acquired_or_reviewed: false
+    auto_launch: false
+controls:
+  C-S: two_clean_views_b0es
+  A-S: clean_perturbed_bce_dice
+  Q-total: actual_increment_projection_single_total_clean_risk_constraint
+  P-FB:
+    algorithm: PCGrad_then_original_clip_AdamW
+    tasks: [clean_foreground_bce_total_pixel_denominator, clean_background_bce_total_pixel_denominator, clean_dice, perturbed_bce_dice]
+    task_weights: [0.5, 0.5, 0.5, 0.5]
+    sum_before_projection: exactly_A-S_gradient
+    order_rng: independent_local_deterministic
+  L:
+    loss: original_bce_plus_per_sample_tversky
+    tversky_fp_weight: 0.3
+    tversky_fn_weight: 0.7
+    tversky_smooth: 0.5
+    alpha_beta_half_regression: exactly_existing_dice
+  K: original_bce_dice_plus_symmetric_probability_mse_weight_1
+  P:
+    algorithm: PCGrad_then_original_clip_AdamW
+    tasks: [clean_bce_dice, perturbed_bce_dice]
+    task_weights: [0.5, 0.5]
+  P-FB-MAdam: primary_algorithm_review_and_separate_compatibility_protocol_required
+proposed_full_run_gates:
+  status: new_exploratory_gates_not_retroactive_old_b1_gates
+  control_eligibility_vs_same_seed_C-S:
+    maximum_clean_f1_drop: 0.005
+    maximum_clean_recall_drop: 0.01
+    maximum_corruption_recall_drop: 0.01
+    maximum_clean_empty_tile_fpr_increase: 0.0002
+    maximum_corruption_empty_tile_fpr_increase: 0.0002
+  best_ordinary_selection:
+    candidates: [C-S, A-S, L, K, P, P-FB]
+    eligible_only: true
+    metric: all_45_condition_mf1
+    tie_break: fixed_candidate_order
+  candidate_vs_best_eligible_ordinary:
+    minimum_corruption_mf1_gain: 0.005
+    minimum_corruption_recall_gain: 0.01
+    same_protection_gates_vs: [C-S, best_eligible_ordinary]
+  first_batch_provisional_comparator:
+    candidates: [C-S, A-S, P-FB]
+    eligible_only: true
+    metric: all_45_condition_mf1
+    minimum_corruption_mf1_gain: 0.005
+    minimum_corruption_recall_gain: 0.01
+    same_protection_gates: true
+    complete_ordinary_controls_required_before_claim: true
+  candidate_vs_Q-total:
+    minimum_corruption_mf1_gain: 0.003
+    same_protection_gates: true
+  candidate_vs_P-FB-MAdam:
+    minimum_corruption_mf1_gain: 0.005
+    minimum_corruption_recall_gain: 0.01
+    same_protection_gates: true
+  confirmation:
+    every_seed_mf1_difference_positive: true
+    minimum_mean_mf1_gain: 0.005
+    each_seed_protection_gates: true
+    report_all_seed_differences: true
+    statistical_significance_claim: false
+compute:
+  ordinary_full_runs_first_gate: 2
+  complete_seed42_screen_runs: 8
+  attribution_and_nearest_neighbor_runs: 3
+  additional_seed_confirmation_runs: [6, 8]
+  successful_path_maximum_valais_full_runs: [17, 19]
+  all_rows_launch_together: false
+  engineering_pilot_max_epochs: 10
+  pilot_scores_select_hyperparameters: false
+  full_runs_restart_from_matched_initialization: true
+  maximum_mechanism_train_stage_time_ratio_vs_A-S: 3.0
+  silently_reduce_precision_or_parameter_scope: false
+stop_conditions:
+  - ordinary_controls_resolve_problem_and_masked_conflict_no_longer_present
+  - mechanism_diagnostic_or_actual_local_effect_gate_fails
+  - strongest_ordinary_or_same_information_neighbor_explains_gain
+  - new_seed_or_external_evidence_is_unstable
+  - nonfinite_values_projection_failure_data_hash_change_guard_stop
+publication_claim:
+  method_contribution: conditional_on_incremental_and_external_evidence
+  fallback: controlled_exposure_normalization_and_augmentation_harm_study
+  guaranteed_novelty_or_acceptance: false
+references:
+  pcgrad: https://arxiv.org/abs/2001.06782
+  scat: https://arxiv.org/html/2411.02149v1
+  madam: https://arxiv.org/html/2606.03904v1
+  trust_ssl: https://arxiv.org/html/2604.21349v1
+  tversky: https://arxiv.org/abs/1706.05721
+  semicd: https://arxiv.org/abs/2204.08454
+  efp_net: https://www.mdpi.com/2072-4292/15/22/5268
+  phy_unfold: https://arxiv.org/abs/2603.19566v3
+  whu_data_candidate: https://gpcv.whu.edu.cn/data/building_dataset.html

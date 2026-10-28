@@ -1,0 +1,46 @@
+{
+  "trigger_utc": "2026-10-24T15:08:26.540Z",
+  "completed_utc": "2026-10-24T15:49:14.629376+00:00",
+  "initial_worker_found": false,
+  "initial_gpu_temperature_c": 41,
+  "work": "Completed frozen clean-label-region diagnostic and fixed next ordinary tail-risk control protocol",
+  "region_primary_common_misses": 41,
+  "region_primary_eligible": 1242,
+  "region_resource_gate_passed": false,
+  "next_phase": "tail_risk_ordinary_control_engineering_preparation",
+  "new_research_training_started": false,
+  "hourly_automation_active": true,
+  "automation_prompt_updated_for_current_phase": true,
+  "automation_config_sha256": "fd4aac8b5ec48e8d821600c85171fd2b92b4f89f43b63592a7731fe939cf5cef",
+  "compute_ledger": {
+    "schema_version": 1,
+    "date": "2026-10-24",
+    "unit": "conservative_charged_gpu_seconds",
+    "entries": [
+      {
+        "kind": "prior_delegated_completion_full_tests",
+        "charged_seconds": 69.239,
+        "basis": "Conservatively charge all test wall time, including CPU; exact GPU-active subtime unavailable."
+      },
+      {
+        "kind": "region_diagnostic_full_tests",
+        "charged_seconds": 73.7833997,
+        "basis": "Conservative whole-process test wall time."
+      },
+      {
+        "kind": "region_diagnostic_real_forward_process",
+        "charged_seconds": 139.1882329,
+        "pair_predictions": 5120,
+        "optimizer_updates": 0,
+        "basis": "Whole process wall time including setup and data work; not pure kernel time."
+      }
+    ],
+    "total_charged_seconds": 282.2106326,
+    "batch_upper_bound_seconds": 172800,
+    "new_research_optimizer_updates": 0,
+    "historical_reference_compute_is_separately_reported_not_new_spend": true,
+    "no_budget_reset_between_region_and_tail_control": true
+  },
+  "next_protocol_sha256": "21f3bc3ef2680bbfcce0b15c3d8651f9de7148f7571c8a7223c8fcb852b8f97b",
+  "next_config_sha256": "899f23b33f9fdba966dd29a4e28bbfb7dc954725e096f2650ca7034ec8b750f3"
+}

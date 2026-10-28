@@ -1,0 +1,11 @@
+schema_version: 1
+completion_audit: ../runs/valais_matched_completion_audit_20261004/audit.json
+completion_audit_sha256: 2bedb7cfca880f29c730836c0cdc22d03632e3d43b61ff5553fd109eb55c4eb2
+evaluations:
+  b0: ../runs/valais_baseline_corruption_val_v1_seed42_20261002
+  b1: ../runs/valais_b1_fp32_seed42_v1_20261002_val
+  b0e: ../runs/valais_b0e_fp32_seed42_v1_20261002_val
+instances: ../runs/valais_corruption_protocol_v1_20261002/val_instances.jsonl
+output_dir: ../runs/valais_matched_error_review_20261004
+# Descriptive label-area bins, independent of model scores. No selection/tuning.
+foreground_area_boundaries: [64, 256, 1024, 4096]

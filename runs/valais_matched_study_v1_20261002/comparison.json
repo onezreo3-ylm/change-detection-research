@@ -1,0 +1,85 @@
+{
+  "status": "single_seed_matched_descriptive_comparison",
+  "scores": {
+    "b0": {
+      "mf1": 0.37004352259315076,
+      "clean_f1": 0.4162248161980205,
+      "clean_recall": 0.4067214128844536,
+      "corruption_recall": 0.34225528669758554,
+      "empty_tile_fpr": 0.0005901727558654032
+    },
+    "b1": {
+      "mf1": 0.3669634994163977,
+      "clean_f1": 0.3927471582466876,
+      "clean_recall": 0.38715220386801996,
+      "corruption_recall": 0.3509422393581448,
+      "empty_tile_fpr": 0.0007512054914309655
+    },
+    "b0e": {
+      "mf1": 0.37552548248848555,
+      "clean_f1": 0.42058990678779773,
+      "clean_recall": 0.4251057994115163,
+      "corruption_recall": 0.3630619042475777,
+      "empty_tile_fpr": 0.0007599990750536506
+    }
+  },
+  "gate": {
+    "passed": false,
+    "checks": {
+      "b0": {
+        "mf1_gain": false,
+        "clean_f1_protected": false,
+        "clean_recall_protected": false,
+        "corruption_recall_protected": true,
+        "empty_fpr_protected": true
+      },
+      "b0e": {
+        "mf1_gain": false,
+        "clean_f1_protected": false,
+        "clean_recall_protected": false,
+        "corruption_recall_protected": false,
+        "empty_fpr_protected": true
+      }
+    },
+    "b1_minus_reference": {
+      "b0": {
+        "mf1": -0.003080023176753044,
+        "clean_f1": -0.023477657951332886,
+        "clean_recall": -0.019569209016433664,
+        "corruption_recall": 0.008686952660559244,
+        "empty_tile_fpr": 0.00016103273556556232
+      },
+      "b0e": {
+        "mf1": -0.008561983072087831,
+        "clean_f1": -0.02784274854111013,
+        "clean_recall": -0.037953595543496366,
+        "corruption_recall": -0.012119664889432946,
+        "empty_tile_fpr": -8.793583622685114e-06
+      }
+    },
+    "decision": "stop_augmentation_claim_and_review_clean_detection",
+    "mechanism_training_authorized": false,
+    "statistical_significance_claim": false
+  },
+  "test_accessed": false,
+  "thresholds": {
+    "minimum_mf1_gain_over_b0e": 0.005,
+    "minimum_mf1_gain_over_b0": 0.005,
+    "maximum_clean_f1_drop": 0.005,
+    "maximum_clean_recall_drop": 0.01,
+    "maximum_corruption_recall_drop": 0.01,
+    "maximum_empty_tile_fpr_increase": 0.0002,
+    "independent_seeds_required_before_mechanism": 3
+  },
+  "new_model_inference": false,
+  "source_summary_sha256": {
+    "b0": "21baa3cede4f12fafb60fae69ac4eb98e5ee4276f9b86c0efe6e327aae2ed414",
+    "b1": "2fc5726586d4713b0161e4f1aa6808646458307738b55dbd65caa20abe024683",
+    "b0e": "84d761463a4542b563e5a81fa24ede37059c4c46ed8e3968c33f78fe0825e71e"
+  },
+  "source_order_sha256": {
+    "b1": "183189389edf6bc081573c10a9d6dd6c06366cccb9ae0905721834946f4f5aab",
+    "b0e": "6628347889693cdf4b71d312bb26a14bde6cd6b7d6afacd6df59e55ad3e4ffa7"
+  },
+  "limitation": "One seed and one validation city without reliable spatial source IDs; no bootstrap or significance claim."
+}

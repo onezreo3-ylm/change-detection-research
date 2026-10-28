@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-24T16:27:21.756748+00:00",
+  "original_32_step_stream_sha256": "a28dbf567c01f9114bb686407521a71a9a2c24bf824efd9ff341a0e8e29839fb",
+  "all_three_real_streams_match_original_metadata": true,
+  "physical_optimizer_attempts": 99,
+  "physical_training_pair_views": 792,
+  "q1_cuda_exact": true,
+  "repeat_exact": true,
+  "next_update_exact": true,
+  "budget": {
+    "estimated_training_seconds_with_margin": 40135.725806442,
+    "available_seconds": 86400,
+    "passed": true,
+    "measured_seconds_per_step": 0.14667741935479553
+  },
+  "rows": [
+    {
+      "label": "original_mean",
+      "successful_updates": 32,
+      "amp_skips": 0,
+      "step_seconds": 0.14616129032266703,
+      "warmup_seconds": 9.702999999994063,
+      "max_allocated_bytes_main_32_step_sequence": 813430272,
+      "max_reserved_bytes_main_32_step_sequence": 987758592
+    },
+    {
+      "label": "proposed_top_half",
+      "successful_updates": 32,
+      "amp_skips": 0,
+      "step_seconds": 0.14667741935479553,
+      "warmup_seconds": 8.656999999999243,
+      "max_allocated_bytes_main_32_step_sequence": 813430272,
+      "max_reserved_bytes_main_32_step_sequence": 987758592
+    },
+    {
+      "label": "proposed_repeat",
+      "successful_updates": 32,
+      "amp_skips": 0,
+      "step_seconds": 0.1461612903224323,
+      "warmup_seconds": 8.485000000000582,
+      "max_allocated_bytes_main_32_step_sequence": 813431296,
+      "max_reserved_bytes_main_32_step_sequence": 987758592
+    }
+  ],
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "pilot_maximum_observed_temperature_c": 61,
+  "charged_seconds": 410.6956326000006
+}

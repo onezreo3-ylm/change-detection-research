@@ -1,0 +1,61 @@
+{
+  "status": "engineering_clean_cuda_smoke_passed",
+  "smoke_only": true,
+  "train_only": true,
+  "val_accessed": false,
+  "test_accessed": false,
+  "gradients_enabled": false,
+  "training": false,
+  "amp": false,
+  "manifest_sha256": "2c32e831bb2b5cf82c19ee91ba4e45d46f5c1dbca19f758426d57d8a3659a4fe",
+  "review_sha256": null,
+  "environment": {
+    "created_utc": "2026-10-07T10:59:15.900021+00:00",
+    "python": "3.11.14 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 18:30:03) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+    "platform": "Windows-10-10.0.26100-SP0",
+    "torch": "2.0.1",
+    "torchvision": "0.15.2",
+    "numpy": "1.26.4",
+    "pillow": "12.0.0",
+    "pyyaml": "6.0.3",
+    "cuda_runtime": "11.7",
+    "cudnn": 8500,
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "seed": 42,
+    "deterministic": true,
+    "num_threads": 4,
+    "cublas_workspace_config": ":4096:8",
+    "source_config": "E:\\new research\\detection\\configs\\valais_clean_full_fp32_seed42_20261002.yaml"
+  },
+  "predictions": 9,
+  "main_predictions": 3,
+  "records": 0,
+  "self_checks": [
+    {
+      "model": "b0",
+      "source_id": "train/1332.tif@x0_y0",
+      "repeat_bitwise_equal": true,
+      "temporal_swap_allclose": true,
+      "max_swap_abs_error": 0.0
+    },
+    {
+      "model": "b1",
+      "source_id": "train/1332.tif@x0_y0",
+      "repeat_bitwise_equal": true,
+      "temporal_swap_allclose": true,
+      "max_swap_abs_error": 0.0
+    },
+    {
+      "model": "b0e",
+      "source_id": "train/1332.tif@x0_y0",
+      "repeat_bitwise_equal": true,
+      "temporal_swap_allclose": true,
+      "max_swap_abs_error": 0.0
+    }
+  ],
+  "elapsed_seconds": 5.25,
+  "maximum_observed_temperature_c": 44,
+  "budget_seconds": 21600
+}

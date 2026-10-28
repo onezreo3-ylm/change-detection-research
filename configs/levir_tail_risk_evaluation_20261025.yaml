@@ -1,0 +1,22 @@
+schema_version: 1
+kind: explicit_risk_flavor_fixed_validation
+workspace_root: ..
+output_dir: runs/levir_tail_risk_evaluation_20261025
+managed_ledger: runs/managed_continuation_20261024/compute_ledger.json
+training_study: configs/levir_tail_risk_control_20261025_iofix.yaml
+benchmark_config: configs/evaluate_corruptions_val_v1.yaml
+reference_validation: runs/levir_b1_corruption_val_v1_seed42
+reference_checkpoint_sha256: c4c0b849081bc5ec5de501b5e5e6c36b07c1c6b7b8ffb403bbeec49d1b1d746d
+runtime_config: configs/levir_tail_risk_eval_runtime_20261025.yaml
+evaluation_wall_limit_seconds: 7200
+bootstrap:
+  replicates: 20000
+  seed: 20261024
+  unit: original_source_pair
+  rng: numpy_default_rng_PCG64_integers_then_multiplicity
+  percentile: linear_two_sided_95
+  chunk_size: 512
+condition_count: 45
+source_count: 64
+held_out_test_open: false
+automatic_retry: false

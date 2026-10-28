@@ -1,0 +1,29 @@
+schema_version: 1
+name: levir_b2_consistency_seed42
+mode: b2
+base_config: E:\new research\detection\runs\phase2_protocol_v1_20260913\base_config.yaml
+protocol_config: E:\new research\detection\runs\phase2_protocol_v1_20260913\candidate_resolved.yaml
+protocol_sha256: 98f5e62efb60fa0cefd17c0191522cb11b0083755f1215484206a8b5e8469296
+severity_review: E:\new research\detection\configs\corruption_v1_acceptance.yaml
+output_dir: E:\new research\detection\runs\levir_b2_consistency_seed42
+expected_source_tiles: 7120
+expected_batches_per_epoch: 1780
+views:
+  primary: clean
+  secondary: perturbed
+  views_per_source: 2
+  concat_order:
+  - clean
+  - secondary
+  optimizer_steps_per_source_batch: 1
+  batchnorm_update: single_forward_clean_then_secondary_then_temporal_concat
+corruption:
+  stream: train
+  view: 0
+  selection: uniform_family_level_direction_date_spatial_per_sample_epoch_view
+consistency:
+  kind: probability_mse
+  weight: 1.0
+  space: probability
+  gradient_flow: symmetric
+selection: clean_val_f1

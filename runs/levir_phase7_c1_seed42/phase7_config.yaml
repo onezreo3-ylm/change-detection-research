@@ -1,0 +1,175 @@
+# User-approved Phase 7 whole-tile action-selector diagnostic. Test remains closed.
+schema_version: 1
+name: phase7_whole_tile_selector_v1_seed42
+status: approved_frozen
+base_config: ../runs/phase2_protocol_v1_20260913/base_config.yaml
+base_config_sha256: 4f621c739a36461a0efafad5285bcbd3e8b425df92ad98aa20a865a46f5017a0
+phase56_config: phase5_6_v1_seed42.yaml
+phase56_config_sha256: 12820dc7753884e54eda461e718fd3aad31f914dbf60333cfbabf413f28ebf40
+frozen_protocol_document: ../docs/PHASE7_PROTOCOL_FOR_REVIEW_2026-09-22.md
+frozen_protocol_document_sha256: 4a41c265600d69a5d5f785873b7b4941a57947efbb43e6a39af46b18231f2c1f
+reviewed_draft_sha256: f1909323547bd0fef02415b312d367bbd6c751f3fead72689bb1a8ea161923f0
+approval: phase7_v1_approval.yaml
+protocol_output_dir: ../runs/phase7_protocol_v1_seed42
+selector_split_manifest: ../runs/phase7_protocol_v1_seed42/selector_split_manifest.json
+descriptor_cache_dir: ../runs/phase7_descriptor_cache_seed42
+preval_seal: ../runs/phase7_protocol_v1_seed42/preval_seal.json
+validation_output_dir: ../runs/levir_phase7_val_seed42
+
+upstream:
+  actor_gate_manifest: ../runs/phase5_6_protocol_v1_seed42/actor_gate_manifest.json
+  actor_gate_manifest_sha256: 778f0a87200760f7c9102388d59bef96f9633e51b6de3334caf0c503447819d1
+  gate_action_manifest: ../runs/phase5_6_protocol_v1_seed42/gate_action_manifest.json
+  gate_action_manifest_sha256: ac7daa655fa9b535748d8628942a832d2ea7a8e23eb3d7768a6dc40065e38796
+  actor_best_checkpoint: ../runs/levir_phase5_actor_b1_seed42/best.pt
+  actor_best_sha256: 20e53ddc95a6e510c8ed988621112965f51669abdcb517bba858b5b8bb095de1
+  actor_status: ../runs/levir_phase5_actor_b1_seed42/status.json
+  actor_status_sha256: 470bfd2d4661632a75adbee6db2ce6263b64bc546391a41d9e73a3fbe3778023
+  actor_guard_completion: ../runs/levir_phase5_actor_b1_seed42/guard_completion.json
+  actor_guard_sha256: 0caf4fee738e104eab9173ff3a49f06c31ec6f5c96c35173af6f35eaeeee7c4a
+  adapter_best_checkpoint: ../runs/levir_phase5_stage2_adapter_seed42/best.pt
+  adapter_best_sha256: 7447184bb1852cb03dd1bebe5e681ea2165d2fae2425348457ad820fe5e103dd
+  adapter_status: ../runs/levir_phase5_stage2_adapter_seed42/status.json
+  adapter_status_sha256: 040bad7b42a53fe5df6195f9973ec1d9d92b8b8c68a5d64466ae4e6d1078ada8
+  adapter_guard_completion: ../runs/levir_phase5_stage2_adapter_seed42/guard_completion.json
+  adapter_guard_sha256: 71cfc27e38d6f4768fce41eae73d93f7ba130a74c64d9906e103269b3ec5242b
+  phase6_action_utility: ../runs/levir_phase6_action_utility_seed42/action_utility.jsonl
+  phase6_action_utility_sha256: 0d6753a8e0fb7a85642f5614f642841a6d797e8fa6382856605e81c7a97fa3ce
+  phase6_clean_actions: ../runs/levir_phase6_action_utility_seed42/clean_actions.jsonl
+  phase6_clean_actions_sha256: fdcf43dced94e9e3afd5dd5ed825b37fc6c86492de5a0c083c1304650d5caadb
+  phase6_status: ../runs/levir_phase6_action_utility_seed42/status.json
+  phase6_status_sha256: 1d708d03fd0432397add9274692a2a4fbfa5084482235b4da13bf120acab890e
+  phase6_gate_decision: ../runs/levir_phase6_action_utility_seed42/gate_decision.json
+  phase6_gate_decision_sha256: dc4307d215e5b7d513d98a922eee5cbaa2219f1715227fb76cecb800cee573fe
+  validation_manifest: ../runs/phase2_protocol_v1_20260913/val_manifest.json
+  validation_manifest_sha256: 951e1498f2d538d55be91ea2629ddde7edf1af6651bf97184db18ce2b7bc0039
+
+split:
+  source_split: train_gate_only
+  gate_sources: 89
+  fit_sources: 71
+  calibration_sources: 18
+  group_size: 5
+  final_group_size: 4
+  ordering: foreground_pixel_count_then_canonical_filename
+  calibration_selection: minimum_sha256_per_group
+  salt: phase7_gate_fit_cal_v1_seed42
+  separator: ascii_backslash_zero
+  fit_tiles: 1136
+  calibration_tiles: 288
+  fit_perturbed_instances: 51120
+  calibration_perturbed_instances: 12960
+
+descriptor:
+  stage_number: 2
+  channels: 128
+  tensors: [symmetric_feature_mean, absolute_feature_difference, symmetric_residual_mean, absolute_residual_difference]
+  statistics: [spatial_mean, spatial_population_std]
+  dimensions: 1024
+  dtype: float32
+  swap_invariant: true
+  include_pixels: false
+  include_action_logits: false
+  include_metadata: false
+  normalization_source: gate_fit_only
+  normalization_weighting: equal_clean_perturbed
+  std_floor: 1.0e-06
+
+selector:
+  variants: [c1, g1, g2, g3]
+  input_dimensions: 1024
+  hidden_dimensions: [128, 64]
+  output_dimensions: 2
+  normalization: layer_norm
+  activation: gelu
+  dropout: 0.0
+  linear_initialization: xavier_uniform
+  linear_bias_initialization: zero
+  layer_norm_scale_initialization: one
+  layer_norm_bias_initialization: zero
+  parameter_count: 139970
+  seed: 42
+
+targets:
+  clean_perturbed_weighting: [0.5, 0.5]
+  g1: [u_obs]
+  g2: [u_obs, u_clean]
+  g3: [u_obs, a_obs]
+  c1: benefit_sign_classification
+  zero_utility_action: a0
+  regression_loss: smooth_l1
+  smooth_l1_beta: 1.0
+  component_weighting: equal_mean
+  target_standardization: weighted_gate_fit_mean_population_std
+  target_std_floor: 1.0e-06
+  c1_class_weighting: inverse_weighted_frequency_expected_weight_one
+
+training:
+  output_dirs:
+    c1: ../runs/levir_phase7_c1_seed42
+    g1: ../runs/levir_phase7_g1_seed42
+    g2: ../runs/levir_phase7_g2_seed42
+    g3: ../runs/levir_phase7_g3_seed42
+  device: cuda
+  dtype: float32
+  amp: false
+  optimizer: adamw
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  adam_betas: [0.9, 0.999]
+  scheduler: cosine
+  min_learning_rate: 1.0e-06
+  batch_perturbed_records: 256
+  drop_last: false
+  epochs: 100
+  attempted_updates_per_epoch: 200
+  attempted_updates_per_variant: 20000
+  grad_clip_norm: 1.0
+  checkpoint_every_epoch: true
+  resume_boundary: complete_epoch
+  checkpoint_selection:
+    regression: calibration_primary_smooth_l1
+    classification: calibration_unweighted_binary_log_loss
+    tie_break: earliest_epoch
+
+policies:
+  constants: [a0_no_correction, a1_shared_stage2_adapter]
+  diagnostic_reference: label_informed_lower_task_loss_actual_action
+  unconstrained_threshold: 0.0
+  paired_harm_score: min_predicted_u_obs_and_u_clean
+  calibration_quantiles: 1001
+  clean_f1_tolerance: 0.0005
+  clean_recall_tolerance: 0.001
+  threshold_objective: calibration_corruption_mf1
+  threshold_ties: [higher_clean_recall, higher_clean_f1, lower_negative_utility_mass, larger_threshold]
+
+evaluation:
+  split: val
+  source_pairs: 64
+  tiles: 1024
+  conditions: 45
+  perturbed_instances: 46080
+  threshold: 0.5
+  bootstrap_unit: original_source_pair
+  bootstrap_replicates: 20000
+  bootstrap_seed: 20260922
+  confidence_level: 0.95
+  min_selector_mf1_gain: 0.0005
+  require_selector_gain_ci_lower_positive: true
+  clean_f1_tolerance: 0.0005
+  clean_recall_tolerance: 0.001
+  corruption_recall_tolerance: 0.001
+  min_paired_target_mf1_gain: 0.0005
+  require_paired_target_gain_ci_lower_positive: true
+  min_g3_over_g2_mf1_gain: 0.0005
+  require_g3_over_g2_ci_lower_positive: true
+
+boundaries:
+  selector_fit_sources: train_gate_fit_only
+  selector_calibration_sources: train_gate_calibration_only
+  validation_use: one_shot_after_preval_seal
+  held_out_test_access: false
+  actor_adapter_frozen: true
+  local_actions: false
+  joint_training: false
+  phase8_to_10: false

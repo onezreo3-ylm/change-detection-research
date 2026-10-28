@@ -1,0 +1,24 @@
+kind: exploratory_saved_train_gate_hard_action_feasibility
+scope: docs/NEW_METHOD_FEASIBILITY_SCOPE_2026-10-27.md
+phase6_dir: runs/levir_phase6_action_utility_seed42
+source_partition: runs/phase7_descriptor_cache_seed42/selector_split_manifest.json
+output_dir: runs/spatial_action_feasibility_20261027
+source_counts:
+  all: 89
+  fit: 71
+  calibration: 18
+tiles_per_source: 16
+tile_pixels: 65536
+condition_count: 45
+levels_per_family: 5
+families: [brightness, contrast, gamma, color_bias, haze, shadow, noise, blur, jpeg]
+threshold: 0.5
+fractional_iteration_limit: 64
+minimum_pixel_bound_gain_over_better_constant: 0.005
+minimum_pixel_minus_optimal_whole_tile_bound: 0.002
+required_partitions: [fit, calibration]
+raw_images_or_labels: false
+checkpoints_or_new_model_inference: false
+new_bootstrap: false
+test_or_martigny_access: false
+publication_or_method_success_claim: false

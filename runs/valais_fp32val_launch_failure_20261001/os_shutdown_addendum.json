@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "external_os_shutdown_corroborated",
+  "prior_audit_sha256": "f8f69e12e917cd953c67c75b4d5b4006c7e433e26b93b6ed31eecacda0f83cde",
+  "evidence_source": "Windows System EventLog, read-only Get-WinEvent",
+  "local_timeline": [
+    {
+      "local_time": "2026-10-01 00:48:56",
+      "observation": "last train log write, epoch1 step275"
+    },
+    {
+      "local_time": "2026-10-01 00:49:06",
+      "observation": "last guard sample, 43C, decision ok"
+    },
+    {
+      "local_time": "2026-10-01 00:49:19",
+      "event_id": 1074,
+      "provider": "User32",
+      "observation": "winlogon.exe on behalf of NT AUTHORITY\\SYSTEM initiated Shutdown Off"
+    },
+    {
+      "local_time": "2026-10-01 00:49:20",
+      "event_id": 6006,
+      "provider": "EventLog",
+      "observation": "event log service stopped"
+    },
+    {
+      "local_time": "2026-10-01 00:49:25",
+      "event_id": 109,
+      "provider": "Microsoft-Windows-Kernel-Power",
+      "observation": "kernel power manager initiated shutdown transition"
+    },
+    {
+      "local_time": "2026-10-01 00:49:26",
+      "event_id": 13,
+      "provider": "Microsoft-Windows-Kernel-General",
+      "observation": "operating system shutdown announced"
+    },
+    {
+      "local_time": "2026-10-01 14:01:16",
+      "observation": "next Windows LastBootUpTime"
+    }
+  ],
+  "disposition": "OS shutdown explains simultaneous process disappearance with no traceback; no checkpoint exists and old output is not resumable. Preserve original, use a distinct run and full preflight for any new attempt.",
+  "test_accessed": false,
+  "observed_utc": "2026-10-01T06:16:26.598544+00:00"
+}

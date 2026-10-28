@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "E:\new research\detection\scripts\levir_tail_risk_supervision.py", line 284, in owner
+    raise RuntimeError("Worker failed with exit code " + str(child.returncode))
+RuntimeError: Worker failed with exit code 1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\new research\detection\scripts\levir_tail_risk_supervision.py", line 491, in <module>
+    main()
+  File "E:\new research\detection\scripts\levir_tail_risk_supervision.py", line 486, in main
+    result = guard_loop(args.runtime, args.mode, args.action) if args.action in ("guard", "watchdog") else globals()[args.action](args.runtime, args.mode)
+                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\scripts\levir_tail_risk_supervision.py", line 312, in owner
+    raise RuntimeError(state.get("error", "Supervisor failed"))
+RuntimeError: RuntimeError: Worker failed with exit code 1

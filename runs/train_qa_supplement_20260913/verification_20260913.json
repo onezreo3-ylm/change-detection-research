@@ -1,0 +1,93 @@
+{
+  "date": "2026-09-13",
+  "status": "engineering_verified_visual_review_pending",
+  "vision_probe": {
+    "status": "images_omitted_in_current_session",
+    "standard_and_explicit_png_attempts_failed": true,
+    "observed_gateway_event_count": 154,
+    "last_observed_event_time": "2026-09-13T14:59:18.471122+08:00",
+    "gateway_model_label": "gpt-6-astra",
+    "historical_success_window": "Previously recorded 14:08-14:19 reads are historical, not proof of the current route",
+    "provider_or_model_changed_by_this_continuation": false,
+    "shared_gateway_restarted": false
+  },
+  "supplement": {
+    "new_train_source_pairs": 12,
+    "positive_tiles_posthoc": 5,
+    "instances": 2160,
+    "preview_sheets": 108,
+    "level5_png_pixel_hashes_verified": 432,
+    "preview_pngs_decoded": 108,
+    "original_frozen_sources": 15,
+    "current_pcdc_sources": 17,
+    "raw_train_files_rechecked": 36,
+    "all_invariants_passed": true,
+    "both_dates_per_sample_family_spatial_mode": true,
+    "local_l5_positive_sample_combinations": 90,
+    "local_l5_combinations_with_any_label_overlap": 63,
+    "local_l5_overlap_by_target": {
+      "A": {
+        "total": 45,
+        "with_overlap": 32
+      },
+      "B": {
+        "total": 45,
+        "with_overlap": 31
+      }
+    },
+    "limitation": "Any label overlap is not full target coverage, observability, or a causal damage annotation."
+  },
+  "tests": {
+    "passed": 145,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 63.784,
+    "command": "python -m unittest discover -s tests -v",
+    "log": "E:/new research/detection/runs/vision_continuation_full_unittest_20260913.log",
+    "sha256": "70f56843893b3ae7f64c9d33d5f7cc5d9d64f937d90bc5c0cb0f86031d6c125b"
+  },
+  "cuda_smoke": {
+    "status": "passed",
+    "kind": "smoke",
+    "config": "configs/smoke_vision_continuation_20260913.yaml",
+    "independent_val_matches": true,
+    "test_evaluated": false,
+    "log_sha256": "d5bdd434884b949e5fc8da202443fe4080259574c1b1539d38cc67291668a8ce"
+  },
+  "guarded_cuda_smoke": {
+    "status": "completed",
+    "kind": "smoke",
+    "conditions": 45,
+    "run": "E:/new research/detection/runs/smoke_guarded_evaluator_verified_20260913",
+    "guard_state_and_commit_marker": "completed",
+    "summary_and_guard_state_commit_hashes_match": true,
+    "callback_count": 93,
+    "temperature_observations": 6,
+    "max_observed_gpu_c": 82,
+    "hard_peak_or_hardware_safety_claim": false,
+    "log_sha256": "b37e153a50ab571a7a6db1103969ea047e7cbde1de61083ad434649ee52e360c"
+  },
+  "integrity": {
+    "raw_files_checked": 36,
+    "raw_files_unchanged": true,
+    "pcdc_sources_checked": 17,
+    "pcdc_sources_unchanged": true,
+    "script_matches_archive": true,
+    "baseline_checkpoint_sha256": "033a0aa14becabc97c60b368b6d7c2e49bc8b386daa61dcc77e761c81ae747f3",
+    "original_manifest_sha256": "951e1498f2d538d55be91ea2629ddde7edf1af6651bf97184db18ce2b7bc0039",
+    "original_instances_sha256": "01c6864811e6f20832dda13a754b5ed524d7be8b7e0d43cd33c41c3e022c4f2c",
+    "supplement_report_sha256": "ff989443f1e4e782b81f11126d5b38c3a18b4adf0bc40982cda0541fab4e1969",
+    "tests_log_sha256": "70f56843893b3ae7f64c9d33d5f7cc5d9d64f937d90bc5c0cb0f86031d6c125b",
+    "cuda_smoke_log_sha256": "d5bdd434884b949e5fc8da202443fe4080259574c1b1539d38cc67291668a8ce",
+    "guarded_smoke_log_sha256": "b37e153a50ab571a7a6db1103969ea047e7cbde1de61083ad434649ee52e360c"
+  },
+  "research_gate": {
+    "acceptance_status": "pending",
+    "visual_review": "not_completed",
+    "real_validation_corruption_scored": false,
+    "real_val_or_test_images_read_by_supplement": false,
+    "new_research_training_started": false,
+    "checkpoint_and_v1_settings_unchanged": true
+  },
+  "next_action": "Restore reliable image delivery and actually inspect original/supplemental training samples, or obtain an explicit genuine human severity review; no automatic approval or real corruption scoring."
+}

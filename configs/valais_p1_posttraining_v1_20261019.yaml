@@ -1,0 +1,27 @@
+schema_version: 1
+parent_study: valais_p1_study_v1_20261014.yaml
+latest_recovery: valais_p1_resume_as_epoch96_20261019.yaml
+previous_as_recovery: valais_p1_resume_as_epoch73_20261019.yaml
+output_dir: ../runs/valais_p1_posttraining_v1_20261019
+b0e_evaluation: ../runs/valais_b0e_fp32_seed42_v1_20261002_val
+p0_manifest: ../runs/valais_coupling_p0_train_qa_v1r1_20261007/manifest.json
+p0_review: ../runs/valais_coupling_p0_train_qa_v1r1_20261007/visual_review.json
+protocol_document: ../docs/P1_POSTTRAINING_PROTOCOL_2026-10-19.md
+minimum_unittests: 352
+validation_max_seconds_per_model: 21600
+residual_max_seconds: 21600
+gates:
+  cs_vs_b0e:
+    minimum_clean_f1_gain: 0.01
+    minimum_clean_recall_gain: 0.02
+    maximum_mf1_drop: 0.005
+    maximum_corruption_recall_drop: 0.01
+    maximum_clean_empty_fpr_increase: 0.0002
+    maximum_corruption_empty_fpr_increase: 0.0002
+  as_vs_cs:
+    minimum_mf1_gain: 0.005
+    maximum_clean_f1_drop: 0.005
+    maximum_clean_recall_drop: 0.01
+    maximum_corruption_recall_drop: 0.01
+    maximum_clean_empty_fpr_increase: 0.0002
+    maximum_corruption_empty_fpr_increase: 0.0002

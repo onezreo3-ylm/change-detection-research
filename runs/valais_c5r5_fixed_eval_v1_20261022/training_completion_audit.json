@@ -1,0 +1,94 @@
+{
+  "status": "passed_completed_40ep_bf16_training_audit",
+  "rows": {
+    "c5": {
+      "role": "c5",
+      "epochs": 40,
+      "optimizer_steps": 110280,
+      "pair_views": 2205000,
+      "source_draws": 441000,
+      "best_epoch": 38,
+      "clean_metrics": {
+        "precision": 0.3960536818072133,
+        "recall": 0.3491724244021065,
+        "f1": 0.3711384319946564,
+        "iou": 0.22785142659430643,
+        "oa": 0.9967833760876003,
+        "tp": 106683,
+        "fp": 162682,
+        "fn": 198848,
+        "tn": 111926027,
+        "pixels": 112394240
+      },
+      "training_flavor": "matched_five_view_baseline_40ep_runtime_v1",
+      "numerical_mapping": {
+        "training_protocol_signature": "513b2f4ec01a0687f6db9a3d06728d450cd9f206f5678bafdcbc13e98cd6582d",
+        "fp32_evaluation_protocol_signature": "b84a496a4c1b91c7dab154543f0b9c94e6987fe5318e5986c654bddd13faebd1",
+        "explicit_differences": [
+          "training_autocast_bfloat16_vs_evaluation_float32",
+          "40ep_vs_historical100ep",
+          "experiment_name_and_output_paths"
+        ],
+        "checkpoint_fields_modified": false
+      },
+      "bound_sha256": {
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\c5\\best.pt": "ebaae51fe93fb61497dbb00f051c07417688ef174aafce7c38c23330e8247843",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\c5\\last.pt": "eb4a538bf72c9413ee59b80704989f3424ae68d20d0ac93ae391bdb4380298a1",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\c5\\status.json": "6af2a25213a387a881fa5bc0f4faca8a50bfb0514d3ee14d17961f8e2f04817e",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\c5\\guard_completion.json": "d70e52c29bc00770fafeba07b398c5b7d1091cf5925bf4395af60ee7723ab512",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\c5\\temperature_guard_state.json": "e8bc718375e175ac6303a816336f99e5263b460889c4441bd21280d2d93d4dc3",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\c5\\history.json": "603ad010378b995ee3570fa4e16fa9595bcab63aab568c56d3b2407e41eaf43e",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\c5\\sampling_actual.json": "c23e8f1a2579e20054ac9a5e191d39b45ffb592b27b36cbf2cb908de2122a7c8",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\c5\\identity.json": "06949c8ace89c3c00ba2b9016c0382752a006e4e4805419ee21eb1e42e376268",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\c5\\base_config.yaml": "3c668f5244805194341cd50cbeee6109c13b897ea391635c4c3bd7b20a73c11d"
+      }
+    },
+    "r5": {
+      "role": "r5",
+      "epochs": 40,
+      "optimizer_steps": 110280,
+      "pair_views": 2205000,
+      "source_draws": 441000,
+      "best_epoch": 21,
+      "clean_metrics": {
+        "precision": 0.3248595293307903,
+        "recall": 0.33058838546661384,
+        "f1": 0.32769892124259875,
+        "iou": 0.19595689161792237,
+        "oa": 0.9963126224262027,
+        "tp": 101005,
+        "fp": 209914,
+        "fn": 204526,
+        "tn": 111878795,
+        "pixels": 112394240
+      },
+      "training_flavor": "matched_five_view_baseline_40ep_runtime_v1",
+      "numerical_mapping": {
+        "training_protocol_signature": "513b2f4ec01a0687f6db9a3d06728d450cd9f206f5678bafdcbc13e98cd6582d",
+        "fp32_evaluation_protocol_signature": "b84a496a4c1b91c7dab154543f0b9c94e6987fe5318e5986c654bddd13faebd1",
+        "explicit_differences": [
+          "training_autocast_bfloat16_vs_evaluation_float32",
+          "40ep_vs_historical100ep",
+          "experiment_name_and_output_paths"
+        ],
+        "checkpoint_fields_modified": false
+      },
+      "bound_sha256": {
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\r5\\best.pt": "68efae6aad6fcd3ce5a2440f83bdac59cf01babc865fb2996e63c1b6964c6b66",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\r5\\last.pt": "12392d605157e3204a2d432604541190f26d21716251cdd8d67dcf9bfed5f94a",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\r5\\status.json": "48ced0071ddf54f2f298623946b55ddba800ff6f22ca1b53d9694c367356661d",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\r5\\guard_completion.json": "a6bfed18a3517aea0c132885c4c7cd23ec9752a7c00c579fcce4237d9a7ad250",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\r5\\temperature_guard_state.json": "9a60f3ed6d671b8c27c52a7ce53886a8b9ca2c099146806b33189cee4469b3a1",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\r5\\history.json": "34062a2e0a8ab35563fcf69af6a3c832387b5198f45ef68fff34756956c0d331",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\r5\\sampling_actual.json": "c23e8f1a2579e20054ac9a5e191d39b45ffb592b27b36cbf2cb908de2122a7c8",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\r5\\identity.json": "0ae0c26b2141884e7938f3906d88820939a07c11ea3c961ed8e06b1dd5f00460",
+        "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\r5\\base_config.yaml": "4314d3ca3c33d09d263f79ff0a9be048de0fe735eaf30dee2acd6bd45fbf7530"
+      }
+    }
+  },
+  "matched_full_actual_source_instance_candidate_streams": true,
+  "test_accessed": false,
+  "checkpoint_fields_modified": false,
+  "extra_training_physical_steps": 210,
+  "extra_training_pair_forward_views": 4158
+}

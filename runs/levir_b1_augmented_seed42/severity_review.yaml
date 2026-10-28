@@ -1,0 +1,12 @@
+# Validation-only approval recorded after a genuine train-only severity review.
+# This sidecar does not authorize training or held-out test evaluation.
+schema_version: 1
+status: approved
+approved_for: validation_only
+protocol_sha256: 98f5e62efb60fa0cefd17c0191522cb11b0083755f1215484206a8b5e8469296
+manifest_sha256: 951e1498f2d538d55be91ea2629ddde7edf1af6651bf97184db18ce2b7bc0039
+instances_sha256: 01c6864811e6f20832dda13a754b5ed524d7be8b7e0d43cd33c41c3e022c4f2c
+checkpoint_sha256: 033a0aa14becabc97c60b368b6d7c2e49bc8b386daa61dcc77e761c81ae747f3
+visual_review: passed
+reviewer: "Codex visual reviewer (current task, 2026-09-13)"
+notes: "Reviewed all 18 original and 108 supplemental train-only contact sheets plus original-resolution L5 outputs for the 289-, 1024-, and 2738-pixel positive examples. L1/L3/L5 severity is visually ordered; the untouched date and geometry stay aligned; local masks are feathered without hard seams; and L5 noise/blur reduce detail without saturation, occlusion, or loss of the identifiable scene/edge target. Approved only for the fixed validation benchmark bound to these hashes. Synthetic haze/shadow/local-JPEG are controlled interventions, not claims of physical realism; brightness/shadow overlap and strong L5 noise/blur remain disclosed limitations."

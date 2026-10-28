@@ -1,0 +1,23 @@
+kind: explicit_synthetic_cpu_temporal_alternatives_mechanism
+protocol: docs/TEMPORAL_ALTERNATIVES_CPU_SCOPE_2026-10-27.md
+proposal: docs/METHOD_TEMPORAL_ALTERNATIVES_PROPOSAL_2026-10-27.md
+output_dir: runs/temporal_alternatives_cpu_yaml_20261027
+device: cpu
+dtype: float32
+amp: false
+engineering_only: true
+real_data_or_checkpoint: false
+optimizer_updates: 0
+seed: 20261027
+num_threads: 2
+input_size: 256
+batch_size: 1
+decoder_channels: 64
+normalization_groups: 8
+synthetic_adapter_final_weight_std: 0.01
+action_boxes: [[2, 8, 2, 8], [2, 8, 24, 30], [24, 30, 2, 8], [24, 30, 24, 30]]
+input_sources:
+  - pcdc/local_feature_replay.py
+  - pcdc/bound_local_actions.py
+  - pcdc/model.py
+  - pcdc/phase5_models.py

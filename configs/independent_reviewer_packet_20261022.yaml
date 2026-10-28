@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "workspace_root": "..",
+  "source_manifest": "runs/research_direction_screen_20261022/review_samples.json",
+  "preview_manifest": "runs/research_direction_screen_20261022/train_review_preparation.json",
+  "review_guide": "docs/TRAIN_REVIEWER_GUIDE_2026-10-22.md",
+  "previous_closeout": "runs/natural_change_review_20261022/closeout.json",
+  "output_dir": "outputs/01a1636c-d6e2-7f83-9fd3-5d68f7dfec2c/independent_review",
+  "expected_sources": 24,
+  "workbook_name": "建筑变化独立复核.xlsx",
+  "archive_name": "独立复核资料包.zip",
+  "sheet_name": "复核",
+  "verdicts": [
+    {
+      "label": "变化与标注相符",
+      "code": "observable_change_consistent_with_label",
+      "meaning": "可见建筑结构变化与主要白色标注大体对应。"
+    },
+    {
+      "label": "疑似标注或时点问题",
+      "code": "suspected_image_label_timing_or_extent_disagreement",
+      "meaning": "存在范围、施工状态或时点疑点，需要写明证据。"
+    },
+    {
+      "label": "触边难判断",
+      "code": "tile_edge_context_insufficient",
+      "meaning": "目标在图块边缘，缺少块外上下文。"
+    },
+    {
+      "label": "看不清或证据不足",
+      "code": "insufficient_visual_evidence",
+      "meaning": "遮挡、阴影、细节或任务定义不足，保留待定。"
+    },
+    {
+      "label": "空标签基本合理",
+      "code": "unchanged_consistent_with_empty_label",
+      "meaning": "对空标签样本，未见明显建筑新增或拆除。"
+    }
+  ],
+  "prior_context_options": [
+    "未看过相关结果",
+    "看过AI或模型结果"
+  ],
+  "user_confirmed_reviewer_resource_available": true,
+  "reviewer_identity_assigned": false,
+  "all_human_verdicts_remain_blank": true,
+  "include_model_predictions_or_ai_verdicts": false
+}

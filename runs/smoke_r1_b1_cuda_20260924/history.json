@@ -1,0 +1,86 @@
+[
+  {
+    "epoch": 1,
+    "learning_rate": 0.001,
+    "train": {
+      "loss": {
+        "total": 1.5054957866668701,
+        "supervised": 1.5054957866668701,
+        "bce": 0.7276423573493958,
+        "dice": 0.7778534889221191,
+        "consistency": 0.0
+      },
+      "metrics": {
+        "precision": 0.1601778656126482,
+        "recall": 0.79150390625,
+        "f1": 0.26643655489809337,
+        "iou": 0.15369299326822794,
+        "oa": 0.4552001953125,
+        "tp": 3242,
+        "fp": 16998,
+        "fn": 854,
+        "tn": 11674,
+        "pixels": 32768
+      },
+      "clean_metrics": {
+        "precision": 0.17575095576187874,
+        "recall": 0.78564453125,
+        "f1": 0.2872444880835491,
+        "iou": 0.1677089847821555,
+        "oa": 0.51263427734375,
+        "tp": 1609,
+        "fp": 7546,
+        "fn": 439,
+        "tn": 6790,
+        "pixels": 16384
+      },
+      "secondary_metrics": {
+        "precision": 0.14731619305367613,
+        "recall": 0.79736328125,
+        "f1": 0.2486865148861646,
+        "iou": 0.142,
+        "oa": 0.39776611328125,
+        "tp": 1633,
+        "fp": 9452,
+        "fn": 415,
+        "tn": 4884,
+        "pixels": 16384
+      },
+      "source_samples": 4,
+      "pair_views": 8,
+      "optimizer_steps": 1,
+      "amp_skipped_steps": 0,
+      "exposure_counts": {
+        "blur|l2|neutral|B|local": 1,
+        "gamma|l5|darken|A|global": 1,
+        "jpeg|l3|neutral|A|local": 1,
+        "jpeg|l4|neutral|A|global": 1
+      },
+      "exposure_stream_sha256": "54f710c9b7b041db441a2036b7ea1d285746efa10eba53445a3410a8e8e03a15",
+      "seconds": 1.0939999999973224
+    },
+    "val": {
+      "loss": {
+        "total": 1.3989300727844238,
+        "bce": 0.5689941644668579,
+        "dice": 0.8299358487129211
+      },
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "iou": 0.0,
+        "oa": 0.8724365234375,
+        "tp": 0,
+        "fp": 21,
+        "fn": 1024,
+        "tn": 7147,
+        "pixels": 8192
+      },
+      "samples": 2,
+      "optimizer_steps": 0,
+      "amp_skipped_steps": 0,
+      "seconds": 0.046999999998661224
+    }
+  }
+]

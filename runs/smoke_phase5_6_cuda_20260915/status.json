@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "kind": "engineering_smoke_not_research",
+  "real_data_split": "train_actor_and_train_gate_only",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "phase56_fingerprint": "76bf9fde5c2be22f92d552be18be6f92398c539b4ccefc01c076a4e756377e89",
+  "initial_model_tensor_sha256": "eb4fa2550e47d732c5b21acb6899ba5539856bee35b532da58006f56108001a8",
+  "actor_batch": {
+    "samples": 4,
+    "optimizer_steps": 1
+  },
+  "adapter_batch": {
+    "samples": 4,
+    "optimizer_steps": 1
+  },
+  "phase6_batch": {
+    "condition": "brightness_l1",
+    "samples": 32,
+    "finite_utilities": true,
+    "pixels": 2097152
+  },
+  "detector_gradients_after_adapter": 0,
+  "test_evaluated": false,
+  "research_result": false,
+  "temperature_guard": {
+    "status": "completed",
+    "config_sha256": "0ee2d8259f4e74dd38bf329a890862fbaf6f53ee80a37884f517a28a84e45216",
+    "source_sha256": {
+      "scripts/__init__.py": "00241d069e1be186a6dd6f320846d7bb888099a977ef80a3c14021e1e0ee7f9f",
+      "scripts/evaluate_guarded.py": "ee204f3026208c9a9a6b39e3d23ba31bb559ca27b3a002e7ef9722d33b59eb80",
+      "scripts/temperature_guard.py": "f5693454ccbf3b1fa3188605a52b3363442432116c4958245615b2ecf9122763"
+    }
+  },
+  "guarded_completion_required": true
+}

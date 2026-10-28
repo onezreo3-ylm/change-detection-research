@@ -1,0 +1,63 @@
+{
+  "status": "passed_saved_training_commits_exit_guard_and_stream_audit",
+  "checked_utc": "2026-10-22T04:21:10.673868+00:00",
+  "roles": {
+    "c5": {
+      "epochs": 40,
+      "optimizer_steps": 110280,
+      "pair_views": 2205000,
+      "source_draws": 441000,
+      "best_epoch": 38,
+      "best_clean_metrics": {
+        "precision": 0.3960536818072133,
+        "recall": 0.3491724244021065,
+        "f1": 0.3711384319946564,
+        "iou": 0.22785142659430643,
+        "oa": 0.9967833760876003,
+        "tp": 106683,
+        "fp": 162682,
+        "fn": 198848,
+        "tn": 111926027,
+        "pixels": 112394240
+      },
+      "worker_seconds": 14780.171999999962,
+      "cumulative_role_seconds_including_engineering": 15078.031999999948,
+      "maximum_observed_temperature_c": 83,
+      "guard_hashes_and_zero_exit_verified": true,
+      "completed_utc": "2026-10-21T11:52:22.901008+00:00"
+    },
+    "r5": {
+      "epochs": 40,
+      "optimizer_steps": 110280,
+      "pair_views": 2205000,
+      "source_draws": 441000,
+      "best_epoch": 21,
+      "best_clean_metrics": {
+        "precision": 0.3248595293307903,
+        "recall": 0.33058838546661384,
+        "f1": 0.32769892124259875,
+        "iou": 0.19595689161792237,
+        "oa": 0.9963126224262027,
+        "tp": 101005,
+        "fp": 209914,
+        "fn": 204526,
+        "tn": 111878795,
+        "pixels": 112394240
+      },
+      "worker_seconds": 14877.468999999983,
+      "cumulative_role_seconds_including_engineering": 15165.406999999977,
+      "maximum_observed_temperature_c": 83,
+      "guard_hashes_and_zero_exit_verified": true,
+      "completed_utc": "2026-10-21T16:00:24.672446+00:00"
+    }
+  },
+  "matched_full_actual_source_instance_candidate_streams": true,
+  "clean_r5_minus_c5": -0.04343951075205765,
+  "r5_clean_protection_passed": false,
+  "worker_training_hours": 8.238233611111095,
+  "training_and_all_engineering_hours": 8.400955277777758,
+  "original_c5_worker_restarted": false,
+  "new_model_inference": false,
+  "test_accessed": false,
+  "pending": "Explicit new flavor and precision checkpoint adapter, original 45-condition val and fixed train residual."
+}

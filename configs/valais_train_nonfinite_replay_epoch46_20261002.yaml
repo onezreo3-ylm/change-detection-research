@@ -1,0 +1,33 @@
+schema_version: 1
+kind: isolated_train_numeric_replay
+study_config: valais_clean_fp32val_seed42_relaunch_20261001.yaml
+study_config_sha256: febae7befad0d4ea52281eaf9502b7ea0cafbb7c1f74e72f431b8f0f6626328e
+checkpoint: ../runs/valais_clean_fp32val_seed42_relaunch_20261001/last.pt
+checkpoint_sha256: e9f0bdc9955af247d6138c5efbffe28b1dbf5f0dcaff010b83540f32293d15e4
+failure_audit: ../runs/valais_fp32val_train_nonfinite_20261001/audit.json
+failure_audit_sha256: 58642ffca1155b5d389b03e20c7a4b0ae1426d6d84a42f17384aaabe754bd76a
+output_dir: ../runs/valais_train_nonfinite_replay_epoch46_20261002
+source_epoch: 45
+replay_epoch: 46
+max_train_step: 1375
+expected_prefix_loss:
+  1: 0.000045
+  275: 0.091539
+  550: 0.090347
+  825: 0.087594
+  1100: 0.091178
+expected_overflow:
+  step: 480
+  scale_before: 131072
+  scale_after: 65536
+failure_window: [1101, 1375]
+test_access: forbidden
+guard:
+  gpu_index: 0
+  gpu_uuid: GPU-8ada1895-7628-bb88-1dda-c57679117fa2
+  confirmed_pause_c: 85
+  immediate_pause_c: 86
+  poll_seconds: 10
+  confirmation_seconds: 5
+  confirmation_samples: 3
+  max_sensor_failures: 3

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\new research\detection\scripts\recover_b0e_analysis_serialization.py", line 159, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "E:\new research\detection\scripts\recover_b0e_analysis_serialization.py", line 156, in main
+    print(json.dumps(globals()[a.action](),allow_nan=False))
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\scripts\recover_b0e_analysis_serialization.py", line 120, in recover
+    complete=strict_bytes(result);require_same_prefix(saved,complete)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\scripts\recover_b0e_analysis_serialization.py", line 40, in require_same_prefix
+    if not complete.startswith(partial):raise ValueError('Serialized numeric prefix differs from the original failed computation')
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Serialized numeric prefix differs from the original failed computation

@@ -1,0 +1,160 @@
+{
+  "training_flavor": "matched_five_view_baseline_40ep_runtime_v1",
+  "role": "c5",
+  "study_config_sha256": "56003d25dc42b6e95d014d27b2e6628a7f0267726dcb16ff81af2a70da65dee9",
+  "implementation_sha256": {
+    "pcdc/__init__.py": "0297caa54f1b6236d4bd3b0320066b4b305db85b4c401c3ae59f6522413b8f31",
+    "pcdc/__main__.py": "bdaf64a7541d8b22cf0d163aaaf05936da513fb920afc9b7e0d205a7d198f4d7",
+    "pcdc/benchmark.py": "1d55fb76c3d2f2b9c5a243d343e49a7381d7536af31b5080521d211f955af941",
+    "pcdc/config.py": "4001e618f842a9c424c795a8a0df442acbc0e0da297490983989621c531f8a6e",
+    "pcdc/corruption_protocol.py": "680f5841379b38c24835c8a5feaff916b73c3a9333dbb7eadbfd09d7137e0320",
+    "pcdc/data.py": "e0bcd0c438b61dba6fbbe8a0fa8600c4ce2d72275b9c56f130d1a5e7cd748a7b",
+    "pcdc/engine.py": "58c4861942950f2638b612d94dbdf8fbeb0b90103907d7f5fc818b82e81306d0",
+    "pcdc/evaluate_candidate.py": "7d015a670e6d95b5c38a0cdc99763b7d5d61e173c6f78e75d8c282e86e963282",
+    "pcdc/evaluate_corruptions.py": "7ec517ed10ac7f1430f9f2495a26ada5b8458f2c231590f8f12bff6dd7f1e46a",
+    "pcdc/frozen_validation.py": "a0ec776bf6d4b5058fd6416e33734f6bda3332b6c9280ea3581f7b67f7d38a66",
+    "pcdc/inspect_labels.py": "90cad8f41dbbca8b9acc6003aa4dda5ab65c7a01ae1a62b8416f56de8f2f43b4",
+    "pcdc/losses.py": "a663686b4b4ef83e81685f26f1e55ea209c1b3d491b7f3afbd1ebf725fc3b2cb",
+    "pcdc/metrics.py": "e84f2e3062b2ee97cbeddd54ea875bd3ac61d158a84dbf60992ea7ec1083c55e",
+    "pcdc/model.py": "6964aa3b8ef4c593a7a6e61e2d01ebdec0b69054eacd34c814af3f1f14a6573f",
+    "pcdc/perturbations.py": "665e97a12de8a3ed3de011099b88c0cbe8e2de81db878db72cb0c04b6f94d22b",
+    "pcdc/phase5_models.py": "c898ad454e21b5c00e4010983d2e2d1d79ac5da9e1e748925e3b94dbacad9e52",
+    "pcdc/phase5_protocol.py": "b3e4da0636d7e15597f95cdd6ef7a818e577276b6b41b410a637cefe3de8bca6",
+    "pcdc/phase5_training.py": "ca3b187d47a979d47b8080d1bbf909a478cfaebf3b495f26f637b20758b1d4de",
+    "pcdc/phase6_diagnostic.py": "2d5ea22f7796c8af889fd08f9c4ea992860c49224f7abe17e66741f10039c015",
+    "pcdc/phase7_cache.py": "e6fe2e0e9b7fccec4b9c83f84b7706ea93d592992bbce5ba5fcdedc35ec8db7b",
+    "pcdc/phase7_evaluation.py": "562d88adfa92fa4dcf696d604b26f12470d101a0356c923215588b622267be07",
+    "pcdc/phase7_models.py": "9420dcc0d27056458611a0b60cb585a6c262e67601d9e7a72957fbf1b9b010c7",
+    "pcdc/phase7_protocol.py": "6f6669f49ed99408b0a6cec8991eb01b5396dc530d3d7e1b9dfe96549fc371da",
+    "pcdc/phase7_training.py": "67c1b5e2f038bfbafc80eb8c1193440951e91f8131df5d810357ef6880e13ed6",
+    "pcdc/prepare_corruptions.py": "869731ee01574cbfb5b01296dca27cfc502a7b980dde1f46006fc6e2261116ec",
+    "pcdc/robust_baselines.py": "4d89a634583554c7270dc987baa795245a9237e5cbd8e6b77e11fef30152970f",
+    "pcdc/runtime.py": "60fc6429ac113a00f5d067d1c8d12d8435c56691fb331b73f7825a4f9aa216f5",
+    "pcdc/smoke.py": "9cc354fd3d9a29a9d3386629eb8ef94e755c7cb99fa0bfd2885e694fc5a0a7ef",
+    "scripts/five_view_baselines.py": "d30c0176f7ddb3f850224e94cfeb0c521e969948cc17c8ec70c3f775f68e2a15",
+    "scripts/valais_c5r5_study.py": "7470dc757832d90f91dc20ea840e3e319b4a3926245483ab1224616cbfb70f8a",
+    "scripts/evaluate_coupling_p0.py": "0ff21337149a4a1a6a836a2fb205c6141b2451623772c6f15f01faa00f9dc2f6",
+    "scripts/prepare_coupling_p0.py": "8114f3befafb83bcb0c34ab22d8d74e45de2fb0559bf462192893c426136f763",
+    "scripts/coupling_diagnostic.py": "0bc8c2e682eee1dab921c56b30ebb0a8c7d127d5c6775b124ee3844c337c86bd",
+    "scripts/evaluate_guarded.py": "ee204f3026208c9a9a6b39e3d23ba31bb559ca27b3a002e7ef9722d33b59eb80",
+    "scripts/temperature_guard.py": "f5693454ccbf3b1fa3188605a52b3363442432116c4958245615b2ecf9122763",
+    "scripts/p1_process_state.py": "bf931931aef276d7e339a1d3bdeea8a7a3e2f75820718551ebcdfceca3ae4804",
+    "scripts/run_valais_clean_guarded.py": "5b5075c2d89d19dbeb509b8f310d1dadda1fe3ee7ec71fbde3d52d0342b118b8",
+    "scripts/c5r5_40ep_identity.py": "2f219a62a812a0b5c2df6cbcc125ce441ea98dd797b6bff123cdfe1b631cce0b",
+    "scripts/five_view_40ep.py": "c4ee0444189e45fdcfdc6409f49d68f244291d03d6155a611d97698972e3c873",
+    "scripts/valais_c5r5_40ep.py": "cf8d7345f3d74c615c7a7f05c8e6bb00f62d9865b8088c3f49e4f4edd24aea8e",
+    "scripts/c5r5_runtime_identity.py": "bb2e3816ffe5c17ae360b2e58e88088a493f8353cd7f818d0b52997b94dbf33b",
+    "scripts/five_view_40ep_runtime.py": "7dfcc466da3ed51edeb99083468e2ce85fc41b4b99c0d99af2e9891607d81c26",
+    "scripts/valais_c5r5_runtime.py": "8006f3f51214fdd34dce3156297492828baf74dfa7a97329b6d93bf1960cce26",
+    "scripts/five_view_speed.py": "0f3652f158b4fbbfd6a9c7a550cf7317489e44ded4b1063452fb72b080122dc2",
+    "scripts/profile_five_view_speed.py": "f1312e12260a66af8d1bfb23e017c0edd0b3d3aef239524ce79011d20ababd05",
+    "scripts/five_view_bf16.py": "71bb1eefc721d32fb45832c594802a639ba661c69792ec4b942b02555db8b488",
+    "scripts/profile_five_view_bf16.py": "1827c17397fc0970b16f9f2de08c7021e059af2e4f6be8e6ec1d7451adaad308"
+  },
+  "base_protocol_signature": "513b2f4ec01a0687f6db9a3d06728d450cd9f206f5678bafdcbc13e98cd6582d",
+  "base_training_values": {
+    "experiment": {
+      "name": "valais_uniform_c5r5_40ep_runtime_v1_20261020_c5",
+      "kind": "research",
+      "seed": 42,
+      "output_dir": "E:\\new research\\detection\\runs\\valais_c5r5_40ep_runtime_v1_20261020\\c5"
+    },
+    "runtime": {
+      "device": "cuda",
+      "deterministic": true,
+      "num_threads": 4,
+      "memory_format": "channels_last"
+    },
+    "data": {
+      "root": "E:\\thesis\\datasets\\ValaisCD-candidate\\prepared_v2",
+      "splits": {
+        "train": "train",
+        "val": "val",
+        "test": "test"
+      },
+      "folders": {
+        "image_a": "A",
+        "image_b": "B",
+        "mask": "label"
+      },
+      "extensions": [
+        ".tif"
+      ],
+      "expected_pairs": {
+        "train": 11025,
+        "val": 1715,
+        "test": null
+      },
+      "expected_image_size": 256,
+      "tile_size": 256,
+      "label_values": [
+        0,
+        1
+      ],
+      "label_decode": "strict_values",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "model": {
+      "encoder_weights": null,
+      "weights_cache": "E:\\new research\\detection\\weights\\torch_hub",
+      "decoder_channels": 64,
+      "normalization_groups": 8
+    },
+    "research": {
+      "pse": false,
+      "pcdc": false,
+      "cpc": false
+    },
+    "train": {
+      "epochs": 40,
+      "batch_size": 4,
+      "eval_batch_size": 32,
+      "num_workers": 4,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "adam_betas": [
+        0.9,
+        0.999
+      ],
+      "min_learning_rate": 1e-06,
+      "amp": true,
+      "grad_clip_norm": 1.0
+    },
+    "loss": {
+      "bce_weight": 1.0,
+      "dice_weight": 1.0,
+      "dice_smooth": 1.0
+    },
+    "evaluation": {
+      "threshold": 0.5,
+      "checkpoint_metric": "f1",
+      "run_test_after_training": false
+    }
+  },
+  "data_audit_sha256": "670d7d29361125e291d637f9fb9be44df31b67912dc2af837d719f6c4ae2cd87",
+  "data_files_sha256": "e70e15d30d877e3af33ab0e57ab07b699ffc2cbccb35bef48a5b8d1fbae799a2",
+  "manifests_sha256": "8f3abb833efae1bf52fd0f7bad7edd930d62cbb8b41eabb74893673548d148a0",
+  "sampling_plan_sha256": "917e7a5b88bc53b71253a5b7a645cbbe4e171179597f1fc4e671b6d8f8e848cf",
+  "initial_model_tensor_sha256": "eb4fa2550e47d732c5b21acb6899ba5539856bee35b532da58006f56108001a8",
+  "selection": "first_highest_clean_val_f1",
+  "epochs": 40,
+  "cosine_tmax": 40,
+  "optimization_mode": "bf16_training_fp32_validation",
+  "training_autocast_dtype": "bfloat16",
+  "parameter_optimizer_loss_dtype": "float32",
+  "validation_dtype": "float32",
+  "grad_scaler": null,
+  "runtime_equivalence_report_sha256": "1763fefb4a4c4843896882762aa81bb3dbeea47d3184edbdf04bd84b349ace51",
+  "bf16_engineering_report_sha256": "53f6c4bee8ebf42882fd278a1ebf92e7dd64b346f6587256eb94ff5168d5683a",
+  "parent_identity_sha256": "24f41e7486c9f4bc28793932f63c8877d6f125b79bc4d898c3e7492524e1cb29",
+  "historical_b0e_100ep_is_unmatched_context": true
+}

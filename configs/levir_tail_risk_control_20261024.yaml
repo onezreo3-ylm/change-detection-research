@@ -1,0 +1,77 @@
+schema_version: 1
+kind: ordinary_training_risk_control_not_new_method
+status: protocol_fixed_engineering_implementation_pending
+workspace_root: ..
+reference_robust_config: configs/robust_b1_seed42.yaml
+reference_run: runs/levir_b1_augmented_seed42
+reference_validation: runs/levir_b1_corruption_val_v1_seed42
+output_dir: runs/levir_tail_risk_control_20261024
+protocol: docs/LEVIR_TAIL_RISK_CONTROL_PROTOCOL_2026-10-24.md
+managed_ledger: runs/managed_continuation_20261024/compute_ledger.json
+reference_strategy: reuse_if_core_code_initial_state_and_exposure_identity_verified_else_stop_and_record_new_control_requirement
+candidate:
+  name: b1_secondary_empirical_top_half_loss_seed42
+  seed: 42
+  epochs: 100
+  cosine_t_max: 100
+  loss:
+    per_sample: original_bce_plus_soft_dice
+    primary_clean_weight: 0.5
+    primary_clean_reduction: mean_all_sources
+    secondary_weight: 0.5
+    secondary_reduction: empirical_upper_tail_mean
+    upper_tail_fraction: 0.5
+    count_rule: ceil_fraction_times_source_batch_size
+    deterministic_ties: original_sample_index
+  initialization_sha256: eb4fa2550e47d732c5b21acb6899ba5539856bee35b532da58006f56108001a8
+  source_tiles_per_epoch: 7120
+  attempted_steps_per_epoch: 1780
+  total_attempted_steps: 178000
+  pair_views: 1424000
+  amp: original_fp16
+  parameters_and_loss_accumulation: fp32
+  batchnorm: original_single_joint_clean_secondary_temporal_forward
+  inference_threshold: 0.5
+  checkpoint_selection: original_clean_validation_f1
+engineering:
+  real_cuda_steps_per_loss: 32
+  losses_to_check: [original_mean, proposed_top_half]
+  require_equal_initial_state: true
+  require_q1_mean_gradient_identity: true
+  require_repeat_and_next_update_replay: true
+  require_original_source_and_instance_stream: true
+  require_batch_and_tail_sample_shapes: true
+  allowance_fraction: 0.25
+  per_epoch_validation_save_allowance_seconds: 60
+  training_authorization_created_only_after_checks: true
+budgets:
+  batch_upper_bound_gpu_hours: 48
+  single_training_upper_bound_hours: 24
+  charge_pilot_and_discarded_compute: true
+  include_prior_managed_diagnostic_cost: true
+  automatic_extension: false
+  no_automatic_precision_substitution: true
+evaluation:
+  original_45_condition_validation_only: true
+  tail_k_conditions: 5
+  compute_tail_separately_per_model_from_all_45: true
+  mean_corruption_f1_min_delta: -0.0005
+  clean_f1_min_delta: -0.0005
+  pooled_corruption_recall_min_delta: -0.001
+  pooled_background_fpr_max_delta: 0.0001
+  worst_five_mean_f1_min_delta: 0.002
+  worst_single_condition_f1_min_delta: 0.002
+  bootstrap_unit: original_source_pair
+  source_pair_bootstrap_replicates: 20000
+  bootstrap_seed: 20261024
+  require_worst_five_delta_lower_95_bound_positive: true
+  single_seed_success_only_admits_review_of_seed43_44_replication: true
+  checkpoint_flavor_must_explicitly_identify_risk_objective: true
+  do_not_relabel_as_original_matched_robust_baseline: true
+boundaries:
+  new_model_architecture: false
+  new_corruption_operators_or_severities: false
+  original_test_and_martigny_access: false
+  new_datasets: false
+  new_method_or_novelty_admitted: false
+  training_currently_started: false

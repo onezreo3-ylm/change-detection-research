@@ -1,0 +1,107 @@
+{
+  "status": "native512_completed_grouped256_formal_training_running",
+  "checked_utc": "2026-10-25T17:07:18.059133+00:00",
+  "checked_beijing": "2026-10-26T01:07:18.059133+08:00",
+  "identity_check": "All4new bound processes verified active by grouped256 monitor this turn. Completed native512 PIDs were not polled.",
+  "process_identity": {
+    "owner": {
+      "process_id": 35224,
+      "creation_time_ticks": 134374214736405540,
+      "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+      "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision owner --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode grouped256",
+      "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+    },
+    "worker": {
+      "process_id": 28148,
+      "creation_time_ticks": 134374214749487065,
+      "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+      "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision worker --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode grouped256",
+      "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+    },
+    "guard": {
+      "process_id": 16256,
+      "creation_time_ticks": 134374214753572395,
+      "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+      "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision guard --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode grouped256",
+      "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+    },
+    "watchdog": {
+      "process_id": 28620,
+      "creation_time_ticks": 134374214757646929,
+      "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+      "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision watchdog --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode grouped256",
+      "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+    }
+  },
+  "owner": {
+    "status": "running",
+    "mode": "grouped256",
+    "research_training": true,
+    "updated_utc": "2026-10-25T17:07:16.752153+00:00",
+    "automatic_retry": false,
+    "allowed_wall_seconds": 86158.88306610001,
+    "elapsed_seconds": 162.98499999998603
+  },
+  "progress": {
+    "stage": "grouped256_train",
+    "epoch": 1,
+    "step": 966,
+    "steps_in_stage": 1780,
+    "completed_training_attempts": 966,
+    "amp_skips_in_stage": 0,
+    "consecutive_amp_skips": 0,
+    "amp_scale": 65536.0,
+    "numeric_alert": false,
+    "updated_utc": "2026-10-25T17:07:18.038560+00:00",
+    "stage_elapsed_seconds": 156.04699999999139,
+    "actual_source_batch_shape": [
+      4,
+      1,
+      256,
+      256
+    ]
+  },
+  "guard": {
+    "status": "monitoring",
+    "role": "guard",
+    "updated_utc": "2026-10-25T17:07:17.307841+00:00",
+    "gpu": {
+      "uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+      "temperature_c": 75,
+      "utilization_percent": 98,
+      "memory_used_mib": 2508
+    },
+    "temperature_c": 75,
+    "maximum_observed_temperature_c": 75,
+    "sensor_error": null,
+    "decision": "ok"
+  },
+  "watchdog": {
+    "status": "monitoring",
+    "role": "watchdog",
+    "updated_utc": "2026-10-25T17:07:16.430712+00:00"
+  },
+  "committed_training": {
+    "status": "running",
+    "training_started": true,
+    "arm": "grouped256",
+    "epoch": 0,
+    "epochs": 100,
+    "optimizer_steps": 0,
+    "amp_skipped_steps": 0,
+    "updated_utc": "2026-10-25T17:04:41.997453+00:00",
+    "test_evaluated": false
+  },
+  "initialization_identity_verified_before_first_update": true,
+  "native512_completion_verification": "native512_completion_verification.json",
+  "paired_effectiveness_comparison_completed": false,
+  "first_control_epoch_verified": false,
+  "extra_test_or_evaluation_started": false,
+  "remaining_queue": [],
+  "budget": {
+    "shared_charged_seconds": 61116.68496399996,
+    "shared_limit_seconds": 172800,
+    "new_study_charged_seconds": 29704.711933899962,
+    "new_study_limit_seconds": 129600
+  }
+}

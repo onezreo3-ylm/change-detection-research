@@ -1,0 +1,45 @@
+{
+  "status": "passed_CPU_all_actions_recover_all_subset_outputs",
+  "actual_device": "cpu",
+  "actual_dtype": "torch.float32",
+  "real_data_or_checkpoint": false,
+  "actual_forwards": {
+    "encoder": 1,
+    "adapter": 2,
+    "decoder": 21
+  },
+  "all_four_single_outputs_bit_exact": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "all15_actual_subset_outputs_recovered_bit_exact": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "nonzero_single_changed_logit_positions": [
+    12167,
+    12168,
+    12168,
+    12168
+  ],
+  "deployed_dense_decoder_calls_preaction_predict_then_selected": 2,
+  "deployed_dense_decoder_calls_all_actions_then_postselect": 2,
+  "dense_decoder_call_saving_established": false,
+  "method_novelty_or_effectiveness": false,
+  "elapsed_seconds": 2.3575330000021495
+}

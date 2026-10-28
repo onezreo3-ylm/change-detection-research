@@ -1,0 +1,52 @@
+# New, evaluation-only R1E freeze under the user's standing delegated judgment.
+# Original R1 source and pre-validation seal remain immutable; no corruption
+# validation score was observed before this correction was defined.
+schema_version: 1
+status: approved
+protocol_document: ../docs/R1E_REPLICATION_EVALUATION_RECOVERY_PROTOCOL_2026-09-26.md
+protocol_document_sha256: 1810c19a1c77caf45826ee75f48b1cdfeb7f0f8d7fea3925ab2e88c0bfc67104
+original_r1_seal: ../runs/r1_protocol_v1_20260924/preval_seal.json
+original_r1_seal_sha256: 55a4454f2c34162871f4f7082e7282c57a27eaae347ef79547e4eae21743edbf
+original_r1_approval: r1_v1_approval.yaml
+original_r1_approval_sha256: 14df22d35ef63cbd547c32a4b480f03ac51d80afc7c33f5dd348b62152d2f995
+new_source_sha256:
+  scripts/r1e_evaluation.py: 8ef753bc02b8f32f2105ac34981d806d8a1dfdbac63e6db7ff5167cf689d7708
+  scripts/evaluate_r1e_guarded.py: 938c73bb1e1d14fde9231bc986bc738ec4c86c193eff3a029e85752aa9d6d51b
+runs:
+  b1_43:
+    candidate_config: r1e_evaluate_b1_seed43.yaml
+    candidate_config_sha256: da67cfb43da1f5440ad84443dd414588738bc957609a23616170ec351cb9a3c0
+    training_config: r1_b1_seed43.yaml
+    training_config_sha256: 0267b49d8b0309f3a1573d108c7cea661b02cc359ab4c846f27275fcb0ad980d
+    reference_training_config: robust_b1_seed42.yaml
+    reference_training_config_sha256: b2ee6636080f171b3d67cfa5867237a7c79d82b37f4a4a80c1021879ffe17c71
+    training_seed: 43
+    train_stream_seed: 310945
+  b2_43:
+    candidate_config: r1e_evaluate_b2_seed43.yaml
+    candidate_config_sha256: f30e31bf9ccdd1ecc1671ec3f83998f9f6d16943ac1814d027c0a7717c407158
+    training_config: r1_b2_seed43.yaml
+    training_config_sha256: a23707732229c2ddbd05086ba973128a7bb05e6b4f29bbf535d13d56ac6f35c5
+    reference_training_config: robust_b2_seed42.yaml
+    reference_training_config_sha256: 7a1fedb28026e2fdc085e222364e78323bf2ff051851bbc36cedaecf12ace363
+    training_seed: 43
+    train_stream_seed: 310945
+  b1_44:
+    candidate_config: r1e_evaluate_b1_seed44.yaml
+    candidate_config_sha256: d86abead7f88ae8503989770a74030ab57acc5f5bb3b8eb4a67eac2e99b51c0a
+    training_config: r1_b1_seed44.yaml
+    training_config_sha256: df368bb8e458c500d483215d40112387e711b7984a6bebe28ec2057a2143df8d
+    reference_training_config: robust_b1_seed42.yaml
+    reference_training_config_sha256: b2ee6636080f171b3d67cfa5867237a7c79d82b37f4a4a80c1021879ffe17c71
+    training_seed: 44
+    train_stream_seed: 310946
+  b2_44:
+    candidate_config: r1e_evaluate_b2_seed44.yaml
+    candidate_config_sha256: adcd07cdb574d667e6d5a0a2d0e92a0a1d7a39c8f53c507c9bbfd5d4519b25e8
+    training_config: r1_b2_seed44.yaml
+    training_config_sha256: 9914bbbccbaf85e63ed6576bbea5c013e53fee20997bccb200bbe3914beb1522
+    reference_training_config: robust_b2_seed42.yaml
+    reference_training_config_sha256: 7a1fedb28026e2fdc085e222364e78323bf2ff051851bbc36cedaecf12ace363
+    training_seed: 44
+    train_stream_seed: 310946
+test_evaluated: false

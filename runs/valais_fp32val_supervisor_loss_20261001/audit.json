@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "safely_interrupted_after_supervisor_loss",
+  "observed_utc": "2026-10-01T09:45:34.895219+00:00",
+  "run": "valais_clean_fp32val_seed42_relaunch_20261001",
+  "task_name": "Codex-Valais-FP32Val-Resume-Epoch27-20261001",
+  "task_last_result_decimal": 3221225786,
+  "task_last_result_hex": "0xC000013A",
+  "task_result_interpretation": "STATUS_CONTROL_C_EXIT; source of control signal not established",
+  "task_triggers": 0,
+  "task_registration_removed_after_stop": true,
+  "supervisor_pids_absent": [
+    27532,
+    33500
+  ],
+  "training_pid_stopped_with_bound_identity": 33900,
+  "guard_pid_exited_after_training": 13892,
+  "before_status": {
+    "status": "running",
+    "epoch": 38
+  },
+  "after_status": {
+    "status": "interrupted",
+    "epoch": 38,
+    "manual_resume_required": true
+  },
+  "complete_checkpoint": {
+    "format_version": 2,
+    "epoch": 38,
+    "history_length": 38,
+    "best_epoch": 33,
+    "best_val_f1": 0.3772780754484571,
+    "model_finite": true,
+    "test_evaluated": false
+  },
+  "guard_status_after_stop": "training_process_exited",
+  "last_complete_epoch": 38,
+  "partial_epoch39_discarded": true,
+  "test_accessed": false,
+  "guard_completion_exists": false,
+  "cause_limit": "Taskhost/launcher exited with 0xC000013A while train+guard remained active; exact control-C source unknown. No OS reboot or temperature guard pause established. Manual owner stopped the bound train process after epoch38 checkpoint to prevent an unguarded-completion run.",
+  "automatic_resume_authorized": false,
+  "artifacts_sha256": {
+    "status_before_stop": "ff3e1daaa697b5b84170593b7551ba553dac4f01bcc770a8506206e85d6e1e41",
+    "status_after_stop": "6d1077bf41d95782a49bf98d67eeef317616a5f4cd9b829b65351a77631384db",
+    "guard_after_stop": "cc3f65e6ae8c1efd7f5746cf20128b8aacf864ee233ce7d42818a37bfcb4ab66",
+    "train_session_log": "aee5be47a92d5ae2b02f7944515a5dffbd986bd926eac687c0969ec17a9b851e",
+    "guard_session_log": "ddaf319709a0468ea7ef32e586004301d841ea4af54a7e72e17fbd89d4cd5a04",
+    "scheduler_launcher_log": "524817b93d5cd1225fe8cca036af74d4b0aa6fbba0d9f5de30fcdefc3c43fe8f",
+    "last_checkpoint": "2ea5b2db2ced33bef992e3078d5e6d7db19a40a3eda8c081d87ec196f86cce05",
+    "best_checkpoint": "31055e9745e43b409a08728a87a0957bdccf418a85b6ecf292445ec4bff1450f",
+    "history": "8cdeda62d0acf8d8a39bb5a7e0c792e7042a172c1c2684ec02e3c7ea3bb1b76c",
+    "source_hashes": "8782cf810e6884679c677d2b284bbd598d11248dd3b570f5916869fa48b82e64",
+    "data_audit": "670d7d29361125e291d637f9fb9be44df31b67912dc2af837d719f6c4ae2cd87",
+    "study_config": "febae7befad0d4ea52281eaf9502b7ea0cafbb7c1f74e72f431b8f0f6626328e",
+    "base_config": "7a4931665591a24e005b7ea3b42b1cb88855accc52343c8642ad4efc5ceea6ab",
+    "prior_recovery_authorization": "2a43a1186ad050c977cba54a4110e8a35701b53967fe10eae1dadf6bd535ea0b"
+  }
+}

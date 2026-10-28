@@ -1,0 +1,15 @@
+schema_version: 1
+name: valais_p1_stratified_seed42_v1_20261014
+output_dir: ../runs/valais_p1_study_v1_20261014
+python: E:/Download/anaconda3/envs/geosa-basa/python.exe
+runs:
+  cs: valais_cs_seed42_v1_20261014.yaml
+  as: valais_as_seed42_v1_20261014.yaml
+sampling_proposal: valais_b0es_candidate_proposal_20261004.yaml
+guard_config: evaluation_temperature_guard.yaml
+protocol_document: ../docs/P1_MANAGED_PROTOCOL_2026-10-14.md
+initial_model_tensor_sha256: eb4fa2550e47d732c5b21acb6899ba5539856bee35b532da58006f56108001a8
+minimum_unittests: 330
+benchmark_config: evaluate_valais_baseline_corruption_v1_20261002.yaml
+baseline_evaluation: ../runs/valais_baseline_corruption_val_v1_seed42_20261002
+check_interval_minutes: 90

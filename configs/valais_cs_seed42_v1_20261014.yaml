@@ -1,0 +1,23 @@
+schema_version: 1
+name: valais_cs_fp32_seed42_v1_20261014
+mode: b0e
+base_config: ../runs/valais_corruption_protocol_v1_20261002/base_config.yaml
+protocol_config: ../runs/valais_corruption_protocol_v1_20261002/candidate_resolved.yaml
+protocol_sha256: aa16a00382be46d2e6d9f1918d072f86fbee1ccef0a3eb70da462cdad52c4416
+severity_review: valais_matched_train_review_v1_20261002.yaml
+output_dir: ../runs/valais_cs_fp32_seed42_v1_20261014
+expected_source_tiles: 11025
+expected_batches_per_epoch: 2757
+views:
+  primary: clean
+  secondary: clean
+  views_per_source: 2
+  concat_order: [clean, secondary]
+  optimizer_steps_per_source_batch: 1
+  batchnorm_update: single_forward_clean_then_secondary_then_temporal_concat
+corruption:
+  stream: train
+  view: 0
+  selection: uniform_family_level_direction_date_spatial_per_sample_epoch_view
+consistency: {kind: none, weight: 0.0, space: probability, gradient_flow: symmetric}
+selection: clean_val_f1

@@ -1,0 +1,61 @@
+{
+  "status": "independent_saved_count_audit_and_cpu_smoke_passed",
+  "verified_utc": "2026-10-03T02:06:18.963871+00:00",
+  "unittest_command": "python -m unittest discover -s tests -v",
+  "unittest_process_environment": {
+    "CUDA_VISIBLE_DEVICES": "-1"
+  },
+  "unittests": {
+    "discovered": 273,
+    "passed": 270,
+    "skipped": 3,
+    "seconds": 41.166,
+    "skip_reasons": [
+      "test_amp_overflow_is_logged_and_safely_skipped (test_baseline.IntegrationTests.test_amp_overflow_is_logged_and_safely_skipped) ... skipped 'AMP overflow check requires CUDA'",
+      "test_fast_cuda_exact_epoch_boundary_resume (test_baseline.IntegrationTests.test_fast_cuda_exact_epoch_boundary_resume) ... skipped 'Accelerated resume check requires CUDA'",
+      "test_cuda_metrics_with_strict_determinism (test_baseline.MathTests.test_cuda_metrics_with_strict_determinism) ... skipped 'Explicit CUDA metric check requires CUDA'"
+    ]
+  },
+  "smoke": {
+    "command": "python -m scripts.analyze_valais_saved_subgroups --config configs/valais_saved_subgroup_audit_20261003.yaml",
+    "input": "real saved validation counts; no model or raw images",
+    "condition_count": 45,
+    "subgroup_count": 255,
+    "independent_partition_checks": 135,
+    "changed_subgroup_count": 255,
+    "aggregate_metrics_unchanged": true,
+    "raw_mf1": 0.3700435225931509,
+    "empty_tile_corruption_fpr": 0.0005901727558654032
+  },
+  "legacy_bug_reproduction": {
+    "legacy_source_sha256": "1f74ca77d41ceee0d68cbaf71cd048aa479576122fc4825ea8549bc43b92f5a8",
+    "reiterable_list": {
+      "tn": 18,
+      "fp": 7,
+      "fn": 9,
+      "tp": 12
+    },
+    "one_shot_iterator": {
+      "tn": 18,
+      "fp": 0,
+      "fn": 0,
+      "tp": 0
+    }
+  },
+  "protected_inputs": {
+    "checked": 59,
+    "changed": [],
+    "authorization_sha256": "5006e7e680e80d7dfae2297973e2fcddd22e1999e8af08ff27704c421cc07062"
+  },
+  "new_model_inference": false,
+  "test_accessed": false,
+  "gpu_work_started": false,
+  "source_sha256": {
+    "E:\\new research\\detection\\scripts\\analyze_valais_saved_subgroups.py": "163294be45aeeedccccfe5e3e263fe65a40418ba1c7c7cf02679c33dc16e0d31",
+    "E:\\new research\\detection\\tests\\test_valais_saved_subgroups.py": "7869e0f5655f9e08be63a09c30dd7e964769c4c81fb1fd6f550172dbbae703a1",
+    "E:\\new research\\detection\\configs\\valais_saved_subgroup_audit_20261003.yaml": "49d8074cfce2af59e13a66b0a4e42f1b4b26af372095d8ecdf42580ada6a71bd",
+    "E:\\new research\\detection\\docs\\VALAIS_MATCHED_PROGRESS_AND_NEXT_GATES_2026-10-03.md": "ed6e4a30aa54597daa6fa712a14e1c9e805a4863092935649a4d03010450c8ca",
+    "E:\\new research\\detection\\runs\\valais_saved_subgroup_audit_20261003\\report.json": "6a92f6380da2713a0c37e4dcc38370405cace368f3eccc4ac0827f659ee2dd22",
+    "E:\\new research\\detection\\runs\\valais_saved_subgroup_verification_20261003\\unittest_cpu.log": "e8f0a9bd75c1d6f8fe8bbf381e0e4346018acb8282eac9b4fa148327903f1060"
+  }
+}

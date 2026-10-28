@@ -1,0 +1,118 @@
+{
+  "status": "healthy_training_in_progress_no_action_needed",
+  "checked_utc": "2026-10-25T11:56:58.964323+00:00",
+  "identity_check": "All4bound processes verified active by native_window_supervision monitor this turn; exact int64 identities retained from attachment.",
+  "process_identity": {
+    "owner": {
+      "process_id": 9584,
+      "creation_time_ticks": 134373901857985370,
+      "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+      "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision owner --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode native512",
+      "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+    },
+    "worker": {
+      "process_id": 35656,
+      "creation_time_ticks": 134373901870793734,
+      "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+      "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision worker --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode native512",
+      "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+    },
+    "guard": {
+      "process_id": 2096,
+      "creation_time_ticks": 134373901874368295,
+      "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+      "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision guard --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode native512",
+      "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+    },
+    "watchdog": {
+      "process_id": 18664,
+      "creation_time_ticks": 134373901879617665,
+      "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+      "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision watchdog --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode native512",
+      "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+    }
+  },
+  "owner": {
+    "status": "running",
+    "mode": "native512",
+    "research_training": true,
+    "updated_utc": "2026-10-25T11:56:58.493638+00:00",
+    "automatic_retry": false,
+    "allowed_wall_seconds": 86162.88306610001,
+    "elapsed_seconds": 12832.562999999995
+  },
+  "progress": {
+    "stage": "native512_train",
+    "epoch": 44,
+    "step": 1477,
+    "steps_in_stage": 1780,
+    "completed_training_attempts": 78017,
+    "amp_skips_in_stage": 1,
+    "consecutive_amp_skips": 0,
+    "amp_scale": 65536.0,
+    "numeric_alert": false,
+    "updated_utc": "2026-10-25T11:56:58.928644+00:00",
+    "stage_elapsed_seconds": 231.65600000000268,
+    "actual_source_batch_shape": [
+      1,
+      1,
+      512,
+      512
+    ]
+  },
+  "guard": {
+    "status": "monitoring",
+    "role": "guard",
+    "updated_utc": "2026-10-25T11:56:57.417811+00:00",
+    "gpu": {
+      "uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+      "temperature_c": 78,
+      "utilization_percent": 91,
+      "memory_used_mib": 2887
+    },
+    "temperature_c": 78,
+    "maximum_observed_temperature_c": 81,
+    "sensor_error": null,
+    "decision": "ok"
+  },
+  "watchdog": {
+    "status": "monitoring",
+    "role": "watchdog",
+    "updated_utc": "2026-10-25T11:56:58.790164+00:00"
+  },
+  "committed_training": {
+    "status": "running",
+    "arm": "native512",
+    "training_started": true,
+    "epoch": 43,
+    "epochs": 100,
+    "best_epoch": 41,
+    "best_val_f1": 0.8876938583646665,
+    "updated_utc": "2026-10-25T11:53:07.279506+00:00",
+    "training_flavor": "ordinary_matched_native_window_v1",
+    "optimizer_steps": 76512,
+    "amp_skipped_steps": 28,
+    "attempts": 76540,
+    "tile256_equivalent_pair_views": 612320,
+    "actual_pair_views": 153080,
+    "test_evaluated": false
+  },
+  "checkpoint_metadata": {
+    "last.pt": {
+      "bytes": 137324867,
+      "modified_unix": 1792929187.2625635
+    },
+    "best.pt": {
+      "bytes": 137322819,
+      "modified_unix": 1792928601.0287535
+    }
+  },
+  "budget": {
+    "shared_charged_seconds": 44481.65296399998,
+    "shared_limit_seconds": 172800,
+    "new_study_charged_seconds": 13069.679933899984,
+    "new_study_limit_seconds": 129600
+  },
+  "extra_compute_or_worker_started": false,
+  "user_notification_required": false
+}

@@ -1,0 +1,51 @@
+schema_version: 1
+status: proposal_only_not_authorized_or_runnable
+parent_study_config: E:\new research\detection\configs\valais_c5r5_study_v1_20261020.yaml
+parent_study_config_sha256: 13f3d9791028d8de1232f796b02ab220be3c4db26379d40cc785316788e6b85a
+reason: Original 100-epoch comparison exceeds the human-selected 24 hours per role;
+  proposed horizon is selected only from compute, never validation scores.
+proposed_epochs: 40
+proposed_cosine_scheduler_t_max: 40
+maximum_total_training_seconds_per_role_including_engineering: 86400
+carry_current_pilot_time_debit: true
+restart_from_original_seed42_initialization: true
+discard_engineering_weights: true
+roles:
+- c5
+- r5
+source_flow: shared uniform first 40 epoch plans
+unchanged:
+- architecture
+- FP32 CUDA
+- batch4
+- single joint BN
+- initialization
+- input normalization
+- 0.5 threshold
+- optimizer settings
+- BCE/Dice objective
+- five view order and weights
+- fixed pair operator table
+- 45 condition validation
+- held-out isolation
+explicit_protocol_changes:
+- training epochs 100 -> 40
+- cosine T_max 100 -> 40
+- new named source/config/checkpoint identities
+interpretation: A separate limited-budget ordinary comparison; not the original 100-epoch
+  result and not evidence against fully trained methods.
+historical_b0e100_reference: Descriptive context; epochs, source order and view counts
+  differ. No matched causal comparison claim.
+r5_vs_c5_gates_proposed:
+  minimum_corruption_mf1_gain: 0.005
+  maximum_clean_f1_drop: 0.005
+  maximum_clean_recall_drop: 0.01
+  maximum_corruption_recall_drop: 0.01
+  maximum_clean_empty_fpr_increase: 0.0002
+  maximum_corruption_empty_fpr_increase: 0.0002
+no_automatic_execution: true
+projected_hours_including_existing_pilot:
+  c5: 22.446481041740217
+  r5: 22.576321180481635
+new_method_or_m5_admitted: false
+test_opened: false

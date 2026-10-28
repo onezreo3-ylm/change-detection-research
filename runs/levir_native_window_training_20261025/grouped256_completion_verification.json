@@ -1,0 +1,87 @@
+{
+  "status": "completed_grouped256_and_paired_saved_records_verified",
+  "verified_utc": "2026-10-26T01:11:09.014721+00:00",
+  "arm": "grouped256",
+  "epochs": 100,
+  "best_epoch": 46,
+  "attempts": 178000,
+  "successful_updates": 177936,
+  "amp_skips": 64,
+  "actual_pair_views": 1424000,
+  "tile256_equivalent_pair_views": 1424000,
+  "all100_group_orders_exact": true,
+  "all100_original_clean_val_counts_and_metrics_arithmetic_verified": true,
+  "initialization_tensor_sha256": "eb4fa2550e47d732c5b21acb6899ba5539856bee35b532da58006f56108001a8",
+  "selected_clean_val_metrics": {
+    "precision": 0.9144007241785646,
+    "recall": 0.8629866297761072,
+    "f1": 0.8879500548576714,
+    "iou": 0.7984803728793178,
+    "oa": 0.9908599257469177,
+    "tp": 2430393,
+    "fp": 227515,
+    "fn": 385865,
+    "tn": 64065091,
+    "pixels": 67108864,
+    "background_fpr": 0.003538742853260607
+  },
+  "owner": {
+    "status": "completed",
+    "mode": "grouped256",
+    "research_training": true,
+    "updated_utc": "2026-10-26T01:08:39.087273+00:00",
+    "automatic_retry": false,
+    "allowed_wall_seconds": 86158.88306610001,
+    "worker_exit_code": 0,
+    "elapsed_seconds": 29046.32799999998
+  },
+  "worker_result": {
+    "status": "completed",
+    "mode": "grouped256",
+    "result_status": "completed",
+    "successful_research_optimizer_updates": 177936,
+    "completed_utc": "2026-10-26T01:08:36.644291+00:00",
+    "test_accessed": false
+  },
+  "guard": {
+    "status": "worker_exited",
+    "role": "guard",
+    "updated_utc": "2026-10-26T01:08:37.782654+00:00",
+    "gpu": {
+      "uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+      "temperature_c": 67,
+      "utilization_percent": 0,
+      "memory_used_mib": 3296
+    },
+    "temperature_c": 67,
+    "maximum_observed_temperature_c": 81,
+    "sensor_error": null,
+    "decision": "ok"
+  },
+  "watchdog": {
+    "status": "worker_exited",
+    "role": "watchdog",
+    "updated_utc": "2026-10-26T01:08:37.313944+00:00"
+  },
+  "gpu_lease_released": true,
+  "checkpoints": {
+    "best.pt": {
+      "epoch": 46,
+      "bytes": 137327939,
+      "sha256": "18d9dab111638585762992fd0cdec089194a6aefc940c3bca7b6847d783aa3bb",
+      "metadata_initialization_history_source_and_scope_verified": true
+    },
+    "last.pt": {
+      "epoch": 100,
+      "bytes": 137383363,
+      "sha256": "569c9fed727599b92aa7fe1343197f53407dcd9c3c1cacb780a25248f23724da",
+      "metadata_initialization_history_source_and_scope_verified": true
+    }
+  },
+  "native512_checkpoint_proof_reused": "native512_completion_verification.json",
+  "cpu_audit_charged_seconds": 4,
+  "shared_charged_seconds": 90004.02796399995,
+  "paired_study_charged_seconds": 58592.054933899955,
+  "raw_data_or_gpu_forward_in_this_audit": false,
+  "test_or_martigny_access": false
+}

@@ -1,0 +1,46 @@
+{
+  "entries": [
+    {
+      "id": "b0e_fixed_validation_cpu_prepare_20261026",
+      "phase": "prepare",
+      "charged_seconds": 8.889999999999418,
+      "basis": "Measured CPU metadata/engineering wall plus3second import/startup allowance; completed",
+      "recorded_utc": "2026-10-27T05:41:27.841016+00:00"
+    },
+    {
+      "id": "b0e_fixed_validation_cpu_full_tests_20261026",
+      "phase": "full_tests",
+      "charged_seconds": 83.45433049999701,
+      "basis": "Actual full unittest subprocess wall plus2seconds coordination allowance. The probe additionally reserves this cost conservatively; the fixed-evaluation charge is not removed.",
+      "recorded_utc": "2026-10-27T05:43:24.216760+00:00"
+    },
+    {
+      "id": "b0e_fixed_validation_cpu_smoke_20261026",
+      "phase": "smoke",
+      "charged_seconds": 3.25,
+      "basis": "Measured CPU metadata/engineering wall plus3second import/startup allowance; completed",
+      "recorded_utc": "2026-10-27T05:44:46.747464+00:00"
+    },
+    {
+      "id": "b0e_fixed_validation_cpu_seal_20261026",
+      "phase": "seal",
+      "charged_seconds": 1.5780000000086147,
+      "basis": "Actual CPU sealing wall plus1second import allowance; completed",
+      "recorded_utc": "2026-10-27T05:44:47.799397+00:00"
+    },
+    {
+      "id": "b0e_fixed_validation_cpu_certify_20261026",
+      "phase": "certify",
+      "charged_seconds": 6.125,
+      "basis": "Measured CPU metadata/engineering wall plus3second import/startup allowance; completed",
+      "recorded_utc": "2026-10-27T06:19:06.433180+00:00"
+    },
+    {
+      "id": "b0e_fixed_validation_cpu_analysis_20261026",
+      "phase": "analysis",
+      "charged_seconds": 186.59377980002319,
+      "basis": "All original/repair failed analyses, prefix diagnosis, targeted and full regression runs, synthetic smokes and successful same-rule native-JSON publication, plus10seconds coordination. Detailed measured entries: runs/b0e_queue_closure_20261027/serialization_repair_costs.json",
+      "recorded_utc": "2026-10-27T06:46:14.597873+00:00"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "status": "completed_verified_fixed_candidate_rejected",
+  "completed_utc": "2026-10-26T01:14:29.629491+00:00",
+  "all_authorized_arms_completed": true,
+  "arms": [
+    "native512",
+    "grouped256"
+  ],
+  "epochs_per_arm": 100,
+  "identity_and_exposure_matching_passed": true,
+  "all200_saved_val_count_tables_and_metrics_arithmetic_verified": true,
+  "grouped256_new_checkpoints_cpu_metadata_and_sha256_verified": true,
+  "native512_completion_proof_reused": true,
+  "all_effectiveness_gates_passed": false,
+  "gates": {
+    "clean_val_f1": {
+      "delta": 0.00011237770290506433,
+      "required_min": 0.002,
+      "passed": false
+    },
+    "clean_val_recall": {
+      "delta": 0.02322621009864856,
+      "required_min": -0.001,
+      "passed": true
+    },
+    "clean_val_background_fpr": {
+      "delta": 0.0012631001456061678,
+      "required_max": 0.0001,
+      "passed": false
+    }
+  },
+  "analysis": "runs/levir_native_window_training_20261025/analysis.json",
+  "report": "docs/LEVIR_NATIVE_WINDOW_TRAINING_RESULTS_2026-10-26.md",
+  "no_active_worker_or_gpu_lease": true,
+  "no_test_or_martigny_access": true,
+  "no_new_inference_or_training_in_completion_audit": true,
+  "source_changed_in_completion": false,
+  "full_unittest_and_smoke_repeated": false,
+  "paired_study_charged_seconds": 58594.054933899955,
+  "shared_charged_seconds": 90006.02796399995,
+  "single_training_prior_engineering_plus_owner_seconds": {
+    "native512": 29537.726933899976,
+    "grouped256": 29287.44493389997
+  },
+  "result_sealing_cpu_charged_seconds": 2,
+  "artifact_manifest": "runs/levir_native_window_training_20261025/artifact_sha256.json",
+  "next_action": "Fixed candidate ended. No new training, seed, inference, bootstrap or tuning without a newly frozen authorized scope."
+}

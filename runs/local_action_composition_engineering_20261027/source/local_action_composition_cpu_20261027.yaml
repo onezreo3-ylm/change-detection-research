@@ -1,0 +1,21 @@
+kind: synthetic_cpu_fixed_local_action_composition
+protocol: docs/LOCAL_ACTION_COMPOSITION_CPU_PROTOCOL_2026-10-27.md
+output_dir: runs/local_action_composition_cpu_20261027
+device: cpu
+dtype: float32
+seed: 20261027
+num_threads: 2
+decoder_channels: 64
+normalization_groups: 8
+feature_channels: [64, 128, 256, 512]
+feature_sizes: [32, 16, 8, 4]
+output_size: [128, 128]
+edited_feature_stage: 1
+action_boxes: [[1, 4, 1, 4], [12, 15, 12, 15]]
+edit_amplitude: 0.25
+center_synthetic_classifier_bias_before_all_arms: true
+synthetic_foreground_probability: 0.25
+threshold: 0.5
+engineering_only: true
+research_data_or_weights: false
+new_gpu_job: false

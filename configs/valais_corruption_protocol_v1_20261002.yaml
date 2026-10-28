@@ -1,0 +1,126 @@
+# Candidate Phase-2 benchmark. These are project choices, not a published standard.
+# Calibrate visibility on TRAIN only; do not tune severity against val/test scores.
+schema_version: 1
+name: valais_tile_corruptions_v1
+status: candidate_pending_review
+base_config: valais_clean_full_fp32_seed42_20261002.yaml
+reference_checkpoint: ../runs/valais_clean_full_fp32_seed42_20261002/best.pt
+reference_checkpoint_sha256: de42460dfce94717a890ae359124c659ce57d7d396f44429ac370463e1991b7d
+reference_audit: ../runs/valais_clean_full_fp32_seed42_20261002/data_audit.json
+output_dir: ../runs/valais_corruption_protocol_v1_20261002
+seeds: {train: 510942, val: 510943, test: 510944}
+placement: after_tiling_before_normalization
+spatial_modes: [global, local]
+local_mask:
+  center_x_range: [0.30, 0.70]
+  center_y_range: [0.30, 0.70]
+  radius_x_range: [0.25, 0.45]
+  radius_y_range: [0.25, 0.45]
+  feather: 0.25
+calibration:
+  source_pairs: 4
+  selection_seed: 810209
+  preview_levels: [1, 3, 5]
+  preview_tile_pixels: 192
+# Every list contains explicit L1..L5 parameters. Direction is kept in manifests.
+# Normalized RGB units except Gaussian blur radius (sigma in pixels) and JPEG quality.
+corruptions:
+  brightness:
+    darken:
+      - {factor: 0.95}
+      - {factor: 0.90}
+      - {factor: 0.85}
+      - {factor: 0.80}
+      - {factor: 0.70}
+    brighten:
+      - {factor: 1.05}
+      - {factor: 1.10}
+      - {factor: 1.15}
+      - {factor: 1.20}
+      - {factor: 1.30}
+  contrast:
+    reduce:
+      - {factor: 0.90, pivot: 0.5}
+      - {factor: 0.80, pivot: 0.5}
+      - {factor: 0.70, pivot: 0.5}
+      - {factor: 0.60, pivot: 0.5}
+      - {factor: 0.50, pivot: 0.5}
+    increase:
+      - {factor: 1.10, pivot: 0.5}
+      - {factor: 1.20, pivot: 0.5}
+      - {factor: 1.30, pivot: 0.5}
+      - {factor: 1.40, pivot: 0.5}
+      - {factor: 1.50, pivot: 0.5}
+  gamma:
+    darken:
+      - {exponent: 1.10}
+      - {exponent: 1.25}
+      - {exponent: 1.45}
+      - {exponent: 1.70}
+      - {exponent: 2.00}
+    brighten:
+      - {exponent: 0.9090909090909091}
+      - {exponent: 0.80}
+      - {exponent: 0.6896551724137931}
+      - {exponent: 0.5882352941176471}
+      - {exponent: 0.50}
+  color_bias:
+    warm:
+      - {offset_rgb: [0.02, 0.0, -0.02]}
+      - {offset_rgb: [0.04, 0.0, -0.04]}
+      - {offset_rgb: [0.06, 0.0, -0.06]}
+      - {offset_rgb: [0.08, 0.0, -0.08]}
+      - {offset_rgb: [0.12, 0.0, -0.12]}
+    cool:
+      - {offset_rgb: [-0.02, 0.0, 0.02]}
+      - {offset_rgb: [-0.04, 0.0, 0.04]}
+      - {offset_rgb: [-0.06, 0.0, 0.06]}
+      - {offset_rgb: [-0.08, 0.0, 0.08]}
+      - {offset_rgb: [-0.12, 0.0, 0.12]}
+    magenta:
+      - {offset_rgb: [0.01, -0.02, 0.01]}
+      - {offset_rgb: [0.02, -0.04, 0.02]}
+      - {offset_rgb: [0.03, -0.06, 0.03]}
+      - {offset_rgb: [0.04, -0.08, 0.04]}
+      - {offset_rgb: [0.06, -0.12, 0.06]}
+    green:
+      - {offset_rgb: [-0.01, 0.02, -0.01]}
+      - {offset_rgb: [-0.02, 0.04, -0.02]}
+      - {offset_rgb: [-0.03, 0.06, -0.03]}
+      - {offset_rgb: [-0.04, 0.08, -0.04]}
+      - {offset_rgb: [-0.06, 0.12, -0.06]}
+  haze:
+    neutral:
+      - {opacity: 0.05, airlight_rgb: [1.0, 1.0, 1.0]}
+      - {opacity: 0.10, airlight_rgb: [1.0, 1.0, 1.0]}
+      - {opacity: 0.15, airlight_rgb: [1.0, 1.0, 1.0]}
+      - {opacity: 0.20, airlight_rgb: [1.0, 1.0, 1.0]}
+      - {opacity: 0.30, airlight_rgb: [1.0, 1.0, 1.0]}
+  shadow:
+    neutral:
+      - {attenuation: 0.10}
+      - {attenuation: 0.20}
+      - {attenuation: 0.30}
+      - {attenuation: 0.40}
+      - {attenuation: 0.50}
+  noise:
+    neutral:
+      - {sigma: 0.01}
+      - {sigma: 0.02}
+      - {sigma: 0.03}
+      - {sigma: 0.05}
+      - {sigma: 0.08}
+  blur:
+    neutral:
+      - {radius: 0.30}
+      - {radius: 0.60}
+      - {radius: 0.90}
+      - {radius: 1.20}
+      - {radius: 1.60}
+  jpeg:
+    neutral:
+      - {quality: 95, subsampling: 2}
+      - {quality: 85, subsampling: 2}
+      - {quality: 70, subsampling: 2}
+      - {quality: 55, subsampling: 2}
+      - {quality: 40, subsampling: 2}

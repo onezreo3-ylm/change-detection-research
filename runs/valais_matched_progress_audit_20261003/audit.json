@@ -1,0 +1,59 @@
+{
+  "status": "interim_audit_passed_not_final_result",
+  "observed_utc": "2026-10-03T01:48:52.265214+00:00",
+  "observed_beijing": "2026-10-03T09:48:52.265214+08:00",
+  "read_only_original_run": true,
+  "new_model_inference": false,
+  "test_accessed": false,
+  "static_bound_files_checked": 59,
+  "static_bound_files_changed": [],
+  "completed_epochs": 58,
+  "planned_epochs": 100,
+  "best_epoch_so_far": 47,
+  "best_clean_f1_so_far": 0.3927471582466876,
+  "best_clean_recall_so_far": 0.38715220386801996,
+  "b0_clean_f1": 0.4162248161980205,
+  "best_so_far_minus_b0_clean_f1": -0.023477657951332886,
+  "successful_updates": 159906,
+  "amp_skips": 0,
+  "pair_views": 1278900,
+  "guard": {
+    "status": "monitoring",
+    "temperature_c": 82,
+    "decision": "ok",
+    "observed_max_temperature_c": 83,
+    "sensor_failures": 0
+  },
+  "b0e_started": false,
+  "b1_corruption_scoring_started": false,
+  "comparison_complete": false,
+  "recent_mean_epoch_seconds": 650.6421999999933,
+  "approximate_remaining_b1_phase_hours": 7.590825666666588,
+  "eta_limitation": "Estimate from ten completed phase timers; excludes current partial-epoch progress, setup/checkpoint I/O, pauses and validation corruption scoring. Not a schedule guarantee.",
+  "train_only_small_label_counts": {
+    "2": {
+      "tiles": 10,
+      "foreground_pixels": 14
+    },
+    "16": {
+      "tiles": 31,
+      "foreground_pixels": 214
+    },
+    "64": {
+      "tiles": 77,
+      "foreground_pixels": 2071
+    },
+    "256": {
+      "tiles": 275,
+      "foreground_pixels": 33533
+    }
+  },
+  "train_positive_tiles": 1046,
+  "train_positive_pixels": 1118423,
+  "source_files": {
+    "authorization": "5006e7e680e80d7dfae2297973e2fcddd22e1999e8af08ff27704c421cc07062",
+    "history_snapshot": "f50802f575a9dd3d4d0e492ff400d6d6f2c4df591d30ae7fc61f2d1e336fa0ca",
+    "status_snapshot": "abbcc96e7ae2a8a6591a8aaddb2e6fed9c155ea10395be1183a13712d4376353"
+  },
+  "next_step": "Continue the sealed B1 validation/B0-E queue; decide independent seeds or clean-detection diagnostics only after the full frozen comparison."
+}

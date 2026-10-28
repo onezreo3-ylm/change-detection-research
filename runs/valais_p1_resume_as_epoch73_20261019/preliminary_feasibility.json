@@ -1,0 +1,110 @@
+{
+  "status": "partial_p1_feasibility_audit",
+  "recorded_utc": "2026-10-19T06:42:44.122015+00:00",
+  "new_model_inference": false,
+  "research_scores_are_saved_clean_validation_only": true,
+  "rows": {
+    "b0e": {
+      "committed_epochs": 100,
+      "best_epoch": 53,
+      "selected_clean_val_metrics": {
+        "precision": 0.4161689501813568,
+        "recall": 0.4251057994115163,
+        "f1": 0.42058990678779773,
+        "iou": 0.2662955673104523,
+        "oa": 0.996816055698228,
+        "tp": 129883,
+        "fp": 182209,
+        "fn": 175648,
+        "tn": 111906500,
+        "pixels": 112394240
+      },
+      "last_epoch_f1": 0.35192625157537855,
+      "last_epoch_seconds": 644.625
+    },
+    "b1": {
+      "committed_epochs": 100,
+      "best_epoch": 47,
+      "selected_clean_val_metrics": {
+        "precision": 0.3985061955489074,
+        "recall": 0.38715220386801996,
+        "f1": 0.3927471582466876,
+        "iou": 0.2443592868799967,
+        "oa": 0.9967455360701758,
+        "tp": 118287,
+        "fp": 178539,
+        "fn": 187244,
+        "tn": 111910170,
+        "pixels": 112394240
+      },
+      "last_epoch_f1": 0.19711369411741236,
+      "last_epoch_seconds": 645.7809999999881
+    },
+    "cs": {
+      "committed_epochs": 100,
+      "best_epoch": 36,
+      "selected_clean_val_metrics": {
+        "precision": 0.4007825914550889,
+        "recall": 0.35065508900897124,
+        "f1": 0.374046867580929,
+        "iou": 0.23004775483560655,
+        "oa": 0.9968096585732508,
+        "tp": 107136,
+        "fp": 160181,
+        "fn": 198395,
+        "tn": 111928528,
+        "pixels": 112394240
+      },
+      "last_epoch_f1": 0.20818086939026997,
+      "last_epoch_seconds": 653.1100000000006
+    },
+    "as": {
+      "committed_epochs": 73,
+      "best_epoch": 17,
+      "selected_clean_val_metrics": {
+        "precision": 0.3448063866827851,
+        "recall": 0.3818205026658506,
+        "f1": 0.3623707017053397,
+        "iou": 0.22127761275564206,
+        "oa": 0.9963472861242711,
+        "tp": 116658,
+        "fp": 221671,
+        "fn": 188873,
+        "tn": 111867038,
+        "pixels": 112394240
+      },
+      "last_epoch_f1": 0.17751687074414485,
+      "last_epoch_seconds": 666.484999999986
+    }
+  },
+  "cs_minus_b0e": {
+    "f1": -0.04654303920686875,
+    "recall": -0.07445071040254508,
+    "precision": -0.015386358726267924
+  },
+  "predeclared_cs_clean_gate": {
+    "f1_gain_required": 0.01,
+    "recall_gain_required": 0.02,
+    "f1_passed": false,
+    "recall_passed": false,
+    "passed": false
+  },
+  "remaining_as_epochs": 27,
+  "remaining_as_successful_updates": 74439,
+  "remaining_as_pair_views": 595350,
+  "estimated_remaining_train_clean_val_hours_from_last_epoch": 4.998637499999895,
+  "pending": [
+    "finish_original_as_budget",
+    "unchanged_45_condition_validation",
+    "fixed_train_residual_coupling_diagnostic"
+  ],
+  "interpretation": "Completed C-S fails the predeclared clean improvement gate. Stratified sampling benefit is not supported. A-S remains incomplete; no robustness or innovation conclusion is established.",
+  "extra_training_to_select_hyperparameters_authorized": false,
+  "test_accessed": false,
+  "source_history_sha256": {
+    "E:\\new research\\detection\\runs\\valais_b0e_fp32_seed42_v1_20261002\\history.json": "8fa955bf98293154f131fa13c63e8b0e2d0dd87265b4f07fb4ec6bbb5ac36cc0",
+    "E:\\new research\\detection\\runs\\valais_b1_fp32_seed42_v1_20261002\\history.json": "91c9760fa25edf3541fbbd217e39b68261edf21166fc883705af3e67a2d0cb30",
+    "E:\\new research\\detection\\runs\\valais_cs_fp32_seed42_v1_20261014\\history.json": "c4b838e9a93d6c2416fd0478fa0e9f117145a04191449c6d4b50be1452f6f934",
+    "E:\\new research\\detection\\runs\\valais_as_fp32_seed42_v1_20261014\\history.json": "890eb82a9b699acb59231e6cb8c345ded994289a1da8e1fd49a0d3140b22b567"
+  }
+}

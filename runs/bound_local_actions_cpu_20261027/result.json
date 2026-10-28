@@ -1,0 +1,234 @@
+{
+  "status": "passed_synthetic_CPU_original_architecture_bound_actions",
+  "engineering_only": true,
+  "actual_device": "cpu",
+  "actual_dtype": "torch.float32",
+  "amp": false,
+  "explicit_random_weights": true,
+  "real_data_or_checkpoint": false,
+  "optimizer_updates": 0,
+  "original_a0_bit_exact": true,
+  "reference_noop_bit_exact": true,
+  "original_whole_adapter_output_computed_for_separate_identity_unit_test": true,
+  "ordered_identity": {
+    "sample_ids": [
+      "train/engineering_synthetic_0.png@x0_y0",
+      "train/engineering_synthetic_1.png@x0_y0"
+    ],
+    "source_pair_sha256": [
+      [
+        "a9421372c89e1aba68b93280772776b43c81669e83990056f20137b853f681dd",
+        "5ae03aed3c886c47b733373895addbd8ff53e18b99dbffb3286f784585b7fe5a"
+      ],
+      [
+        "7732d0572b441b16d634973663b1073c28f1d9768e59e6f5ce0a06782a624be5",
+        "5489249229d108682745af22b9b1e71e6eecd5b88d7f38b1d8a5a1cc2fec1257"
+      ]
+    ],
+    "instance_sha256": [
+      "3c004abdc51f20bef7302898b544e0a04f5fd9e69592563620accf94dca45d95",
+      "76b5a35311a61330ace365ddba678369b06742bf61913616e2b70541c33b5fb6"
+    ],
+    "actor_checkpoint_sha256": "66f4d4a0010f7bcd4f6fae88ea586bcfe6ad1b0e99530f7f57fc369ef7366bb2",
+    "adapter_checkpoint_sha256": "989bffdf76b0a425fbd75c3136b22ef5d755488a43337779c18f05a14f6731ef",
+    "protocol_sha256": "2ad77c3023721f1e4a8495947589a338ea8157b0df8d31ef0af92268adce6423"
+  },
+  "actual_evidence": {
+    "identity": {
+      "sample_ids": [
+        "train/engineering_synthetic_0.png@x0_y0",
+        "train/engineering_synthetic_1.png@x0_y0"
+      ],
+      "source_pair_sha256": [
+        [
+          "a9421372c89e1aba68b93280772776b43c81669e83990056f20137b853f681dd",
+          "5ae03aed3c886c47b733373895addbd8ff53e18b99dbffb3286f784585b7fe5a"
+        ],
+        [
+          "7732d0572b441b16d634973663b1073c28f1d9768e59e6f5ce0a06782a624be5",
+          "5489249229d108682745af22b9b1e71e6eecd5b88d7f38b1d8a5a1cc2fec1257"
+        ]
+      ],
+      "instance_sha256": [
+        "3c004abdc51f20bef7302898b544e0a04f5fd9e69592563620accf94dca45d95",
+        "76b5a35311a61330ace365ddba678369b06742bf61913616e2b70541c33b5fb6"
+      ],
+      "actor_checkpoint_sha256": "66f4d4a0010f7bcd4f6fae88ea586bcfe6ad1b0e99530f7f57fc369ef7366bb2",
+      "adapter_checkpoint_sha256": "989bffdf76b0a425fbd75c3136b22ef5d755488a43337779c18f05a14f6731ef",
+      "protocol_sha256": "2ad77c3023721f1e4a8495947589a338ea8157b0df8d31ef0af92268adce6423"
+    },
+    "actual_model_tensor_sha256": "da743dce12893812f5991d665a9264723e134ed9d0110572d977402bb9b61d93",
+    "normalized_a_sha256": [
+      "f728fbdd91d10511163d3e580e7024c2498df0b103c31562ef28594d4b451cf8",
+      "00f91b1ede2f864103356b0e01a97ce281c1af10ec178ff336d191eb55d3b375"
+    ],
+    "normalized_b_sha256": [
+      "c64c1cea10f3d7f6129f4630dc03fcf38e7dd55cf59577cceecd4ba6c02dc594",
+      "409662966bec00fa78d7e3522bd787603ac380fecbd1ce5e186e7b953af1f301"
+    ],
+    "amp": false,
+    "actual_device": "cpu",
+    "input_dtype": "torch.float32",
+    "engineering_only": true
+  },
+  "arms": {
+    "ordinary_GN": {
+      "joint_equals_pasted_individuals": false,
+      "joint_minus_pasted_max_abs": 0.000691831111907959,
+      "joint_minus_pasted_changed_positions": 32764,
+      "count_increment_additivity": true,
+      "base_counts": [
+        21542,
+        2997,
+        7208,
+        1021
+      ],
+      "single_counts": [
+        [
+          21546,
+          2993,
+          7212,
+          1017
+        ],
+        [
+          21542,
+          2997,
+          7207,
+          1022
+        ]
+      ],
+      "joint_counts": [
+        21546,
+        2993,
+        7211,
+        1018
+      ],
+      "sum_of_individual_count_increments": [
+        21546,
+        2993,
+        7211,
+        1018
+      ],
+      "outside_joint_changed_positions": 23930,
+      "individual_locality": [
+        false,
+        false
+      ],
+      "hard_prediction_changes": [
+        22,
+        1
+      ]
+    },
+    "ordinary_GN_output_mask": {
+      "joint_equals_pasted_individuals": false,
+      "joint_minus_pasted_max_abs": 0.00032767653465270996,
+      "joint_minus_pasted_changed_positions": 8834,
+      "count_increment_additivity": true,
+      "base_counts": [
+        21542,
+        2997,
+        7208,
+        1021
+      ],
+      "single_counts": [
+        [
+          21547,
+          2992,
+          7212,
+          1017
+        ],
+        [
+          21542,
+          2997,
+          7208,
+          1021
+        ]
+      ],
+      "joint_counts": [
+        21547,
+        2992,
+        7212,
+        1017
+      ],
+      "sum_of_individual_count_increments": [
+        21547,
+        2992,
+        7212,
+        1017
+      ],
+      "outside_joint_changed_positions": 0,
+      "individual_locality": [
+        true,
+        true
+      ],
+      "hard_prediction_changes": [
+        21,
+        0
+      ]
+    },
+    "reference_replay": {
+      "joint_equals_pasted_individuals": true,
+      "joint_minus_pasted_max_abs": 0.0,
+      "joint_minus_pasted_changed_positions": 0,
+      "count_increment_additivity": true,
+      "base_counts": [
+        21542,
+        2997,
+        7208,
+        1021
+      ],
+      "single_counts": [
+        [
+          21547,
+          2992,
+          7212,
+          1017
+        ],
+        [
+          21542,
+          2997,
+          7208,
+          1021
+        ]
+      ],
+      "joint_counts": [
+        21547,
+        2992,
+        7212,
+        1017
+      ],
+      "sum_of_individual_count_increments": [
+        21547,
+        2992,
+        7212,
+        1017
+      ],
+      "outside_joint_changed_positions": 0,
+      "individual_locality": [
+        true,
+        true
+      ],
+      "hard_prediction_changes": [
+        21,
+        0
+      ]
+    }
+  },
+  "session_actual_forwards": {
+    "encoder": 1,
+    "adapter": 2,
+    "decoder": 11
+  },
+  "total_actual_forwards": {
+    "encoder": 2,
+    "adapter": 4,
+    "decoder": 13
+  },
+  "final_full_model_and_cache_identity_check_passed": true,
+  "hooks_removed": true,
+  "elapsed_seconds": 0.5962423000019044,
+  "full_project_tests_pending_GPU_idle": true,
+  "GPU_FP16_validated": false,
+  "task_effectiveness": false,
+  "novelty_verified": false
+}

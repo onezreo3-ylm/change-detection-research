@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "completed_utc": "2026-10-25T02:33:34.511868+00:00",
+  "config": "configs/levir_provenance_admission_screen_20261025.yaml",
+  "decision": "ADMIT_NOMINAL_LOCATION_LOOKUP_ONLY_REJECT_VERIFIED_SOURCE_GROUPS",
+  "nominal_location_lookup_admitted": true,
+  "geographic_grouping_as_independent_source_units_admitted": false,
+  "original_scene_grouping_admitted": false,
+  "new_training_admitted": false,
+  "publisher_traceability": {
+    "release_page": "https://justchenhao.github.io/LEVIR/",
+    "repository": "https://github.com/justchenhao/STANet",
+    "commit": "6152d72f55df00a43d341580970be7a58c6b0cd5",
+    "metadata_release_news_date": "2023-03-11",
+    "pinned_readme": "https://raw.githubusercontent.com/justchenhao/STANet/6152d72f55df00a43d341580970be7a58c6b0cd5/LEVIR_CD_spatial_info/README.md",
+    "metadata_version_or_crs_accuracy_statement": "No separate metadata version, geolocation accuracy or native datum statement in the inspected publisher documentation; version frozen by repository commit and file SHA256."
+  },
+  "coverage": {
+    "train": {
+      "expected": 445,
+      "matched_json": 445,
+      "matched_geojson": 445,
+      "fraction": 1.0
+    },
+    "val": {
+      "expected": 64,
+      "matched_json": 64,
+      "matched_geojson": 64,
+      "fraction": 1.0
+    },
+    "missing": 0,
+    "duplicate_whitelisted_keys": 0,
+    "ambiguous_id_matches": 0
+  },
+  "mapping_rule": "Exact original inventory filename == publisher JSON key == GeoJSON properties.name. No numeric-ID, renamed-file or proximity inference.",
+  "coordinate_semantics": "Publisher JSON: [upper-left longitude, upper-left latitude, lower-right longitude, lower-right latitude], recorded as [west,north,east,south]; named corner labels in the GeoJSON README example contain a left/right inconsistency, so only the actual point-set extent was checked against the explicit JSON field description.",
+  "coordinate_validation": {
+    "whitelisted_sources": 509,
+    "splits": {
+      "train": 445,
+      "val": 64
+    },
+    "missing_in_json": [],
+    "missing_in_geojson": [],
+    "json_duplicate_whitelisted_keys": [],
+    "geojson_duplicate_whitelisted_keys": [],
+    "unique_exact_json_coordinate_boxes": 509,
+    "identical_boxes_different_allowed_ids": [],
+    "all_finite_and_correct_lon_lat_bounds": true,
+    "json_geojson_bounds_consistent_at_6_decimal_rounding": true,
+    "maximum_rounding_difference_degrees": 4.994316071815774e-07,
+    "json_filtered_numeric_decimal_places": {
+      "14": 1200,
+      "15": 836
+    },
+    "geojson_filtered_numeric_decimal_places": {
+      "4": 37,
+      "5": 571,
+      "6": 4482
+    },
+    "geojson_polygon_coordinates_outer_ring_array_present": false,
+    "native_crs_declared": false,
+    "georeferencing_accuracy_documented": false,
+    "original_scene_id_present": false,
+    "publisher_region_id_present": false,
+    "per_date_scene_id_or_acquisition_date_present": false,
+    "pairwise_geographic_distance_or_clustering_performed": false,
+    "held_out_mapping_or_analysis_performed": false,
+    "test_or_martigny_raw_files_accessed": false
+  },
+  "format_limitations": [
+    "All509 retained Polygon coordinates are a flat closed array of positions rather than an array of linear-ring arrays; thus they fail RFC7946 Polygon nesting. Original geometry is preserved in filtered copies; no GIS repair, reprojection or geometry operation performed.",
+    "GeoJSON coordinate values have up to6 decimal places, JSON parsed decimal representations14-15; coordinate digit counts do not establish spatial accuracy.",
+    "No native datum, projection/transform or georeferencing accuracy is explicitly supplied by publisher README. RFC7946 standard WGS84 semantics are not an independent validation of this publisher export."
+  ],
+  "source_group_limitations": [
+    "Selected feature properties contain only name; there is no publisher region ID, original-scene ID, per-date parent-scene ID, acquisition date or crop-window lineage.",
+    "The release page mentions20 collection regions but provides no file-to-region crosswalk in the inspected metadata.",
+    "Distinct filenames and distinct coordinate boxes do not establish independent original scenes; geographic proximity alone would not establish leakage.",
+    "Mapping matches saved local filenames. The inspected release does not supply per-image content hashes to additionally establish publisher-to-local pixel identity."
+  ],
+  "one_irreplaceable_resource": "由发布者确认的509个原train/开发val文件名到原采集区域及两期父场景ID的对应表，说明共享父场景与切片关系，并附可追溯的版本或确认依据。",
+  "resource_owner": "Dataset publisher or another verifiable custodian of the original collection lineage; no AI or coordinate clustering may fabricate it.",
+  "next_action": "Wait for that verifiable source crosswalk or explicit new user direction. Do not repeat this completed screen. Any future grouping remains a new proposed protocol requiring its own research question and admission.",
+  "constraints": {
+    "whitelisted_ids_only": true,
+    "public_combined_metadata_received": true,
+    "unfiltered_combined_metadata_persisted": false,
+    "out_of_whitelist_values_analyzed": false,
+    "raw_images_or_labels_read": false,
+    "models_loaded": false,
+    "gpu_compute": false,
+    "training_started": false,
+    "held_out_raw_data_accessed": false,
+    "held_out_mapping_or_spatial_analysis": false,
+    "pairwise_distance_or_clustering": false,
+    "current_split_or_bootstrap_or_gates_changed": false,
+    "failed_candidates_reopened": false
+  },
+  "license_record": {
+    "repository_license": "BSD-2-Clause (pinned LICENSE saved)",
+    "dataset_release_terms": "Publisher states images/annotations are academic-only and subject to Google Earth terms.",
+    "metadata_separate_license_statement_found": false,
+    "usage_scope": "Internal academic metadata admission screen; repository software license does not expand the image/annotation terms."
+  },
+  "prior_candidate_conclusion_unchanged": true,
+  "compute_ledger_total_unchanged_seconds": 30708.102632600006,
+  "code_changes": false,
+  "tests_repeated": false
+}

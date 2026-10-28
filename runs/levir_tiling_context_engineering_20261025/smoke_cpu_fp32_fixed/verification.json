@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "synthetic_only": true,
+  "device": "cpu",
+  "amp": false,
+  "same_resnet18_fpn_width": 64,
+  "arms": {
+    "grid32": {
+      "pair_predictions": 8,
+      "finite_common_support": true,
+      "coverage_verified": true,
+      "uncovered_pixels_not_scored": true
+    },
+    "alternate32": {
+      "pair_predictions": 2,
+      "finite_common_support": true,
+      "coverage_verified": true,
+      "uncovered_pixels_not_scored": true
+    },
+    "overlap32": {
+      "pair_predictions": 18,
+      "finite_common_support": true,
+      "coverage_verified": true,
+      "uncovered_pixels_not_scored": true
+    },
+    "context64": {
+      "pair_predictions": 2,
+      "finite_common_support": true,
+      "coverage_verified": true,
+      "uncovered_pixels_not_scored": true
+    }
+  },
+  "pair_predictions": 30,
+  "model_state_unchanged": true,
+  "optimizer_updates": 0,
+  "real_cuda_or_archive_replay_claim": false
+}

@@ -1,0 +1,29 @@
+schema_version: 1
+name: synthetic_r1_b2_20260924
+mode: b2
+base_config: E:\new research\detection\configs\smoke_validation_evaluator_20260913.yaml
+protocol_config: E:\new research\detection\configs\corruption_protocol_evaluator_smoke_20260913.yaml
+protocol_sha256: 8b17e4691e86a51144c1e475bab71159681422507d35dca4d25738276216ac02
+severity_review: E:\new research\detection\configs\corruption_evaluator_smoke_acceptance_20260913.yaml
+output_dir: E:\new research\detection\runs\smoke_r1_b2_cuda_20260924
+expected_source_tiles: 4
+expected_batches_per_epoch: 1
+views:
+  primary: clean
+  secondary: perturbed
+  views_per_source: 2
+  concat_order:
+  - clean
+  - secondary
+  optimizer_steps_per_source_batch: 1
+  batchnorm_update: single_forward_clean_then_secondary_then_temporal_concat
+corruption:
+  stream: train
+  view: 0
+  selection: uniform_family_level_direction_date_spatial_per_sample_epoch_view
+consistency:
+  kind: probability_mse
+  weight: 1.0
+  space: probability
+  gradient_flow: symmetric
+selection: clean_val_f1

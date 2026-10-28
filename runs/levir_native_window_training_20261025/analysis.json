@@ -1,0 +1,103 @@
+{
+  "status": "completed_frozen_paired_gate_failed",
+  "created_utc": "2026-10-26T01:11:09.014721+00:00",
+  "protocol": "docs/LEVIR_NATIVE_WINDOW_TRAINING_PROTOCOL_2026-10-25.md",
+  "selection": "each_arms_original_clean_val_pooled_f1_best_epoch",
+  "threshold": 0.5,
+  "validation_input": {
+    "sources": 64,
+    "tiles": 1024,
+    "tile_size": 256,
+    "batch_size": 32,
+    "pixels": 67108864
+  },
+  "accounting": {
+    "native512": {
+      "epochs": 100,
+      "best_epoch": 58,
+      "attempts": 178000,
+      "successful_updates": 177939,
+      "amp_skips": 61,
+      "actual_pair_views": 356000,
+      "tile256_equivalent_pair_views": 1424000
+    },
+    "grouped256": {
+      "epochs": 100,
+      "best_epoch": 46,
+      "attempts": 178000,
+      "successful_updates": 177936,
+      "amp_skips": 64,
+      "actual_pair_views": 1424000,
+      "tile256_equivalent_pair_views": 1424000
+    }
+  },
+  "selected_metrics": {
+    "native512": {
+      "precision": 0.8899197618707183,
+      "recall": 0.8862128398747557,
+      "f1": 0.8880624325605765,
+      "iou": 0.798662135865786,
+      "oa": 0.9906245321035385,
+      "tp": 2495804,
+      "fp": 308723,
+      "fn": 320454,
+      "tn": 63983883,
+      "pixels": 67108864,
+      "background_fpr": 0.004801842998866775
+    },
+    "grouped256": {
+      "precision": 0.9144007241785646,
+      "recall": 0.8629866297761072,
+      "f1": 0.8879500548576714,
+      "iou": 0.7984803728793178,
+      "oa": 0.9908599257469177,
+      "tp": 2430393,
+      "fp": 227515,
+      "fn": 385865,
+      "tn": 64065091,
+      "pixels": 67108864,
+      "background_fpr": 0.003538742853260607
+    }
+  },
+  "native512_minus_grouped256": {
+    "f1": 0.00011237770290506433,
+    "recall": 0.02322621009864856,
+    "background_fpr": 0.0012631001456061678,
+    "precision": -0.024480962307846243,
+    "iou": 0.00018176298646821465,
+    "oa": -0.00023539364337921143
+  },
+  "gates": {
+    "clean_val_f1": {
+      "delta": 0.00011237770290506433,
+      "required_min": 0.002,
+      "passed": false
+    },
+    "clean_val_recall": {
+      "delta": 0.02322621009864856,
+      "required_min": -0.001,
+      "passed": true
+    },
+    "clean_val_background_fpr": {
+      "delta": 0.0012631001456061678,
+      "required_max": 0.0001,
+      "passed": false
+    }
+  },
+  "all_effectiveness_gates_passed": false,
+  "identity_and_exposure_matching_passed": true,
+  "all100_group_orders_exact_for_both_arms": true,
+  "all200_saved_val_confusion_tables_and_metrics_verified": true,
+  "same_initialization_tensor_sha256": "eb4fa2550e47d732c5b21acb6899ba5539856bee35b532da58006f56108001a8",
+  "single_seed": 42,
+  "test_or_martigny_access": false,
+  "new_gpu_forward_or_raw_data_access_in_analysis": false,
+  "new_training_or_search_authorized_by_completion": false,
+  "limitations": [
+    "One seed and repeatedly used clean development validation; no held-out generalization confirmation.",
+    "Convolution context, BN spatial population and GN spatial statistics remain confounded; no GN causal attribution.",
+    "No consistent inference-probe accuracy gain or novelty claim is implied."
+  ],
+  "decision": "End the fixed ordinary window-size candidate without tuning or extra training.",
+  "cpu_audit_charged_seconds": 4
+}

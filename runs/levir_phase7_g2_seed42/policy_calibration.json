@@ -1,0 +1,71 @@
+{
+  "status": "calibrated",
+  "variant": "g2",
+  "unconstrained": {
+    "threshold": {
+      "kind": "finite",
+      "value": 0.0
+    },
+    "corruption_mf1": 0.9009154752531264,
+    "clean": {
+      "precision": 0.917941027027913,
+      "recall": 0.8916585449620222,
+      "f1": 0.9046089236422582,
+      "iou": 0.8258319272146633,
+      "oa": 0.991238964928521,
+      "tn": 17924946,
+      "fp": 70091,
+      "fn": 95268,
+      "tp": 784063,
+      "pixels": 18874368
+    },
+    "perturbed_a1_selected": 6440,
+    "perturbed_selection_rate": 0.49691358024691357,
+    "clean_a1_selected": 147,
+    "clean_selection_rate": 0.5104166666666666,
+    "selected_negative_utility_mass": 41.58866882324219,
+    "captured_positive_utility_mass": 41.186519622802734
+  },
+  "harm_constrained": {
+    "threshold": {
+      "kind": "finite",
+      "value": 0.013091259831629927
+    },
+    "corruption_mf1": 0.9014379191173485,
+    "clean": {
+      "precision": 0.9160699871054314,
+      "recall": 0.8943696969628047,
+      "f1": 0.9050897900372418,
+      "iou": 0.8266338022987539,
+      "oa": 0.9912612703111436,
+      "tn": 17922983,
+      "fp": 72054,
+      "fn": 92884,
+      "tp": 786447,
+      "pixels": 18874368
+    },
+    "perturbed_a1_selected": 340,
+    "perturbed_selection_rate": 0.026234567901234566,
+    "clean_a1_selected": 8,
+    "clean_selection_rate": 0.027777777777777776,
+    "selected_negative_utility_mass": 5.448301315307617,
+    "captured_positive_utility_mass": 3.524616241455078
+  },
+  "candidate_thresholds": 798,
+  "clean_a0_reference": {
+    "precision": 0.9155445075592269,
+    "recall": 0.8946687879763138,
+    "f1": 0.9049862764089975,
+    "iou": 0.8264611273009196,
+    "oa": 0.991247812906901,
+    "tn": 17922466,
+    "fp": 72571,
+    "fn": 92621,
+    "tp": 786710,
+    "pixels": 18874368
+  },
+  "clean_f1_floor": 0.9044862764089976,
+  "clean_recall_floor": 0.8936687879763138,
+  "score_rule": "min_predicted_u_obs_and_u_clean",
+  "test_evaluated": false
+}

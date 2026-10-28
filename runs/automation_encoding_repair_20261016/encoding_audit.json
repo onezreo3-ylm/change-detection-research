@@ -1,0 +1,19 @@
+{
+  "root_cause": "Native Python stdout encoded GBK, decoded by PowerShell as UTF-8; lossy strings were written into automation metadata during pause update.",
+  "exact_gbk_to_utf8_corruption_reproduced": {
+    "name": true,
+    "prompt": true
+  },
+  "replacement_chars_before": {
+    "name": 11,
+    "prompt": 536
+  },
+  "replacement_chars_after": {
+    "name": 0,
+    "prompt": 0
+  },
+  "status": "PAUSED",
+  "protected_fields_unchanged": true,
+  "prevention": "Use direct Unicode structured tool arguments; JSON crossing shell boundary uses ensure_ascii=True and exact readback comparison.",
+  "training_started": false
+}

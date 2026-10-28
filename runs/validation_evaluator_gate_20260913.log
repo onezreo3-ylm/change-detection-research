@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\new research\detection\pcdc\evaluate_corruptions.py", line 406, in <module>
+    main()
+  File "E:\new research\detection\pcdc\evaluate_corruptions.py", line 401, in main
+    result = preflight(job) if args.preflight_only else evaluate(job, clean_only=args.clean_only)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\pcdc\evaluate_corruptions.py", line 283, in evaluate
+    bundle = load_bundle(job, require_review=not clean_only)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\pcdc\frozen_validation.py", line 172, in load_bundle
+    review = _approval(job, required=require_review)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\pcdc\frozen_validation.py", line 126, in _approval
+    raise ReviewRequired("Visual severity review is pending; real corruption scoring is blocked")
+pcdc.frozen_validation.ReviewRequired: Visual severity review is pending; real corruption scoring is blocked

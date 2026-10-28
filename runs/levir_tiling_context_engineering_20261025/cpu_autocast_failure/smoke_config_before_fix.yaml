@@ -1,0 +1,30 @@
+schema_version: 1
+synthetic_only: true
+device: cpu
+amp: false
+base_config: runs/phase2_protocol_v1_20260913/base_config.yaml
+output_dir: runs/levir_tiling_context_engineering_20261025/smoke
+seed: 42
+num_threads: 4
+source_size: 64
+source_count: 2
+batch_size: 2
+common_support_xyxy_exclusive: [16, 16, 48, 48]
+arms:
+  grid32:
+    window_size: 32
+    origins_yx_1d: [0, 32]
+    aggregation: none_unique_coverage
+  alternate32:
+    window_size: 32
+    origins_yx_1d: [16]
+    support_xyxy_exclusive: [16, 16, 48, 48]
+    aggregation: none_unique_coverage
+  overlap32:
+    window_size: 32
+    origins_yx_1d: [0, 16, 32]
+    aggregation: uniform_arithmetic_mean_probability_float32_before_threshold
+  context64:
+    window_size: 64
+    origins_yx_1d: [0]
+    aggregation: uniform_arithmetic_mean_probability_float32_before_threshold

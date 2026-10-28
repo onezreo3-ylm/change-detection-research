@@ -1,0 +1,17 @@
+{
+  "input_rule": "Only prepared.selected.train names; allow_pickle=False; np.unpackbits(axis=1,bitorder=big) restores1024x1024 masks.",
+  "primary_geometry": "Exclude outer32; distance to line between centers cut-.5; near if min absolute x/y distance<16; core distance>=32.",
+  "secondary_geometry": "Same cuts halfwidth32. Control cuts128/384/640/896,halfwidth16.",
+  "counts": "Per source and model count TP,FP,FN,TN on fixed zones; sum counts then compute rates; no per-tile F1 mean.",
+  "null_denominators": "Return JSON null, never impute0 for missing foreground/background support.",
+  "integrity": "Full-source64 confusion tables replay saved train counts; separate integer-slice joint-label bincount verifies320 zone tables and area formulas.",
+  "causal_or_independence_claim": false,
+  "raw_data_or_model_load": false,
+  "config": "configs/research_question_screen_20261025.yaml",
+  "newly_computed_results": [
+    "saved_train_spatial_profile.json",
+    "per_source_spatial_counts.json",
+    "verification_cpu.json",
+    "independent_cpu_audit.json"
+  ]
+}

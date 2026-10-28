@@ -1,0 +1,86 @@
+{
+  "status": "candidate_preflight_only",
+  "model_training_or_inference": false,
+  "official_test_archive_requested": false,
+  "official_test_pixels_accessed": false,
+  "rights_status": "upstream_attribution_and_derived_terms_review_needed",
+  "dataset_card": "https://huggingface.co/datasets/EPFL-ECEO/ValaisCD",
+  "dataset_revision": "dbf58176968d17c964cfda960a314b243f73ca8b",
+  "upstream_terms": "https://www.swisstopo.admin.ch/en/terms-of-use-free-geodata-and-geoservices",
+  "upstream_attribution": "Federal Office of Topography swisstopo",
+  "config_sha256": "a344fda321d06ac05639958b33ca52c5487c5dedd7c292b6a70dae99b0a19ff4",
+  "inventories": {
+    "dev": {
+      "archive_size_bytes": 1062362132,
+      "etag": "\"3dfc98898d46dafef7ec76b3857162ee5910fda49c684c8f1ddf142191a444b4\"",
+      "zip_entries": 9413,
+      "paired_tiff_ids": 3136,
+      "nonempty_categories": [
+        "2017",
+        "2023",
+        "labels"
+      ]
+    },
+    "train": {
+      "archive_size_bytes": 3750792668,
+      "etag": "\"5166abafc1c2a77bb3badd891801d051fe24c6440646fbed89d569d0dc0b41c0\"",
+      "zip_entries": 33084,
+      "paired_tiff_ids": 11025,
+      "nonempty_categories": [
+        "2017",
+        "2023",
+        "labels"
+      ]
+    },
+    "val": {
+      "archive_size_bytes": 603524101,
+      "etag": "\"291608aefd39a1932f98f8baf31325155e9751506a1f44504af673245ce0016b\"",
+      "zip_entries": 5154,
+      "paired_tiff_ids": 1715,
+      "nonempty_categories": [
+        "2017",
+        "2023",
+        "labels"
+      ]
+    }
+  },
+  "cross_split_same_image_crc_size_groups": 0,
+  "crc_size_screen_is_not_cryptographic_duplicate_audit": true,
+  "dev_samples": [
+    {
+      "id": 304,
+      "size": [
+        256,
+        256
+      ],
+      "label_values": [
+        0
+      ],
+      "positive_pixels": 0,
+      "member_sha256": {
+        "2017": "34dc1f106758cb5ffb86381e6126bbeb6eb860b899cf9d6930c491517070aaa6",
+        "2023": "2c6d1a41285acbabfb9acb8d96073c4febb6cce0e60fc606d7a4df884c1db7ee",
+        "labels": "9d9bc11705b84fc3a196a51401547cd8dbd7414441ae306e2954258c6368a5f8"
+      },
+      "preview": "dev_304_qa.png"
+    },
+    {
+      "id": 1360,
+      "size": [
+        256,
+        256
+      ],
+      "label_values": [
+        0,
+        1
+      ],
+      "positive_pixels": 6348,
+      "member_sha256": {
+        "2017": "b334825854829b16a54578cc2537389110ba94228660ffc6aecda953866f5b22",
+        "2023": "bd3265d836ac56b484a8eda8631efe420a245d603f5e4da3f4bbeb6410aae27b",
+        "labels": "836cdedf2fd27e9b001fb12ab47a3745e078ce1866637c3949df5238a1cd3ceb"
+      },
+      "preview": "dev_1360_qa.png"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+kind: synthetic_cpu_local_feature_mechanism_prototype
+protocol: docs/LOCAL_FEATURE_REPLAY_CPU_PROTOCOL_2026-10-27.md
+output_dir: runs/local_feature_replay_cpu_20261027
+device: cpu
+dtype: float32
+seed: 20261027
+num_threads: 2
+decoder_channels: 64
+normalization_groups: 8
+feature_channels: [64, 128, 256, 512]
+feature_sizes: [32, 16, 8, 4]
+output_size: [128, 128]
+edited_feature_stage: 1
+edit_rows: [7, 10]
+edit_columns: [7, 10]
+edit_amplitude: 0.25
+engineering_only: true
+actual_checkpoint_or_data: false
+new_gpu_job: false

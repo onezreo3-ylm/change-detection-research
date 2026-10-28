@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "status": "training_nonfinite_failure_preserved",
+  "audited_utc": "2026-10-01T15:40:56.4333860Z",
+  "run": "valais_clean_fp32val_seed42_relaunch_20261001",
+  "session": "session_0002",
+  "last_complete_epoch": 45,
+  "failing_epoch": 46,
+  "failing_step_exact": "unknown; after logged step 1100 and before next 1375 progress point",
+  "error": "FloatingPointError: Non-finite loss; experiment stopped",
+  "training_amp": true,
+  "validation_amp": false,
+  "test_accessed": false,
+  "last_checkpoint_metadata_checked": {
+    "format_version": 2,
+    "epoch": 45,
+    "history_length": 45,
+    "all_model_tensors_finite": true,
+    "optimizer_scheduler_scaler_rng_present": true
+  },
+  "best_development_validation": {
+    "epoch": 44,
+    "f1": 0.39461201065792173,
+    "tp": 120332,
+    "fp": 184012,
+    "fn": 185199,
+    "not_final_study_result": true
+  },
+  "guard": {
+    "status": "training_process_exited",
+    "decision": "ok",
+    "last_temperature_c": 75,
+    "sensor_error": null,
+    "hot_samples": 0
+  },
+  "scheduler": {
+    "task_name": "Codex-Valais-FP32Val-Resume-Epoch38-20261001",
+    "last_result": 1,
+    "triggers": 0,
+    "automatic_retries": 0,
+    "registration_removed": true,
+    "result_marker_exists": false
+  },
+  "completion_marker_exists": false,
+  "independent_val_exists": false,
+  "matching_processes_after_failure": 0,
+  "disposition": "No automatic retry, no protocol changes, no held-out evaluation; original run artifacts unchanged.",
+  "artifacts_sha256": {
+    "status": "d5eceb550a2670f7906d91d4b52a2357ae5b5b9d58d96711e0089b4fc62a8d03",
+    "last_checkpoint": "e9f0bdc9955af247d6138c5efbffe28b1dbf5f0dcaff010b83540f32293d15e4",
+    "best_checkpoint": "018c85205e96fa29c869e34d599729909c6213986697768235e86b50302773ca",
+    "history": "da09f7621deadf3ba701995a99a9a4221268a0307d154fc6b8b92a98faa8807c",
+    "train_log": "d0ebc883d4f9fc90fba64e3b1385848ec8f750ee13cd6a77e2f37ad970e57d01",
+    "guard_log": "ddaf319709a0468ea7ef32e586004301d841ea4af54a7e72e17fbd89d4cd5a04",
+    "guard_state": "2b3ea15442b0c53bdcaa6fa4b52cef0b9ce14809aace2345f5b59e020ee48d81",
+    "preflight_seal": "65340a622b83bd105b493f7e6a22c0d4fb15fa29d27ed8cd1ae3bb3624f9ff18",
+    "scheduler_wrapper": "7ad74a9ca675b4dfcc8eaf6b95a90353e9ef276089988bb71afdbb59ac18df15",
+    "scheduler_task_definition": "ebeaf13547d39931752b93298a0eacf72231731bcb39f6e756c4938de36cdf43"
+  }
+}

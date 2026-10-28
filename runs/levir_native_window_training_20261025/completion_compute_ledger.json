@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-24",
+  "unit": "conservative_charged_gpu_seconds",
+  "entries": [
+    {
+      "kind": "prior_delegated_completion_full_tests",
+      "charged_seconds": 69.239,
+      "basis": "Conservatively charge all test wall time, including CPU; exact GPU-active subtime unavailable."
+    },
+    {
+      "kind": "region_diagnostic_full_tests",
+      "charged_seconds": 73.7833997,
+      "basis": "Conservative whole-process test wall time."
+    },
+    {
+      "kind": "region_diagnostic_real_forward_process",
+      "charged_seconds": 139.1882329,
+      "pair_predictions": 5120,
+      "optimizer_updates": 0,
+      "basis": "Whole process wall time including setup and data work; not pure kernel time."
+    },
+    {
+      "kind": "tail_risk_full_tests_20261025",
+      "charged_seconds": 74.48500000000058,
+      "basis": "Conservative entire full-test subprocess wall time; includes synthetic CUDA tests and CPU tests.",
+      "exit_code": 0
+    },
+    {
+      "id": "tail_risk_pilot_runs/levir_tail_risk_control_20261024/pilot",
+      "kind": "tail_risk_pilot_whole_worker_process",
+      "status": "completed",
+      "charged_seconds": 54.0,
+      "started_utc": "2026-10-24T16:25:26.496124+00:00",
+      "basis": "Conservative entire worker wall time including CPU/data/I/O, not pure kernel time.",
+      "research_training": false,
+      "maximum_seconds": 1800,
+      "updated_utc": "2026-10-24T16:26:19.763302+00:00",
+      "worker_exit_code": 0
+    },
+    {
+      "id": "tail_risk_train_runs/levir_tail_risk_control_20261024/training_session",
+      "kind": "tail_risk_train_whole_worker_process",
+      "status": "failed_preserve",
+      "charged_seconds": 47.9059999999954,
+      "started_utc": "2026-10-24T16:27:48.821911+00:00",
+      "basis": "Conservative entire worker wall time including CPU/data/I/O, not pure kernel time.",
+      "research_training": true,
+      "maximum_seconds": 86400,
+      "updated_utc": "2026-10-24T16:28:35.991994+00:00",
+      "successful_research_optimizer_updates": 201,
+      "worker_exit_code": 1
+    },
+    {
+      "kind": "tail_risk_windows_io_repair_full_tests",
+      "charged_seconds": 74.65699999999924,
+      "basis": "Conservative entire required full-test wall time after diagnosed IO code repair; includes synthetic CUDA.",
+      "exit_code": 0
+    },
+    {
+      "id": "tail_risk_pilot_runs/levir_tail_risk_control_20261025_iofix/pilot",
+      "kind": "tail_risk_pilot_whole_worker_process",
+      "status": "completed",
+      "charged_seconds": 54.01499999999942,
+      "started_utc": "2026-10-24T16:44:18.143451+00:00",
+      "basis": "Conservative entire worker wall time including CPU/data/I/O, not pure kernel time.",
+      "research_training": false,
+      "maximum_seconds": 1800,
+      "updated_utc": "2026-10-24T16:45:11.442130+00:00",
+      "worker_exit_code": 0
+    },
+    {
+      "id": "tail_risk_train_runs/levir_tail_risk_control_20261025_iofix/training_session",
+      "kind": "tail_risk_train_whole_worker_process",
+      "status": "completed",
+      "charged_seconds": 29015.172000000006,
+      "started_utc": "2026-10-24T16:45:54.765011+00:00",
+      "basis": "Conservative entire worker wall time including CPU/data/I/O, not pure kernel time.",
+      "research_training": true,
+      "maximum_seconds": 86352.09400000001,
+      "updated_utc": "2026-10-25T00:49:29.204844+00:00",
+      "successful_research_optimizer_updates": 177934,
+      "worker_exit_code": 0
+    },
+    {
+      "kind": "tail_risk_explicit_evaluator_full_tests",
+      "charged_seconds": 76.54700000000594,
+      "basis": "Conservative whole required full-test subprocess after new explicit evaluator code; synthetic CUDA included.",
+      "exit_code": 0
+    },
+    {
+      "id": "tail_risk_fixed45_validation_20261025",
+      "kind": "tail_risk_fixed45_validation_process",
+      "status": "completed",
+      "charged_seconds": 1029.1100000000006,
+      "started_utc": "2026-10-25T01:32:28.943136+00:00",
+      "maximum_seconds": 7200,
+      "research_training": false,
+      "optimizer_updates": 0,
+      "candidate_training_seconds_already_debited": 29063.078,
+      "basis": "Conservative whole validation worker wall time including setup, CPU bootstrap and I/O; same original budgets.",
+      "updated_utc": "2026-10-25T01:49:37.295930+00:00",
+      "worker_exit_code": 0
+    },
+    {
+      "kind": "tiling_probe_full_unittest",
+      "started_utc": "2026-10-25T06:49:48.167525+00:00",
+      "charged_seconds": 99.25434110000788,
+      "exit_code": 0,
+      "basis": "Conservative entire subprocess wall time, including CPU and any existing synthetic CUDA tests; not pure GPU kernel time.",
+      "research_training": false,
+      "new_real_probe": false
+    },
+    {
+      "kind": "tiling_probe_cpu_synthetic_smoke",
+      "started_utc": "2026-10-25T06:51:27.427179+00:00",
+      "charged_seconds": 2.622548100000131,
+      "exit_code": 1,
+      "basis": "Conservative entire subprocess wall time, including CPU and any existing synthetic CUDA tests; not pure GPU kernel time.",
+      "research_training": false,
+      "new_real_probe": false
+    },
+    {
+      "kind": "tiling_probe_full_unittest_after_cpu_fix",
+      "started_utc": "2026-10-25T06:53:10.603227+00:00",
+      "charged_seconds": 105.50987019999593,
+      "exit_code": 0,
+      "research_training": false,
+      "new_real_probe": false,
+      "basis": "Conservative entire check process wall time; preserve prior failed CPU smoke and all prior charges."
+    },
+    {
+      "kind": "tiling_probe_cpu_synthetic_smoke_after_fix",
+      "started_utc": "2026-10-25T06:54:56.119932+00:00",
+      "charged_seconds": 2.8543613999936497,
+      "exit_code": 0,
+      "research_training": false,
+      "new_real_probe": false,
+      "basis": "Conservative entire check process wall time; preserve prior failed CPU smoke and all prior charges."
+    },
+    {
+      "kind": "tiling_probe_cpu_identity_preparation",
+      "started_utc": "2026-10-25T06:55:31.051730+00:00",
+      "charged_seconds": 3.2971411000035005,
+      "exit_code": 0,
+      "research_training": false,
+      "new_real_probe": false,
+      "actual_gpu_compute": false,
+      "basis": "Conservatively charge entire CPU checkpoint/hash/train-mask preparation process; no model forward."
+    },
+    {
+      "kind": "tiling_probe_initial_focused_cpu_tests",
+      "charged_seconds": 2.813,
+      "exit_code": 0,
+      "actual_gpu_compute": false,
+      "research_training": false,
+      "new_real_probe": false,
+      "basis": "Observed2.8125139s command wall rounded up;20 initial focused checks before final regression check."
+    },
+    {
+      "kind": "tiling_probe_original_source_compatibility_cpu",
+      "charged_seconds": 0.332,
+      "exit_code": 0,
+      "actual_gpu_compute": false,
+      "research_training": false,
+      "new_real_probe": false,
+      "basis": "Observed0.331996s command wall rounded up;28 original source hashes checked against original region preparation."
+    },
+    {
+      "kind": "tiling_supervision_full_unittest",
+      "charged_seconds": 127.26444069998979,
+      "exit_code": 0,
+      "started_utc": "2026-10-25T07:24:55.149973+00:00",
+      "research_training": false,
+      "new_real_probe": false,
+      "basis": "Conservative whole test process wall including existing synthetic CUDA tests and CPU work."
+    },
+    {
+      "kind": "tiling_supervision_cpu_synthetic_smoke",
+      "charged_seconds": 3.0176949000015156,
+      "exit_code": 0,
+      "started_utc": "2026-10-25T07:27:02.420836+00:00",
+      "research_training": false,
+      "new_real_probe": false,
+      "basis": "Conservative whole test process wall including existing synthetic CUDA tests and CPU work."
+    },
+    {
+      "id": "tiling_probe_gpu_pilot_20261025",
+      "kind": "tiling_probe_gpu_pilot",
+      "status": "completed",
+      "charged_seconds": 101.1710000000021,
+      "started_utc": "2026-10-25T07:28:43.907265+00:00",
+      "maximum_seconds": 900,
+      "research_training": false,
+      "optimizer_updates": 0,
+      "basis": "Conservative entire owner process wall including startup, CPU, I/O and guard cleanup.",
+      "updated_utc": "2026-10-25T07:30:22.815271+00:00",
+      "worker_exit_code": 0
+    },
+    {
+      "id": "tiling_probe_gpu_main_20261025",
+      "kind": "tiling_probe_gpu_main",
+      "status": "completed",
+      "charged_seconds": 243.73399999999674,
+      "started_utc": "2026-10-25T07:33:16.579022+00:00",
+      "maximum_seconds": 1800,
+      "research_training": false,
+      "optimizer_updates": 0,
+      "basis": "Conservative entire owner process wall including startup, CPU, I/O and guard cleanup.",
+      "updated_utc": "2026-10-25T07:37:18.995489+00:00",
+      "worker_exit_code": 0
+    },
+    {
+      "id": "tiling_probe_independent_saved_cpu_audit_20261025",
+      "kind": "tiling_probe_independent_saved_cpu_audit",
+      "status": "completed",
+      "charged_seconds": 10.0,
+      "research_training": false,
+      "optimizer_updates": 0,
+      "actual_gpu_compute": false,
+      "exit_code": 0,
+      "basis": "Observed whole command wall9.6629731s rounded up; independent saved probability/coverage/cached-label audit,288 confusion tables exact; no model/raw data read."
+    },
+    {
+      "id": "tiling_probe_new_artifact_sealing_20261025",
+      "kind": "tiling_probe_new_artifact_sealing_cpu_io",
+      "status": "completed",
+      "charged_seconds": 2,
+      "research_training": false,
+      "optimizer_updates": 0,
+      "actual_gpu_compute": false,
+      "basis": "New current-probe artifact hashing/binding and report sealing CPU/I/O wall rounded up plus1s for final metadata writes; no old checkpoint/raw full hash.",
+      "new_artifact_bytes_hashed": 404824355
+    },
+    {
+      "kind": "native_window_full_unittest",
+      "charged_seconds": 74.91629969999485,
+      "exit_code": 1,
+      "started_utc": "2026-10-25T08:14:23.726230+00:00",
+      "research_training": false,
+      "new_real_training": false,
+      "basis": "Conservative whole required check subprocess including CPU/existing synthetic CUDA checks; original shared ledger."
+    },
+    {
+      "kind": "native_window_full_unittest_after_fixture_fix",
+      "charged_seconds": 74.18425160000334,
+      "exit_code": 0,
+      "started_utc": "2026-10-25T08:16:34.263912+00:00",
+      "research_training": false,
+      "new_real_training": false,
+      "basis": "Conservative whole required check wall after fixing two test-only explicit loss constructor arguments; failed evidence and spend preserved."
+    },
+    {
+      "kind": "native_window_cpu_synthetic_smoke",
+      "charged_seconds": 2.97792639999534,
+      "exit_code": 0,
+      "started_utc": "2026-10-25T08:17:48.454924+00:00",
+      "research_training": false,
+      "new_real_training": false,
+      "basis": "Conservative whole required check wall after fixing two test-only explicit loss constructor arguments; failed evidence and spend preserved."
+    },
+    {
+      "kind": "native_window_cpu_data_initialization_preparation",
+      "charged_seconds": 31.67945619999955,
+      "exit_code": 0,
+      "started_utc": "2026-10-25T08:18:16.914475+00:00",
+      "research_training": false,
+      "actual_gpu_compute": false,
+      "basis": "Conservative complete CPU full train/val identity, source, initialization and100epoch paired group-order preparation wall."
+    },
+    {
+      "id": "native_window_pilot_20261025",
+      "kind": "native_window_gpu_pilot",
+      "mode": "pilot",
+      "status": "completed",
+      "charged_seconds": 53.35899999999674,
+      "started_utc": "2026-10-25T08:19:49.819858+00:00",
+      "maximum_seconds": 1800,
+      "research_training": false,
+      "basis": "Conservative complete owner wall including CPU/startup/I/O and guard cleanup; original shared ledger.",
+      "updated_utc": "2026-10-25T08:20:41.985875+00:00",
+      "worker_exit_code": 0
+    },
+    {
+      "id": "native_window_native512_20261025",
+      "kind": "native_window_gpu_native512",
+      "mode": "native512",
+      "status": "completed",
+      "charged_seconds": 29300.609999999986,
+      "started_utc": "2026-10-25T08:23:07.072205+00:00",
+      "maximum_seconds": 86162.88306610001,
+      "research_training": true,
+      "basis": "Conservative complete owner wall including CPU/startup/I/O and guard cleanup; original shared ledger.",
+      "updated_utc": "2026-10-25T16:31:26.541665+00:00",
+      "successful_research_optimizer_updates": 177939,
+      "worker_exit_code": 0
+    },
+    {
+      "id": "native_window_native512_completion_cpu_audit_20261026",
+      "kind": "native_window_native512_completion_cpu_audit",
+      "status": "completed",
+      "charged_seconds": 4,
+      "research_training": false,
+      "actual_gpu_compute": false,
+      "optimizer_updates": 0,
+      "basis": "Completed new100epoch saved history/status audit, CPU-only best/last checkpoint metadata load and new-file SHA256, wall rounded up plus1s; no forwards/raw data/old-results hashing."
+    },
+    {
+      "id": "native_window_grouped256_20261025",
+      "kind": "native_window_gpu_grouped256",
+      "mode": "grouped256",
+      "status": "completed",
+      "charged_seconds": 29046.32799999998,
+      "started_utc": "2026-10-25T17:04:34.942278+00:00",
+      "maximum_seconds": 86158.88306610001,
+      "research_training": true,
+      "basis": "Conservative complete owner wall including CPU/startup/I/O and guard cleanup; original shared ledger.",
+      "updated_utc": "2026-10-26T01:08:39.089266+00:00",
+      "successful_research_optimizer_updates": 177936,
+      "worker_exit_code": 0
+    },
+    {
+      "id": "native_window_paired_completion_cpu_audit_20261026",
+      "kind": "native_window_paired_completion_cpu_audit",
+      "status": "completed",
+      "charged_seconds": 4,
+      "research_training": false,
+      "actual_gpu_compute": false,
+      "optimizer_updates": 0,
+      "basis": "Measured Python CPU wall for two saved100epoch count/order/accounting audits and only new grouped256 best/last weights_only CPU metadata load/SHA256, rounded up plus1s startup/write allowance; native checkpoint hashes reused, no forwards/raw data."
+    },
+    {
+      "id": "native_window_paired_result_sealing_cpu_20261026",
+      "kind": "native_window_paired_result_sealing_cpu",
+      "status": "completed",
+      "charged_seconds": 2,
+      "research_training": false,
+      "actual_gpu_compute": false,
+      "optimizer_updates": 0,
+      "basis": "CPU result/report/state serialization and first-time new small-artifact hashes; wall rounded up plus1s I/O allowance. Existing native and newly audited grouped256 checkpoint hashes reused."
+    }
+  ],
+  "total_charged_seconds": 90006.02796399995,
+  "batch_upper_bound_seconds": 172800,
+  "new_research_optimizer_updates": 534010,
+  "historical_reference_compute_is_separately_reported_not_new_spend": true,
+  "no_budget_reset_between_region_and_tail_control": true
+}

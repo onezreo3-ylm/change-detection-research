@@ -1,0 +1,68 @@
+{
+  "status": "engineering_and_first_epoch_verified_training_still_active",
+  "created_utc": "2026-10-24T16:52:08.055171+00:00",
+  "full_tests": 459,
+  "full_test_log": "full_unittest_20261025_iofix.log",
+  "cpu_synthetic_smoke_passed": true,
+  "first_epoch_source_instance_and_exposure_exact": true,
+  "first_epoch_optimizer_attempts": 1780,
+  "first_epoch_successful_updates": 1780,
+  "first_epoch_amp_skips": 0,
+  "first_epoch_pair_views": 14240,
+  "first_epoch_clean_val_f1": 0.7788441239034746,
+  "checkpoints_exist_and_timestamped_without_loading_model": true,
+  "worker": {
+    "pid": 11252,
+    "creation_time_ticks": 134373339547696568,
+    "owner_pid": 3304,
+    "guard_pid": 22856,
+    "watchdog_pid": 32092,
+    "epoch": 2,
+    "step": 435,
+    "committed_epochs": 1,
+    "training_flavor": "b1_secondary_empirical_tail_v1"
+  },
+  "engineering": {
+    "status": "passed",
+    "kind": "programmatic_engineering_crosscheck_not_human_label_truth",
+    "checked_utc": "2026-10-24T16:45:50.247834+00:00",
+    "original_prefix_stream_sha256": "a28dbf567c01f9114bb686407521a71a9a2c24bf824efd9ff341a0e8e29839fb",
+    "all_actual_streams_match": true,
+    "full_model_optimizer_scaler_rng_boundaries_equal_before_and_after_io_repair": true,
+    "physical_engineering_attempts": 99,
+    "physical_engineering_pair_views": 792,
+    "all_main_32_step_amp_skips": [
+      0,
+      0,
+      0
+    ],
+    "peak_allocated_bytes_including_replays": 902886912,
+    "peak_reserved_bytes_including_replays": 1130364928,
+    "pilot_max_observed_temperature_c": 61,
+    "budget": {
+      "estimated_training_seconds_with_margin": 40925.24193547844,
+      "available_seconds": 86352.09400000001,
+      "passed": true,
+      "measured_seconds_per_step": 0.1502258064515885
+    },
+    "prior_discarded_successful_training_updates": 201,
+    "prior_training_wall_seconds_debited": 47.9059999999954,
+    "total_charged_seconds": 587.2736325999947
+  },
+  "current_gpu": {
+    "uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+    "temperature_c": 75,
+    "utilization_percent": 97,
+    "memory_used_mib": 2935
+  },
+  "guard_maximum_observed_temperature_c": 76,
+  "all_four_creation_bound_processes_active": true,
+  "first_fault_preserved": "../levir_tail_risk_control_20261024/training_session",
+  "same_single_training_cap_not_reset": true,
+  "current_worker_allowed_wall_seconds": 86352.09400000001,
+  "shared_charged_seconds_at_check": 960.414632599998,
+  "old_held_out_test_or_martigny_opened": false,
+  "effectiveness_result_available": false,
+  "no_independent_label_truth_claim": true,
+  "automatic_second_infrastructure_recovery": false
+}

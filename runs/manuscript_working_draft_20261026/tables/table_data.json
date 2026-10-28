@@ -1,0 +1,334 @@
+{
+  "status": "working_tables_missing_two_b0e_controls",
+  "rows": [
+    {
+      "seed": 42,
+      "mode": "b0e",
+      "clean_f1": 0.9039766971440153,
+      "corruption_mf1": 0.876716007244136,
+      "clean_minus_corruption_mf1": 0.027260689899879287,
+      "pooled_recall": 0.8524890988128376,
+      "background_fpr": 0.003945219524068513,
+      "status": "saved_verified_result"
+    },
+    {
+      "seed": 42,
+      "mode": "b1",
+      "clean_f1": 0.9060728685624768,
+      "corruption_mf1": 0.9023764360699057,
+      "clean_minus_corruption_mf1": 0.0036964324925711223,
+      "pooled_recall": 0.896359148281948,
+      "background_fpr": 0.003955371719658643,
+      "status": "saved_verified_result"
+    },
+    {
+      "seed": 42,
+      "mode": "b2",
+      "clean_f1": 0.9038268270904687,
+      "corruption_mf1": 0.900742077324794,
+      "clean_minus_corruption_mf1": 0.0030847497656746325,
+      "pooled_recall": 0.8923001214929724,
+      "background_fpr": 0.003896136292181959,
+      "status": "saved_verified_result"
+    },
+    {
+      "seed": 43,
+      "mode": "b0e",
+      "clean_f1": null,
+      "corruption_mf1": null,
+      "clean_minus_corruption_mf1": null,
+      "pooled_recall": null,
+      "background_fpr": null,
+      "status": "pending_final_training_and_fixed_validation"
+    },
+    {
+      "seed": 43,
+      "mode": "b1",
+      "clean_f1": 0.9034185105939818,
+      "corruption_mf1": 0.8995681992371025,
+      "clean_minus_corruption_mf1": 0.003850311356879299,
+      "pooled_recall": 0.8914074160345631,
+      "background_fpr": 0.003961751233277294,
+      "status": "saved_verified_result"
+    },
+    {
+      "seed": 43,
+      "mode": "b2",
+      "clean_f1": 0.9040954950453227,
+      "corruption_mf1": 0.9003866824365346,
+      "clean_minus_corruption_mf1": 0.0037088126087880813,
+      "pooled_recall": 0.8889016954807092,
+      "background_fpr": 0.0037487459202453924,
+      "status": "saved_verified_result"
+    },
+    {
+      "seed": 44,
+      "mode": "b0e",
+      "clean_f1": null,
+      "corruption_mf1": null,
+      "clean_minus_corruption_mf1": null,
+      "pooled_recall": null,
+      "background_fpr": null,
+      "status": "pending_final_training_and_fixed_validation"
+    },
+    {
+      "seed": 44,
+      "mode": "b1",
+      "clean_f1": 0.9040675323162796,
+      "corruption_mf1": 0.8996533279753594,
+      "clean_minus_corruption_mf1": 0.004414204340920214,
+      "pooled_recall": 0.8873858779194868,
+      "background_fpr": 0.0037376328400120467,
+      "status": "saved_verified_result"
+    },
+    {
+      "seed": 44,
+      "mode": "b2",
+      "clean_f1": 0.9006669076235465,
+      "corruption_mf1": 0.8974146585825686,
+      "clean_minus_corruption_mf1": 0.0032522490409778726,
+      "pooled_recall": 0.8837433139214439,
+      "background_fpr": 0.003757524189052505,
+      "status": "saved_verified_result"
+    }
+  ],
+  "aggregates": {
+    "b0e": {
+      "n": 1,
+      "mean": null,
+      "sample_sd": null
+    },
+    "b1": {
+      "clean_f1": {
+        "mean": 0.9045196371575794,
+        "sample_sd": 0.0013837279887583724
+      },
+      "corruption_mf1": {
+        "mean": 0.9005326544274559,
+        "sample_sd": 0.0015973289530637
+      },
+      "clean_minus_corruption_mf1": {
+        "mean": 0.003986982730123545,
+        "sample_sd": 0.0003778999930788154
+      },
+      "pooled_recall": {
+        "mean": 0.8917174807453326,
+        "sample_sd": 0.004494663540589507
+      },
+      "background_fpr": {
+        "mean": 0.003884918597649328,
+        "sample_sd": 0.0001275930850422292
+      }
+    },
+    "b2": {
+      "clean_f1": {
+        "mean": 0.9028630765864459,
+        "sample_sd": 0.0019066762186311383
+      },
+      "corruption_mf1": {
+        "mean": 0.8995144727812991,
+        "sample_sd": 0.001827153834120927
+      },
+      "clean_minus_corruption_mf1": {
+        "mean": 0.0033486038051468623,
+        "sample_sd": 0.000322996576564298
+      },
+      "pooled_recall": {
+        "mean": 0.8883150436317085,
+        "sample_sd": 0.0043084636760676075
+      },
+      "background_fpr": {
+        "mean": 0.003800802133826619,
+        "sample_sd": 8.267838782174749e-05
+      }
+    }
+  },
+  "existing_b2_minus_b1_interval": [
+    -0.0032494862795897817,
+    -0.0009676588850718685,
+    0.0008292796299137283
+  ],
+  "phase6_label_informed_margin": 0.0021832401970008908,
+  "phase6_legacy_field": "oracle_mf1_margin; diagnostic, not an upper bound",
+  "phase7_decision": {
+    "status": "completed",
+    "better_constant": "G0",
+    "selector_feasibility": {
+      "passing_policies": [],
+      "policies": {
+        "C1-U": {
+          "passes": false,
+          "checks": {
+            "mf1_gain": false,
+            "mf1_gain_ci_lower_positive": false,
+            "clean_f1": true,
+            "clean_recall": false,
+            "corruption_recall": true,
+            "transitions_and_regret_finite": true
+          },
+          "mf1_gain_over_better_constant": -0.00030787510836105536,
+          "mf1_gain_bootstrap": [
+            -0.0007971431321822792,
+            -0.0002996620738079936,
+            0.0001539828074691301
+          ]
+        },
+        "C1-H": {
+          "passes": false,
+          "checks": {
+            "mf1_gain": false,
+            "mf1_gain_ci_lower_positive": false,
+            "clean_f1": true,
+            "clean_recall": true,
+            "corruption_recall": true,
+            "transitions_and_regret_finite": true
+          },
+          "mf1_gain_over_better_constant": -0.0003412527525210596,
+          "mf1_gain_bootstrap": [
+            -0.0012336038567951596,
+            -0.000317216810704124,
+            0.0004512378120213761
+          ]
+        },
+        "G1-U": {
+          "passes": false,
+          "checks": {
+            "mf1_gain": false,
+            "mf1_gain_ci_lower_positive": false,
+            "clean_f1": true,
+            "clean_recall": false,
+            "corruption_recall": true,
+            "transitions_and_regret_finite": true
+          },
+          "mf1_gain_over_better_constant": -0.00014362744155116403,
+          "mf1_gain_bootstrap": [
+            -0.0008129869139211319,
+            -0.00012835939285277265,
+            0.0004037444747765042
+          ]
+        },
+        "G1-H": {
+          "passes": false,
+          "checks": {
+            "mf1_gain": false,
+            "mf1_gain_ci_lower_positive": false,
+            "clean_f1": true,
+            "clean_recall": true,
+            "corruption_recall": true,
+            "transitions_and_regret_finite": true
+          },
+          "mf1_gain_over_better_constant": -0.0003173713289863489,
+          "mf1_gain_bootstrap": [
+            -0.001127328867906921,
+            -0.00030109922742371786,
+            0.0004134310919603837
+          ]
+        },
+        "G2-U": {
+          "passes": false,
+          "checks": {
+            "mf1_gain": false,
+            "mf1_gain_ci_lower_positive": false,
+            "clean_f1": true,
+            "clean_recall": false,
+            "corruption_recall": true,
+            "transitions_and_regret_finite": true
+          },
+          "mf1_gain_over_better_constant": -0.0002242865810621053,
+          "mf1_gain_bootstrap": [
+            -0.0009664897112838128,
+            -0.00020353795927691154,
+            0.0003613452772810828
+          ]
+        },
+        "G2-H": {
+          "passes": false,
+          "checks": {
+            "mf1_gain": false,
+            "mf1_gain_ci_lower_positive": false,
+            "clean_f1": true,
+            "clean_recall": true,
+            "corruption_recall": true,
+            "transitions_and_regret_finite": true
+          },
+          "mf1_gain_over_better_constant": -0.0003775791908917636,
+          "mf1_gain_bootstrap": [
+            -0.0012424402533428968,
+            -0.0003533199423781386,
+            0.0003699726074290171
+          ]
+        },
+        "G3-U": {
+          "passes": false,
+          "checks": {
+            "mf1_gain": false,
+            "mf1_gain_ci_lower_positive": false,
+            "clean_f1": true,
+            "clean_recall": false,
+            "corruption_recall": true,
+            "transitions_and_regret_finite": true
+          },
+          "mf1_gain_over_better_constant": -0.0005493038875095113,
+          "mf1_gain_bootstrap": [
+            -0.0013365172928623964,
+            -0.0005239451635661307,
+            4.7961887143521496e-05
+          ]
+        },
+        "G3-H": {
+          "passes": false,
+          "checks": {
+            "mf1_gain": false,
+            "mf1_gain_ci_lower_positive": false,
+            "clean_f1": true,
+            "clean_recall": true,
+            "corruption_recall": true,
+            "transitions_and_regret_finite": true
+          },
+          "mf1_gain_over_better_constant": -0.000387390579853375,
+          "mf1_gain_bootstrap": [
+            -0.0012671325478202072,
+            -0.0003649622868862612,
+            0.00039755636839840426
+          ]
+        }
+      },
+      "decision": "stop_whole_tile_selector_route"
+    },
+    "paired_auxiliary_rule": {
+      "ordinary": null,
+      "paired": null,
+      "supported": false
+    },
+    "g2_g3_equivalence_rule": {
+      "matched": {
+        "U": {
+          "delta": -0.000325017306447406,
+          "bootstrap": [
+            -0.0006655691558244303,
+            -0.0003160928419392861,
+            -5.2397524788050425e-05
+          ],
+          "g3_advantage_supported": false
+        },
+        "H": {
+          "delta": -9.811388961611378e-06,
+          "bootstrap": [
+            -0.00021019329194601474,
+            -1.047405879417429e-05,
+            0.0002000145961232378
+          ],
+          "g3_advantage_supported": false
+        }
+      },
+      "g3_advantage_supported": false,
+      "conclusion": "g2_g3_empirically_equivalent_parameterizations"
+    },
+    "automatic_next_phase_authorized": false,
+    "test_evaluated": false
+  },
+  "source_unit": "original image pair; geographic independence unproven",
+  "new_inference": false,
+  "new_bootstrap": false,
+  "publication_ready": false
+}

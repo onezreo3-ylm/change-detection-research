@@ -1,0 +1,133 @@
+{
+  "status": "reproduced_train_nonfinite",
+  "kind": "engineering_replay_only",
+  "research_result": false,
+  "test_accessed": false,
+  "source_epoch": 45,
+  "replay_epoch": 46,
+  "spec_sha256": "d45080a04b78254a11e4626720e864d765a7c557dd10fc805bfa9d6c0cd129eb",
+  "seal_sha256": "86a7ea288b894894c84c84cea95abc756f11cf13060ef02f152f1cbf68a43069",
+  "checkpoint_sha256": "e9f0bdc9955af247d6138c5efbffe28b1dbf5f0dcaff010b83540f32293d15e4",
+  "failure_audit_sha256": "58642ffca1155b5d389b03e20c7a4b0ae1426d6d84a42f17384aaabe754bd76a",
+  "study_fingerprint": "5a3ea7fa8cf49a5bb16c896eea78d53068c0dd48d6eaf4b5897e479cb49c0202",
+  "environment": {
+    "created_utc": "2026-10-01T17:35:38.793095+00:00",
+    "python": "3.11.14 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 18:30:03) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+    "platform": "Windows-10-10.0.26100-SP0",
+    "torch": "2.0.1",
+    "torchvision": "0.15.2",
+    "numpy": "1.26.4",
+    "pillow": "12.0.0",
+    "pyyaml": "6.0.3",
+    "cuda_runtime": "11.7",
+    "cudnn": 8500,
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "seed": 42,
+    "deterministic": true,
+    "num_threads": 4,
+    "cublas_workspace_config": ":4096:8",
+    "source_config": "E:\\new research\\detection\\configs\\valais_clean_development_seed42.yaml"
+  },
+  "prefix_loss": {
+    "1": {
+      "observed": "0.000045",
+      "expected": "0.000045"
+    },
+    "275": {
+      "observed": "0.091539",
+      "expected": "0.091539"
+    },
+    "550": {
+      "observed": "0.090347",
+      "expected": "0.090347"
+    },
+    "825": {
+      "observed": "0.087594",
+      "expected": "0.087594"
+    },
+    "1100": {
+      "observed": "0.091178",
+      "expected": "0.091178"
+    }
+  },
+  "observed_overflow": [
+    {
+      "step": 480,
+      "scale_before": 131072,
+      "scale_after": 65536
+    }
+  ],
+  "first_nonfinite": {
+    "step": 1104,
+    "sample_ids": [
+      "train/7865.tif@x0_y0",
+      "train/9301.tif@x0_y0",
+      "train/1998.tif@x0_y0",
+      "train/7874.tif@x0_y0"
+    ],
+    "input_a_finite": true,
+    "input_b_finite": true,
+    "target_finite": true,
+    "amp_logits": {
+      "dtype": "torch.float16",
+      "shape": [
+        4,
+        1,
+        256,
+        256
+      ],
+      "nan": 65536,
+      "posinf": 0,
+      "neginf": 0,
+      "finite": 196608,
+      "finite_min": -26.015625,
+      "finite_max": -14.890625
+    },
+    "amp_losses": {
+      "total": "nan",
+      "bce": "nan",
+      "dice": "nan"
+    },
+    "first_visible_bad_module": {
+      "name": "decoder.refine.3.0",
+      "type": "Conv2d",
+      "output": {
+        "dtype": "torch.float16",
+        "shape": [
+          4,
+          64,
+          8,
+          8
+        ],
+        "nan": 0,
+        "posinf": 1,
+        "neginf": 0,
+        "finite": 16383,
+        "finite_min": -9384.0,
+        "finite_max": 63744.0
+      }
+    },
+    "fp32_logits": {
+      "dtype": "torch.float32",
+      "shape": [
+        4,
+        1,
+        256,
+        256
+      ],
+      "nan": 0,
+      "posinf": 0,
+      "neginf": 0,
+      "finite": 262144,
+      "finite_min": -28.306657791137695,
+      "finite_max": -14.889135360717773
+    },
+    "fp32_losses": {
+      "total": 0.00031358201522380114,
+      "bce": 1.983152975171265e-09,
+      "dice": 0.0003135800361633301
+    }
+  }
+}

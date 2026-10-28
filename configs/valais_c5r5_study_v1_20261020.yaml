@@ -1,0 +1,54 @@
+schema_version: 1
+name: valais_uniform_c5r5_seed42_v1_20261020
+output_dir: ../runs/valais_c5r5_study_v1_20261020
+python: E:/Download/anaconda3/envs/geosa-basa/python.exe
+base_config: ../runs/valais_b0e_fp32_seed42_v1_20261002/base_config.yaml
+data_audit: ../runs/valais_b0e_fp32_seed42_v1_20261002/data_audit.json
+data_audit_sha256: 670d7d29361125e291d637f9fb9be44df31b67912dc2af837d719f6c4ae2cd87
+label_report: ../runs/valais_class_balance_20260930/report.json
+label_report_sha256: 687861cb1107ba76ce78af144ee1f82c3f4ceae13ba3c152fa955b8dfbfe7991
+corruption_config: ../runs/valais_corruption_protocol_v1_20261002/candidate_resolved.yaml
+p0_manifest: ../runs/valais_coupling_p0_train_qa_v1r1_20261007/manifest.json
+p0_review: ../runs/valais_coupling_p0_train_qa_v1r1_20261007/visual_review.json
+guard_config: evaluation_temperature_guard.yaml
+protocol_document: ../docs/C5R5_ORDINARY_CONTROL_PROTOCOL_2026-10-20.md
+prior_screen_closeout: ../runs/valais_feasibility_screen_v1_20261020/closeout.json
+roles: [c5, r5]
+epochs: 100
+source_batch_size: 4
+source_tiles: 11025
+batches_per_epoch: 2757
+seed: 42
+source_seed_template: 'valais-five-view|42|{epoch}|uniform'
+pair_seed: 2026102002
+families: [brightness, contrast, gamma, color_bias]
+levels: [1, 3, 5]
+view_order: [clean, uu, uv, vu, vv]
+view_weights: [0.5, 0.125, 0.125, 0.125, 0.125]
+initial_model_tensor_sha256: eb4fa2550e47d732c5b21acb6899ba5539856bee35b532da58006f56108001a8
+pilot_steps_per_role: 32
+pilot_warmup_steps: 8
+pilot_max_seconds_per_role: 1800
+pilot_training_time_multiplier: 1.25
+pilot_extra_seconds_per_epoch: 60
+maximum_training_seconds_per_role: 86400
+validation_seconds_per_role: 21600
+residual_seconds: 21600
+progress_every_steps: 100
+minimum_unittests: 377
+check_interval_minutes: 90
+gates:
+  r5_vs_c5:
+    minimum_corruption_mf1_gain: 0.005
+    maximum_clean_f1_drop: 0.005
+    maximum_clean_recall_drop: 0.01
+    maximum_corruption_recall_drop: 0.01
+    maximum_clean_empty_fpr_increase: 0.0002
+    maximum_corruption_empty_fpr_increase: 0.0002
+  c5_vs_b0e:
+    maximum_clean_f1_drop: 0.005
+    maximum_clean_recall_drop: 0.01
+    maximum_corruption_mf1_drop: 0.005
+    maximum_corruption_recall_drop: 0.01
+    maximum_clean_empty_fpr_increase: 0.0002
+    maximum_corruption_empty_fpr_increase: 0.0002

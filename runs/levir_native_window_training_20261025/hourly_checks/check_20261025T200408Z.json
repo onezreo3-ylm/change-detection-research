@@ -1,0 +1,120 @@
+{
+  "status": "healthy_training_in_progress_no_action_needed",
+  "checked_utc": "2026-10-25T20:04:08.242729+00:00",
+  "mode": "grouped256",
+  "identity_check": "All4grouped256 bound processes verified active by monitor this turn; exact int64 identities retained. No completed native512 PID polling.",
+  "process_identity": {
+    "owner": {
+      "process_id": 35224,
+      "creation_time_ticks": 134374214736405540,
+      "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+      "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision owner --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode grouped256",
+      "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+    },
+    "worker": {
+      "process_id": 28148,
+      "creation_time_ticks": 134374214749487065,
+      "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+      "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision worker --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode grouped256",
+      "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+    },
+    "guard": {
+      "process_id": 16256,
+      "creation_time_ticks": 134374214753572395,
+      "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+      "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision guard --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode grouped256",
+      "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+    },
+    "watchdog": {
+      "process_id": 28620,
+      "creation_time_ticks": 134374214757646929,
+      "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+      "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision watchdog --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode grouped256",
+      "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+    }
+  },
+  "owner": {
+    "status": "running",
+    "mode": "grouped256",
+    "research_training": true,
+    "updated_utc": "2026-10-25T20:04:07.869136+00:00",
+    "automatic_retry": false,
+    "allowed_wall_seconds": 86158.88306610001,
+    "elapsed_seconds": 10775.109999999986
+  },
+  "progress": {
+    "stage": "grouped256_train",
+    "epoch": 38,
+    "step": 112,
+    "steps_in_stage": 1780,
+    "completed_training_attempts": 65972,
+    "amp_skips_in_stage": 0,
+    "consecutive_amp_skips": 0,
+    "amp_scale": 65536.0,
+    "numeric_alert": false,
+    "updated_utc": "2026-10-25T20:04:08.183656+00:00",
+    "stage_elapsed_seconds": 25.094000000011874,
+    "actual_source_batch_shape": [
+      4,
+      1,
+      256,
+      256
+    ]
+  },
+  "guard": {
+    "status": "monitoring",
+    "role": "guard",
+    "updated_utc": "2026-10-25T20:04:07.040329+00:00",
+    "gpu": {
+      "uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+      "temperature_c": 74,
+      "utilization_percent": 91,
+      "memory_used_mib": 3115
+    },
+    "temperature_c": 74,
+    "maximum_observed_temperature_c": 81,
+    "sensor_error": null,
+    "decision": "ok"
+  },
+  "watchdog": {
+    "status": "monitoring",
+    "role": "watchdog",
+    "updated_utc": "2026-10-25T20:04:07.096410+00:00"
+  },
+  "committed_training": {
+    "status": "running",
+    "arm": "grouped256",
+    "training_started": true,
+    "epoch": 37,
+    "epochs": 100,
+    "best_epoch": 36,
+    "best_val_f1": 0.8848234203063777,
+    "updated_utc": "2026-10-25T20:03:43.085017+00:00",
+    "training_flavor": "ordinary_matched_native_window_v1",
+    "optimizer_steps": 65834,
+    "amp_skipped_steps": 26,
+    "attempts": 65860,
+    "tile256_equivalent_pair_views": 526880,
+    "actual_pair_views": 526880,
+    "test_evaluated": false
+  },
+  "checkpoint_metadata": {
+    "last.pt": {
+      "bytes": 137318723,
+      "modified_unix": 1792958623.0682738
+    },
+    "best.pt": {
+      "bytes": 137317699,
+      "modified_unix": 1792958332.3182921
+    }
+  },
+  "committed_group_orders_and_val_counts_verified_epochs": 37,
+  "budget": {
+    "shared_charged_seconds": 71728.80996399996,
+    "shared_limit_seconds": 172800,
+    "new_study_charged_seconds": 40316.83693389996,
+    "new_study_limit_seconds": 129600
+  },
+  "extra_compute_or_worker_started": false,
+  "user_notification_required": false
+}

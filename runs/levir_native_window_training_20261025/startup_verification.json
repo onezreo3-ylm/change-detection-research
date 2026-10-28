@@ -1,0 +1,95 @@
+{
+  "status": "engineering_verified_formal_training_running",
+  "snapshot_utc": "2026-10-25T08:26:53.310218+00:00",
+  "snapshot_beijing": "2026-10-25T16:26:53.310218+08:00",
+  "user_request": "有提升吗，开启新的训练",
+  "active_mode": "native512",
+  "worker_identity": {
+    "process_id": 35656,
+    "creation_time_ticks": 134373901870793734,
+    "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+    "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision worker --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode native512",
+    "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+  },
+  "owner_identity": {
+    "process_id": 9584,
+    "creation_time_ticks": 134373901857985370,
+    "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+    "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision owner --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode native512",
+    "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+  },
+  "full_unittest_count": 515,
+  "cpu_synthetic_smoke_passed": true,
+  "cpu_data_initialization_and_order_identity_passed": true,
+  "pilot_owner_wall_seconds": 53.35899999999674,
+  "pilot_maximum_observed_temperature_c": 61,
+  "pilot_physical_training_attempts": 98,
+  "pilot_physical_pair_predictions": 388,
+  "pilot_repeat_and_next_update_full_state_exact": true,
+  "budget": {
+    "predicted_arm_seconds": {
+      "native512": 41255.40322576384,
+      "grouped256": 40810.40322582985
+    },
+    "predicted_total_seconds": 82065.80645159369,
+    "passed": true,
+    "allowance": "(post-first mean step seconds*178000+6000)*1.25 per arm"
+  },
+  "actual_progress": {
+    "stage": "native512_train",
+    "epoch": 1,
+    "step": 1391,
+    "steps_in_stage": 1780,
+    "completed_training_attempts": 1391,
+    "amp_skips_in_stage": 0,
+    "consecutive_amp_skips": 0,
+    "amp_scale": 65536.0,
+    "numeric_alert": false,
+    "updated_utc": "2026-10-25T08:26:53.243220+00:00",
+    "stage_elapsed_seconds": 220.09399999999732,
+    "actual_source_batch_shape": [
+      1,
+      1,
+      512,
+      512
+    ]
+  },
+  "committed_training": {
+    "status": "running",
+    "training_started": true,
+    "arm": "native512",
+    "epoch": 0,
+    "epochs": 100,
+    "optimizer_steps": 0,
+    "amp_skipped_steps": 0,
+    "updated_utc": "2026-10-25T08:23:13.142328+00:00",
+    "test_evaluated": false
+  },
+  "guard": {
+    "status": "monitoring",
+    "role": "guard",
+    "updated_utc": "2026-10-25T08:26:51.283638+00:00",
+    "gpu": {
+      "uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+      "temperature_c": 77,
+      "utilization_percent": 89,
+      "memory_used_mib": 2078
+    },
+    "temperature_c": 77,
+    "maximum_observed_temperature_c": 77,
+    "sensor_error": null,
+    "decision": "ok"
+  },
+  "watchdog": {
+    "status": "monitoring",
+    "role": "watchdog",
+    "updated_utc": "2026-10-25T08:26:52.483353+00:00"
+  },
+  "remaining_queue": [
+    "grouped256"
+  ],
+  "research_training_completed": false,
+  "new_training_improvement_claim": false,
+  "test_or_martigny_access": false,
+  "first_epoch_checkpoint_verified": false
+}

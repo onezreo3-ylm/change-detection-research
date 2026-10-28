@@ -1,0 +1,39 @@
+schema_version: 1
+kind: algebraic_task_projection_screen_only
+scope: docs/METHOD_SCREEN_PREPARATION_SCOPE_2026-10-27.md
+output_dir: runs/task_projection_screen_20261027
+shared_ledger: runs/managed_continuation_20261024/compute_ledger.json
+global_lease: runs/managed_continuation_20261024/gpu_study.lock
+device: cpu
+dtype: float64
+pinv_rtol: 1.0e-12
+assert_atol: 1.0e-12
+compute_subcap_seconds: 600
+real_data_or_checkpoint: false
+optimizer_updates: 0
+full_vector:
+  jacobian: [[1, 0, 0], [0, 1, 0]]
+  residual: [0.25, -0.5, 1.0]
+mean_only:
+  jacobian: [[0.5, 0.5]]
+  residual: [-0.2, 0.2]
+  base_logits: [0.1, -0.1]
+  truth: [1, 0]
+positive_mask:
+  base_logits: [0.5, 0.5, -0.5, -0.5]
+  truth: [1, 0, 1, 0]
+  requested_residual: [0, -1, 1, 0]
+teacher_shift:
+  clean_jacobian: [[1, 0]]
+  observed_jacobian: [[0, 1]]
+  residual: [0, 1]
+finite_step:
+  function: offset_plus_x0_plus_x1_squared
+  offset: -0.1
+  base_feature: [0, 0]
+  residual: [0, 0.5]
+dense_size_accounting:
+  output_rows: 65536
+  stage2_feature_columns: 131072
+  bytes_per_element: 4
+  device_capacity_bytes: 6442450944

@@ -1,0 +1,87 @@
+{
+  "status": "passed_40ep_cuda_smoke",
+  "physical_optimizer_steps": 3,
+  "optimizer_steps_retained_for_research": 0,
+  "pair_forward_views": 60,
+  "initial_model_tensor_sha256": "eb4fa2550e47d732c5b21acb6899ba5539856bee35b532da58006f56108001a8",
+  "scheduler": {
+    "T_max": 40,
+    "eta_min": 1e-06,
+    "base_lrs": [
+      0.001
+    ],
+    "last_epoch": 1,
+    "verbose": false,
+    "_step_count": 2,
+    "_get_lr_called_within_step": false,
+    "_last_lr": [
+      0.0009984602081996976
+    ]
+  },
+  "replay": {
+    "exact_model_optimizer_loss_rng_replay": true,
+    "physical_updates": 2,
+    "result": {
+      "losses": {
+        "total": 1.4760181903839111,
+        "bce": 0.4760585427284241,
+        "dice": 0.9999595284461975
+      },
+      "norm": 2.1130871772766113,
+      "model": "882c24e6bb0ab1ce6cda1880b104ae1ee463cd37ef7a3d584b9ee1123fa9cf50",
+      "optimizer": "87e6ce5d76c248fb0c88ceb2186eeffe03b353e36462fe8008a19ed03b71d91c",
+      "rng": "5d4d74e0a088dac7ad50f9f56556764c9b3ecc82a7758bed90881356963cb759"
+    },
+    "safe_saved_state_sha256": "5f6a4865630bdf3f017aa46c7cf0d56189703c77a22ffdac0ce398bf428553b9"
+  },
+  "joint_bn_verified": true,
+  "elapsed_seconds": 60.84399999998277,
+  "parent_pilot_seconds_debited": 76.25,
+  "cumulative_engineering_debit_seconds": 137.09399999998277,
+  "budget_projection": {
+    "steady_mean_seconds_per_step": 0.5716249999980695,
+    "projected_worker_seconds_including_margin": 81198.50624973388,
+    "engineering_seconds_debited": 137.09399999998277,
+    "projected_total_role_seconds": 81335.60024973386,
+    "maximum_role_seconds": 86400,
+    "within_frozen_budget": true
+  },
+  "source_ids": [
+    "train/5178.tif@x0_y0",
+    "train/1725.tif@x0_y0",
+    "train/1903.tif@x0_y0",
+    "train/6441.tif@x0_y0"
+  ],
+  "candidate_pixels": [
+    "{\"au\":\"ea8661c7481ea522e9dc0a0ea1ef2f5cf3ba2ce70a7be1494cb003f2d7792c7d\",\"av\":\"ea8661c7481ea522e9dc0a0ea1ef2f5cf3ba2ce70a7be1494cb003f2d7792c7d\",\"bu\":\"027c6927224f5313eafc947d0f2e7474bd6cd14b6ea38b6498cc438781028cbb\",\"bv\":\"027c6927224f5313eafc947d0f2e7474bd6cd14b6ea38b6498cc438781028cbb\"}",
+    "{\"au\":\"8203bab49b8ecfa9809b4d525a57e4cdef37c602078032b5d1ec4082b9f6d758\",\"av\":\"0041f7a83e823070ab8632abb41822475e60ad4f9c5067ad79a4d637d5f129ff\",\"bu\":\"da816e573d6e28b2268805a3df03a4d6c87e9eb94c6d07ced31c313c3347e044\",\"bv\":\"738d42e5f122e5b3d983acd484d9870c8bdabf953a569434b7b2b31b3999ab79\"}",
+    "{\"au\":\"068cc403f5481e733f1e73cdb87245a80d3ab067dc9d82dc865b91081e192a1f\",\"av\":\"5b1757a49f131fea42c84d73d3b231518e7a47de33a795677abff54d995f3981\",\"bu\":\"7b6d9571471292e028e58ff4a4e0a79a58fa287dcdeff1bdd818dc7b892bc761\",\"bv\":\"e33ae3b04b14c7bb3a8e8b7d0f37a380b4fc0b16b99b1fbc169b77fa360196a1\"}",
+    "{\"au\":\"5929e141f3042b10620b6661d11c8a829d0884e46e8d7fa6057a1413156220a9\",\"av\":\"ba8aa70f0386eaa601cd87e49990745ab3c5ceea74ae6811d0907e365a629eef\",\"bu\":\"da6469548a5a000385eb2ab1e4d4bb085d62390f23bc9c291245e7ec873990a5\",\"bv\":\"53937775371cd3ac493c0d222b21ecf9a75eacf74f248b185246073d03a815ec\"}"
+  ],
+  "used_pixels": [
+    "[[\"65f0b63a317ab75b10768c5cfe69b00570c9d89b13ab304294c9db3e312a8a5d\",\"4edfee6b15db9d939fa616698319006a224bf7e2958d86b16ad319a86930c446\"],[\"ea8661c7481ea522e9dc0a0ea1ef2f5cf3ba2ce70a7be1494cb003f2d7792c7d\",\"027c6927224f5313eafc947d0f2e7474bd6cd14b6ea38b6498cc438781028cbb\"],[\"ea8661c7481ea522e9dc0a0ea1ef2f5cf3ba2ce70a7be1494cb003f2d7792c7d\",\"027c6927224f5313eafc947d0f2e7474bd6cd14b6ea38b6498cc438781028cbb\"],[\"ea8661c7481ea522e9dc0a0ea1ef2f5cf3ba2ce70a7be1494cb003f2d7792c7d\",\"027c6927224f5313eafc947d0f2e7474bd6cd14b6ea38b6498cc438781028cbb\"],[\"ea8661c7481ea522e9dc0a0ea1ef2f5cf3ba2ce70a7be1494cb003f2d7792c7d\",\"027c6927224f5313eafc947d0f2e7474bd6cd14b6ea38b6498cc438781028cbb\"]]",
+    "[[\"e1bc4197e11713cc92e63f523d1d93346c4a286c0caa190020ea16b115b73fc0\",\"eb74b5ee1d5380276744715de0e5e9ff61e4feb0e6e87f62b20e0e43626b4287\"],[\"8203bab49b8ecfa9809b4d525a57e4cdef37c602078032b5d1ec4082b9f6d758\",\"da816e573d6e28b2268805a3df03a4d6c87e9eb94c6d07ced31c313c3347e044\"],[\"8203bab49b8ecfa9809b4d525a57e4cdef37c602078032b5d1ec4082b9f6d758\",\"738d42e5f122e5b3d983acd484d9870c8bdabf953a569434b7b2b31b3999ab79\"],[\"0041f7a83e823070ab8632abb41822475e60ad4f9c5067ad79a4d637d5f129ff\",\"da816e573d6e28b2268805a3df03a4d6c87e9eb94c6d07ced31c313c3347e044\"],[\"0041f7a83e823070ab8632abb41822475e60ad4f9c5067ad79a4d637d5f129ff\",\"738d42e5f122e5b3d983acd484d9870c8bdabf953a569434b7b2b31b3999ab79\"]]",
+    "[[\"ca8a41d546676f17366d8619f9457c65ae9b8538d27a2a6f6c6a32d3cbeae923\",\"8c3e6f787505bc648ab888babf2e946af2df89423a6a7b76a5896395a37f94f9\"],[\"068cc403f5481e733f1e73cdb87245a80d3ab067dc9d82dc865b91081e192a1f\",\"7b6d9571471292e028e58ff4a4e0a79a58fa287dcdeff1bdd818dc7b892bc761\"],[\"068cc403f5481e733f1e73cdb87245a80d3ab067dc9d82dc865b91081e192a1f\",\"e33ae3b04b14c7bb3a8e8b7d0f37a380b4fc0b16b99b1fbc169b77fa360196a1\"],[\"5b1757a49f131fea42c84d73d3b231518e7a47de33a795677abff54d995f3981\",\"7b6d9571471292e028e58ff4a4e0a79a58fa287dcdeff1bdd818dc7b892bc761\"],[\"5b1757a49f131fea42c84d73d3b231518e7a47de33a795677abff54d995f3981\",\"e33ae3b04b14c7bb3a8e8b7d0f37a380b4fc0b16b99b1fbc169b77fa360196a1\"]]",
+    "[[\"e67d627eb22f23af63c47d1a95e650e866732bee0275070e9c0fc3f0b41f0d41\",\"7abf2363384b31f05f1d8a514bfe9db11a41d7a3db9c84a0f77f48ba522cc984\"],[\"5929e141f3042b10620b6661d11c8a829d0884e46e8d7fa6057a1413156220a9\",\"da6469548a5a000385eb2ab1e4d4bb085d62390f23bc9c291245e7ec873990a5\"],[\"5929e141f3042b10620b6661d11c8a829d0884e46e8d7fa6057a1413156220a9\",\"53937775371cd3ac493c0d222b21ecf9a75eacf74f248b185246073d03a815ec\"],[\"ba8aa70f0386eaa601cd87e49990745ab3c5ceea74ae6811d0907e365a629eef\",\"da6469548a5a000385eb2ab1e4d4bb085d62390f23bc9c291245e7ec873990a5\"],[\"ba8aa70f0386eaa601cd87e49990745ab3c5ceea74ae6811d0907e365a629eef\",\"53937775371cd3ac493c0d222b21ecf9a75eacf74f248b185246073d03a815ec\"]]"
+  ],
+  "environment": {
+    "created_utc": "2026-10-20T13:09:57.835375+00:00",
+    "python": "3.11.14 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 18:30:03) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+    "platform": "Windows-10-10.0.26100-SP0",
+    "torch": "2.0.1",
+    "torchvision": "0.15.2",
+    "numpy": "1.26.4",
+    "pillow": "12.0.0",
+    "pyyaml": "6.0.3",
+    "cuda_runtime": "11.7",
+    "cudnn": 8500,
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "seed": 42,
+    "deterministic": true,
+    "num_threads": 4,
+    "cublas_workspace_config": ":4096:8",
+    "source_config": "E:\\new research\\detection\\runs\\valais_c5r5_40ep_seed42_v1_20261020\\r5\\base_config.yaml"
+  }
+}

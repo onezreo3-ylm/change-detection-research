@@ -1,0 +1,101 @@
+{
+  "status": "completed_fixed_c5r5_development_comparison",
+  "scores": {
+    "c5": {
+      "clean_f1": 0.3711384319946564,
+      "clean_recall": 0.3491724244021065,
+      "mf1": 0.3303648451287665,
+      "corruption_recall": 0.3064860848817305,
+      "clean_empty_fpr": 0.0006421195136176215,
+      "corruption_empty_fpr": 0.000867624400574484
+    },
+    "r5": {
+      "clean_f1": 0.32769892124259875,
+      "clean_recall": 0.33058838546661384,
+      "mf1": 0.30037528310673806,
+      "corruption_recall": 0.2869174577302394,
+      "clean_empty_fpr": 0.0007299635145399306,
+      "corruption_empty_fpr": 0.0007085611790786555
+    },
+    "b0e": {
+      "clean_f1": 0.42058990678779773,
+      "clean_recall": 0.4251057994115163,
+      "mf1": 0.37552548248848555,
+      "corruption_recall": 0.3630619042475777,
+      "clean_empty_fpr": 0.0006751060485839844,
+      "corruption_empty_fpr": 0.0007599990750536506
+    }
+  },
+  "gates": {
+    "deltas": {
+      "c5_vs_b0e": {
+        "clean_f1": -0.049451474793141326,
+        "corruption_empty_fpr": 0.00010762532552083335,
+        "corruption_recall": -0.05657581936584721,
+        "mf1": -0.045160637359719036,
+        "clean_empty_fpr": -3.2986534966362806e-05,
+        "clean_recall": -0.07593337500940983
+      },
+      "r5_vs_c5": {
+        "clean_f1": -0.04343951075205765,
+        "corruption_empty_fpr": -0.0001590632214958285,
+        "corruption_recall": -0.019568627151491103,
+        "mf1": -0.02998956202202846,
+        "clean_empty_fpr": 8.7844000922309e-05,
+        "clean_recall": -0.018584038935492653
+      }
+    },
+    "checks": {
+      "c5_vs_b0e": {
+        "clean_f1": false,
+        "clean_recall": false,
+        "mf1": false,
+        "corruption_recall": false,
+        "clean_empty_fpr": true,
+        "corruption_empty_fpr": true
+      },
+      "r5_vs_c5": {
+        "clean_f1": false,
+        "clean_recall": false,
+        "mf1": false,
+        "corruption_recall": false,
+        "clean_empty_fpr": true,
+        "corruption_empty_fpr": true
+      }
+    },
+    "passed": {
+      "c5_vs_b0e": false,
+      "r5_vs_c5": false
+    },
+    "historical_b0e_is_unmatched_100ep_fp32_background": true,
+    "single_seed_development_only": true,
+    "p2_training_authorized": false
+  },
+  "residual_gate": {
+    "models": {
+      "c5": {
+        "qualifying_families": [
+          "brightness",
+          "color_bias",
+          "contrast",
+          "gamma"
+        ],
+        "passed": true
+      },
+      "r5": {
+        "qualifying_families": [
+          "brightness",
+          "color_bias",
+          "contrast",
+          "gamma"
+        ],
+        "passed": true
+      }
+    },
+    "passed": true,
+    "interpretation": "Fixed enriched train screening, not significance, causality or P2 authorization."
+  },
+  "test_accessed": false,
+  "training_authorized": false,
+  "physical_compute_note": "Training 210 extra optimizer computations / 4158 pair forwards; evaluation smoke102. Prior P1 includes discarded C-S95 epochs, A-S97 >=1100 updates and earlier unknown uncommitted steps; prior screen/update and restore smokes remain additional physical costs, not credited research updates."
+}

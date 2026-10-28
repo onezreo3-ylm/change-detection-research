@@ -1,0 +1,192 @@
+test_duplicate_yaml_rejected (test_baseline.ConfigTests.test_duplicate_yaml_rejected) ... ok
+test_invalid_settings_and_future_modules_rejected (test_baseline.ConfigTests.test_invalid_settings_and_future_modules_rejected) ... ok
+test_legacy_config_defaults_to_original_strict_decode (test_baseline.ConfigTests.test_legacy_config_defaults_to_original_strict_decode) ... ok
+test_local_binding_preserves_protocol (test_baseline.ConfigTests.test_local_binding_preserves_protocol) ... ok
+test_missing_cuda_never_falls_back (test_baseline.ConfigTests.test_missing_cuda_never_falls_back) ... ok
+test_relative_paths_use_yaml_parent (test_baseline.ConfigTests.test_relative_paths_use_yaml_parent) ... ok
+test_author_floor255_decode_is_explicit_and_non_mutating (test_baseline.DataTests.test_author_floor255_decode_is_explicit_and_non_mutating) ... ok
+test_duplicate_temporal_pair_across_splits_rejected (test_baseline.DataTests.test_duplicate_temporal_pair_across_splits_rejected) ... ok
+test_full_audit_and_heldout_loader (test_baseline.DataTests.test_full_audit_and_heldout_loader) ... ok
+Auditing train/val/test real/smoke splits, decoded labels and SHA256...
+test_inspection_reports_without_remapping_and_training_stops (test_baseline.DataTests.test_inspection_reports_without_remapping_and_training_stops) ... ok
+test_loader_seed_reproducible (test_baseline.DataTests.test_loader_seed_reproducible) ... ok
+test_missing_pair_rejected (test_baseline.DataTests.test_missing_pair_rejected) ... ok
+test_no_synthetic_relabel_or_overwrite (test_baseline.DataTests.test_no_synthetic_relabel_or_overwrite) ... ok
+test_rgb_mask_disagreement_rejected (test_baseline.DataTests.test_rgb_mask_disagreement_rejected) ... ok
+test_tiling_normalization_and_binary_masks (test_baseline.DataTests.test_tiling_normalization_and_binary_masks) ... ok
+test_unexpected_label_rejected (test_baseline.DataTests.test_unexpected_label_rejected) ... ok
+test_amp_overflow_is_logged_and_safely_skipped (test_baseline.IntegrationTests.test_amp_overflow_is_logged_and_safely_skipped) ... ok
+test_benchmark_uses_real_pipeline_without_test_split (test_baseline.IntegrationTests.test_benchmark_uses_real_pipeline_without_test_split) ... ok
+Auditing train/val/test real/smoke splits, decoded labels and SHA256...
+epoch=1/train step=1/4 loss=1.577986
+epoch=1/train step=2/4 loss=1.536542
+epoch=1/train step=3/4 loss=1.475980
+epoch=1/train step=4/4 loss=1.419055
+epoch=1/val step=1/2 loss=1.180119
+epoch=1/val step=2/2 loss=1.313775
+epoch=1 val_f1=0.000000 best=0.000000
+test_exact_epoch_boundary_resume (test_baseline.IntegrationTests.test_exact_epoch_boundary_resume) ... E:\Download\anaconda3\envs\geosa-basa\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Auditing train/val/test real/smoke splits, decoded labels and SHA256...
+epoch=2/train step=1/4 loss=1.290939
+epoch=2/train step=2/4 loss=1.287423
+epoch=2/train step=3/4 loss=1.222950
+epoch=2/train step=4/4 loss=1.276414
+epoch=2/val step=1/2 loss=1.087622
+epoch=2/val step=2/2 loss=1.259363
+epoch=2 val_f1=0.737179 best=0.737179
+evaluate/test step=1/2 loss=1.102465
+evaluate/test step=2/2 loss=1.266784
+Auditing train/val/test real/smoke splits, decoded labels and SHA256...
+epoch=1/train step=1/4 loss=1.577986
+epoch=1/train step=2/4 loss=1.536542
+epoch=1/train step=3/4 loss=1.475980
+epoch=1/train step=4/4 loss=1.419055
+epoch=1/val step=1/2 loss=1.180119
+epoch=1/val step=2/2 loss=1.313775
+epoch=1 val_f1=0.000000 best=0.000000
+epoch=2/train step=1/4 loss=1.290939
+epoch=2/train step=2/4 loss=1.287423
+epoch=2/train step=3/4 loss=1.222950
+epoch=2/train step=4/4 loss=1.276414
+epoch=2/val step=1/2 loss=1.087622
+epoch=2/val step=2/2 loss=1.259363
+epoch=2 val_f1=0.737179 best=0.737179
+evaluate/test step=1/2 loss=1.102465
+evaluate/test step=2/2 loss=1.266784
+ok
+Auditing train/val/test real/smoke splits, decoded labels and SHA256...
+epoch=1/train step=1/1 loss=1.475601
+epoch=1/val step=1/1 loss=1.361530
+epoch=1 val_f1=0.000000 best=0.000000
+Auditing train/val/test real/smoke splits, decoded labels and SHA256...
+epoch=2/train step=1/1 loss=1.352858
+epoch=2/val step=1/1 loss=1.274593
+epoch=2 val_f1=0.489083 best=0.489083
+evaluate/test step=1/1 loss=1.282698
+Auditing train/val/test real/smoke splits, decoded labels and SHA256...
+epoch=1/train step=1/1 loss=1.475601
+epoch=1/val step=1/1 loss=1.361530
+epoch=1 val_f1=0.000000 best=0.000000
+epoch=2/train step=1/1 loss=1.352858
+epoch=2/val step=1/1 loss=1.274593
+epoch=2 val_f1=0.489083 best=0.489083
+evaluate/test step=1/1 loss=1.282698
+test_fast_cuda_exact_epoch_boundary_resume (test_baseline.IntegrationTests.test_fast_cuda_exact_epoch_boundary_resume) ... ok
+Auditing train/val/test real/smoke splits, decoded labels and SHA256...
+epoch=1/train step=1/4 loss=1.577986
+epoch=1/train step=2/4 loss=1.536542
+epoch=1/train step=3/4 loss=1.475980
+epoch=1/train step=4/4 loss=1.419055
+epoch=1/val step=1/2 loss=1.180119
+epoch=1/val step=2/2 loss=1.313775
+epoch=1 val_f1=0.000000 best=0.000000
+evaluate/test step=1/2 loss=1.187892
+evaluate/test step=2/2 loss=1.317662
+evaluate/test step=1/2 loss=1.187892
+evaluate/test step=2/2 loss=1.317662
+test_training_checkpoint_standalone_and_protocol_protection (test_baseline.IntegrationTests.test_training_checkpoint_standalone_and_protocol_protection) ... ok
+test_cuda_metrics_with_strict_determinism (test_baseline.MathTests.test_cuda_metrics_with_strict_determinism) ... ok
+test_dice_is_per_sample_then_mean_and_backward (test_baseline.MathTests.test_dice_is_per_sample_then_mean_and_backward) ... ok
+test_empty_negative_threshold_and_nonfinite (test_baseline.MathTests.test_empty_negative_threshold_and_nonfinite) ... ok
+test_pooled_metrics (test_baseline.MathTests.test_pooled_metrics) ... ok
+test_shared_encoder_symmetry_shapes_and_gradients (test_baseline.ModelTests.test_shared_encoder_symmetry_shapes_and_gradients) ... ok
+test_all_severity_levels_pair_masks_and_noise_fields (test_corruption_protocol.CorruptionProtocolTests.test_all_severity_levels_pair_masks_and_noise_fields) ... ok
+test_application_preserves_labels_other_date_inputs_and_metadata (test_corruption_protocol.CorruptionProtocolTests.test_application_preserves_labels_other_date_inputs_and_metadata) ... ok
+test_application_rejects_invalid_pair_or_target (test_corruption_protocol.CorruptionProtocolTests.test_application_rejects_invalid_pair_or_target) ... ok
+test_calibration_selection_is_label_independent_distinct_and_train_only (test_corruption_protocol.CorruptionProtocolTests.test_calibration_selection_is_label_independent_distinct_and_train_only) ... ok
+test_canonical_hashes_and_seed_encoding_are_stable (test_corruption_protocol.CorruptionProtocolTests.test_canonical_hashes_and_seed_encoding_are_stable) ... ok
+test_duplicate_yaml_duplicate_levels_and_missing_parameters_are_rejected (test_corruption_protocol.CorruptionProtocolTests.test_duplicate_yaml_duplicate_levels_and_missing_parameters_are_rejected) ... ok
+test_instance_validation_and_heldout_test_firewall (test_corruption_protocol.CorruptionProtocolTests.test_instance_validation_and_heldout_test_firewall) ... ok
+test_invalid_protocol_fields_seeds_masks_and_calibration_rejected (test_corruption_protocol.CorruptionProtocolTests.test_invalid_protocol_fields_seeds_masks_and_calibration_rejected) ... ok
+test_protocol_and_application_do_not_consume_global_rng_state (test_corruption_protocol.CorruptionProtocolTests.test_protocol_and_application_do_not_consume_global_rng_state) ... ok
+test_protocol_rejects_base_config_with_test_access_enabled (test_corruption_protocol.CorruptionProtocolTests.test_protocol_rejects_base_config_with_test_access_enabled) ... ok
+test_relative_paths_and_fingerprint_capture_protocol_not_relocation (test_corruption_protocol.CorruptionProtocolTests.test_relative_paths_and_fingerprint_capture_protocol_not_relocation) ... ok
+test_sample_ids_match_loader_and_require_no_pixel_reads (test_corruption_protocol.CorruptionProtocolTests.test_sample_ids_match_loader_and_require_no_pixel_reads) ... ok
+test_train_stream_epoch_view_and_selection_are_stateless (test_corruption_protocol.CorruptionProtocolTests.test_train_stream_epoch_view_and_selection_are_stateless) ... ok
+test_validation_assignment_is_independent_of_sample_iteration_order (test_corruption_protocol.CorruptionProtocolTests.test_validation_assignment_is_independent_of_sample_iteration_order) ... ok
+test_validation_manifest_has_45_exactly_balanced_cells (test_corruption_protocol.CorruptionProtocolTests.test_validation_manifest_has_45_exactly_balanced_cells) ... ok
+test_batch_partition_does_not_change_any_aggregation (test_corruption_statistics.ConditionRunnerTests.test_batch_partition_does_not_change_any_aggregation) ... ok
+test_clean_path_has_no_injection_regions_or_strata (test_corruption_statistics.ConditionRunnerTests.test_clean_path_has_no_injection_regions_or_strata) ... ok
+test_empty_loader_and_guard_failure_never_forward (test_corruption_statistics.ConditionRunnerTests.test_empty_loader_and_guard_failure_never_forward) ... ok
+test_invalid_or_mixed_metadata_rejected_before_model_forward (test_corruption_statistics.ConditionRunnerTests.test_invalid_or_mixed_metadata_rejected_before_model_forward) ... ok
+test_strata_marginals_regions_and_original_source_counts (test_corruption_statistics.ConditionRunnerTests.test_strata_marginals_regions_and_original_source_counts) ... ok
+test_empty_regions_are_not_measured_zero_scores (test_corruption_statistics.ConfusionTests.test_empty_regions_are_not_measured_zero_scores) ... ok
+test_equal_cell_average_is_not_pooled_f1 (test_corruption_statistics.ConfusionTests.test_equal_cell_average_is_not_pooled_f1) ... ok
+test_invalid_counts_rejected (test_corruption_statistics.ConfusionTests.test_invalid_counts_rejected) ... ok
+test_metrics_match_baseline_and_expose_foreground_background_denominators (test_corruption_statistics.ConfusionTests.test_metrics_match_baseline_and_expose_foreground_background_denominators) ... ok
+test_nonfinite_and_misaligned_metric_inputs_rejected (test_corruption_statistics.ConfusionTests.test_nonfinite_and_misaligned_metric_inputs_rejected) ... ok
+test_per_sample_confusions_threshold_and_region_partition (test_corruption_statistics.ConfusionTests.test_per_sample_confusions_threshold_and_region_partition) ... ok
+test_all_validation_rgb_and_label_paths_stay_bound_through_completion (test_corruption_statistics.InputBindingTests.test_all_validation_rgb_and_label_paths_stay_bound_through_completion) ... ok
+test_manifest_checkpoint_mismatch_and_non_val_files_rejected (test_corruption_statistics.InputBindingTests.test_manifest_checkpoint_mismatch_and_non_val_files_rejected) ... ok
+test_missing_optional_acceptance_is_not_hashed_or_created (test_corruption_statistics.InputBindingTests.test_missing_optional_acceptance_is_not_hashed_or_created) ... ok
+test_missing_validated_digest_never_falls_back_to_current_bytes (test_corruption_statistics.InputBindingTests.test_missing_validated_digest_never_falls_back_to_current_bytes) ... ok
+test_mutations_after_bundle_validation_are_rejected_not_rebound (test_corruption_statistics.InputBindingTests.test_mutations_after_bundle_validation_are_rejected_not_rebound) ... ok
+test_dataset_guard_blocks_test_before_file_access (test_development_mode.DevelopmentAccessTests.test_dataset_guard_blocks_test_before_file_access) ... ok
+test_enabled_config_cannot_silently_bypass_missing_test_audit (test_development_mode.DevelopmentAccessTests.test_enabled_config_cannot_silently_bypass_missing_test_audit) ... ok
+test_fixture_and_full_audit_use_only_train_and_val (test_development_mode.DevelopmentAccessTests.test_fixture_and_full_audit_use_only_train_and_val) ... ok
+test_resume_cannot_change_test_policy_before_audit (test_development_mode.DevelopmentAccessTests.test_resume_cannot_change_test_policy_before_audit) ... ok
+test_standalone_test_is_rejected_before_io_or_device_setup (test_development_mode.DevelopmentAccessTests.test_standalone_test_is_rejected_before_io_or_device_setup) ... ok
+test_development_yaml_preserves_stable_training_protocol (test_development_mode.DevelopmentConfigTests.test_development_yaml_preserves_stable_training_protocol) ... ok
+test_legacy_default_and_exact_signature_compatibility (test_development_mode.DevelopmentConfigTests.test_legacy_default_and_exact_signature_compatibility) ... ok
+test_test_lifecycle_setting_requires_a_boolean (test_development_mode.DevelopmentConfigTests.test_test_lifecycle_setting_requires_a_boolean) ... ok
+test_cpu_train_without_test_matches_legacy_weights_and_val_reload (test_development_mode.DevelopmentIntegrationTests.test_cpu_train_without_test_matches_legacy_weights_and_val_reload) ... ok
+test_smoke_development_independently_evaluates_val_only (test_development_mode.DevelopmentIntegrationTests.test_smoke_development_independently_evaluates_val_only) ... ok
+test_acceptance_bindings_and_schema_are_strict (test_frozen_validation.FrozenValidationTests.test_acceptance_bindings_and_schema_are_strict) ... ok
+test_approval_requires_evidence_identity_and_nonempty_notes (test_frozen_validation.FrozenValidationTests.test_approval_requires_evidence_identity_and_nonempty_notes) ... ok
+test_bound_artifact_byte_tampering_is_rejected (test_frozen_validation.FrozenValidationTests.test_bound_artifact_byte_tampering_is_rejected) ... ok
+test_build_uses_only_validation_and_requires_no_train_or_test_directory (test_frozen_validation.FrozenValidationTests.test_build_uses_only_validation_and_requires_no_train_or_test_directory) ... ok
+test_changed_checkpoint_bytes_rejected_before_deserialization (test_frozen_validation.FrozenValidationTests.test_changed_checkpoint_bytes_rejected_before_deserialization) ... ok
+test_current_frozen_source_change_rejected_without_editing_workspace (test_frozen_validation.FrozenValidationTests.test_current_frozen_source_change_rejected_without_editing_workspace) ... ok
+test_engineering_gate_and_checkpoint_cannot_be_relabelled_as_research (test_frozen_validation.FrozenValidationTests.test_engineering_gate_and_checkpoint_cannot_be_relabelled_as_research) ... ok
+test_environment_versions_rejected_even_after_rebinding_hash (test_frozen_validation.FrozenValidationTests.test_environment_versions_rejected_even_after_rebinding_hash) ... ok
+test_evaluation_schema_relative_paths_and_duplicate_yaml (test_frozen_validation.FrozenValidationTests.test_evaluation_schema_relative_paths_and_duplicate_yaml) ... ok
+test_instance_duplicates_bounds_seeds_and_exact_order_rejected_after_rebinding_hash (test_frozen_validation.FrozenValidationTests.test_instance_duplicates_bounds_seeds_and_exact_order_rejected_after_rebinding_hash) ... ok
+test_manifest_counts_and_inventory_structure_rejected_after_rebinding_hash (test_frozen_validation.FrozenValidationTests.test_manifest_counts_and_inventory_structure_rejected_after_rebinding_hash) ... ok
+test_manifest_validation_content_must_match_checkpoint_audit (test_frozen_validation.FrozenValidationTests.test_manifest_validation_content_must_match_checkpoint_audit) ... ok
+test_missing_and_pending_review_reject_before_any_hash_or_data_work (test_frozen_validation.FrozenValidationTests.test_missing_and_pending_review_reject_before_any_hash_or_data_work) ... ERROR
+test_preflight_reads_no_model_data_or_device_and_allows_new_evaluation_files (test_frozen_validation.FrozenValidationTests.test_preflight_reads_no_model_data_or_device_and_allows_new_evaluation_files) ... ok
+test_validation_inventory_and_same_size_content_tampering_are_distinguished (test_frozen_validation.FrozenValidationTests.test_validation_inventory_and_same_size_content_tampering_are_distinguished) ... ok
+test_wrapper_large_seed_and_heterogeneous_masks_collate_safely (test_frozen_validation.FrozenValidationTests.test_wrapper_large_seed_and_heterogeneous_masks_collate_safely) ... ok
+test_wrapper_noop_normalization_matches_baseline_bitwise (test_frozen_validation.FrozenValidationTests.test_wrapper_noop_normalization_matches_baseline_bitwise) ... ok
+test_wrapper_preserves_semantic_labels_other_date_and_exterior (test_frozen_validation.FrozenValidationTests.test_wrapper_preserves_semantic_labels_other_date_and_exterior) ... ok
+test_wrapper_rejects_unknown_duplicate_empty_and_pretransformed_samples (test_frozen_validation.FrozenValidationTests.test_wrapper_rejects_unknown_duplicate_empty_and_pretransformed_samples) ... ok
+test_blur_matches_reflect_gaussian_without_intermediate_quantization (test_perturbations.CorruptionTests.test_blur_matches_reflect_gaussian_without_intermediate_quantization) ... ok
+test_empty_support_and_neutral_parameters_are_bitwise_identities (test_perturbations.CorruptionTests.test_empty_support_and_neutral_parameters_are_bitwise_identities) ... ok
+test_every_kind_is_repeatable_and_does_not_mutate_inputs (test_perturbations.CorruptionTests.test_every_kind_is_repeatable_and_does_not_mutate_inputs) ... ok
+test_extreme_valid_parameters_clip_safely (test_perturbations.CorruptionTests.test_extreme_valid_parameters_clip_safely) ... ok
+test_float_blend_precedes_clipping_and_rounding (test_perturbations.CorruptionTests.test_float_blend_precedes_clipping_and_rounding) ... ok
+test_invalid_image_seed_mask_and_kind_rejected (test_perturbations.CorruptionTests.test_invalid_image_seed_mask_and_kind_rejected) ... ok
+test_jpeg_is_explicit_codec_roundtrip_including_quality_100 (test_perturbations.CorruptionTests.test_jpeg_is_explicit_codec_roundtrip_including_quality_100) ... ok
+test_mask_exterior_is_exact_and_none_equals_global (test_perturbations.CorruptionTests.test_mask_exterior_is_exact_and_none_equals_global) ... ok
+test_noise_uses_local_pcg64_and_seed_changes_output (test_perturbations.CorruptionTests.test_noise_uses_local_pcg64_and_seed_changes_output) ... ok
+test_nonrandom_operators_ignore_seed_without_mutating_global_rngs (test_perturbations.CorruptionTests.test_nonrandom_operators_ignore_seed_without_mutating_global_rngs) ... ok
+test_parameter_schema_and_ranges_rejected_even_with_empty_support (test_perturbations.CorruptionTests.test_parameter_schema_and_ranges_rejected_even_with_empty_support) ... ok
+test_simple_operators_match_float_formulas (test_perturbations.CorruptionTests.test_simple_operators_match_float_formulas) ... ok
+test_ellipse_uses_pixel_centers_and_explicit_xy_axes (test_perturbations.InjectionMaskTests.test_ellipse_uses_pixel_centers_and_explicit_xy_axes) ... ok
+test_invalid_shapes_modes_schema_and_ranges_rejected (test_perturbations.InjectionMaskTests.test_invalid_shapes_modes_schema_and_ranges_rejected) ... ok
+test_modes_shape_dtype_and_repeatability (test_perturbations.InjectionMaskTests.test_modes_shape_dtype_and_repeatability) ... ok
+test_86_pauses_on_first_sample (test_temperature_guard.TemperatureGuardTests.test_86_pauses_on_first_sample) ... ok
+test_duplicate_guard_never_touches_training (test_temperature_guard.TemperatureGuardTests.test_duplicate_guard_never_touches_training) ... ok
+test_exited_training_is_not_stopped_or_overwritten (test_temperature_guard.TemperatureGuardTests.test_exited_training_is_not_stopped_or_overwritten) ... ok
+test_monitor_confirms_pauses_once_and_cleans_lock (test_temperature_guard.TemperatureGuardTests.test_monitor_confirms_pauses_once_and_cleans_lock) ... ok
+test_normal_temperature_and_old_76_rule_do_not_pause (test_temperature_guard.TemperatureGuardTests.test_normal_temperature_and_old_76_rule_do_not_pause) ... ok
+test_sensor_error_stops_after_bounded_retries (test_temperature_guard.TemperatureGuardTests.test_sensor_error_stops_after_bounded_retries) ... ok
+test_sensor_failures_fail_closed_and_reset (test_temperature_guard.TemperatureGuardTests.test_sensor_failures_fail_closed_and_reset) ... ok
+test_three_confirmations_reset_when_cool (test_temperature_guard.TemperatureGuardTests.test_three_confirmations_reset_when_cool) ... ok
+
+======================================================================
+ERROR: test_missing_and_pending_review_reject_before_any_hash_or_data_work (test_frozen_validation.FrozenValidationTests.test_missing_and_pending_review_reject_before_any_hash_or_data_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\new research\detection\tests\test_frozen_validation.py", line 237, in test_missing_and_pending_review_reject_before_any_hash_or_data_work
+    self.assertIsNone(load_bundle(missing, require_review=False).approval)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\pcdc\frozen_validation.py", line 181, in load_bundle
+    raise ValueError("Evaluation config changed after it was loaded")
+ValueError: Evaluation config changed after it was loaded
+
+----------------------------------------------------------------------
+Ran 109 tests in 54.876s
+
+FAILED (errors=1)

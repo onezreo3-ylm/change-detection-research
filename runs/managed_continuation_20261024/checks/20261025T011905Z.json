@@ -1,0 +1,163 @@
+{
+  "automation_id": "levir-cd",
+  "trigger_utc": "2026-10-25T01:19:05.713Z",
+  "checked_utc": "2026-10-25T01:55:29.980561+00:00",
+  "decision": "NOTIFY",
+  "assessment": "training100_and_fixed45_with_bootstrap_completed_candidate_rejected",
+  "snapshot": {
+    "mode": "evaluation",
+    "gpu": {
+      "uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+      "temperature_c": 41,
+      "utilization_percent": 2,
+      "memory_used_mib": 1631
+    },
+    "checked_utc": "2026-10-25T01:55:29.980561+00:00",
+    "owner_state": {
+      "status": "completed",
+      "kind": "fixed_validation_only",
+      "optimizer_updates": 0,
+      "automatic_retry": false,
+      "updated_utc": "2026-10-25T01:49:37.292904+00:00",
+      "owner_pid": 28512,
+      "owner_creation_ticks": 134373655480494933,
+      "worker_pid": 28220,
+      "worker_creation_ticks": 134373655489465693,
+      "allowed_wall_seconds": 7200,
+      "guard_pid": 30988,
+      "watchdog_pid": 20768,
+      "worker_exit_code": 0,
+      "elapsed_seconds": 1029.1100000000006
+    },
+    "progress": {
+      "stage": "fixed_validation_only",
+      "condition_id": "jpeg_l5",
+      "completed_conditions": 44,
+      "step": 32,
+      "steps_in_stage": 32,
+      "updated_utc": "2026-10-25T01:49:34.101504+00:00",
+      "numeric_alert": false,
+      "optimizer_updates": 0
+    },
+    "guard_state": {
+      "status": "worker_exited",
+      "role": "guard",
+      "pid": 30988,
+      "updated_utc": "2026-10-25T01:49:36.161200+00:00",
+      "elapsed_seconds": 1023.1409999999887,
+      "gpu": {
+        "uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+        "temperature_c": 57,
+        "utilization_percent": 0,
+        "memory_used_mib": 2955
+      },
+      "temperature_c": 57,
+      "maximum_observed_temperature_c": 61,
+      "decision": "ok",
+      "sensor_error": null
+    },
+    "watchdog_state": {
+      "status": "worker_exited",
+      "role": "watchdog",
+      "pid": 20768,
+      "updated_utc": "2026-10-25T01:49:36.413724+00:00",
+      "elapsed_seconds": 1023.4850000000006
+    },
+    "worker_result": {
+      "status": "completed",
+      "kind": "fixed_validation_only",
+      "all_gates_passed": false,
+      "optimizer_updates": 0,
+      "test_accessed": false,
+      "completed_utc": "2026-10-25T01:49:35.597436+00:00"
+    },
+    "processes": {
+      "owner": {
+        "pid": 28512,
+        "active": false,
+        "identity_error": "[WinError 87] 参数错误。"
+      },
+      "worker": {
+        "pid": 28220,
+        "active": false,
+        "identity_error": "[WinError 87] 参数错误。"
+      },
+      "guard": {
+        "pid": 30988,
+        "active": false,
+        "identity_error": "[WinError 87] 参数错误。"
+      },
+      "watchdog": {
+        "pid": 20768,
+        "active": false,
+        "identity_error": "[WinError 87] 参数错误。"
+      }
+    },
+    "worker.stdout.log": [
+      "risk_eval/jpeg_l1 f1=0.904094950 completed=41/45",
+      "risk_eval/jpeg_l2 f1=0.904023478 completed=42/45",
+      "risk_eval/jpeg_l3 f1=0.903900172 completed=43/45",
+      "risk_eval/jpeg_l4 f1=0.901889713 completed=44/45",
+      "risk_eval/jpeg_l5 f1=0.900925432 completed=45/45",
+      "{\"status\": \"completed\"}"
+    ],
+    "worker.stderr.log": [
+      "E:\\Download\\anaconda3\\envs\\geosa-basa\\Lib\\site-packages\\torch\\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()",
+      "  return self.fget.__get__(instance, owner)()"
+    ],
+    "charged_seconds": 30708.102632600006,
+    "batch_budget_seconds": 172800
+  },
+  "verification": {
+    "status": "fixed_validation_completed_audited_candidate_rejected",
+    "training_flavor": "b1_secondary_empirical_tail_v1",
+    "training_epochs": 100,
+    "training_attempts": 178000,
+    "training_successful_updates": 177934,
+    "training_amp_skips": 66,
+    "effective_training_pair_views": 1424000,
+    "all_original_training_streams_and_exposure_exact": true,
+    "clean_checkpoint_counts_and_metrics_reproduced_exactly": true,
+    "condition_count": 45,
+    "source_count": 64,
+    "source_tiles_per_condition": 1024,
+    "real_evaluation_pair_predictions": 47104,
+    "evaluation_optimizer_updates": 0,
+    "condition_source_counts_and_metrics_audited": true,
+    "source_pair_bootstrap_replicates": 20000,
+    "bootstrap_saved_values_and_interval_verified": true,
+    "passed_gates": 1,
+    "failed_gates": 6,
+    "all_gates_passed": false,
+    "worker_exit_code": 0,
+    "owner_completed": true,
+    "independent_guards_normal_completion": true,
+    "evaluation_wall_seconds": 1029.1100000000006,
+    "evaluation_maximum_observed_temperature_c": 61,
+    "training_maximum_observed_temperature_c": 77,
+    "shared_charged_seconds": 30708.102632600006,
+    "shared_upper_bound_seconds": 172800,
+    "same_candidate_charged_training_and_evaluation_seconds": 30092.188000000002,
+    "discarded_prefix_updates": 201,
+    "discarded_prefix_seconds": 47.906,
+    "original_inputs_code_and_checkpoints_unchanged": true,
+    "test_or_martigny_opened": false,
+    "independent_human_truth_claimed": false,
+    "new_method_claimed": false,
+    "further_training_admitted": false,
+    "analysis_sha256": "8e330bb0184e12a6f8163fc674388aa562ed3b9d2ea4af167e876001f3bb978e"
+  },
+  "gates": {
+    "clean_f1": false,
+    "mean_f1": false,
+    "pooled_recall": true,
+    "pooled_background_fpr": false,
+    "worst_five_f1": false,
+    "worst_single_f1": false,
+    "bootstrap_tail_lower_positive": false
+  },
+  "result_report": "docs/LEVIR_TAIL_RISK_RESULTS_2026-10-25.md",
+  "next_action_config": "configs/levir_provenance_admission_screen_20261025.yaml",
+  "next_screen_executed": false,
+  "new_training_admitted": false
+}

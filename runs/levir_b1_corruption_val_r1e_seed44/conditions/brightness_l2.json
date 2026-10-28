@@ -1,0 +1,5187 @@
+{
+  "condition_id": "brightness_l2",
+  "kind": "brightness",
+  "level": 2,
+  "samples": 1024,
+  "counts": {
+    "tn": 64059525,
+    "fp": 233081,
+    "fn": 302908,
+    "tp": 2513350
+  },
+  "pixels": 67108864,
+  "foreground_pixels": 2816258,
+  "background_pixels": 64292606,
+  "metrics": {
+    "precision": 0.9151331309616008,
+    "recall": 0.8924430929268554,
+    "f1": 0.9036457008471982,
+    "iou": 0.824227808059386,
+    "oa": 0.9920131415128708,
+    "foreground_recall": 0.8924430929268554,
+    "background_fpr": 0.0036253157944787615,
+    "foreground_fn_rate": 0.10755690707314458
+  },
+  "regions": {
+    "injection_support": {
+      "counts": {
+        "tn": 44311862,
+        "fp": 155026,
+        "fn": 198845,
+        "tp": 1650375
+      },
+      "pixels": 46316108,
+      "foreground_pixels": 1849220,
+      "background_pixels": 44466888,
+      "metrics": {
+        "precision": 0.9141320958612519,
+        "recall": 0.8924708796141075,
+        "f1": 0.9031716284670832,
+        "iou": 0.8234393382848213,
+        "oa": 0.9923596559538207,
+        "foreground_recall": 0.8924708796141075,
+        "background_fpr": 0.003486324475866177,
+        "foreground_fn_rate": 0.10752912038589243
+      }
+    },
+    "outside_injection": {
+      "counts": {
+        "tn": 19747663,
+        "fp": 78055,
+        "fn": 104063,
+        "tp": 862975
+      },
+      "pixels": 20792756,
+      "foreground_pixels": 967038,
+      "background_pixels": 19825718,
+      "metrics": {
+        "precision": 0.9170536539748998,
+        "recall": 0.8923899577886287,
+        "f1": 0.9045537161149393,
+        "iou": 0.825739910228085,
+        "oa": 0.9912412765291913,
+        "foreground_recall": 0.8923899577886287,
+        "background_fpr": 0.0039370579163892075,
+        "foreground_fn_rate": 0.10761004221137122
+      }
+    }
+  },
+  "joint_strata": {
+    "brighten|A|global": {
+      "samples": 128,
+      "counts": {
+        "tn": 8070113,
+        "fp": 31018,
+        "fn": 33657,
+        "tp": 253820
+      },
+      "pixels": 8388608,
+      "foreground_pixels": 287477,
+      "background_pixels": 8101131,
+      "metrics": {
+        "precision": 0.891103012940689,
+        "recall": 0.8829228077376625,
+        "f1": 0.8869940504791941,
+        "iou": 0.796935587685835,
+        "oa": 0.9922901391983032,
+        "foreground_recall": 0.8829228077376625,
+        "background_fpr": 0.0038288480954079126,
+        "foreground_fn_rate": 0.11707719226233751
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 8070113,
+            "fp": 31018,
+            "fn": 33657,
+            "tp": 253820
+          },
+          "pixels": 8388608,
+          "foreground_pixels": 287477,
+          "background_pixels": 8101131,
+          "metrics": {
+            "precision": 0.891103012940689,
+            "recall": 0.8829228077376625,
+            "f1": 0.8869940504791941,
+            "iou": 0.796935587685835,
+            "oa": 0.9922901391983032,
+            "foreground_recall": 0.8829228077376625,
+            "background_fpr": 0.0038288480954079126,
+            "foreground_fn_rate": 0.11707719226233751
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 0,
+          "foreground_pixels": 0,
+          "background_pixels": 0,
+          "metrics": null
+        }
+      }
+    },
+    "brighten|A|local": {
+      "samples": 128,
+      "counts": {
+        "tn": 7853567,
+        "fp": 37455,
+        "fn": 55989,
+        "tp": 441597
+      },
+      "pixels": 8388608,
+      "foreground_pixels": 497586,
+      "background_pixels": 7891022,
+      "metrics": {
+        "precision": 0.9218143333082839,
+        "recall": 0.8874787473924105,
+        "f1": 0.9043207411548598,
+        "iou": 0.8253517020190976,
+        "oa": 0.9888606071472168,
+        "foreground_recall": 0.8874787473924105,
+        "background_fpr": 0.004746533465500413,
+        "foreground_fn_rate": 0.11252125260758944
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 2929904,
+            "fp": 12335,
+            "fn": 18498,
+            "tp": 155891
+          },
+          "pixels": 3116628,
+          "foreground_pixels": 174389,
+          "background_pixels": 2942239,
+          "metrics": {
+            "precision": 0.9266760191646951,
+            "recall": 0.8939267958414808,
+            "f1": 0.9100068590108431,
+            "iou": 0.8348739315781581,
+            "oa": 0.9901069360860519,
+            "foreground_recall": 0.8939267958414808,
+            "background_fpr": 0.004192385458829144,
+            "foreground_fn_rate": 0.10607320415851917
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 4923663,
+            "fp": 25120,
+            "fn": 37491,
+            "tp": 285706
+          },
+          "pixels": 5271980,
+          "foreground_pixels": 323197,
+          "background_pixels": 4948783,
+          "metrics": {
+            "precision": 0.919183079922529,
+            "recall": 0.8839995420749573,
+            "f1": 0.9012480619788241,
+            "iou": 0.820247073786235,
+            "oa": 0.9881238168581823,
+            "foreground_recall": 0.8839995420749573,
+            "background_fpr": 0.005075995451811081,
+            "foreground_fn_rate": 0.11600045792504263
+          }
+        }
+      }
+    },
+    "brighten|B|global": {
+      "samples": 128,
+      "counts": {
+        "tn": 8031573,
+        "fp": 25486,
+        "fn": 38051,
+        "tp": 293498
+      },
+      "pixels": 8388608,
+      "foreground_pixels": 331549,
+      "background_pixels": 8057059,
+      "metrics": {
+        "precision": 0.920102575677777,
+        "recall": 0.8852326503774706,
+        "f1": 0.9023308579272689,
+        "iou": 0.8220426568823784,
+        "oa": 0.992425799369812,
+        "foreground_recall": 0.8852326503774706,
+        "background_fpr": 0.0031631889502112373,
+        "foreground_fn_rate": 0.1147673496225294
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 8031573,
+            "fp": 25486,
+            "fn": 38051,
+            "tp": 293498
+          },
+          "pixels": 8388608,
+          "foreground_pixels": 331549,
+          "background_pixels": 8057059,
+          "metrics": {
+            "precision": 0.920102575677777,
+            "recall": 0.8852326503774706,
+            "f1": 0.9023308579272689,
+            "iou": 0.8220426568823784,
+            "oa": 0.992425799369812,
+            "foreground_recall": 0.8852326503774706,
+            "background_fpr": 0.0031631889502112373,
+            "foreground_fn_rate": 0.1147673496225294
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 0,
+          "foreground_pixels": 0,
+          "background_pixels": 0,
+          "metrics": null
+        }
+      }
+    },
+    "brighten|B|local": {
+      "samples": 128,
+      "counts": {
+        "tn": 7979547,
+        "fp": 29515,
+        "fn": 33594,
+        "tp": 345952
+      },
+      "pixels": 8388608,
+      "foreground_pixels": 379546,
+      "background_pixels": 8009062,
+      "metrics": {
+        "precision": 0.9213912274580722,
+        "recall": 0.9114889894769014,
+        "f1": 0.9164133597699642,
+        "iou": 0.8457222761397445,
+        "oa": 0.9924768209457397,
+        "foreground_recall": 0.9114889894769014,
+        "background_fpr": 0.003685200589032773,
+        "foreground_fn_rate": 0.08851101052309865
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 3054304,
+            "fp": 13161,
+            "fn": 12781,
+            "tp": 145780
+          },
+          "pixels": 3226026,
+          "foreground_pixels": 158561,
+          "background_pixels": 3067465,
+          "metrics": {
+            "precision": 0.917195688966346,
+            "recall": 0.9193937979704971,
+            "f1": 0.918293428072894,
+            "iou": 0.8489302477259757,
+            "oa": 0.9919585273026318,
+            "foreground_recall": 0.9193937979704971,
+            "background_fpr": 0.004290513502191549,
+            "foreground_fn_rate": 0.08060620202950285
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 4925243,
+            "fp": 16354,
+            "fn": 20813,
+            "tp": 200172
+          },
+          "pixels": 5162582,
+          "foreground_pixels": 220985,
+          "background_pixels": 4941597,
+          "metrics": {
+            "precision": 0.9244709642260052,
+            "recall": 0.905817136909745,
+            "f1": 0.915048993053889,
+            "iou": 0.8434012109261436,
+            "oa": 0.992800695465951,
+            "foreground_recall": 0.905817136909745,
+            "background_fpr": 0.003309456436856344,
+            "foreground_fn_rate": 0.09418286309025499
+          }
+        }
+      }
+    },
+    "darken|A|global": {
+      "samples": 128,
+      "counts": {
+        "tn": 8040966,
+        "fp": 25685,
+        "fn": 39716,
+        "tp": 282241
+      },
+      "pixels": 8388608,
+      "foreground_pixels": 321957,
+      "background_pixels": 8066651,
+      "metrics": {
+        "precision": 0.9165871020959582,
+        "recall": 0.8766419118080986,
+        "f1": 0.8961696061014506,
+        "iou": 0.8118725585516134,
+        "oa": 0.9922035932540894,
+        "foreground_recall": 0.8766419118080986,
+        "background_fpr": 0.0031840970930811312,
+        "foreground_fn_rate": 0.1233580881919014
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 8040966,
+            "fp": 25685,
+            "fn": 39716,
+            "tp": 282241
+          },
+          "pixels": 8388608,
+          "foreground_pixels": 321957,
+          "background_pixels": 8066651,
+          "metrics": {
+            "precision": 0.9165871020959582,
+            "recall": 0.8766419118080986,
+            "f1": 0.8961696061014506,
+            "iou": 0.8118725585516134,
+            "oa": 0.9922035932540894,
+            "foreground_recall": 0.8766419118080986,
+            "background_fpr": 0.0031840970930811312,
+            "foreground_fn_rate": 0.1233580881919014
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 0,
+          "foreground_pixels": 0,
+          "background_pixels": 0,
+          "metrics": null
+        }
+      }
+    },
+    "darken|A|local": {
+      "samples": 128,
+      "counts": {
+        "tn": 8044764,
+        "fp": 29761,
+        "fn": 34299,
+        "tp": 279784
+      },
+      "pixels": 8388608,
+      "foreground_pixels": 314083,
+      "background_pixels": 8074525,
+      "metrics": {
+        "precision": 0.9038556591125685,
+        "recall": 0.8907963818481102,
+        "f1": 0.8972785057758792,
+        "iou": 0.8136945824269145,
+        "oa": 0.992363452911377,
+        "foreground_recall": 0.8907963818481102,
+        "background_fpr": 0.003685789566568931,
+        "foreground_fn_rate": 0.10920361815188978
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 3156152,
+            "fp": 11067,
+            "fn": 10453,
+            "tp": 106143
+          },
+          "pixels": 3283815,
+          "foreground_pixels": 116596,
+          "background_pixels": 3167219,
+          "metrics": {
+            "precision": 0.9055797286920911,
+            "recall": 0.9103485539812687,
+            "f1": 0.9079578796095908,
+            "iou": 0.8314311899297369,
+            "oa": 0.9934466466594495,
+            "foreground_recall": 0.9103485539812687,
+            "background_fpr": 0.0034942326375283807,
+            "foreground_fn_rate": 0.08965144601873135
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 4888612,
+            "fp": 18694,
+            "fn": 23846,
+            "tp": 173641
+          },
+          "pixels": 5104793,
+          "foreground_pixels": 197487,
+          "background_pixels": 4907306,
+          "metrics": {
+            "precision": 0.9028050016897601,
+            "recall": 0.8792528115774709,
+            "f1": 0.8908732703644228,
+            "iou": 0.8032204495307174,
+            "oa": 0.9916666552394975,
+            "foreground_recall": 0.8792528115774709,
+            "background_fpr": 0.0038094221147,
+            "foreground_fn_rate": 0.12074718842252907
+          }
+        }
+      }
+    },
+    "darken|B|global": {
+      "samples": 128,
+      "counts": {
+        "tn": 8051429,
+        "fp": 25850,
+        "fn": 33343,
+        "tp": 277986
+      },
+      "pixels": 8388608,
+      "foreground_pixels": 311329,
+      "background_pixels": 8077279,
+      "metrics": {
+        "precision": 0.9149212074935162,
+        "recall": 0.89290107892294,
+        "f1": 0.9037770354295189,
+        "iou": 0.824446362317938,
+        "oa": 0.9929436445236206,
+        "foreground_recall": 0.89290107892294,
+        "background_fpr": 0.0032003351623733686,
+        "foreground_fn_rate": 0.10709892107705996
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 8051429,
+            "fp": 25850,
+            "fn": 33343,
+            "tp": 277986
+          },
+          "pixels": 8388608,
+          "foreground_pixels": 311329,
+          "background_pixels": 8077279,
+          "metrics": {
+            "precision": 0.9149212074935162,
+            "recall": 0.89290107892294,
+            "f1": 0.9037770354295189,
+            "iou": 0.824446362317938,
+            "oa": 0.9929436445236206,
+            "foreground_recall": 0.89290107892294,
+            "background_fpr": 0.0032003351623733686,
+            "foreground_fn_rate": 0.10709892107705996
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 0,
+          "foreground_pixels": 0,
+          "background_pixels": 0,
+          "metrics": null
+        }
+      }
+    },
+    "darken|B|local": {
+      "samples": 128,
+      "counts": {
+        "tn": 7987566,
+        "fp": 28311,
+        "fn": 34259,
+        "tp": 338472
+      },
+      "pixels": 8388608,
+      "foreground_pixels": 372731,
+      "background_pixels": 8015877,
+      "metrics": {
+        "precision": 0.9228126712524845,
+        "recall": 0.9080865288908087,
+        "f1": 0.9153903780050141,
+        "iou": 0.8439814283790725,
+        "oa": 0.9925410747528076,
+        "foreground_recall": 0.9080865288908087,
+        "background_fpr": 0.0035318655712905773,
+        "foreground_fn_rate": 0.09191347110919135
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 2977421,
+            "fp": 10424,
+            "fn": 12346,
+            "tp": 135016
+          },
+          "pixels": 3135207,
+          "foreground_pixels": 147362,
+          "background_pixels": 2987845,
+          "metrics": {
+            "precision": 0.9283278327832784,
+            "recall": 0.916219921010844,
+            "f1": 0.9222341377449608,
+            "iou": 0.8556906189395764,
+            "oa": 0.9927373216505322,
+            "foreground_recall": 0.916219921010844,
+            "background_fpr": 0.0034888021299632342,
+            "foreground_fn_rate": 0.08378007898915596
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 5010145,
+            "fp": 17887,
+            "fn": 21913,
+            "tp": 203456
+          },
+          "pixels": 5253401,
+          "foreground_pixels": 225369,
+          "background_pixels": 5028032,
+          "metrics": {
+            "precision": 0.9191887703699688,
+            "recall": 0.9027683487968621,
+            "f1": 0.9109045649098301,
+            "iou": 0.8363863584043147,
+            "oa": 0.9924239554528581,
+            "foreground_recall": 0.9027683487968621,
+            "background_fpr": 0.003557455481588025,
+            "foreground_fn_rate": 0.09723165120313797
+          }
+        }
+      }
+    }
+  },
+  "marginals": {
+    "direction": {
+      "brighten": {
+        "samples": 512,
+        "counts": {
+          "tn": 31934800,
+          "fp": 123474,
+          "fn": 161291,
+          "tp": 1334867
+        },
+        "pixels": 33554432,
+        "foreground_pixels": 1496158,
+        "background_pixels": 32058274,
+        "metrics": {
+          "precision": 0.9153325593945449,
+          "recall": 0.8921965460867101,
+          "f1": 0.9036164845545726,
+          "iou": 0.8241791962618669,
+          "oa": 0.9915133416652679,
+          "foreground_recall": 0.8921965460867101,
+          "background_fpr": 0.003851548589297103,
+          "foreground_fn_rate": 0.10780345391328991
+        },
+        "regions": {
+          "injection_support": {
+            "counts": {
+              "tn": 22085894,
+              "fp": 82000,
+              "fn": 102987,
+              "tp": 848989
+            },
+            "pixels": 23119870,
+            "foreground_pixels": 951976,
+            "background_pixels": 22167894,
+            "metrics": {
+              "precision": 0.911921623134108,
+              "recall": 0.8918176508651479,
+              "f1": 0.9017576003802513,
+              "iou": 0.8210915920679009,
+              "oa": 0.9919987871904125,
+              "foreground_recall": 0.8918176508651479,
+              "background_fpr": 0.0036990433101132657,
+              "foreground_fn_rate": 0.10818234913485214
+            }
+          },
+          "outside_injection": {
+            "counts": {
+              "tn": 9848906,
+              "fp": 41474,
+              "fn": 58304,
+              "tp": 485878
+            },
+            "pixels": 10434562,
+            "foreground_pixels": 544182,
+            "background_pixels": 9890380,
+            "metrics": {
+              "precision": 0.9213542377766653,
+              "recall": 0.8928593742534666,
+              "f1": 0.906883029376576,
+              "iou": 0.8296303632166323,
+              "oa": 0.9904377395045427,
+              "foreground_recall": 0.8928593742534666,
+              "background_fpr": 0.004193367696691128,
+              "foreground_fn_rate": 0.10714062574653332
+            }
+          }
+        }
+      },
+      "darken": {
+        "samples": 512,
+        "counts": {
+          "tn": 32124725,
+          "fp": 109607,
+          "fn": 141617,
+          "tp": 1178483
+        },
+        "pixels": 33554432,
+        "foreground_pixels": 1320100,
+        "background_pixels": 32234332,
+        "metrics": {
+          "precision": 0.9149073434309715,
+          "recall": 0.8927225210211348,
+          "f1": 0.9036787964067035,
+          "iou": 0.8242828775406429,
+          "oa": 0.9925129413604736,
+          "foreground_recall": 0.8927225210211348,
+          "background_fpr": 0.0034003186416271943,
+          "foreground_fn_rate": 0.10727747897886523
+        },
+        "regions": {
+          "injection_support": {
+            "counts": {
+              "tn": 22225968,
+              "fp": 73026,
+              "fn": 95858,
+              "tp": 801386
+            },
+            "pixels": 23196238,
+            "foreground_pixels": 897244,
+            "background_pixels": 22298994,
+            "metrics": {
+              "precision": 0.9164855926039441,
+              "recall": 0.8931639554012064,
+              "f1": 0.9046744966291425,
+              "iou": 0.8259412328527111,
+              "oa": 0.9927193366441576,
+              "foreground_recall": 0.8931639554012064,
+              "background_fpr": 0.0032748562558472367,
+              "foreground_fn_rate": 0.10683604459879364
+            }
+          },
+          "outside_injection": {
+            "counts": {
+              "tn": 9898757,
+              "fp": 36581,
+              "fn": 45759,
+              "tp": 377097
+            },
+            "pixels": 10358194,
+            "foreground_pixels": 422856,
+            "background_pixels": 9935338,
+            "metrics": {
+              "precision": 0.9115713187551671,
+              "recall": 0.8917858561779897,
+              "f1": 0.901570049752909,
+              "iou": 0.8207806511012391,
+              "oa": 0.9920507378023621,
+              "foreground_recall": 0.8917858561779897,
+              "background_fpr": 0.003681907953207027,
+              "foreground_fn_rate": 0.10821414382201033
+            }
+          }
+        }
+      }
+    },
+    "target_date": {
+      "A": {
+        "samples": 512,
+        "counts": {
+          "tn": 32009410,
+          "fp": 123919,
+          "fn": 163661,
+          "tp": 1257442
+        },
+        "pixels": 33554432,
+        "foreground_pixels": 1421103,
+        "background_pixels": 32133329,
+        "metrics": {
+          "precision": 0.9102920959835988,
+          "recall": 0.8848352300994369,
+          "f1": 0.8973831599620905,
+          "iou": 0.8138667281113149,
+          "oa": 0.9914294481277466,
+          "foreground_recall": 0.8848352300994369,
+          "background_fpr": 0.0038564009349918273,
+          "foreground_fn_rate": 0.11516476990056315
+        },
+        "regions": {
+          "injection_support": {
+            "counts": {
+              "tn": 22197135,
+              "fp": 80105,
+              "fn": 102324,
+              "tp": 798095
+            },
+            "pixels": 23177659,
+            "foreground_pixels": 900419,
+            "background_pixels": 22277240,
+            "metrics": {
+              "precision": 0.9087850148030061,
+              "recall": 0.8863595725989789,
+              "f1": 0.8974322212907879,
+              "iou": 0.813947440348222,
+              "oa": 0.9921291015628455,
+              "foreground_recall": 0.8863595725989789,
+              "background_fpr": 0.003595822462746732,
+              "foreground_fn_rate": 0.11364042740102108
+            }
+          },
+          "outside_injection": {
+            "counts": {
+              "tn": 9812275,
+              "fp": 43814,
+              "fn": 61337,
+              "tp": 459347
+            },
+            "pixels": 10376773,
+            "foreground_pixels": 520684,
+            "background_pixels": 9856089,
+            "metrics": {
+              "precision": 0.9129225039301536,
+              "recall": 0.8821991841500795,
+              "f1": 0.8972979308391407,
+              "iou": 0.8137265322463498,
+              "oa": 0.9898666955516903,
+              "foreground_recall": 0.8821991841500795,
+              "background_fpr": 0.004445373819169043,
+              "foreground_fn_rate": 0.11780081584992048
+            }
+          }
+        }
+      },
+      "B": {
+        "samples": 512,
+        "counts": {
+          "tn": 32050115,
+          "fp": 109162,
+          "fn": 139247,
+          "tp": 1255908
+        },
+        "pixels": 33554432,
+        "foreground_pixels": 1395155,
+        "background_pixels": 32159277,
+        "metrics": {
+          "precision": 0.9200319397540053,
+          "recall": 0.9001924517347535,
+          "f1": 0.9100040757546939,
+          "iou": 0.8348692463091223,
+          "oa": 0.992596834897995,
+          "foreground_recall": 0.9001924517347535,
+          "background_fpr": 0.0033944171070761325,
+          "foreground_fn_rate": 0.09980754826524652
+        },
+        "regions": {
+          "injection_support": {
+            "counts": {
+              "tn": 22114727,
+              "fp": 74921,
+              "fn": 96521,
+              "tp": 852280
+            },
+            "pixels": 23138449,
+            "foreground_pixels": 948801,
+            "background_pixels": 22189648,
+            "metrics": {
+              "precision": 0.9191965927560475,
+              "recall": 0.8982705540993317,
+              "f1": 0.9086131038239831,
+              "iou": 0.8325307065785438,
+              "oa": 0.9925906010381249,
+              "foreground_recall": 0.8982705540993317,
+              "background_fpr": 0.003376394253752921,
+              "foreground_fn_rate": 0.10172944590066832
+            }
+          },
+          "outside_injection": {
+            "counts": {
+              "tn": 9935388,
+              "fp": 34241,
+              "fn": 42726,
+              "tp": 403628
+            },
+            "pixels": 10415983,
+            "foreground_pixels": 446354,
+            "background_pixels": 9969629,
+            "metrics": {
+              "precision": 0.9218008125717966,
+              "recall": 0.9042777705587941,
+              "f1": 0.9129552160484403,
+              "iou": 0.8398506018581133,
+              "oa": 0.9926106830243483,
+              "foreground_recall": 0.9042777705587941,
+              "background_fpr": 0.0034345310141430537,
+              "foreground_fn_rate": 0.09572222944120586
+            }
+          }
+        }
+      }
+    },
+    "spatial_mode": {
+      "global": {
+        "samples": 512,
+        "counts": {
+          "tn": 32194081,
+          "fp": 108039,
+          "fn": 144767,
+          "tp": 1107545
+        },
+        "pixels": 33554432,
+        "foreground_pixels": 1252312,
+        "background_pixels": 32302120,
+        "metrics": {
+          "precision": 0.9111217324347803,
+          "recall": 0.8844002133653595,
+          "f1": 0.8975621338986732,
+          "iou": 0.8141611981025485,
+          "oa": 0.9924657940864563,
+          "foreground_recall": 0.8844002133653595,
+          "background_fpr": 0.0033446411566795,
+          "foreground_fn_rate": 0.11559978663464057
+        },
+        "regions": {
+          "injection_support": {
+            "counts": {
+              "tn": 32194081,
+              "fp": 108039,
+              "fn": 144767,
+              "tp": 1107545
+            },
+            "pixels": 33554432,
+            "foreground_pixels": 1252312,
+            "background_pixels": 32302120,
+            "metrics": {
+              "precision": 0.9111217324347803,
+              "recall": 0.8844002133653595,
+              "f1": 0.8975621338986732,
+              "iou": 0.8141611981025485,
+              "oa": 0.9924657940864563,
+              "foreground_recall": 0.8844002133653595,
+              "background_fpr": 0.0033446411566795,
+              "foreground_fn_rate": 0.11559978663464057
+            }
+          },
+          "outside_injection": {
+            "counts": {
+              "tn": 0,
+              "fp": 0,
+              "fn": 0,
+              "tp": 0
+            },
+            "pixels": 0,
+            "foreground_pixels": 0,
+            "background_pixels": 0,
+            "metrics": null
+          }
+        }
+      },
+      "local": {
+        "samples": 512,
+        "counts": {
+          "tn": 31865444,
+          "fp": 125042,
+          "fn": 158141,
+          "tp": 1405805
+        },
+        "pixels": 33554432,
+        "foreground_pixels": 1563946,
+        "background_pixels": 31990486,
+        "metrics": {
+          "precision": 0.9183184211093597,
+          "recall": 0.8988833374042327,
+          "f1": 0.9084969495536535,
+          "iou": 0.832335694510559,
+          "oa": 0.9915604889392853,
+          "foreground_recall": 0.8988833374042327,
+          "background_fpr": 0.003908724612686409,
+          "foreground_fn_rate": 0.10111666259576738
+        },
+        "regions": {
+          "injection_support": {
+            "counts": {
+              "tn": 12117781,
+              "fp": 46987,
+              "fn": 54078,
+              "tp": 542830
+            },
+            "pixels": 12761676,
+            "foreground_pixels": 596908,
+            "background_pixels": 12164768,
+            "metrics": {
+              "precision": 0.9203363077022195,
+              "recall": 0.9094031240995262,
+              "f1": 0.9148370515494323,
+              "iou": 0.8430411790742279,
+              "oa": 0.9920805856534831,
+              "foreground_recall": 0.9094031240995262,
+              "background_fpr": 0.0038625479746099557,
+              "foreground_fn_rate": 0.09059687590047377
+            }
+          },
+          "outside_injection": {
+            "counts": {
+              "tn": 19747663,
+              "fp": 78055,
+              "fn": 104063,
+              "tp": 862975
+            },
+            "pixels": 20792756,
+            "foreground_pixels": 967038,
+            "background_pixels": 19825718,
+            "metrics": {
+              "precision": 0.9170536539748998,
+              "recall": 0.8923899577886287,
+              "f1": 0.9045537161149393,
+              "iou": 0.825739910228085,
+              "oa": 0.9912412765291913,
+              "foreground_recall": 0.8923899577886287,
+              "background_fpr": 0.0039370579163892075,
+              "foreground_fn_rate": 0.10761004221137122
+            }
+          }
+        }
+      }
+    }
+  },
+  "by_source": {
+    "val/val_1.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1040961,
+        "fp": 358,
+        "fn": 1952,
+        "tp": 5305
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 7257,
+      "background_pixels": 1041319,
+      "metrics": {
+        "precision": 0.9367826240508564,
+        "recall": 0.7310183271324239,
+        "f1": 0.8212074303405573,
+        "iou": 0.6966513460275772,
+        "oa": 0.9977970123291016,
+        "foreground_recall": 0.7310183271324239,
+        "background_fpr": 0.0003437947449340692,
+        "foreground_fn_rate": 0.2689816728675761
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 752789,
+            "fp": 48,
+            "fn": 100,
+            "tp": 1006
+          },
+          "pixels": 753943,
+          "foreground_pixels": 1106,
+          "background_pixels": 752837,
+          "metrics": {
+            "precision": 0.9544592030360531,
+            "recall": 0.9095840867992767,
+            "f1": 0.9314814814814815,
+            "iou": 0.8717504332755632,
+            "oa": 0.9998036986880972,
+            "foreground_recall": 0.9095840867992767,
+            "background_fpr": 6.375882163071156e-05,
+            "foreground_fn_rate": 0.09041591320072333
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 288172,
+            "fp": 310,
+            "fn": 1852,
+            "tp": 4299
+          },
+          "pixels": 294633,
+          "foreground_pixels": 6151,
+          "background_pixels": 288482,
+          "metrics": {
+            "precision": 0.9327402907355175,
+            "recall": 0.6989107462201268,
+            "f1": 0.7990706319702602,
+            "iou": 0.6653768766444823,
+            "oa": 0.9926620575427736,
+            "foreground_recall": 0.6989107462201268,
+            "background_fpr": 0.00107459044238462,
+            "foreground_fn_rate": 0.30108925377987317
+          }
+        }
+      }
+    },
+    "val/val_10.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1022005,
+        "fp": 2338,
+        "fn": 5764,
+        "tp": 18469
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 24233,
+      "background_pixels": 1024343,
+      "metrics": {
+        "precision": 0.8876339693372423,
+        "recall": 0.7621425329096686,
+        "f1": 0.8201154529307283,
+        "iou": 0.6950811034586579,
+        "oa": 0.9922733306884766,
+        "foreground_recall": 0.7621425329096686,
+        "background_fpr": 0.0022824385972276865,
+        "foreground_fn_rate": 0.23785746709033137
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 659913,
+            "fp": 1899,
+            "fn": 3895,
+            "tp": 13109
+          },
+          "pixels": 678816,
+          "foreground_pixels": 17004,
+          "background_pixels": 661812,
+          "metrics": {
+            "precision": 0.8734674840085288,
+            "recall": 0.7709362502940484,
+            "f1": 0.8190053729851305,
+            "iou": 0.693487806168333,
+            "oa": 0.9914645500400697,
+            "foreground_recall": 0.7709362502940484,
+            "background_fpr": 0.0028693949339087233,
+            "foreground_fn_rate": 0.22906374970595153
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 362092,
+            "fp": 439,
+            "fn": 1869,
+            "tp": 5360
+          },
+          "pixels": 369760,
+          "foreground_pixels": 7229,
+          "background_pixels": 362531,
+          "metrics": {
+            "precision": 0.9242972926366615,
+            "recall": 0.7414580163231429,
+            "f1": 0.8228431071538226,
+            "iou": 0.6990088680229525,
+            "oa": 0.9937581133708351,
+            "foreground_recall": 0.7414580163231429,
+            "background_fpr": 0.0012109309272862183,
+            "foreground_fn_rate": 0.2585419836768571
+          }
+        }
+      }
+    },
+    "val/val_11.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1004313,
+        "fp": 3829,
+        "fn": 8752,
+        "tp": 31682
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 40434,
+      "background_pixels": 1008142,
+      "metrics": {
+        "precision": 0.89217425586438,
+        "recall": 0.7835484987881486,
+        "f1": 0.8343406412535388,
+        "iou": 0.7157671192643968,
+        "oa": 0.988001823425293,
+        "foreground_recall": 0.7835484987881486,
+        "background_fpr": 0.0037980760646813645,
+        "foreground_fn_rate": 0.21645150121185142
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 783791,
+            "fp": 1583,
+            "fn": 4487,
+            "tp": 16196
+          },
+          "pixels": 806057,
+          "foreground_pixels": 20683,
+          "background_pixels": 785374,
+          "metrics": {
+            "precision": 0.9109623713369706,
+            "recall": 0.783058550500411,
+            "f1": 0.8421818938172742,
+            "iou": 0.7273870475163927,
+            "oa": 0.9924695151831694,
+            "foreground_recall": 0.783058550500411,
+            "background_fpr": 0.0020156002108549557,
+            "foreground_fn_rate": 0.21694144949958905
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 220522,
+            "fp": 2246,
+            "fn": 4265,
+            "tp": 15486
+          },
+          "pixels": 242519,
+          "foreground_pixels": 19751,
+          "background_pixels": 222768,
+          "metrics": {
+            "precision": 0.8733363410782765,
+            "recall": 0.7840615665029619,
+            "f1": 0.8262945868793853,
+            "iou": 0.7040050916034004,
+            "oa": 0.9731526189700601,
+            "foreground_recall": 0.7840615665029619,
+            "background_fpr": 0.010082238023414495,
+            "foreground_fn_rate": 0.21593843349703812
+          }
+        }
+      }
+    },
+    "val/val_12.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 988792,
+        "fp": 6106,
+        "fn": 6742,
+        "tp": 46936
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 53678,
+      "background_pixels": 994898,
+      "metrics": {
+        "precision": 0.8848836770860827,
+        "recall": 0.8743991952010135,
+        "f1": 0.8796101949025488,
+        "iou": 0.7850930014719657,
+        "oa": 0.9877471923828125,
+        "foreground_recall": 0.8743991952010135,
+        "background_fpr": 0.0061373125687256384,
+        "foreground_fn_rate": 0.12560080479898655
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 581773,
+            "fp": 3684,
+            "fn": 2168,
+            "tp": 26067
+          },
+          "pixels": 613692,
+          "foreground_pixels": 28235,
+          "background_pixels": 585457,
+          "metrics": {
+            "precision": 0.8761722295048906,
+            "recall": 0.9232158668319461,
+            "f1": 0.8990790880557376,
+            "iou": 0.8166609229612457,
+            "oa": 0.9904642719800812,
+            "foreground_recall": 0.9232158668319461,
+            "background_fpr": 0.006292520202166855,
+            "foreground_fn_rate": 0.07678413316805384
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 407019,
+            "fp": 2422,
+            "fn": 4574,
+            "tp": 20869
+          },
+          "pixels": 434884,
+          "foreground_pixels": 25443,
+          "background_pixels": 409441,
+          "metrics": {
+            "precision": 0.8960113348503714,
+            "recall": 0.8202256023267697,
+            "f1": 0.8564451922682316,
+            "iou": 0.7489323524134218,
+            "oa": 0.9839129514997103,
+            "foreground_recall": 0.8202256023267697,
+            "background_fpr": 0.0059153821918176246,
+            "foreground_fn_rate": 0.17977439767323036
+          }
+        }
+      }
+    },
+    "val/val_13.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 999618,
+        "fp": 4711,
+        "fn": 7562,
+        "tp": 36685
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 44247,
+      "background_pixels": 1004329,
+      "metrics": {
+        "precision": 0.8861967339839598,
+        "recall": 0.8290957579044907,
+        "f1": 0.8566958186892099,
+        "iou": 0.7493157400220597,
+        "oa": 0.9882955551147461,
+        "foreground_recall": 0.8290957579044907,
+        "background_fpr": 0.00469069398573575,
+        "foreground_fn_rate": 0.1709042420955093
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 821233,
+            "fp": 4363,
+            "fn": 5988,
+            "tp": 30838
+          },
+          "pixels": 862422,
+          "foreground_pixels": 36826,
+          "background_pixels": 825596,
+          "metrics": {
+            "precision": 0.8760546575381382,
+            "recall": 0.8373974909031663,
+            "f1": 0.856290002360226,
+            "iou": 0.7486950399378475,
+            "oa": 0.9879977551593072,
+            "foreground_recall": 0.8373974909031663,
+            "background_fpr": 0.005284667076875372,
+            "foreground_fn_rate": 0.16260250909683377
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 178385,
+            "fp": 348,
+            "fn": 1574,
+            "tp": 5847
+          },
+          "pixels": 186154,
+          "foreground_pixels": 7421,
+          "background_pixels": 178733,
+          "metrics": {
+            "precision": 0.9438256658595642,
+            "recall": 0.7878992049589004,
+            "f1": 0.8588425381903643,
+            "iou": 0.7526065130647445,
+            "oa": 0.9896752151444503,
+            "foreground_recall": 0.7878992049589004,
+            "background_fpr": 0.00194703831972831,
+            "foreground_fn_rate": 0.21210079504109958
+          }
+        }
+      }
+    },
+    "val/val_14.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 997363,
+        "fp": 4655,
+        "fn": 10276,
+        "tp": 36282
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 46558,
+      "background_pixels": 1002018,
+      "metrics": {
+        "precision": 0.8862886874954198,
+        "recall": 0.779286051806349,
+        "f1": 0.8293502485856334,
+        "iou": 0.7084529318727667,
+        "oa": 0.9857606887817383,
+        "foreground_recall": 0.779286051806349,
+        "background_fpr": 0.0046456251284907055,
+        "foreground_fn_rate": 0.22071394819365092
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 802320,
+            "fp": 3248,
+            "fn": 7382,
+            "tp": 29604
+          },
+          "pixels": 842554,
+          "foreground_pixels": 36986,
+          "background_pixels": 805568,
+          "metrics": {
+            "precision": 0.9011323511506149,
+            "recall": 0.8004109663115774,
+            "f1": 0.8477906011054154,
+            "iou": 0.735795595764776,
+            "oa": 0.9873835979652342,
+            "foreground_recall": 0.8004109663115774,
+            "background_fpr": 0.004031937713513943,
+            "foreground_fn_rate": 0.19958903368842265
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 195043,
+            "fp": 1407,
+            "fn": 2894,
+            "tp": 6678
+          },
+          "pixels": 206022,
+          "foreground_pixels": 9572,
+          "background_pixels": 196450,
+          "metrics": {
+            "precision": 0.825974025974026,
+            "recall": 0.6976598412035102,
+            "f1": 0.7564138868437447,
+            "iou": 0.6082521176792057,
+            "oa": 0.9791235887429498,
+            "foreground_recall": 0.6976598412035102,
+            "background_fpr": 0.007162127767879867,
+            "foreground_fn_rate": 0.3023401587964898
+          }
+        }
+      }
+    },
+    "val/val_15.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 960218,
+        "fp": 5688,
+        "fn": 5703,
+        "tp": 76967
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 82670,
+      "background_pixels": 965906,
+      "metrics": {
+        "precision": 0.9311838364285282,
+        "recall": 0.9310148784323212,
+        "f1": 0.9310993497656131,
+        "iou": 0.8710812829624935,
+        "oa": 0.9891366958618164,
+        "foreground_recall": 0.9310148784323212,
+        "background_fpr": 0.005888771785246183,
+        "foreground_fn_rate": 0.06898512156767872
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 599226,
+            "fp": 4561,
+            "fn": 4648,
+            "tp": 58387
+          },
+          "pixels": 666822,
+          "foreground_pixels": 63035,
+          "background_pixels": 603787,
+          "metrics": {
+            "precision": 0.9275433691300756,
+            "recall": 0.9262631871182676,
+            "f1": 0.9269028360969337,
+            "iou": 0.8637641280549145,
+            "oa": 0.9861897177957536,
+            "foreground_recall": 0.9262631871182676,
+            "background_fpr": 0.007553988409820019,
+            "foreground_fn_rate": 0.07373681288173237
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 360992,
+            "fp": 1127,
+            "fn": 1055,
+            "tp": 18580
+          },
+          "pixels": 381754,
+          "foreground_pixels": 19635,
+          "background_pixels": 362119,
+          "metrics": {
+            "precision": 0.9428121987111179,
+            "recall": 0.9462694168576522,
+            "f1": 0.9445376442478776,
+            "iou": 0.8949041518158174,
+            "oa": 0.9942842773094716,
+            "foreground_recall": 0.9462694168576522,
+            "background_fpr": 0.0031122365852109387,
+            "foreground_fn_rate": 0.05373058314234785
+          }
+        }
+      }
+    },
+    "val/val_16.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1010345,
+        "fp": 2598,
+        "fn": 6197,
+        "tp": 29436
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 35633,
+      "background_pixels": 1012943,
+      "metrics": {
+        "precision": 0.9188986701629519,
+        "recall": 0.8260881766901468,
+        "f1": 0.8700252708114738,
+        "iou": 0.7699510868143653,
+        "oa": 0.991612434387207,
+        "foreground_recall": 0.8260881766901468,
+        "background_fpr": 0.0025648037451268236,
+        "foreground_fn_rate": 0.17391182330985322
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 625891,
+            "fp": 1995,
+            "fn": 2619,
+            "tp": 22727
+          },
+          "pixels": 653232,
+          "foreground_pixels": 25346,
+          "background_pixels": 627886,
+          "metrics": {
+            "precision": 0.9193026454170374,
+            "recall": 0.8966700860096267,
+            "f1": 0.907845330350723,
+            "iou": 0.8312424563841849,
+            "oa": 0.9929366595635242,
+            "foreground_recall": 0.8966700860096267,
+            "background_fpr": 0.0031773283685254967,
+            "foreground_fn_rate": 0.10332991399037324
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 384454,
+            "fp": 603,
+            "fn": 3578,
+            "tp": 6709
+          },
+          "pixels": 395344,
+          "foreground_pixels": 10287,
+          "background_pixels": 385057,
+          "metrics": {
+            "precision": 0.9175328227571116,
+            "recall": 0.6521823660931273,
+            "f1": 0.7624296835047446,
+            "iou": 0.6160697887970615,
+            "oa": 0.9894244000161885,
+            "foreground_recall": 0.6521823660931273,
+            "background_fpr": 0.0015660019165993607,
+            "foreground_fn_rate": 0.34781763390687276
+          }
+        }
+      }
+    },
+    "val/val_17.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 886470,
+        "fp": 12973,
+        "fn": 15415,
+        "tp": 133718
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 149133,
+      "background_pixels": 899443,
+      "metrics": {
+        "precision": 0.9115623998745662,
+        "recall": 0.8966358887704264,
+        "f1": 0.9040375358321164,
+        "iou": 0.8248800167791445,
+        "oa": 0.9729270935058594,
+        "foreground_recall": 0.8966358887704264,
+        "background_fpr": 0.014423370908440002,
+        "foreground_fn_rate": 0.1033641112295736
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 631623,
+            "fp": 8579,
+            "fn": 8698,
+            "tp": 94960
+          },
+          "pixels": 743860,
+          "foreground_pixels": 103658,
+          "background_pixels": 640202,
+          "metrics": {
+            "precision": 0.9171423328407653,
+            "recall": 0.9160894479924366,
+            "f1": 0.9166155880635337,
+            "iou": 0.8460668050642837,
+            "oa": 0.9767738552953513,
+            "foreground_recall": 0.9160894479924366,
+            "background_fpr": 0.01340045798044992,
+            "foreground_fn_rate": 0.08391055200756334
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 254847,
+            "fp": 4394,
+            "fn": 6717,
+            "tp": 38758
+          },
+          "pixels": 304716,
+          "foreground_pixels": 45475,
+          "background_pixels": 259241,
+          "metrics": {
+            "precision": 0.8981738969225065,
+            "recall": 0.8522924683892249,
+            "f1": 0.8746318841887912,
+            "iou": 0.7771962541859673,
+            "oa": 0.963536538941178,
+            "foreground_recall": 0.8522924683892249,
+            "background_fpr": 0.016949479441909266,
+            "foreground_fn_rate": 0.14770753161077516
+          }
+        }
+      }
+    },
+    "val/val_18.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 931828,
+        "fp": 9566,
+        "fn": 10111,
+        "tp": 97071
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 107182,
+      "background_pixels": 941394,
+      "metrics": {
+        "precision": 0.9102938004632538,
+        "recall": 0.9056651303390495,
+        "f1": 0.9079735664276795,
+        "iou": 0.831457498201254,
+        "oa": 0.9812345504760742,
+        "foreground_recall": 0.9056651303390495,
+        "background_fpr": 0.010161526417206823,
+        "foreground_fn_rate": 0.09433486966095053
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 771003,
+            "fp": 7042,
+            "fn": 7396,
+            "tp": 78754
+          },
+          "pixels": 864195,
+          "foreground_pixels": 86150,
+          "background_pixels": 778045,
+          "metrics": {
+            "precision": 0.9179215814257075,
+            "recall": 0.9141497388276262,
+            "f1": 0.9160317774184918,
+            "iou": 0.8450725384153146,
+            "oa": 0.9832931225012873,
+            "foreground_recall": 0.9141497388276262,
+            "background_fpr": 0.00905089037266482,
+            "foreground_fn_rate": 0.08585026117237377
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 160825,
+            "fp": 2524,
+            "fn": 2715,
+            "tp": 18317
+          },
+          "pixels": 184381,
+          "foreground_pixels": 21032,
+          "background_pixels": 163349,
+          "metrics": {
+            "precision": 0.8788925675351471,
+            "recall": 0.8709109927729175,
+            "f1": 0.8748835765290283,
+            "iou": 0.7775938189845475,
+            "oa": 0.9715860094044397,
+            "foreground_recall": 0.8709109927729175,
+            "background_fpr": 0.015451579134246307,
+            "foreground_fn_rate": 0.12908900722708255
+          }
+        }
+      }
+    },
+    "val/val_19.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 977442,
+        "fp": 4232,
+        "fn": 5462,
+        "tp": 61440
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 66902,
+      "background_pixels": 981674,
+      "metrics": {
+        "precision": 0.935558533317091,
+        "recall": 0.9183581955696392,
+        "f1": 0.9268785734759455,
+        "iou": 0.8637219894846346,
+        "oa": 0.9907550811767578,
+        "foreground_recall": 0.9183581955696392,
+        "background_fpr": 0.004311003449210226,
+        "foreground_fn_rate": 0.08164180443036083
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 687989,
+            "fp": 2000,
+            "fn": 2315,
+            "tp": 32776
+          },
+          "pixels": 725080,
+          "foreground_pixels": 35091,
+          "background_pixels": 689989,
+          "metrics": {
+            "precision": 0.9424890729238555,
+            "recall": 0.9340286683195121,
+            "f1": 0.9382397984742439,
+            "iou": 0.8836645008223019,
+            "oa": 0.9940489325315828,
+            "foreground_recall": 0.9340286683195121,
+            "background_fpr": 0.0028985969341540226,
+            "foreground_fn_rate": 0.06597133168048787
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 289453,
+            "fp": 2232,
+            "fn": 3147,
+            "tp": 28664
+          },
+          "pixels": 323496,
+          "foreground_pixels": 31811,
+          "background_pixels": 291685,
+          "metrics": {
+            "precision": 0.9277576385292594,
+            "recall": 0.9010719562415517,
+            "f1": 0.9142201030188017,
+            "iou": 0.8419939488294216,
+            "oa": 0.9833722828102975,
+            "foreground_recall": 0.9010719562415517,
+            "background_fpr": 0.007652090440029484,
+            "foreground_fn_rate": 0.09892804375844834
+          }
+        }
+      }
+    },
+    "val/val_2.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1019745,
+        "fp": 2285,
+        "fn": 2420,
+        "tp": 24126
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 26546,
+      "background_pixels": 1022030,
+      "metrics": {
+        "precision": 0.9134830184392867,
+        "recall": 0.9088374896406238,
+        "f1": 0.9111543327605416,
+        "iou": 0.8368076029274045,
+        "oa": 0.9955129623413086,
+        "foreground_recall": 0.9088374896406238,
+        "background_fpr": 0.0022357465045057387,
+        "foreground_fn_rate": 0.09116251035937618
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 570547,
+            "fp": 1001,
+            "fn": 1242,
+            "tp": 12985
+          },
+          "pixels": 585775,
+          "foreground_pixels": 14227,
+          "background_pixels": 571548,
+          "metrics": {
+            "precision": 0.9284284284284284,
+            "recall": 0.9127012019399733,
+            "f1": 0.9204976429305639,
+            "iou": 0.8527055424218545,
+            "oa": 0.9961708847253639,
+            "foreground_recall": 0.9127012019399733,
+            "background_fpr": 0.0017513839607522029,
+            "foreground_fn_rate": 0.08729879806002672
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 449198,
+            "fp": 1284,
+            "fn": 1178,
+            "tp": 11141
+          },
+          "pixels": 462801,
+          "foreground_pixels": 12319,
+          "background_pixels": 450482,
+          "metrics": {
+            "precision": 0.8966599597585513,
+            "recall": 0.9043753551424628,
+            "f1": 0.9005011315874556,
+            "iou": 0.8190105123869734,
+            "oa": 0.9946802189277897,
+            "foreground_recall": 0.9043753551424628,
+            "background_fpr": 0.00285028036636314,
+            "foreground_fn_rate": 0.09562464485753713
+          }
+        }
+      }
+    },
+    "val/val_20.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 819641,
+        "fp": 15234,
+        "fn": 15141,
+        "tp": 198560
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 213701,
+      "background_pixels": 834875,
+      "metrics": {
+        "precision": 0.9287444923618062,
+        "recall": 0.9291486703384636,
+        "f1": 0.9289465373864022,
+        "iou": 0.867320418459388,
+        "oa": 0.9710321426391602,
+        "foreground_recall": 0.9291486703384636,
+        "background_fpr": 0.018247042970504567,
+        "foreground_fn_rate": 0.07085132966153644
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 558052,
+            "fp": 11115,
+            "fn": 10696,
+            "tp": 140658
+          },
+          "pixels": 720521,
+          "foreground_pixels": 151354,
+          "background_pixels": 569167,
+          "metrics": {
+            "precision": 0.9267656302504398,
+            "recall": 0.9293312367033577,
+            "f1": 0.9280466603106948,
+            "iou": 0.8657528513131736,
+            "oa": 0.9697288489856646,
+            "foreground_recall": 0.9293312367033577,
+            "background_fpr": 0.019528539075526163,
+            "foreground_fn_rate": 0.0706687632966423
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 261589,
+            "fp": 4119,
+            "fn": 4445,
+            "tp": 57902
+          },
+          "pixels": 328055,
+          "foreground_pixels": 62347,
+          "background_pixels": 265708,
+          "metrics": {
+            "precision": 0.9335870108511634,
+            "recall": 0.9287054709929908,
+            "f1": 0.9311398430464428,
+            "iou": 0.8711521680257576,
+            "oa": 0.9738946213287406,
+            "foreground_recall": 0.9287054709929908,
+            "background_fpr": 0.015501979616722115,
+            "foreground_fn_rate": 0.07129452900700915
+          }
+        }
+      }
+    },
+    "val/val_21.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 963617,
+        "fp": 7154,
+        "fn": 7512,
+        "tp": 70293
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 77805,
+      "background_pixels": 970771,
+      "metrics": {
+        "precision": 0.9076271514713288,
+        "recall": 0.9034509350298824,
+        "f1": 0.9055342282225027,
+        "iou": 0.8273755576219117,
+        "oa": 0.9860134124755859,
+        "foreground_recall": 0.9034509350298824,
+        "background_fpr": 0.007369400198399005,
+        "foreground_fn_rate": 0.0965490649701176
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 639349,
+            "fp": 3291,
+            "fn": 4080,
+            "tp": 34801
+          },
+          "pixels": 681521,
+          "foreground_pixels": 38881,
+          "background_pixels": 642640,
+          "metrics": {
+            "precision": 0.9136039063320383,
+            "recall": 0.8950644273552635,
+            "f1": 0.9042391487924337,
+            "iou": 0.8252157829839704,
+            "oa": 0.9891844858779113,
+            "foreground_recall": 0.8950644273552635,
+            "background_fpr": 0.00512106311465206,
+            "foreground_fn_rate": 0.1049355726447365
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 324268,
+            "fp": 3863,
+            "fn": 3432,
+            "tp": 35492
+          },
+          "pixels": 367055,
+          "foreground_pixels": 38924,
+          "background_pixels": 328131,
+          "metrics": {
+            "precision": 0.9018422055647313,
+            "recall": 0.9118281779878739,
+            "f1": 0.9068077006604581,
+            "iou": 0.8295042886858158,
+            "oa": 0.9801255942569914,
+            "foreground_recall": 0.9118281779878739,
+            "background_fpr": 0.011772737108045262,
+            "foreground_fn_rate": 0.0881718220121262
+          }
+        }
+      }
+    },
+    "val/val_22.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1022900,
+        "fp": 1194,
+        "fn": 2704,
+        "tp": 21778
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 24482,
+      "background_pixels": 1024094,
+      "metrics": {
+        "precision": 0.9480236810029601,
+        "recall": 0.8895515072298015,
+        "f1": 0.9178572933788511,
+        "iou": 0.8481850755569403,
+        "oa": 0.9962825775146484,
+        "foreground_recall": 0.8895515072298015,
+        "background_fpr": 0.0011659085982341465,
+        "foreground_fn_rate": 0.11044849277019851
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 712688,
+            "fp": 1126,
+            "fn": 2054,
+            "tp": 20048
+          },
+          "pixels": 735916,
+          "foreground_pixels": 22102,
+          "background_pixels": 713814,
+          "metrics": {
+            "precision": 0.9468215736280344,
+            "recall": 0.9070672337345037,
+            "f1": 0.9265181624919123,
+            "iou": 0.8630962631307043,
+            "oa": 0.9956788546518897,
+            "foreground_recall": 0.9070672337345037,
+            "background_fpr": 0.0015774417425267646,
+            "foreground_fn_rate": 0.09293276626549633
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 310212,
+            "fp": 68,
+            "fn": 650,
+            "tp": 1730
+          },
+          "pixels": 312660,
+          "foreground_pixels": 2380,
+          "background_pixels": 310280,
+          "metrics": {
+            "precision": 0.9621802002224694,
+            "recall": 0.726890756302521,
+            "f1": 0.8281474389660124,
+            "iou": 0.7066993464052288,
+            "oa": 0.9977035757692062,
+            "foreground_recall": 0.726890756302521,
+            "background_fpr": 0.00021915689055047055,
+            "foreground_fn_rate": 0.27310924369747897
+          }
+        }
+      }
+    },
+    "val/val_23.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1027048,
+        "fp": 661,
+        "fn": 17,
+        "tp": 20850
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 20867,
+      "background_pixels": 1027709,
+      "metrics": {
+        "precision": 0.9692715354934685,
+        "recall": 0.99918531652849,
+        "f1": 0.9840011326631742,
+        "iou": 0.9685061315496098,
+        "oa": 0.9993534088134766,
+        "foreground_recall": 0.99918531652849,
+        "background_fpr": 0.0006431781759233401,
+        "foreground_fn_rate": 0.0008146834715100397
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 760504,
+            "fp": 661,
+            "fn": 17,
+            "tp": 20850
+          },
+          "pixels": 782032,
+          "foreground_pixels": 20867,
+          "background_pixels": 761165,
+          "metrics": {
+            "precision": 0.9692715354934685,
+            "recall": 0.99918531652849,
+            "f1": 0.9840011326631742,
+            "iou": 0.9685061315496098,
+            "oa": 0.9991330278044889,
+            "foreground_recall": 0.99918531652849,
+            "background_fpr": 0.0008684056676279125,
+            "foreground_fn_rate": 0.0008146834715100397
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 266544,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 266544,
+          "foreground_pixels": 0,
+          "background_pixels": 266544,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        }
+      }
+    },
+    "val/val_24.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1014647,
+        "fp": 2065,
+        "fn": 3027,
+        "tp": 28837
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 31864,
+      "background_pixels": 1016712,
+      "metrics": {
+        "precision": 0.9331758462235454,
+        "recall": 0.905002510670349,
+        "f1": 0.9188732753401523,
+        "iou": 0.8499218957234225,
+        "oa": 0.9951438903808594,
+        "foreground_recall": 0.905002510670349,
+        "background_fpr": 0.0020310569758200947,
+        "foreground_fn_rate": 0.09499748932965102
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 739246,
+            "fp": 857,
+            "fn": 1028,
+            "tp": 16535
+          },
+          "pixels": 757666,
+          "foreground_pixels": 17563,
+          "background_pixels": 740103,
+          "metrics": {
+            "precision": 0.9507244710211592,
+            "recall": 0.9414678585663042,
+            "f1": 0.94607352310113,
+            "iou": 0.8976655808903365,
+            "oa": 0.9975120963590817,
+            "foreground_recall": 0.9414678585663042,
+            "background_fpr": 0.001157946934413183,
+            "foreground_fn_rate": 0.05853214143369584
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 275401,
+            "fp": 1208,
+            "fn": 1999,
+            "tp": 12302
+          },
+          "pixels": 290910,
+          "foreground_pixels": 14301,
+          "background_pixels": 276609,
+          "metrics": {
+            "precision": 0.9105847520355292,
+            "recall": 0.86021956506538,
+            "f1": 0.8846859156448887,
+            "iou": 0.793216841833774,
+            "oa": 0.9889759719500877,
+            "foreground_recall": 0.86021956506538,
+            "background_fpr": 0.004367175326905487,
+            "foreground_fn_rate": 0.13978043493461995
+          }
+        }
+      }
+    },
+    "val/val_25.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 971465,
+        "fp": 1323,
+        "fn": 12478,
+        "tp": 63310
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 75788,
+      "background_pixels": 972788,
+      "metrics": {
+        "precision": 0.9795305803536893,
+        "recall": 0.8353565208212382,
+        "f1": 0.9017169796540403,
+        "iou": 0.8210242377870861,
+        "oa": 0.9868383407592773,
+        "foreground_recall": 0.8353565208212382,
+        "background_fpr": 0.0013600085527370814,
+        "foreground_fn_rate": 0.16464347917876182
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 684491,
+            "fp": 1292,
+            "fn": 5762,
+            "tp": 25255
+          },
+          "pixels": 716800,
+          "foreground_pixels": 31017,
+          "background_pixels": 685783,
+          "metrics": {
+            "precision": 0.9513316005575018,
+            "recall": 0.8142309056323951,
+            "f1": 0.8774581335556946,
+            "iou": 0.7816707418985422,
+            "oa": 0.9901590401785715,
+            "foreground_recall": 0.8142309056323951,
+            "background_fpr": 0.0018839778763836373,
+            "foreground_fn_rate": 0.18576909436760486
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 286974,
+            "fp": 31,
+            "fn": 6716,
+            "tp": 38055
+          },
+          "pixels": 331776,
+          "foreground_pixels": 44771,
+          "background_pixels": 287005,
+          "metrics": {
+            "precision": 0.9991860526177598,
+            "recall": 0.8499921824395256,
+            "f1": 0.9185705492595677,
+            "iou": 0.8494040444623008,
+            "oa": 0.9796639901620371,
+            "foreground_recall": 0.8499921824395256,
+            "background_fpr": 0.00010801205553910211,
+            "foreground_fn_rate": 0.1500078175604744
+          }
+        }
+      }
+    },
+    "val/val_26.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1048576,
+        "fp": 0,
+        "fn": 0,
+        "tp": 0
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 0,
+      "background_pixels": 1048576,
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "iou": 0.0,
+        "oa": 1.0,
+        "foreground_recall": 0.0,
+        "background_fpr": 0.0,
+        "foreground_fn_rate": 0.0
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 779835,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 779835,
+          "foreground_pixels": 0,
+          "background_pixels": 779835,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 268741,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 268741,
+          "foreground_pixels": 0,
+          "background_pixels": 268741,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        }
+      }
+    },
+    "val/val_27.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 926882,
+        "fp": 7271,
+        "fn": 7049,
+        "tp": 107374
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 114423,
+      "background_pixels": 934153,
+      "metrics": {
+        "precision": 0.9365781324959658,
+        "recall": 0.9383952527026909,
+        "f1": 0.9374858120732709,
+        "iou": 0.8823278058080103,
+        "oa": 0.9863433837890625,
+        "foreground_recall": 0.9383952527026909,
+        "background_fpr": 0.007783521543044876,
+        "foreground_fn_rate": 0.06160474729730911
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 570493,
+            "fp": 3366,
+            "fn": 2930,
+            "tp": 52871
+          },
+          "pixels": 629660,
+          "foreground_pixels": 55801,
+          "background_pixels": 573859,
+          "metrics": {
+            "precision": 0.9401461671141775,
+            "recall": 0.9474919804304582,
+            "f1": 0.9438047805208947,
+            "iou": 0.8935893318910879,
+            "oa": 0.9900009528952133,
+            "foreground_recall": 0.9474919804304582,
+            "background_fpr": 0.005865552339511971,
+            "foreground_fn_rate": 0.052508019569541764
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 356389,
+            "fp": 3905,
+            "fn": 4119,
+            "tp": 54503
+          },
+          "pixels": 418916,
+          "foreground_pixels": 58622,
+          "background_pixels": 360294,
+          "metrics": {
+            "precision": 0.9331427201753184,
+            "recall": 0.9297362764832315,
+            "f1": 0.9314363838332052,
+            "iou": 0.8716714379388104,
+            "oa": 0.9808458020223625,
+            "foreground_recall": 0.9297362764832315,
+            "background_fpr": 0.010838370885998656,
+            "foreground_fn_rate": 0.07026372351676845
+          }
+        }
+      }
+    },
+    "val/val_28.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 970685,
+        "fp": 5180,
+        "fn": 4571,
+        "tp": 68140
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 72711,
+      "background_pixels": 975865,
+      "metrics": {
+        "precision": 0.9293507910529187,
+        "recall": 0.9371346838855193,
+        "f1": 0.933226506700632,
+        "iou": 0.8748122376141018,
+        "oa": 0.9907007217407227,
+        "foreground_recall": 0.9371346838855193,
+        "background_fpr": 0.005308111265390192,
+        "foreground_fn_rate": 0.06286531611448061
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 708513,
+            "fp": 3475,
+            "fn": 3254,
+            "tp": 46067
+          },
+          "pixels": 761309,
+          "foreground_pixels": 49321,
+          "background_pixels": 711988,
+          "metrics": {
+            "precision": 0.9298574946510032,
+            "recall": 0.9340240465521786,
+            "f1": 0.9319361136117658,
+            "iou": 0.8725471626638381,
+            "oa": 0.9911612761703855,
+            "foreground_recall": 0.9340240465521786,
+            "background_fpr": 0.00488070023652084,
+            "foreground_fn_rate": 0.06597595344782141
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 262172,
+            "fp": 1705,
+            "fn": 1317,
+            "tp": 22073
+          },
+          "pixels": 287267,
+          "foreground_pixels": 23390,
+          "background_pixels": 263877,
+          "metrics": {
+            "precision": 0.9282950626629658,
+            "recall": 0.9436938862761864,
+            "f1": 0.9359311397557666,
+            "iou": 0.8795776051006177,
+            "oa": 0.9894801700160478,
+            "foreground_recall": 0.9436938862761864,
+            "background_fpr": 0.006461343732117615,
+            "foreground_fn_rate": 0.0563061137238136
+          }
+        }
+      }
+    },
+    "val/val_29.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1048576,
+        "fp": 0,
+        "fn": 0,
+        "tp": 0
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 0,
+      "background_pixels": 1048576,
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "iou": 0.0,
+        "oa": 1.0,
+        "foreground_recall": 0.0,
+        "background_fpr": 0.0,
+        "foreground_fn_rate": 0.0
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 734859,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 734859,
+          "foreground_pixels": 0,
+          "background_pixels": 734859,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 313717,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 313717,
+          "foreground_pixels": 0,
+          "background_pixels": 313717,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        }
+      }
+    },
+    "val/val_3.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1010300,
+        "fp": 2427,
+        "fn": 2383,
+        "tp": 33466
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 35849,
+      "background_pixels": 1012727,
+      "metrics": {
+        "precision": 0.9323823586771794,
+        "recall": 0.9335267371474797,
+        "f1": 0.9329541969836358,
+        "iou": 0.8743337861845543,
+        "oa": 0.9954128265380859,
+        "foreground_recall": 0.9335267371474797,
+        "background_fpr": 0.0023964997477108835,
+        "foreground_fn_rate": 0.0664732628525203
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 689851,
+            "fp": 1530,
+            "fn": 1196,
+            "tp": 22539
+          },
+          "pixels": 715116,
+          "foreground_pixels": 23735,
+          "background_pixels": 691381,
+          "metrics": {
+            "precision": 0.9364327558269974,
+            "recall": 0.9496102801769538,
+            "f1": 0.9429754832231613,
+            "iou": 0.8921037007718188,
+            "oa": 0.9961880310327276,
+            "foreground_recall": 0.9496102801769538,
+            "background_fpr": 0.00221296217281065,
+            "foreground_fn_rate": 0.05038971982304614
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 320449,
+            "fp": 897,
+            "fn": 1187,
+            "tp": 10927
+          },
+          "pixels": 333460,
+          "foreground_pixels": 12114,
+          "background_pixels": 321346,
+          "metrics": {
+            "precision": 0.9241373477672531,
+            "recall": 0.9020141984480766,
+            "f1": 0.912941766229426,
+            "iou": 0.8398278379832449,
+            "oa": 0.9937503748575541,
+            "foreground_recall": 0.9020141984480766,
+            "background_fpr": 0.002791383742134646,
+            "foreground_fn_rate": 0.0979858015519234
+          }
+        }
+      }
+    },
+    "val/val_30.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1048576,
+        "fp": 0,
+        "fn": 0,
+        "tp": 0
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 0,
+      "background_pixels": 1048576,
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "iou": 0.0,
+        "oa": 1.0,
+        "foreground_recall": 0.0,
+        "background_fpr": 0.0,
+        "foreground_fn_rate": 0.0
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 683374,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 683374,
+          "foreground_pixels": 0,
+          "background_pixels": 683374,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 365202,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 365202,
+          "foreground_pixels": 0,
+          "background_pixels": 365202,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        }
+      }
+    },
+    "val/val_31.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1048317,
+        "fp": 259,
+        "fn": 0,
+        "tp": 0
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 0,
+      "background_pixels": 1048576,
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "iou": 0.0,
+        "oa": 0.9997529983520508,
+        "foreground_recall": 0.0,
+        "background_fpr": 0.00024700164794921875,
+        "foreground_fn_rate": 0.0
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 815971,
+            "fp": 259,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 816230,
+          "foreground_pixels": 0,
+          "background_pixels": 816230,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 0.9996826874777942,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.00031731252220575085,
+            "foreground_fn_rate": 0.0
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 232346,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 232346,
+          "foreground_pixels": 0,
+          "background_pixels": 232346,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        }
+      }
+    },
+    "val/val_32.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1048576,
+        "fp": 0,
+        "fn": 0,
+        "tp": 0
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 0,
+      "background_pixels": 1048576,
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "iou": 0.0,
+        "oa": 1.0,
+        "foreground_recall": 0.0,
+        "background_fpr": 0.0,
+        "foreground_fn_rate": 0.0
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 928502,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 928502,
+          "foreground_pixels": 0,
+          "background_pixels": 928502,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 120074,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 120074,
+          "foreground_pixels": 0,
+          "background_pixels": 120074,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        }
+      }
+    },
+    "val/val_33.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1014870,
+        "fp": 502,
+        "fn": 3972,
+        "tp": 29232
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 33204,
+      "background_pixels": 1015372,
+      "metrics": {
+        "precision": 0.9831169704715141,
+        "recall": 0.8803758583303216,
+        "f1": 0.928914169500143,
+        "iou": 0.8672639886073696,
+        "oa": 0.9957332611083984,
+        "foreground_recall": 0.8803758583303216,
+        "background_fpr": 0.000494400081940412,
+        "foreground_fn_rate": 0.11962414166967836
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 849278,
+            "fp": 502,
+            "fn": 3972,
+            "tp": 29232
+          },
+          "pixels": 882984,
+          "foreground_pixels": 33204,
+          "background_pixels": 849780,
+          "metrics": {
+            "precision": 0.9831169704715141,
+            "recall": 0.8803758583303216,
+            "f1": 0.928914169500143,
+            "iou": 0.8672639886073696,
+            "oa": 0.9949330905203265,
+            "foreground_recall": 0.8803758583303216,
+            "background_fpr": 0.0005907411329991292,
+            "foreground_fn_rate": 0.11962414166967836
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 165592,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 165592,
+          "foreground_pixels": 0,
+          "background_pixels": 165592,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        }
+      }
+    },
+    "val/val_34.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 966319,
+        "fp": 5593,
+        "fn": 4317,
+        "tp": 72347
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 76664,
+      "background_pixels": 971912,
+      "metrics": {
+        "precision": 0.928239671542212,
+        "recall": 0.9436893457163728,
+        "f1": 0.9359007528912576,
+        "iou": 0.8795239310940103,
+        "oa": 0.9905490875244141,
+        "foreground_recall": 0.9436893457163728,
+        "background_fpr": 0.005754636222209418,
+        "foreground_fn_rate": 0.056310654283627255
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 642456,
+            "fp": 3432,
+            "fn": 2324,
+            "tp": 43340
+          },
+          "pixels": 691552,
+          "foreground_pixels": 45664,
+          "background_pixels": 645888,
+          "metrics": {
+            "precision": 0.9266227657572906,
+            "recall": 0.9491065171688857,
+            "f1": 0.9377298887879181,
+            "iou": 0.8827603063386019,
+            "oa": 0.9916766924251539,
+            "foreground_recall": 0.9491065171688857,
+            "background_fpr": 0.005313614744351962,
+            "foreground_fn_rate": 0.05089348283111422
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 323863,
+            "fp": 2161,
+            "fn": 1993,
+            "tp": 29007
+          },
+          "pixels": 357024,
+          "foreground_pixels": 31000,
+          "background_pixels": 326024,
+          "metrics": {
+            "precision": 0.9306660677618069,
+            "recall": 0.9357096774193548,
+            "f1": 0.9331810577789217,
+            "iou": 0.8747323663339465,
+            "oa": 0.9883649278479878,
+            "foreground_recall": 0.9357096774193548,
+            "background_fpr": 0.006628346379407651,
+            "foreground_fn_rate": 0.06429032258064517
+          }
+        }
+      }
+    },
+    "val/val_35.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1037137,
+        "fp": 838,
+        "fn": 3315,
+        "tp": 7286
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 10601,
+      "background_pixels": 1037975,
+      "metrics": {
+        "precision": 0.8968488429345151,
+        "recall": 0.6872936515423074,
+        "f1": 0.7782109479305741,
+        "iou": 0.6369437887927266,
+        "oa": 0.9960393905639648,
+        "foreground_recall": 0.6872936515423074,
+        "background_fpr": 0.0008073412172740191,
+        "foreground_fn_rate": 0.3127063484576927
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 793139,
+            "fp": 589,
+            "fn": 1594,
+            "tp": 5155
+          },
+          "pixels": 800477,
+          "foreground_pixels": 6749,
+          "background_pixels": 793728,
+          "metrics": {
+            "precision": 0.897458217270195,
+            "recall": 0.7638168617572973,
+            "f1": 0.8252621468022092,
+            "iou": 0.702507495230308,
+            "oa": 0.9972728760476566,
+            "foreground_recall": 0.7638168617572973,
+            "background_fpr": 0.0007420678116432833,
+            "foreground_fn_rate": 0.23618313824270262
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 243998,
+            "fp": 249,
+            "fn": 1721,
+            "tp": 2131
+          },
+          "pixels": 248099,
+          "foreground_pixels": 3852,
+          "background_pixels": 244247,
+          "metrics": {
+            "precision": 0.8953781512605042,
+            "recall": 0.5532191069574247,
+            "f1": 0.6838896020539152,
+            "iou": 0.5196293586930018,
+            "oa": 0.9920596213608277,
+            "foreground_recall": 0.5532191069574247,
+            "background_fpr": 0.0010194598091276454,
+            "foreground_fn_rate": 0.4467808930425753
+          }
+        }
+      }
+    },
+    "val/val_36.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1013638,
+        "fp": 1660,
+        "fn": 1746,
+        "tp": 31532
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 33278,
+      "background_pixels": 1015298,
+      "metrics": {
+        "precision": 0.9499879489033503,
+        "recall": 0.947532904621672,
+        "f1": 0.9487588385737927,
+        "iou": 0.9025130230694373,
+        "oa": 0.9967517852783203,
+        "foreground_recall": 0.947532904621672,
+        "background_fpr": 0.0016349879542754936,
+        "foreground_fn_rate": 0.05246709537832803
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 606351,
+            "fp": 711,
+            "fn": 889,
+            "tp": 13922
+          },
+          "pixels": 621873,
+          "foreground_pixels": 14811,
+          "background_pixels": 607062,
+          "metrics": {
+            "precision": 0.9514111938768537,
+            "recall": 0.9399770440888529,
+            "f1": 0.9456595571253906,
+            "iou": 0.8969204999355753,
+            "oa": 0.9974271274038268,
+            "foreground_recall": 0.9399770440888529,
+            "background_fpr": 0.001171214801783014,
+            "foreground_fn_rate": 0.06002295591114712
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 407287,
+            "fp": 949,
+            "fn": 857,
+            "tp": 17610
+          },
+          "pixels": 426703,
+          "foreground_pixels": 18467,
+          "background_pixels": 408236,
+          "metrics": {
+            "precision": 0.948865779406218,
+            "recall": 0.9535928954351004,
+            "f1": 0.9512234645924486,
+            "iou": 0.9069839307787392,
+            "oa": 0.9957675479197474,
+            "foreground_recall": 0.9535928954351004,
+            "background_fpr": 0.002324635749909366,
+            "foreground_fn_rate": 0.04640710456489955
+          }
+        }
+      }
+    },
+    "val/val_37.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1046332,
+        "fp": 31,
+        "fn": 277,
+        "tp": 1936
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 2213,
+      "background_pixels": 1046363,
+      "metrics": {
+        "precision": 0.9842399593289273,
+        "recall": 0.8748305467690918,
+        "f1": 0.9263157894736842,
+        "iou": 0.8627450980392157,
+        "oa": 0.9997062683105469,
+        "foreground_recall": 0.8748305467690918,
+        "background_fpr": 2.9626429833623705e-05,
+        "foreground_fn_rate": 0.12516945323090828
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 590415,
+            "fp": 31,
+            "fn": 275,
+            "tp": 1936
+          },
+          "pixels": 592657,
+          "foreground_pixels": 2211,
+          "background_pixels": 590446,
+          "metrics": {
+            "precision": 0.9842399593289273,
+            "recall": 0.8756218905472637,
+            "f1": 0.9267592149353758,
+            "iou": 0.863514719000892,
+            "oa": 0.9994836811174086,
+            "foreground_recall": 0.8756218905472637,
+            "background_fpr": 5.250268441144491e-05,
+            "foreground_fn_rate": 0.12437810945273632
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 455917,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "pixels": 455919,
+          "foreground_pixels": 2,
+          "background_pixels": 455917,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 0.9999956132558634,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 1.0
+          }
+        }
+      }
+    },
+    "val/val_38.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1015645,
+        "fp": 2849,
+        "fn": 4358,
+        "tp": 25724
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 30082,
+      "background_pixels": 1018494,
+      "metrics": {
+        "precision": 0.9002904840233787,
+        "recall": 0.8551293132105579,
+        "f1": 0.8771289745119768,
+        "iou": 0.7811484619355622,
+        "oa": 0.9931268692016602,
+        "foreground_recall": 0.8551293132105579,
+        "background_fpr": 0.0027972673378537333,
+        "foreground_fn_rate": 0.1448706867894422
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 571143,
+            "fp": 2518,
+            "fn": 3885,
+            "tp": 20563
+          },
+          "pixels": 598109,
+          "foreground_pixels": 24448,
+          "background_pixels": 573661,
+          "metrics": {
+            "precision": 0.8909059399506087,
+            "recall": 0.8410912958115183,
+            "f1": 0.8652822487323529,
+            "iou": 0.7625528443224802,
+            "oa": 0.9892945934603893,
+            "foreground_recall": 0.8410912958115183,
+            "background_fpr": 0.0043893518994667586,
+            "foreground_fn_rate": 0.1589087041884817
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 444502,
+            "fp": 331,
+            "fn": 473,
+            "tp": 5161
+          },
+          "pixels": 450467,
+          "foreground_pixels": 5634,
+          "background_pixels": 444833,
+          "metrics": {
+            "precision": 0.9397305171158048,
+            "recall": 0.9160454384096557,
+            "f1": 0.9277368326442567,
+            "iou": 0.8652137468566639,
+            "oa": 0.998215185574082,
+            "foreground_recall": 0.9160454384096557,
+            "background_fpr": 0.0007440994710374455,
+            "foreground_fn_rate": 0.08395456159034434
+          }
+        }
+      }
+    },
+    "val/val_39.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 942417,
+        "fp": 12532,
+        "fn": 27534,
+        "tp": 66093
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 93627,
+      "background_pixels": 954949,
+      "metrics": {
+        "precision": 0.8406104928457869,
+        "recall": 0.7059181646319972,
+        "f1": 0.7673989271532407,
+        "iou": 0.62258499043887,
+        "oa": 0.9617900848388672,
+        "foreground_recall": 0.7059181646319972,
+        "background_fpr": 0.013123213909852778,
+        "foreground_fn_rate": 0.2940818353680028
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 862897,
+            "fp": 12166,
+            "fn": 26202,
+            "tp": 64695
+          },
+          "pixels": 965960,
+          "foreground_pixels": 90897,
+          "background_pixels": 875063,
+          "metrics": {
+            "precision": 0.8417142634105723,
+            "recall": 0.7117396613749629,
+            "f1": 0.7712895957271785,
+            "iou": 0.627722849131114,
+            "oa": 0.9602799287755187,
+            "foreground_recall": 0.7117396613749629,
+            "background_fpr": 0.013902998984073147,
+            "foreground_fn_rate": 0.28826033862503714
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 79520,
+            "fp": 366,
+            "fn": 1332,
+            "tp": 1398
+          },
+          "pixels": 82616,
+          "foreground_pixels": 2730,
+          "background_pixels": 79886,
+          "metrics": {
+            "precision": 0.7925170068027211,
+            "recall": 0.512087912087912,
+            "f1": 0.6221628838451269,
+            "iou": 0.45155038759689925,
+            "oa": 0.9794470804686743,
+            "foreground_recall": 0.512087912087912,
+            "background_fpr": 0.004581528678366672,
+            "foreground_fn_rate": 0.4879120879120879
+          }
+        }
+      }
+    },
+    "val/val_4.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 978772,
+        "fp": 3991,
+        "fn": 4068,
+        "tp": 61745
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 65813,
+      "background_pixels": 982763,
+      "metrics": {
+        "precision": 0.9392874528416697,
+        "recall": 0.9381885037910443,
+        "f1": 0.9387376566906628,
+        "iou": 0.8845481634290299,
+        "oa": 0.992314338684082,
+        "foreground_recall": 0.9381885037910443,
+        "background_fpr": 0.0040609994474761464,
+        "foreground_fn_rate": 0.06181149620895568
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 651021,
+            "fp": 2054,
+            "fn": 2174,
+            "tp": 32005
+          },
+          "pixels": 687254,
+          "foreground_pixels": 34179,
+          "background_pixels": 653075,
+          "metrics": {
+            "precision": 0.9396928858745118,
+            "recall": 0.9363936920331197,
+            "f1": 0.9380403880535771,
+            "iou": 0.883310794027544,
+            "oa": 0.9938479805137548,
+            "foreground_recall": 0.9363936920331197,
+            "background_fpr": 0.0031451211576005817,
+            "foreground_fn_rate": 0.06360630796688024
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 327751,
+            "fp": 1937,
+            "fn": 1894,
+            "tp": 29740
+          },
+          "pixels": 361322,
+          "foreground_pixels": 31634,
+          "background_pixels": 329688,
+          "metrics": {
+            "precision": 0.9388515326577643,
+            "recall": 0.9401277106910286,
+            "f1": 0.9394891882927138,
+            "iou": 0.8858836495785053,
+            "oa": 0.9893972689180288,
+            "foreground_recall": 0.9401277106910286,
+            "background_fpr": 0.005875251753172697,
+            "foreground_fn_rate": 0.05987228930897136
+          }
+        }
+      }
+    },
+    "val/val_40.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1033630,
+        "fp": 1855,
+        "fn": 6144,
+        "tp": 6947
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 13091,
+      "background_pixels": 1035485,
+      "metrics": {
+        "precision": 0.7892524426266757,
+        "recall": 0.5306699259032923,
+        "f1": 0.6346320741789613,
+        "iou": 0.4648066372273518,
+        "oa": 0.9923715591430664,
+        "foreground_recall": 0.5306699259032923,
+        "background_fpr": 0.0017914310685331028,
+        "foreground_fn_rate": 0.4693300740967077
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 620943,
+            "fp": 701,
+            "fn": 4244,
+            "tp": 2870
+          },
+          "pixels": 628758,
+          "foreground_pixels": 7114,
+          "background_pixels": 621644,
+          "metrics": {
+            "precision": 0.8036964435732288,
+            "recall": 0.4034298566207478,
+            "f1": 0.5372016846045858,
+            "iou": 0.3672424824056302,
+            "oa": 0.9921352889346935,
+            "foreground_recall": 0.4034298566207478,
+            "background_fpr": 0.0011276550565918757,
+            "foreground_fn_rate": 0.5965701433792522
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 412687,
+            "fp": 1154,
+            "fn": 1900,
+            "tp": 4077
+          },
+          "pixels": 419818,
+          "foreground_pixels": 5977,
+          "background_pixels": 413841,
+          "metrics": {
+            "precision": 0.7793920856432804,
+            "recall": 0.6821147732976409,
+            "f1": 0.7275160599571735,
+            "iou": 0.571729070256626,
+            "oa": 0.9927254191101859,
+            "foreground_recall": 0.6821147732976409,
+            "background_fpr": 0.002788510563235639,
+            "foreground_fn_rate": 0.317885226702359
+          }
+        }
+      }
+    },
+    "val/val_41.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1041059,
+        "fp": 3602,
+        "fn": 3026,
+        "tp": 889
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 3915,
+      "background_pixels": 1044661,
+      "metrics": {
+        "precision": 0.19795145847250056,
+        "recall": 0.22707535121328226,
+        "f1": 0.21151558410659052,
+        "iou": 0.11826526539843023,
+        "oa": 0.9936790466308594,
+        "foreground_recall": 0.22707535121328226,
+        "background_fpr": 0.0034480084927072034,
+        "foreground_fn_rate": 0.7729246487867177
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 721315,
+            "fp": 3273,
+            "fn": 2651,
+            "tp": 0
+          },
+          "pixels": 727239,
+          "foreground_pixels": 2651,
+          "background_pixels": 724588,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 0.9918541222349186,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.004517049688926673,
+            "foreground_fn_rate": 1.0
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 319744,
+            "fp": 329,
+            "fn": 375,
+            "tp": 889
+          },
+          "pixels": 321337,
+          "foreground_pixels": 1264,
+          "background_pixels": 320073,
+          "metrics": {
+            "precision": 0.7298850574712644,
+            "recall": 0.7033227848101266,
+            "f1": 0.7163577759871071,
+            "iou": 0.5580665411173886,
+            "oa": 0.9978091536299897,
+            "foreground_recall": 0.7033227848101266,
+            "background_fpr": 0.0010278905124768412,
+            "foreground_fn_rate": 0.29667721518987344
+          }
+        }
+      }
+    },
+    "val/val_42.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1043367,
+        "fp": 669,
+        "fn": 685,
+        "tp": 3855
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 4540,
+      "background_pixels": 1044036,
+      "metrics": {
+        "precision": 0.8521220159151194,
+        "recall": 0.8491189427312775,
+        "f1": 0.8506178287731686,
+        "iou": 0.7400652716452294,
+        "oa": 0.9987087249755859,
+        "foreground_recall": 0.8491189427312775,
+        "background_fpr": 0.0006407825017528131,
+        "foreground_fn_rate": 0.15088105726872247
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 627031,
+            "fp": 528,
+            "fn": 10,
+            "tp": 452
+          },
+          "pixels": 628021,
+          "foreground_pixels": 462,
+          "background_pixels": 627559,
+          "metrics": {
+            "precision": 0.46122448979591835,
+            "recall": 0.9783549783549783,
+            "f1": 0.6269070735090153,
+            "iou": 0.45656565656565656,
+            "oa": 0.9991433407481597,
+            "foreground_recall": 0.9783549783549783,
+            "background_fpr": 0.0008413551554515193,
+            "foreground_fn_rate": 0.021645021645021644
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 416336,
+            "fp": 141,
+            "fn": 675,
+            "tp": 3403
+          },
+          "pixels": 420555,
+          "foreground_pixels": 4078,
+          "background_pixels": 416477,
+          "metrics": {
+            "precision": 0.960214446952596,
+            "recall": 0.8344776851397744,
+            "f1": 0.8929414851744949,
+            "iou": 0.8065892391561982,
+            "oa": 0.9980597068159931,
+            "foreground_recall": 0.8344776851397744,
+            "background_fpr": 0.000338554109830795,
+            "foreground_fn_rate": 0.1655223148602256
+          }
+        }
+      }
+    },
+    "val/val_43.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 948106,
+        "fp": 3735,
+        "fn": 11711,
+        "tp": 85024
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 96735,
+      "background_pixels": 951841,
+      "metrics": {
+        "precision": 0.9579197602496649,
+        "recall": 0.8789373029410245,
+        "f1": 0.9167304602844297,
+        "iou": 0.8462625659400816,
+        "oa": 0.9852695465087891,
+        "foreground_recall": 0.8789373029410245,
+        "background_fpr": 0.003923974697454722,
+        "foreground_fn_rate": 0.12106269705897556
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 727397,
+            "fp": 1794,
+            "fn": 6814,
+            "tp": 46710
+          },
+          "pixels": 782715,
+          "foreground_pixels": 53524,
+          "background_pixels": 729191,
+          "metrics": {
+            "precision": 0.9630133597229095,
+            "recall": 0.872692623869666,
+            "f1": 0.9156310032540087,
+            "iou": 0.844390614266604,
+            "oa": 0.9890023827319011,
+            "foreground_recall": 0.872692623869666,
+            "background_fpr": 0.0024602607547268137,
+            "foreground_fn_rate": 0.12730737613033405
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 220709,
+            "fp": 1941,
+            "fn": 4897,
+            "tp": 38314
+          },
+          "pixels": 265861,
+          "foreground_pixels": 43211,
+          "background_pixels": 222650,
+          "metrics": {
+            "precision": 0.9517823872810831,
+            "recall": 0.8866723750896762,
+            "f1": 0.9180744255145807,
+            "iou": 0.8485559886605244,
+            "oa": 0.9742797928240697,
+            "foreground_recall": 0.8866723750896762,
+            "background_fpr": 0.008717718392095217,
+            "foreground_fn_rate": 0.11332762491032376
+          }
+        }
+      }
+    },
+    "val/val_44.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 994488,
+        "fp": 2459,
+        "fn": 5477,
+        "tp": 46152
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 51629,
+      "background_pixels": 996947,
+      "metrics": {
+        "precision": 0.9494147415194092,
+        "recall": 0.893916209882043,
+        "f1": 0.920830007980846,
+        "iou": 0.8532761425824582,
+        "oa": 0.992431640625,
+        "foreground_recall": 0.893916209882043,
+        "background_fpr": 0.002466530317057978,
+        "foreground_fn_rate": 0.10608379011795696
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 582659,
+            "fp": 1471,
+            "fn": 3484,
+            "tp": 29880
+          },
+          "pixels": 617494,
+          "foreground_pixels": 33364,
+          "background_pixels": 584130,
+          "metrics": {
+            "precision": 0.9530796465822462,
+            "recall": 0.8955760700155857,
+            "f1": 0.9234335161863556,
+            "iou": 0.8577580020094733,
+            "oa": 0.9919756305324424,
+            "foreground_recall": 0.8955760700155857,
+            "background_fpr": 0.0025182750415147313,
+            "foreground_fn_rate": 0.10442392998441434
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 411829,
+            "fp": 988,
+            "fn": 1993,
+            "tp": 16272
+          },
+          "pixels": 431082,
+          "foreground_pixels": 18265,
+          "background_pixels": 412817,
+          "metrics": {
+            "precision": 0.942757821552723,
+            "recall": 0.8908842047632083,
+            "f1": 0.9160872624912034,
+            "iou": 0.8451669869630707,
+            "oa": 0.9930848423269819,
+            "foreground_recall": 0.8908842047632083,
+            "background_fpr": 0.002393312290918252,
+            "foreground_fn_rate": 0.10911579523679167
+          }
+        }
+      }
+    },
+    "val/val_45.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1048576,
+        "fp": 0,
+        "fn": 0,
+        "tp": 0
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 0,
+      "background_pixels": 1048576,
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "iou": 0.0,
+        "oa": 1.0,
+        "foreground_recall": 0.0,
+        "background_fpr": 0.0,
+        "foreground_fn_rate": 0.0
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 686643,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 686643,
+          "foreground_pixels": 0,
+          "background_pixels": 686643,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 361933,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 361933,
+          "foreground_pixels": 0,
+          "background_pixels": 361933,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        }
+      }
+    },
+    "val/val_46.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1047945,
+        "fp": 20,
+        "fn": 23,
+        "tp": 588
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 611,
+      "background_pixels": 1047965,
+      "metrics": {
+        "precision": 0.9671052631578947,
+        "recall": 0.9623567921440261,
+        "f1": 0.9647251845775225,
+        "iou": 0.9318541996830428,
+        "oa": 0.9999589920043945,
+        "foreground_recall": 0.9623567921440261,
+        "background_fpr": 1.9084606833243478e-05,
+        "foreground_fn_rate": 0.03764320785597381
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 819745,
+            "fp": 20,
+            "fn": 23,
+            "tp": 588
+          },
+          "pixels": 820376,
+          "foreground_pixels": 611,
+          "background_pixels": 819765,
+          "metrics": {
+            "precision": 0.9671052631578947,
+            "recall": 0.9623567921440261,
+            "f1": 0.9647251845775225,
+            "iou": 0.9318541996830428,
+            "oa": 0.9999475850098004,
+            "foreground_recall": 0.9623567921440261,
+            "background_fpr": 2.4397235793184633e-05,
+            "foreground_fn_rate": 0.03764320785597381
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 228200,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 228200,
+          "foreground_pixels": 0,
+          "background_pixels": 228200,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        }
+      }
+    },
+    "val/val_47.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1046626,
+        "fp": 466,
+        "fn": 917,
+        "tp": 567
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 1484,
+      "background_pixels": 1047092,
+      "metrics": {
+        "precision": 0.5488867376573088,
+        "recall": 0.38207547169811323,
+        "f1": 0.4505363528009535,
+        "iou": 0.2907692307692308,
+        "oa": 0.9986810684204102,
+        "foreground_recall": 0.38207547169811323,
+        "background_fpr": 0.0004450420784420089,
+        "foreground_fn_rate": 0.6179245283018868
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 819297,
+            "fp": 466,
+            "fn": 723,
+            "tp": 567
+          },
+          "pixels": 821053,
+          "foreground_pixels": 1290,
+          "background_pixels": 819763,
+          "metrics": {
+            "precision": 0.5488867376573088,
+            "recall": 0.43953488372093025,
+            "f1": 0.4881618596642273,
+            "iou": 0.3228929384965831,
+            "oa": 0.9985518596241656,
+            "foreground_recall": 0.43953488372093025,
+            "background_fpr": 0.000568456980859102,
+            "foreground_fn_rate": 0.5604651162790698
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 227329,
+            "fp": 0,
+            "fn": 194,
+            "tp": 0
+          },
+          "pixels": 227523,
+          "foreground_pixels": 194,
+          "background_pixels": 227329,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 0.9991473389503479,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 1.0
+          }
+        }
+      }
+    },
+    "val/val_48.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 991558,
+        "fp": 10591,
+        "fn": 1810,
+        "tp": 44617
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 46427,
+      "background_pixels": 1002149,
+      "metrics": {
+        "precision": 0.808161860599913,
+        "recall": 0.9610140650914338,
+        "f1": 0.8779849461307621,
+        "iou": 0.7825072784033112,
+        "oa": 0.9881734848022461,
+        "foreground_recall": 0.9610140650914338,
+        "background_fpr": 0.010568288747481662,
+        "foreground_fn_rate": 0.03898593490856614
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 682036,
+            "fp": 8202,
+            "fn": 634,
+            "tp": 22381
+          },
+          "pixels": 713253,
+          "foreground_pixels": 23015,
+          "background_pixels": 690238,
+          "metrics": {
+            "precision": 0.7318117908642056,
+            "recall": 0.9724527482076907,
+            "f1": 0.8351431023545655,
+            "iou": 0.7169490982477497,
+            "oa": 0.9876116889799271,
+            "foreground_recall": 0.9724527482076907,
+            "background_fpr": 0.01188285779687586,
+            "foreground_fn_rate": 0.027547251792309362
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 309522,
+            "fp": 2389,
+            "fn": 1176,
+            "tp": 22236
+          },
+          "pixels": 335323,
+          "foreground_pixels": 23412,
+          "background_pixels": 311911,
+          "metrics": {
+            "precision": 0.902984771573604,
+            "recall": 0.9497693490517684,
+            "f1": 0.9257863730041427,
+            "iou": 0.8618270609666292,
+            "oa": 0.989368459664264,
+            "foreground_recall": 0.9497693490517684,
+            "background_fpr": 0.007659236128254534,
+            "foreground_fn_rate": 0.050230650948231675
+          }
+        }
+      }
+    },
+    "val/val_49.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1040982,
+        "fp": 5258,
+        "fn": 1585,
+        "tp": 751
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 2336,
+      "background_pixels": 1046240,
+      "metrics": {
+        "precision": 0.12497919786986188,
+        "recall": 0.3214897260273973,
+        "f1": 0.17998801677651288,
+        "iou": 0.09889386357650777,
+        "oa": 0.993474006652832,
+        "foreground_recall": 0.3214897260273973,
+        "background_fpr": 0.005025615537543967,
+        "foreground_fn_rate": 0.6785102739726028
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 774853,
+            "fp": 1625,
+            "fn": 1524,
+            "tp": 262
+          },
+          "pixels": 778264,
+          "foreground_pixels": 1786,
+          "background_pixels": 776478,
+          "metrics": {
+            "precision": 0.13884472708002119,
+            "recall": 0.14669652855543114,
+            "f1": 0.14266267356384427,
+            "iou": 0.07681031955438287,
+            "oa": 0.9959538151578384,
+            "foreground_recall": 0.14669652855543114,
+            "background_fpr": 0.0020927830537375174,
+            "foreground_fn_rate": 0.8533034714445689
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 266129,
+            "fp": 3633,
+            "fn": 61,
+            "tp": 489
+          },
+          "pixels": 270312,
+          "foreground_pixels": 550,
+          "background_pixels": 269762,
+          "metrics": {
+            "precision": 0.11863173216885008,
+            "recall": 0.889090909090909,
+            "f1": 0.2093321917808219,
+            "iou": 0.1169017451589768,
+            "oa": 0.9863343099825387,
+            "foreground_recall": 0.889090909090909,
+            "background_fpr": 0.013467426842920797,
+            "foreground_fn_rate": 0.11090909090909092
+          }
+        }
+      }
+    },
+    "val/val_5.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 996402,
+        "fp": 3485,
+        "fn": 2727,
+        "tp": 45962
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 48689,
+      "background_pixels": 999887,
+      "metrics": {
+        "precision": 0.9295204966934293,
+        "recall": 0.9439914559756823,
+        "f1": 0.9367000896714763,
+        "iou": 0.8809368651052248,
+        "oa": 0.9940757751464844,
+        "foreground_recall": 0.9439914559756823,
+        "background_fpr": 0.003485393849504994,
+        "foreground_fn_rate": 0.05600854402431761
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 729101,
+            "fp": 1882,
+            "fn": 1539,
+            "tp": 23135
+          },
+          "pixels": 755657,
+          "foreground_pixels": 24674,
+          "background_pixels": 730983,
+          "metrics": {
+            "precision": 0.9247711556141823,
+            "recall": 0.9376266515360299,
+            "f1": 0.9311545350264635,
+            "iou": 0.8711778882361801,
+            "oa": 0.9954728137236868,
+            "foreground_recall": 0.9376266515360299,
+            "background_fpr": 0.0025746152783306863,
+            "foreground_fn_rate": 0.06237334846397017
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 267301,
+            "fp": 1603,
+            "fn": 1188,
+            "tp": 22827
+          },
+          "pixels": 292919,
+          "foreground_pixels": 24015,
+          "background_pixels": 268904,
+          "metrics": {
+            "precision": 0.9343839541547277,
+            "recall": 0.9505309181761399,
+            "f1": 0.9423882753638146,
+            "iou": 0.8910531657428371,
+            "oa": 0.9904717686459397,
+            "foreground_recall": 0.9505309181761399,
+            "background_fpr": 0.005961235236366882,
+            "foreground_fn_rate": 0.04946908182386009
+          }
+        }
+      }
+    },
+    "val/val_50.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1048412,
+        "fp": 0,
+        "fn": 164,
+        "tp": 0
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 164,
+      "background_pixels": 1048412,
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "iou": 0.0,
+        "oa": 0.9998435974121094,
+        "foreground_recall": 0.0,
+        "background_fpr": 0.0,
+        "foreground_fn_rate": 1.0
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 845588,
+            "fp": 0,
+            "fn": 164,
+            "tp": 0
+          },
+          "pixels": 845752,
+          "foreground_pixels": 164,
+          "background_pixels": 845588,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 0.999806089728431,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 1.0
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 202824,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 202824,
+          "foreground_pixels": 0,
+          "background_pixels": 202824,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        }
+      }
+    },
+    "val/val_51.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 839948,
+        "fp": 14685,
+        "fn": 16582,
+        "tp": 177361
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 193943,
+      "background_pixels": 854633,
+      "metrics": {
+        "precision": 0.9235339449923455,
+        "recall": 0.9145006522534972,
+        "f1": 0.9189951008966577,
+        "iou": 0.850130375596756,
+        "oa": 0.9701814651489258,
+        "foreground_recall": 0.9145006522534972,
+        "background_fpr": 0.01718281414361486,
+        "foreground_fn_rate": 0.08549934774650284
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 544716,
+            "fp": 8528,
+            "fn": 10200,
+            "tp": 105020
+          },
+          "pixels": 668464,
+          "foreground_pixels": 115220,
+          "background_pixels": 553244,
+          "metrics": {
+            "precision": 0.9248951985063586,
+            "recall": 0.9114737024822079,
+            "f1": 0.9181354035529444,
+            "iou": 0.8486601803665513,
+            "oa": 0.9719835323966586,
+            "foreground_recall": 0.9114737024822079,
+            "background_fpr": 0.01541453680473715,
+            "foreground_fn_rate": 0.08852629751779205
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 295232,
+            "fp": 6157,
+            "fn": 6382,
+            "tp": 72341
+          },
+          "pixels": 380112,
+          "foreground_pixels": 78723,
+          "background_pixels": 301389,
+          "metrics": {
+            "precision": 0.9215648806339015,
+            "recall": 0.9189309350507475,
+            "f1": 0.9202460231139606,
+            "iou": 0.8522737983034873,
+            "oa": 0.9670123542534832,
+            "foreground_recall": 0.9189309350507475,
+            "background_fpr": 0.02042874822903291,
+            "foreground_fn_rate": 0.08106906494925244
+          }
+        }
+      }
+    },
+    "val/val_52.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 919206,
+        "fp": 8531,
+        "fn": 14999,
+        "tp": 105840
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 120839,
+      "background_pixels": 927737,
+      "metrics": {
+        "precision": 0.9254094132253805,
+        "recall": 0.8758761658073966,
+        "f1": 0.8999617363207346,
+        "iou": 0.8181185746309036,
+        "oa": 0.9775600433349609,
+        "foreground_recall": 0.8758761658073966,
+        "background_fpr": 0.009195493981591765,
+        "foreground_fn_rate": 0.12412383419260338
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 665887,
+            "fp": 5564,
+            "fn": 11170,
+            "tp": 64241
+          },
+          "pixels": 746862,
+          "foreground_pixels": 75411,
+          "background_pixels": 671451,
+          "metrics": {
+            "precision": 0.920292242676026,
+            "recall": 0.8518783731816313,
+            "f1": 0.8847647642133099,
+            "iou": 0.7933436245754862,
+            "oa": 0.9775942543602433,
+            "foreground_recall": 0.8518783731816313,
+            "background_fpr": 0.008286531705217507,
+            "foreground_fn_rate": 0.14812162681836868
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 253319,
+            "fp": 2967,
+            "fn": 3829,
+            "tp": 41599
+          },
+          "pixels": 301714,
+          "foreground_pixels": 45428,
+          "background_pixels": 256286,
+          "metrics": {
+            "precision": 0.9334245837634071,
+            "recall": 0.9157127762613366,
+            "f1": 0.9244838544791875,
+            "iou": 0.8595722698625891,
+            "oa": 0.9774753574577248,
+            "foreground_recall": 0.9157127762613366,
+            "background_fpr": 0.011576910170668706,
+            "foreground_fn_rate": 0.08428722373866337
+          }
+        }
+      }
+    },
+    "val/val_53.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 987094,
+        "fp": 3124,
+        "fn": 5583,
+        "tp": 52775
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 58358,
+      "background_pixels": 990218,
+      "metrics": {
+        "precision": 0.9441134904023328,
+        "recall": 0.9043318825182495,
+        "f1": 0.9237946033941028,
+        "iou": 0.8583813148563807,
+        "oa": 0.9916963577270508,
+        "foreground_recall": 0.9043318825182495,
+        "background_fpr": 0.0031548608488231886,
+        "foreground_fn_rate": 0.09566811748175058
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 629947,
+            "fp": 3002,
+            "fn": 5281,
+            "tp": 50441
+          },
+          "pixels": 688671,
+          "foreground_pixels": 55722,
+          "background_pixels": 632949,
+          "metrics": {
+            "precision": 0.9438280036674588,
+            "recall": 0.9052259430745486,
+            "f1": 0.924124032427976,
+            "iou": 0.8589503439820175,
+            "oa": 0.9879724861363408,
+            "foreground_recall": 0.9052259430745486,
+            "background_fpr": 0.004742878178178652,
+            "foreground_fn_rate": 0.09477405692545135
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 357147,
+            "fp": 122,
+            "fn": 302,
+            "tp": 2334
+          },
+          "pixels": 359905,
+          "foreground_pixels": 2636,
+          "background_pixels": 357269,
+          "metrics": {
+            "precision": 0.9503257328990228,
+            "recall": 0.8854324734446131,
+            "f1": 0.9167321288295365,
+            "iou": 0.8462654097171863,
+            "oa": 0.9988219113377141,
+            "foreground_recall": 0.8854324734446131,
+            "background_fpr": 0.00034147938947963577,
+            "foreground_fn_rate": 0.11456752655538695
+          }
+        }
+      }
+    },
+    "val/val_54.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1042478,
+        "fp": 216,
+        "fn": 2868,
+        "tp": 3014
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 5882,
+      "background_pixels": 1042694,
+      "metrics": {
+        "precision": 0.9331269349845202,
+        "recall": 0.5124107446446787,
+        "f1": 0.6615452151009658,
+        "iou": 0.494260413250246,
+        "oa": 0.9970588684082031,
+        "foreground_recall": 0.5124107446446787,
+        "background_fpr": 0.0002071556947675924,
+        "foreground_fn_rate": 0.4875892553553213
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 668746,
+            "fp": 0,
+            "fn": 1820,
+            "tp": 0
+          },
+          "pixels": 670566,
+          "foreground_pixels": 1820,
+          "background_pixels": 668746,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 0.9972858749176069,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 1.0
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 373732,
+            "fp": 216,
+            "fn": 1048,
+            "tp": 3014
+          },
+          "pixels": 378010,
+          "foreground_pixels": 4062,
+          "background_pixels": 373948,
+          "metrics": {
+            "precision": 0.9331269349845202,
+            "recall": 0.741999015263417,
+            "f1": 0.8266593527153044,
+            "iou": 0.7045348293595138,
+            "oa": 0.9966561731171133,
+            "foreground_recall": 0.741999015263417,
+            "background_fpr": 0.0005776204178121022,
+            "foreground_fn_rate": 0.25800098473658295
+          }
+        }
+      }
+    },
+    "val/val_55.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1048576,
+        "fp": 0,
+        "fn": 0,
+        "tp": 0
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 0,
+      "background_pixels": 1048576,
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "iou": 0.0,
+        "oa": 1.0,
+        "foreground_recall": 0.0,
+        "background_fpr": 0.0,
+        "foreground_fn_rate": 0.0
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 766570,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 766570,
+          "foreground_pixels": 0,
+          "background_pixels": 766570,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 282006,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 282006,
+          "foreground_pixels": 0,
+          "background_pixels": 282006,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        }
+      }
+    },
+    "val/val_56.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1029209,
+        "fp": 1561,
+        "fn": 1853,
+        "tp": 15953
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 17806,
+      "background_pixels": 1030770,
+      "metrics": {
+        "precision": 0.9108713029576339,
+        "recall": 0.8959339548466809,
+        "f1": 0.9033408833522084,
+        "iou": 0.8237207621211339,
+        "oa": 0.9967441558837891,
+        "foreground_recall": 0.8959339548466809,
+        "background_fpr": 0.0015144018549239889,
+        "foreground_fn_rate": 0.1040660451533191
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 606373,
+            "fp": 823,
+            "fn": 919,
+            "tp": 8868
+          },
+          "pixels": 616983,
+          "foreground_pixels": 9787,
+          "background_pixels": 607196,
+          "metrics": {
+            "precision": 0.9150758435661954,
+            "recall": 0.9060999284765505,
+            "f1": 0.9105657665058015,
+            "iou": 0.8358152686145146,
+            "oa": 0.9971765834715057,
+            "foreground_recall": 0.9060999284765505,
+            "background_fpr": 0.0013554107734570057,
+            "foreground_fn_rate": 0.09390007152344948
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 422836,
+            "fp": 738,
+            "fn": 934,
+            "tp": 7085
+          },
+          "pixels": 431593,
+          "foreground_pixels": 8019,
+          "background_pixels": 423574,
+          "metrics": {
+            "precision": 0.9056627892113001,
+            "recall": 0.8835266242673651,
+            "f1": 0.8944577704835248,
+            "iou": 0.8090670320886149,
+            "oa": 0.9961259798004138,
+            "foreground_recall": 0.8835266242673651,
+            "background_fpr": 0.001742316572783032,
+            "foreground_fn_rate": 0.116473375732635
+          }
+        }
+      }
+    },
+    "val/val_57.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1047769,
+        "fp": 65,
+        "fn": 31,
+        "tp": 711
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 742,
+      "background_pixels": 1047834,
+      "metrics": {
+        "precision": 0.9162371134020618,
+        "recall": 0.9582210242587601,
+        "f1": 0.9367588932806324,
+        "iou": 0.8810408921933085,
+        "oa": 0.999908447265625,
+        "foreground_recall": 0.9582210242587601,
+        "background_fpr": 6.203272655783263e-05,
+        "foreground_fn_rate": 0.04177897574123989
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 513293,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 513293,
+          "foreground_pixels": 0,
+          "background_pixels": 513293,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 534476,
+            "fp": 65,
+            "fn": 31,
+            "tp": 711
+          },
+          "pixels": 535283,
+          "foreground_pixels": 742,
+          "background_pixels": 534541,
+          "metrics": {
+            "precision": 0.9162371134020618,
+            "recall": 0.9582210242587601,
+            "f1": 0.9367588932806324,
+            "iou": 0.8810408921933085,
+            "oa": 0.9998206556158145,
+            "foreground_recall": 0.9582210242587601,
+            "background_fpr": 0.0001215996527862222,
+            "foreground_fn_rate": 0.04177897574123989
+          }
+        }
+      }
+    },
+    "val/val_58.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 924717,
+        "fp": 7215,
+        "fn": 8147,
+        "tp": 108497
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 116644,
+      "background_pixels": 931932,
+      "metrics": {
+        "precision": 0.9376469164823009,
+        "recall": 0.930155001543157,
+        "f1": 0.9338859336535317,
+        "iou": 0.875971871240685,
+        "oa": 0.9853496551513672,
+        "foreground_recall": 0.930155001543157,
+        "background_fpr": 0.007741981174592138,
+        "foreground_fn_rate": 0.06984499845684304
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 666240,
+            "fp": 4803,
+            "fn": 5156,
+            "tp": 72220
+          },
+          "pixels": 748419,
+          "foreground_pixels": 77376,
+          "background_pixels": 671043,
+          "metrics": {
+            "precision": 0.9376420030380536,
+            "recall": 0.9333643507030603,
+            "f1": 0.9354982869060032,
+            "iou": 0.8788133221382591,
+            "oa": 0.9866932827734197,
+            "foreground_recall": 0.9333643507030603,
+            "background_fpr": 0.007157514496090415,
+            "foreground_fn_rate": 0.06663564929693962
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 258477,
+            "fp": 2412,
+            "fn": 2991,
+            "tp": 36277
+          },
+          "pixels": 300157,
+          "foreground_pixels": 39268,
+          "background_pixels": 260889,
+          "metrics": {
+            "precision": 0.9376566982863346,
+            "recall": 0.9238311093001935,
+            "f1": 0.9306925612837846,
+            "iou": 0.870369481765835,
+            "oa": 0.9819994203033746,
+            "foreground_recall": 0.9238311093001935,
+            "background_fpr": 0.009245311224313789,
+            "foreground_fn_rate": 0.07616889069980645
+          }
+        }
+      }
+    },
+    "val/val_59.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1047558,
+        "fp": 192,
+        "fn": 47,
+        "tp": 779
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 826,
+      "background_pixels": 1047750,
+      "metrics": {
+        "precision": 0.8022657054582905,
+        "recall": 0.9430992736077481,
+        "f1": 0.8670005564830273,
+        "iou": 0.7652259332023575,
+        "oa": 0.9997720718383789,
+        "foreground_recall": 0.9430992736077481,
+        "background_fpr": 0.00018324982104509662,
+        "foreground_fn_rate": 0.05690072639225181
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 609500,
+            "fp": 12,
+            "fn": 0,
+            "tp": 12
+          },
+          "pixels": 609524,
+          "foreground_pixels": 12,
+          "background_pixels": 609512,
+          "metrics": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "iou": 0.5,
+            "oa": 0.9999803125061524,
+            "foreground_recall": 1.0,
+            "background_fpr": 1.9687881452703145e-05,
+            "foreground_fn_rate": 0.0
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 438058,
+            "fp": 180,
+            "fn": 47,
+            "tp": 767
+          },
+          "pixels": 439052,
+          "foreground_pixels": 814,
+          "background_pixels": 438238,
+          "metrics": {
+            "precision": 0.8099260823653643,
+            "recall": 0.9422604422604423,
+            "f1": 0.8710959681998864,
+            "iou": 0.7716297786720322,
+            "oa": 0.999482976959449,
+            "foreground_recall": 0.9422604422604423,
+            "background_fpr": 0.00041073571894723873,
+            "foreground_fn_rate": 0.05773955773955774
+          }
+        }
+      }
+    },
+    "val/val_6.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 997295,
+        "fp": 6046,
+        "fn": 3010,
+        "tp": 42225
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 45235,
+      "background_pixels": 1003341,
+      "metrics": {
+        "precision": 0.8747488139876944,
+        "recall": 0.9334586050624516,
+        "f1": 0.9031505999614998,
+        "iou": 0.8234043797897856,
+        "oa": 0.991363525390625,
+        "foreground_recall": 0.9334586050624516,
+        "background_fpr": 0.006025867576427157,
+        "foreground_fn_rate": 0.06654139493754836
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 683215,
+            "fp": 3519,
+            "fn": 2020,
+            "tp": 26598
+          },
+          "pixels": 715352,
+          "foreground_pixels": 28618,
+          "background_pixels": 686734,
+          "metrics": {
+            "precision": 0.8831556927980875,
+            "recall": 0.9294150534628556,
+            "f1": 0.9056950710819783,
+            "iou": 0.8276441484892803,
+            "oa": 0.9922569588118856,
+            "foreground_recall": 0.9294150534628556,
+            "background_fpr": 0.005124254806082122,
+            "foreground_fn_rate": 0.07058494653714445
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 314080,
+            "fp": 2527,
+            "fn": 990,
+            "tp": 15627
+          },
+          "pixels": 333224,
+          "foreground_pixels": 16617,
+          "background_pixels": 316607,
+          "metrics": {
+            "precision": 0.8608020271014653,
+            "recall": 0.9404224589276042,
+            "f1": 0.8988524920192114,
+            "iou": 0.8162870873380693,
+            "oa": 0.9894455381365088,
+            "foreground_recall": 0.9404224589276042,
+            "background_fpr": 0.007981503883363286,
+            "foreground_fn_rate": 0.05957754107239574
+          }
+        }
+      }
+    },
+    "val/val_60.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1027124,
+        "fp": 1499,
+        "fn": 2061,
+        "tp": 17892
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 19953,
+      "background_pixels": 1028623,
+      "metrics": {
+        "precision": 0.9226960961270693,
+        "recall": 0.8967072620658547,
+        "f1": 0.9095160634404229,
+        "iou": 0.8340481074025732,
+        "oa": 0.9966049194335938,
+        "foreground_recall": 0.8967072620658547,
+        "background_fpr": 0.0014572880443077785,
+        "foreground_fn_rate": 0.10329273793414524
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 831044,
+            "fp": 1242,
+            "fn": 1644,
+            "tp": 15070
+          },
+          "pixels": 849000,
+          "foreground_pixels": 16714,
+          "background_pixels": 832286,
+          "metrics": {
+            "precision": 0.9238597351642962,
+            "recall": 0.9016393442622951,
+            "f1": 0.9126143038817901,
+            "iou": 0.8392737803519715,
+            "oa": 0.9966007067137809,
+            "foreground_recall": 0.9016393442622951,
+            "background_fpr": 0.0014922754918381422,
+            "foreground_fn_rate": 0.09836065573770492
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 196080,
+            "fp": 257,
+            "fn": 417,
+            "tp": 2822
+          },
+          "pixels": 199576,
+          "foreground_pixels": 3239,
+          "background_pixels": 196337,
+          "metrics": {
+            "precision": 0.9165313413445924,
+            "recall": 0.8712565606668725,
+            "f1": 0.8933206710984489,
+            "iou": 0.8072082379862701,
+            "oa": 0.996622840421694,
+            "foreground_recall": 0.8712565606668725,
+            "background_fpr": 0.0013089738561758608,
+            "foreground_fn_rate": 0.1287434393331275
+          }
+        }
+      }
+    },
+    "val/val_61.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1046377,
+        "fp": 62,
+        "fn": 2037,
+        "tp": 100
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 2137,
+      "background_pixels": 1046439,
+      "metrics": {
+        "precision": 0.6172839506172839,
+        "recall": 0.04679457182966776,
+        "f1": 0.08699434536755112,
+        "iou": 0.04547521600727603,
+        "oa": 0.9979982376098633,
+        "foreground_recall": 0.04679457182966776,
+        "background_fpr": 5.9248556294251264e-05,
+        "foreground_fn_rate": 0.9532054281703323
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 674805,
+            "fp": 62,
+            "fn": 2037,
+            "tp": 100
+          },
+          "pixels": 677004,
+          "foreground_pixels": 2137,
+          "background_pixels": 674867,
+          "metrics": {
+            "precision": 0.6172839506172839,
+            "recall": 0.04679457182966776,
+            "f1": 0.08699434536755112,
+            "iou": 0.04547521600727603,
+            "oa": 0.9968995751871481,
+            "foreground_recall": 0.04679457182966776,
+            "background_fpr": 9.186995363530889e-05,
+            "foreground_fn_rate": 0.9532054281703323
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 371572,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 371572,
+          "foreground_pixels": 0,
+          "background_pixels": 371572,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        }
+      }
+    },
+    "val/val_62.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1048576,
+        "fp": 0,
+        "fn": 0,
+        "tp": 0
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 0,
+      "background_pixels": 1048576,
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "iou": 0.0,
+        "oa": 1.0,
+        "foreground_recall": 0.0,
+        "background_fpr": 0.0,
+        "foreground_fn_rate": 0.0
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 672121,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 672121,
+          "foreground_pixels": 0,
+          "background_pixels": 672121,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 376455,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "pixels": 376455,
+          "foreground_pixels": 0,
+          "background_pixels": 376455,
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "iou": 0.0,
+            "oa": 1.0,
+            "foreground_recall": 0.0,
+            "background_fpr": 0.0,
+            "foreground_fn_rate": 0.0
+          }
+        }
+      }
+    },
+    "val/val_63.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1042909,
+        "fp": 333,
+        "fn": 959,
+        "tp": 4375
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 5334,
+      "background_pixels": 1043242,
+      "metrics": {
+        "precision": 0.929269328802039,
+        "recall": 0.8202099737532809,
+        "f1": 0.8713403704441346,
+        "iou": 0.772013410975825,
+        "oa": 0.9987678527832031,
+        "foreground_recall": 0.8202099737532809,
+        "background_fpr": 0.00031919727158224076,
+        "foreground_fn_rate": 0.17979002624671916
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 611364,
+            "fp": 321,
+            "fn": 827,
+            "tp": 2991
+          },
+          "pixels": 615503,
+          "foreground_pixels": 3818,
+          "background_pixels": 611685,
+          "metrics": {
+            "precision": 0.9030797101449275,
+            "recall": 0.7833944473546359,
+            "f1": 0.8389901823281908,
+            "iou": 0.7226383184344044,
+            "oa": 0.9981348588065371,
+            "foreground_recall": 0.7833944473546359,
+            "background_fpr": 0.0005247799112288187,
+            "foreground_fn_rate": 0.21660555264536407
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 431545,
+            "fp": 12,
+            "fn": 132,
+            "tp": 1384
+          },
+          "pixels": 433073,
+          "foreground_pixels": 1516,
+          "background_pixels": 431557,
+          "metrics": {
+            "precision": 0.9914040114613181,
+            "recall": 0.9129287598944591,
+            "f1": 0.9505494505494505,
+            "iou": 0.9057591623036649,
+            "oa": 0.9996674925474458,
+            "foreground_recall": 0.9129287598944591,
+            "background_fpr": 2.7806292100464135e-05,
+            "foreground_fn_rate": 0.0870712401055409
+          }
+        }
+      }
+    },
+    "val/val_64.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1046027,
+        "fp": 190,
+        "fn": 311,
+        "tp": 2048
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 2359,
+      "background_pixels": 1046217,
+      "metrics": {
+        "precision": 0.9151027703306523,
+        "recall": 0.8681644764730818,
+        "f1": 0.8910158799216881,
+        "iou": 0.803452334248725,
+        "oa": 0.9995222091674805,
+        "foreground_recall": 0.8681644764730818,
+        "background_fpr": 0.0001816066838906269,
+        "foreground_fn_rate": 0.13183552352691819
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 804395,
+            "fp": 180,
+            "fn": 253,
+            "tp": 1527
+          },
+          "pixels": 806355,
+          "foreground_pixels": 1780,
+          "background_pixels": 804575,
+          "metrics": {
+            "precision": 0.8945518453427065,
+            "recall": 0.8578651685393258,
+            "f1": 0.8758244909664468,
+            "iou": 0.7790816326530612,
+            "oa": 0.9994630156692772,
+            "foreground_recall": 0.8578651685393258,
+            "background_fpr": 0.0002237205978311531,
+            "foreground_fn_rate": 0.14213483146067415
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 241632,
+            "fp": 10,
+            "fn": 58,
+            "tp": 521
+          },
+          "pixels": 242221,
+          "foreground_pixels": 579,
+          "background_pixels": 241642,
+          "metrics": {
+            "precision": 0.9811676082862524,
+            "recall": 0.8998272884283247,
+            "f1": 0.9387387387387387,
+            "iou": 0.8845500848896435,
+            "oa": 0.9997192646384913,
+            "foreground_recall": 0.8998272884283247,
+            "background_fpr": 4.138353431936501e-05,
+            "foreground_fn_rate": 0.1001727115716753
+          }
+        }
+      }
+    },
+    "val/val_7.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 881994,
+        "fp": 18550,
+        "fn": 9832,
+        "tp": 138200
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 148032,
+      "background_pixels": 900544,
+      "metrics": {
+        "precision": 0.8816586921850079,
+        "recall": 0.9335819282317337,
+        "f1": 0.9068777027514748,
+        "iou": 0.8296214476954292,
+        "oa": 0.9729328155517578,
+        "foreground_recall": 0.9335819282317337,
+        "background_fpr": 0.020598660365290313,
+        "foreground_fn_rate": 0.06641807176826632
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 627799,
+            "fp": 11299,
+            "fn": 5650,
+            "tp": 87392
+          },
+          "pixels": 732140,
+          "foreground_pixels": 93042,
+          "background_pixels": 639098,
+          "metrics": {
+            "precision": 0.8855113434862348,
+            "recall": 0.9392747361406677,
+            "f1": 0.91160102851361,
+            "iou": 0.8375614571453216,
+            "oa": 0.9768500560002186,
+            "foreground_recall": 0.9392747361406677,
+            "background_fpr": 0.017679604692864004,
+            "foreground_fn_rate": 0.06072526385933234
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 254195,
+            "fp": 7251,
+            "fn": 4182,
+            "tp": 50808
+          },
+          "pixels": 316436,
+          "foreground_pixels": 54990,
+          "background_pixels": 261446,
+          "metrics": {
+            "precision": 0.8751098020978659,
+            "recall": 0.9239498090561921,
+            "f1": 0.8988668630416898,
+            "iou": 0.8163107919217236,
+            "oa": 0.9638694712358897,
+            "foreground_recall": 0.9239498090561921,
+            "background_fpr": 0.027734216625995425,
+            "foreground_fn_rate": 0.07605019094380797
+          }
+        }
+      }
+    },
+    "val/val_8.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 970631,
+        "fp": 4199,
+        "fn": 7119,
+        "tp": 66627
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 73746,
+      "background_pixels": 974830,
+      "metrics": {
+        "precision": 0.9407138621410217,
+        "recall": 0.903465950695631,
+        "f1": 0.9217137481670032,
+        "iou": 0.8547950477901084,
+        "oa": 0.9892063140869141,
+        "foreground_recall": 0.903465950695631,
+        "background_fpr": 0.004307417703599602,
+        "foreground_fn_rate": 0.09653404930436905
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 665339,
+            "fp": 3547,
+            "fn": 5282,
+            "tp": 55810
+          },
+          "pixels": 729978,
+          "foreground_pixels": 61092,
+          "background_pixels": 668886,
+          "metrics": {
+            "precision": 0.9402429368061054,
+            "recall": 0.9135402344005762,
+            "f1": 0.9266992669096464,
+            "iou": 0.8634106344466963,
+            "oa": 0.9879051149486697,
+            "foreground_recall": 0.9135402344005762,
+            "background_fpr": 0.005302846822926478,
+            "foreground_fn_rate": 0.08645976559942382
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 305292,
+            "fp": 652,
+            "fn": 1837,
+            "tp": 10817
+          },
+          "pixels": 318598,
+          "foreground_pixels": 12654,
+          "background_pixels": 305944,
+          "metrics": {
+            "precision": 0.9431511029732322,
+            "recall": 0.8548285127232496,
+            "f1": 0.896820461799942,
+            "iou": 0.8129415301367804,
+            "oa": 0.9921876471289839,
+            "foreground_recall": 0.8548285127232496,
+            "background_fpr": 0.002131108961117067,
+            "foreground_fn_rate": 0.14517148727675044
+          }
+        }
+      }
+    },
+    "val/val_9.png": {
+      "samples": 16,
+      "counts": {
+        "tn": 1006850,
+        "fp": 4370,
+        "fn": 2375,
+        "tp": 34981
+      },
+      "pixels": 1048576,
+      "foreground_pixels": 37356,
+      "background_pixels": 1011220,
+      "metrics": {
+        "precision": 0.888948184290107,
+        "recall": 0.9364225291787129,
+        "f1": 0.9120679990092169,
+        "iou": 0.8383501893303935,
+        "oa": 0.9935674667358398,
+        "foreground_recall": 0.9364225291787129,
+        "background_fpr": 0.004321512628310358,
+        "foreground_fn_rate": 0.06357747082128708
+      },
+      "regions": {
+        "injection_support": {
+          "counts": {
+            "tn": 573374,
+            "fp": 3184,
+            "fn": 1506,
+            "tp": 25359
+          },
+          "pixels": 603423,
+          "foreground_pixels": 26865,
+          "background_pixels": 576558,
+          "metrics": {
+            "precision": 0.8884490067617279,
+            "recall": 0.9439419318816303,
+            "f1": 0.9153551833670228,
+            "iou": 0.84392159472861,
+            "oa": 0.9922276744505927,
+            "foreground_recall": 0.9439419318816303,
+            "background_fpr": 0.005522427925724732,
+            "foreground_fn_rate": 0.05605806811836963
+          }
+        },
+        "outside_injection": {
+          "counts": {
+            "tn": 433476,
+            "fp": 1186,
+            "fn": 869,
+            "tp": 9622
+          },
+          "pixels": 445153,
+          "foreground_pixels": 10491,
+          "background_pixels": 434662,
+          "metrics": {
+            "precision": 0.8902664692820134,
+            "recall": 0.9171670956057573,
+            "f1": 0.9035165970233344,
+            "iou": 0.8240130170420484,
+            "oa": 0.9953836096802672,
+            "foreground_recall": 0.9171670956057573,
+            "background_fpr": 0.0027285569016845274,
+            "foreground_fn_rate": 0.08283290439424268
+          }
+        }
+      }
+    }
+  },
+  "seconds": 21.75,
+  "clean_reference_f1": 0.9040675323162796,
+  "clean_minus_f1": 0.0004218314690813685
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "batch": "R1E",
+  "status": "sealed_before_validation",
+  "created_utc": "2026-09-25T16:12:26.8200228Z",
+  "original_r1_evaluation_disposition": "closed_pre_scoring_failure",
+  "original_r1_prevalidation_seal_sha256": "55a4454f2c34162871f4f7082e7282c57a27eaae347ef79547e4eae21743edbf",
+  "original_r1_first_evaluation_stderr_sha256": "0e5491547b84208ad8703eccfdcd8c8d30fa7f17dd698b16004f325b07d1f25e",
+  "protocol_document_sha256": "1810c19a1c77caf45826ee75f48b1cdfeb7f0f8d7fea3925ab2e88c0bfc67104",
+  "approval_sha256": "b4e221b424286b12cdd49f97b4e5a66b3cf4cecaf9055efe0ab4ffb51a80feff",
+  "source_sha256": {
+    "scripts/r1e_evaluation.py": "8ef753bc02b8f32f2105ac34981d806d8a1dfdbac63e6db7ff5167cf689d7708",
+    "scripts/evaluate_r1e_guarded.py": "938c73bb1e1d14fde9231bc986bc738ec4c86c193eff3a029e85752aa9d6d51b"
+  },
+  "evaluation_configs_sha256": {
+    "b1_43": "da67cfb43da1f5440ad84443dd414588738bc957609a23616170ec351cb9a3c0",
+    "b2_43": "f30e31bf9ccdd1ecc1671ec3f83998f9f6d16943ac1814d027c0a7717c407158",
+    "b1_44": "d86abead7f88ae8503989770a74030ab57acc5f5bb3b8eb4a67eac2e99b51c0a",
+    "b2_44": "adcd07cdb574d667e6d5a0a2d0e92a0a1d7a39c8f53c507c9bbfd5d4519b25e8"
+  },
+  "fixed_validation_sha256": {
+    "benchmark_job": "4f2280e3bba7896da07940b13c210b7e3c03520fd6d368b16a72cfd7446e5df9",
+    "manifest": "951e1498f2d538d55be91ea2629ddde7edf1af6651bf97184db18ce2b7bc0039",
+    "instances": "01c6864811e6f20832dda13a754b5ed524d7be8b7e0d43cd33c41c3e022c4f2c",
+    "acceptance": "02db3648fb34d8913f810ce51de98ade86f8448000a698f4bfdc23373d34b3dc",
+    "guard_config": "0ee2d8259f4e74dd38bf329a890862fbaf6f53ee80a37884f517a28a84e45216"
+  },
+  "verification": {
+    "four_seed_specific_checkpoint_and_metadata_preflights": "passed without dataset, sensor or inference",
+    "full_unittest": "189 passed in 72.404s",
+    "non_research_smoke": "Full unittest includes synthetic CUDA train/resume and frozen 45-condition CPU evaluation smoke; R1E four-artifact preflight passed",
+    "output_directories_absent_before_seal": true,
+    "gpu_uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+    "gpu_temperature_c_before_start": 51,
+    "test_evaluated": false
+  },
+  "analysis_plan": {
+    "selection_rule": "original R1 section 10, unchanged",
+    "bootstrap_replicates": 20000,
+    "bootstrap_seed": 20260923,
+    "bootstrap_unit": "original validation source pair"
+  },
+  "validation_evaluated": false,
+  "test_evaluated": false
+}

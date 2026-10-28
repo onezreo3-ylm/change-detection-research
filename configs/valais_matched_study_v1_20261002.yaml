@@ -1,0 +1,32 @@
+schema_version: 1
+name: valais_matched_b1_b0e_v1_seed42
+output_dir: ../runs/valais_matched_study_v1_20261002
+python: E:/Download/anaconda3/envs/geosa-basa/python.exe
+task_name: Codex-Valais-Matched-B1-B0E-V1-20261002
+launcher: ../scripts/launch_valais_matched_task_20261002.ps1
+protocol_document: ../docs/VALAIS_MATCHED_BASELINES_PROTOCOL_2026-10-02.md
+baseline_evaluation: ../runs/valais_baseline_corruption_val_v1_seed42_20261002
+benchmark_config: evaluate_valais_baseline_corruption_v1_20261002.yaml
+label_balance_report: ../runs/valais_class_balance_20260930/report.json
+visual_review: ../runs/valais_corruption_protocol_preflight_20261002/visual_review_resumed_20261002.json
+visual_review_sha256: 2ab4752a2a28f852619273836c110b969a444d71116dcf30ba80be539038c90f
+guard_config: evaluation_temperature_guard.yaml
+minimum_unittests: 257
+order: [b1, b0e]
+runs:
+  b1: valais_b1_seed42_v1_20261002.yaml
+  b0e: valais_b0e_seed42_v1_20261002.yaml
+diagnostic:
+  selection_seed: 810210
+  small_positive_tiles: 2
+  large_positive_tiles: 2
+  empty_tiles: 4
+  smoke_source_batch_size: 4
+gates:
+  minimum_mf1_gain_over_b0e: 0.005
+  minimum_mf1_gain_over_b0: 0.005
+  maximum_clean_f1_drop: 0.005
+  maximum_clean_recall_drop: 0.01
+  maximum_corruption_recall_drop: 0.01
+  maximum_empty_tile_fpr_increase: 0.0002
+  independent_seeds_required_before_mechanism: 3

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-24",
+  "scope": "metadata-only feasibility screen after delegated assistant completion; no new dataset download or image access",
+  "candidates": [
+    {"name": "existing LEVIR-CD", "primary_source": "https://justchenhao.github.io/LEVIR/", "observed": "Publisher describes expert binary annotation and a second annotator check; geospatial metadata is available through the official STANet repository.", "local_state": "Local original dataset exists; earlier project test already used and stays closed.", "decision": "Best existing source for a new train/val-only diagnostic protocol; not a fresh final test or independent object-instance annotation."},
+    {"name": "LEVIR-CD+", "primary_source": "https://github.com/S2Looking/Dataset", "official_referral": "https://justchenhao.github.io/LEVIR/", "observed": "Official LEVIR page points to the S2Looking repository; repository README lists provider download locations.", "local_state": "Not found in the local dataset directory inventory.", "unverified": ["archive contents and exact expanded split", "overlap with original LEVIR and its previously used test", "image rights and dataset-specific usage details", "annotation provenance for extra pairs"], "decision": "Reserve candidate only; do not call it independent data or automatically train."},
+    {"name": "WHU-CD", "primary_source": "https://gpcv.whu.edu.cn/data/building_dataset.html", "observed": "Current official page still lists the change dataset download. Earlier local read-only archive audit remains relevant.", "local_state": "Only a 9220096-byte .partial file exists, not a usable dataset.", "prior_evidence": "docs/NEXT_STUDY_REASSESSMENT_2026-09-28.md", "unverified": ["complete data availability locally", "precise image/change-mask alignment", "specific use conditions not established by current page"], "decision": "Not currently runnable; retain as an alternative requiring acquisition/adaptation, not a silent replacement."},
+    {"name": "HRSCD-Clean", "primary_source": "https://huggingface.co/datasets/EPFL-ECEO/HRSCD_clean", "observed": "Publisher notes remaining imagery/vector timing inconsistencies, missing changes not recovered by refinement, and model-based pruning; full archive about60.3GB.", "local_state": "Not found locally.", "decision": "Low priority for resolving the present supervision ambiguity; do not adopt pruned images based on model agreement."}
+  ],
+  "recommended_training_preparation_source": "existing LEVIR-CD train and development validation only, under a new explicitly frozen study",
+  "new_dataset_admitted": false,
+  "new_research_inference": false,
+  "new_research_training": false,
+  "novel_method_or_improvement_claim": false
+}

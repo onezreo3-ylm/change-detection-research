@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-24",
+  "workspace_root": "..",
+  "source_workbook": "outputs/01a1636c-d6e2-7f83-9fd3-5d68f7dfec2c/independent_review/独立复核资料包/建筑变化独立复核.xlsx",
+  "expected_source_sha256": "79030af259639589e68289da6aa9e80408b90e873eb3c93a0c61032c055cb66f",
+  "packet_config": "configs/independent_reviewer_packet_20261022.yaml",
+  "source_manifest": "runs/research_direction_screen_20261022/review_samples.json",
+  "preview_manifest": "runs/research_direction_screen_20261022/train_review_preparation.json",
+  "preliminary_observations": "runs/natural_change_review_20261022/preliminary_observations.json",
+  "prior_closeouts": [
+    "runs/research_direction_screen_20261022/screen_closeout.json",
+    "runs/natural_change_review_20261022/closeout.json"
+  ],
+  "packet_verification": "outputs/01a1636c-d6e2-7f83-9fd3-5d68f7dfec2c/_review_build/packet_verification.json",
+  "output_dir": "runs/human_review_ingest_20261024",
+  "sheet_name": "复核",
+  "expected_rows": 24,
+  "expected_tile_pixels": 65536,
+  "data_first_row": 8,
+  "columns": {
+    "source_id": "B",
+    "verdict": "D",
+    "reason": "E",
+    "reviewer": "F",
+    "prior_context": "G"
+  },
+  "no_prior_context_label": "未看过相关结果",
+  "user_clarification": {
+    "date": "2026-10-24",
+    "source": "direct_human_reply_in_current_chat",
+    "question": "8569、6514的原标签分别有50、8个变化像素，但你选择了空标签基本合理。你的意思是原标签疑似多标、应为空，还是这两行选项需要重填？",
+    "answer_verbatim": "这两行需要重填，先保留待定",
+    "pending_source_ids": [
+      "train/8569.tif@x0_y0",
+      "train/6514.tif@x0_y0"
+    ],
+    "effective_verdict": null,
+    "original_workbook_modified": false
+  },
+  "execution_boundaries": {
+    "new_research_training": false,
+    "new_model_inference": false,
+    "raw_dataset_read": false,
+    "raw_validation_or_test_read": false,
+    "original_labels_modified": false,
+    "workbook_recalculated_or_saved": false
+  }
+}

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\new research\detection\pcdc\__main__.py", line 58, in <module>
+    main()
+  File "E:\new research\detection\pcdc\__main__.py", line 48, in main
+    result = train(config, resume=args.resume)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\pcdc\engine.py", line 249, in train
+    training = run_epoch(model, loaders["train"], loss_fn, device, optimizer=optimizer,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\pcdc\engine.py", line 107, in run_epoch
+    nn.utils.clip_grad_norm_(model.parameters(), grad_clip_norm or float("inf"),
+  File "E:\Download\anaconda3\envs\geosa-basa\Lib\site-packages\torch\nn\utils\clip_grad.py", line 64, in clip_grad_norm_
+    raise RuntimeError(
+RuntimeError: The total norm of order 2.0 for gradients from `parameters` is non-finite, so it cannot be clipped. To disable this error and scale the gradients by the non-finite norm anyway, set `error_if_nonfinite=False`

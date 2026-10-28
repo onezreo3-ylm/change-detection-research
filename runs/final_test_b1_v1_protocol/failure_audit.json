@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "batch": "final_heldout_test_single_b1_seed42_v1",
+  "status": "invalid_incomplete_no_automatic_retry",
+  "audited_utc": "2026-09-25T22:22:24Z",
+  "process": {
+    "started_pid": 9552,
+    "active_at_audit": false,
+    "interpreter": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe"
+  },
+  "pretest_seal_sha256": "33db6693bf3868bc056d68970c488f3ea2685cebf7f3368db0bb79cbd51ede67",
+  "frozen_evaluator_source_sha256": "fc48e169ef45e57af9b2058c20f4b4d165a3f787410cf62bee6472c9d5c070cd",
+  "test_accessed": true,
+  "test_evaluated": true,
+  "completed_condition_files": 45,
+  "expected_condition_files": 45,
+  "progress_completed_conditions": 45,
+  "failure_stage": "durable_guard_completion_commit_after_summary_and_status_write",
+  "exception": "ValueError: Expected lowercase SHA256",
+  "cause": "The frozen evaluator's local _sha(text) validator shadows the imported _sha(bytes) digest helper. Its final guard_completion.json write calls _sha(summary_bytes), raising before the completion marker can be created.",
+  "summary_file_present": true,
+  "summary_internal_status": "completed",
+  "status_file_status": "failed_incomplete_no_automatic_retry",
+  "temperature_guard_state_status": "failed_guard",
+  "guard_completion_exists": false,
+  "maximum_observed_gpu_temperature_c": 64,
+  "temperature_policy_pause_c": 85,
+  "failure_due_to_temperature": false,
+  "valid_final_test_result": false,
+  "scores_reported_or_used_for_selection": false,
+  "automatic_rerun_authorized": false,
+  "output_preserved": true,
+  "artifacts_sha256": {
+    "evaluation_stderr.log": "9d5158eb6044f37a6e3f9c6a9fa4ed6366fafb674deb271258d5fe66e55168e1",
+    "status.json": "4677ea50e0322f0935de750cbbf9a5889234b87914c1f9c79ecf1b7d97b0d51d",
+    "summary.json": "fc2722f15b2408e521a81ada923ca1603581a4d43ffdf938147b5d831247cf4c",
+    "temperature_guard_state.json": "51194bac772a08462aa2fa472cf9ad9d82eeae13dd203478eaa22e8d3662ca02",
+    "test_data_audit.json": "d900a9eff140623804881f6c402aacae46e56babf06af3d889ef06a6a97a3c67",
+    "test_manifest.json": "ebcb0fa31cc338e2dd74130827a4b9fe1f5ab3d146fbd0d8a54dd08f825adfc7",
+    "test_instances.jsonl": "119e5de918fe62a3470cb71ec3fba0a49eb4d53abb22681c2fa45a844e90a721"
+  },
+  "disposition": "Stop this frozen final-test batch. Preserve every output. Do not patch the frozen source, fabricate guard completion, rerun inference, or treat the existing scores as a valid final test without a separate explicit recovery assessment."
+}

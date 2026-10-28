@@ -1,0 +1,29 @@
+schema_version: 1
+kind: external_dataset_candidate_preflight
+dataset_card: https://huggingface.co/datasets/EPFL-ECEO/ValaisCD
+dataset_revision: dbf58176968d17c964cfda960a314b243f73ca8b
+upstream_terms: https://www.swisstopo.admin.ch/en/terms-of-use-free-geodata-and-geoservices
+upstream_attribution: "Federal Office of Topography swisstopo"
+tail_bytes: 1048576
+splits:
+  dev:
+    url: https://huggingface.co/datasets/EPFL-ECEO/ValaisCD/resolve/dbf58176968d17c964cfda960a314b243f73ca8b/dev.zip
+    size_bytes: 1062362132
+    etag: '"3dfc98898d46dafef7ec76b3857162ee5910fda49c684c8f1ddf142191a444b4"'
+    sha256: cd3cc09bc0416a8bd10ee74a4f8319ef205fe758cd8da2cc7bf010222a43d5c3
+    expected_pairs: 3136
+  train:
+    url: https://huggingface.co/datasets/EPFL-ECEO/ValaisCD/resolve/dbf58176968d17c964cfda960a314b243f73ca8b/train.zip
+    size_bytes: 3750792668
+    etag: '"5166abafc1c2a77bb3badd891801d051fe24c6440646fbed89d569d0dc0b41c0"'
+    sha256: 928eba45f4111803538dc857ea3b53480ae1007b58254ffb1e507bfcedc949f9
+    expected_pairs: 11025
+  val:
+    url: https://huggingface.co/datasets/EPFL-ECEO/ValaisCD/resolve/dbf58176968d17c964cfda960a314b243f73ca8b/val.zip
+    size_bytes: 603524101
+    etag: '"291608aefd39a1932f98f8baf31325155e9751506a1f44504af673245ce0016b"'
+    sha256: 709546544035a7c6158e9fe742e588a434839445b348e4cea09fadea6e10871e
+    expected_pairs: 1715
+sample_dev_ids: [304, 1360]
+output_dir: ../runs/valais_candidate_preflight_20260929
+rights_status: upstream_attribution_and_derived_terms_review_needed

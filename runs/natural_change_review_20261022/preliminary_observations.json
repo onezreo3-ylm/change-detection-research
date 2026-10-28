@@ -1,0 +1,238 @@
+{
+  "date": "2026-10-22",
+  "scope": "Original fixed train probe; 16 positive and 8 empty sources",
+  "reviewer": "Same assistant, preliminary visual screen",
+  "independent_reviewer": false,
+  "blind_to_prior_model_results": false,
+  "new_model_counts_read_before_current_verdicts": false,
+  "all_sources_seen_natively_across_two_turns": true,
+  "prior_viewed_sources": 6,
+  "newly_viewed_sources": 18,
+  "estimated_prior_image_data_url_bytes": 2368992,
+  "estimated_new_image_data_url_bytes": 6934460,
+  "estimated_cumulative_image_data_url_bytes": 9303452,
+  "image_budget_bytes": 10485760,
+  "no_more_image_payloads_in_current_history": true,
+  "raw_validation_read": false,
+  "test_read": false,
+  "training": false,
+  "model_inference": false,
+  "cases": [
+    {
+      "source_id": "train/3175.tif@x0_y0",
+      "preliminary_verdict": "tile_edge_context_insufficient",
+      "evidence": "原先已查看；1像素标注位于左边界。仅凭块内影像无法确认完整变化目标，不能据此判错标。",
+      "read_stage": "previous_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/6514.tif@x0_y0",
+      "preliminary_verdict": "tile_edge_context_insufficient",
+      "evidence": "原先已查看；8像素标注贴顶边，缺少块外目标上下文。",
+      "read_stage": "previous_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/8569.tif@x0_y0",
+      "preliminary_verdict": "tile_edge_context_insufficient",
+      "evidence": "原先已查看；两个小标注区域均贴左边，不能将其直接解释为两栋完整小建筑。",
+      "read_stage": "previous_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/9315.tif@x0_y0",
+      "preliminary_verdict": "tile_edge_context_insufficient",
+      "evidence": "原先已查看；标注触及上、左边界，完整目标与块外施工变化范围不明。",
+      "read_stage": "previous_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/291.tif@x0_y0",
+      "preliminary_verdict": "insufficient_visual_evidence",
+      "evidence": "原先已查看；两个内部小标注区域，影像中存在小构筑物及周围外观差异，但未独立确认拆建与精确范围。",
+      "read_stage": "previous_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/3238.tif@x0_y0",
+      "preliminary_verdict": "insufficient_visual_evidence",
+      "evidence": "原先已查看；内部小标注区域伴随明显树冠和阴影差异，不能从本次影像初看认证建筑变化真值。",
+      "read_stage": "previous_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/7284.tif@x0_y0",
+      "preliminary_verdict": "tile_edge_context_insufficient",
+      "evidence": "本轮首次查看；非零标注只是底边的窄小片段，缺少块外完整结构。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/6296.tif@x0_y0",
+      "preliminary_verdict": "observable_change_consistent_with_label",
+      "evidence": "本轮首次查看；2017施工区域与2023已建成屋顶、结构有明显差异，主要标注大体对应可见结构变化；未认证施工时点定义或逐像素边界。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/9318.tif@x0_y0",
+      "preliminary_verdict": "observable_change_consistent_with_label",
+      "evidence": "本轮首次查看；内部位置可见明显新增或替换的建筑屋顶结构，主要标签与该区域大体对应；边界未独立复标。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/8740.tif@x0_y0",
+      "preliminary_verdict": "observable_change_consistent_with_label",
+      "evidence": "本轮首次查看；上部右侧可见2017草地至2023屋顶结构的变化，下部也有结构差异；有触边范围，不能认证完整对象数量。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/7176.tif@x0_y0",
+      "preliminary_verdict": "suspected_image_label_timing_or_extent_disagreement",
+      "evidence": "本轮首次查看；标注附近两期都能辨认相近建筑轮廓，屋顶或施工完成状态有差异。需核查施工阶段、建筑变化定义与地图更新时间，不能仅凭颜色判新建或错标。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/6283.tif@x0_y0",
+      "preliminary_verdict": "tile_edge_context_insufficient",
+      "evidence": "本轮首次查看；标注主要位于右下边界，涉及块外结构的局部，缺少完整目标及块外施工上下文。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/6305.tif@x0_y0",
+      "preliminary_verdict": "tile_edge_context_insufficient",
+      "evidence": "本轮首次查看；36像素标签贴底边，目标主体在可见块外，无法按完整小建筑解释。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/4996.tif@x0_y0",
+      "preliminary_verdict": "observable_change_consistent_with_label",
+      "evidence": "本轮首次查看；多处位置可见较明确建筑结构增建或替换，主要标签大体对应；不是逐对象或逐像素真值认证。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/4024.tif@x0_y0",
+      "preliminary_verdict": "observable_change_consistent_with_label",
+      "evidence": "本轮首次查看；2017施工场地至2023多处已建成建筑有明显结构变化，与主要标签大体相符；施工完成语义仍以正式标注定义为准。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/1910.tif@x0_y0",
+      "preliminary_verdict": "observable_change_consistent_with_label",
+      "evidence": "本轮首次查看；中上部施工区域在2023出现已建成建筑群，多个主要标签与变化大体对应；没有复标所有边界。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/4425.tif@x0_y0",
+      "preliminary_verdict": "unchanged_consistent_with_empty_label",
+      "evidence": "本轮首次查看；草坡和零散植被区域，未见明显建筑新增或拆除。仅为本图块的粗粒度初看。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/3730.tif@x0_y0",
+      "preliminary_verdict": "unchanged_consistent_with_empty_label",
+      "evidence": "本轮首次查看；森林冠层、光照和阴影有外观变化，未见明显建筑变化。不能等同于所有语义均未变化。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/6242.tif@x0_y0",
+      "preliminary_verdict": "unchanged_consistent_with_empty_label",
+      "evidence": "本轮首次查看；葡萄园及少量建筑，主要建筑轮廓看起来保持，未见明显建筑新增或拆除；屋顶外观差异不自动算建筑变化。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/2154.tif@x0_y0",
+      "preliminary_verdict": "unchanged_consistent_with_empty_label",
+      "evidence": "本轮首次查看；森林场景，未见明显建筑新增或拆除，空建筑变化标签初看可解释。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/1332.tif@x0_y0",
+      "preliminary_verdict": "unchanged_consistent_with_empty_label",
+      "evidence": "本轮首次查看；山坡和地面纹理，未见明显建筑变化。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/2065.tif@x0_y0",
+      "preliminary_verdict": "unchanged_consistent_with_empty_label",
+      "evidence": "本轮首次查看；草地内几处建筑主要轮廓保持，未见明显新增或拆除；地面路径与外观差异不作为建筑变化。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/9035.tif@x0_y0",
+      "preliminary_verdict": "unchanged_consistent_with_empty_label",
+      "evidence": "本轮首次查看；森林及冠层阴影变化，未见明显建筑新增或拆除。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    },
+    {
+      "source_id": "train/6233.tif@x0_y0",
+      "preliminary_verdict": "insufficient_visual_evidence",
+      "evidence": "本轮首次查看；水处理设施有可见覆盖或屋面外观差异，但涉及已有池体或设施；是否属于数据集建筑变化语义需要独立判读，空标签不能据此认定错误。",
+      "read_stage": "current_turn_native_inspection",
+      "confirmed_annotation_error": null,
+      "certified_building_instances": null,
+      "independent_verdict": "pending"
+    }
+  ]
+}

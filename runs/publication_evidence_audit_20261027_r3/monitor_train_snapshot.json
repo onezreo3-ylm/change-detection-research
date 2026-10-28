@@ -1,0 +1,77 @@
+{
+  "mode": "train",
+  "checked_utc": "2026-10-26T16:17:31.107787+00:00",
+  "gpu": {
+    "uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+    "temperature_c": 77,
+    "utilization_percent": 94,
+    "memory_used_mib": 2708
+  },
+  "owner_state": {
+    "status": "running",
+    "mode": "train",
+    "updated_utc": "2026-10-26T16:17:31.002969+00:00",
+    "automatic_retry": false,
+    "elapsed_seconds": 7484.671999999999,
+    "allowed_wall_seconds": 78803.17303600005
+  },
+  "progress": {
+    "stage": "original_b0e_training_batch_checks",
+    "seed": 43,
+    "guard_checkpoints": 47881,
+    "run_elapsed_seconds": 7478.014999999999,
+    "updated_utc": "2026-10-26T16:17:29.926282+00:00",
+    "note": "Batch callback progress; committed optimizer counts are in run status/history."
+  },
+  "guard_state": {
+    "status": "monitoring",
+    "role": "guard",
+    "updated_utc": "2026-10-26T16:17:29.681050+00:00",
+    "temperature_c": 77,
+    "maximum_observed_temperature_c": 78,
+    "sensor_error": null,
+    "decision": "ok"
+  },
+  "watchdog_state": {
+    "status": "monitoring",
+    "role": "watchdog",
+    "updated_utc": "2026-10-26T16:17:29.746253+00:00"
+  },
+  "processes": {
+    "owner": {
+      "pid": 26288,
+      "creation_time_ticks": 134374975662027145,
+      "active": true
+    },
+    "worker": {
+      "pid": 21748,
+      "creation_time_ticks": 134374975675485631,
+      "active": true
+    },
+    "guard": {
+      "pid": 7216,
+      "creation_time_ticks": 134374975678821875,
+      "active": true
+    },
+    "watchdog": {
+      "pid": 27804,
+      "creation_time_ticks": 134374975682158050,
+      "active": true
+    }
+  },
+  "seed43": {
+    "status": "running",
+    "training_started": true,
+    "epoch": 26,
+    "epochs": 100,
+    "best_epoch": 24,
+    "best_val_f1": 0.8940246646920315,
+    "initial_model_tensor_sha256": "a76b15a1d630d6b58a65b02d01e3920f4c06a87d5d8ceb57af76497cfb511942",
+    "kind": "research",
+    "mode": "b0e",
+    "selection": "clean_val_f1",
+    "test_evaluated": false
+  },
+  "shared_charged_seconds": 97881.49896399994,
+  "shared_upper_bound_seconds": 172800
+}

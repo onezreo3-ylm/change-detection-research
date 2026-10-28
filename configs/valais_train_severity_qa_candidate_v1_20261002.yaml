@@ -1,0 +1,24 @@
+schema_version: 1
+name: valais_train_severity_qa_candidate_v1
+status: candidate_pending_visual_review
+base_config: valais_clean_full_fp32_seed42_20261002.yaml
+source_corruption_config: corruption_protocol_v1.yaml
+source_corruption_config_sha256: 815f4dbd7875d7a4e5ee95f506ca90a76156d98dcd3bd0eedf3f08476b7e83ee
+reference_checkpoint: ../runs/valais_clean_full_fp32_seed42_20261002/best.pt
+reference_checkpoint_sha256: de42460dfce94717a890ae359124c659ce57d7d396f44429ac370463e1991b7d
+independent_val_completion: ../runs/valais_full_fp32_independent_val_20261002/completion.json
+independent_val_completion_sha256: 63c3cf099e75adf5face9dcc92f3e96b37543b5026fcf59c623e208bd4f070de
+train_label_balance_report: ../runs/valais_class_balance_20260930/report.json
+train_label_balance_report_sha256: 687861cb1107ba76ce78af144ee1f82c3f4ceae13ba3c152fa955b8dfbfe7991
+output_dir: ../runs/valais_train_severity_qa_candidate_v1_20261002
+selection:
+  seed: 810207
+  positive_tiles: 4
+  empty_tiles: 4
+  order: alternating_positive_empty
+  label_source: frozen_train_positive_manifest_only
+seeds: {train: 510942, val: 510943, test: 510944}
+preview_levels: [1, 3, 5]
+preview_tile_pixels: 192
+placement: after_tiling_before_normalization
+spatial_modes: [global, local]

@@ -1,0 +1,196 @@
+{
+  "status": "reproduced_within_bound_window",
+  "research_result": false,
+  "original_run_modified": false,
+  "test_accessed": false,
+  "spec_sha256": "b9f47fb106f97a06a0d561dc74846031c1dabf2c9c7b30e365013c7458a6e7f3",
+  "preflight_seal_sha256": "a0362bd13eff3c87fb2f13bd5da95c7f4676abb4594e065ea0490538011c4be3",
+  "source_config_sha256": "7a4931665591a24e005b7ea3b42b1cb88855accc52343c8642ad4efc5ceea6ab",
+  "checkpoint_sha256": "75bf25c9f50925ff889d029b5798efb212320a77b18e15ff6e10d27e556b64a4",
+  "failure_audit_sha256": "5978cf046aaa9d85553bfaa121b736582f0351e4755733636b3591c5fbcb2ab2",
+  "environment": {
+    "created_utc": "2026-09-30T15:47:26.055712+00:00",
+    "python": "3.11.14 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 18:30:03) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+    "platform": "Windows-10-10.0.26100-SP0",
+    "torch": "2.0.1",
+    "torchvision": "0.15.2",
+    "numpy": "1.26.4",
+    "pillow": "12.0.0",
+    "pyyaml": "6.0.3",
+    "cuda_runtime": "11.7",
+    "cudnn": 8500,
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "seed": 42,
+    "deterministic": true,
+    "num_threads": 4,
+    "cublas_workspace_config": ":4096:8",
+    "source_config": "E:\\new research\\detection\\configs\\valais_clean_development_seed42.yaml"
+  },
+  "training": {
+    "loss_total": 0.09878038206730022,
+    "loss_rounded_6": "0.098780",
+    "optimizer_steps": 2756,
+    "amp_skipped_steps": 1,
+    "loss_match": true,
+    "optimizer_steps_match": true,
+    "amp_skips_match": true,
+    "trace_match": true,
+    "observed_trace": {
+      "1": "0.000086",
+      "275": "0.100919",
+      "550": "0.101703",
+      "825": "0.096255",
+      "1100": "0.097894",
+      "1375": "0.098901",
+      "1650": "0.099496",
+      "1925": "0.099141",
+      "2200": "0.100001",
+      "2475": "0.098888",
+      "2750": "0.098816",
+      "2757": "0.098780"
+    },
+    "expected_trace": {
+      "1": "0.000086",
+      "275": "0.100919",
+      "550": "0.101703",
+      "825": "0.096255",
+      "1100": "0.097894",
+      "1375": "0.098901",
+      "1650": "0.099496",
+      "1925": "0.099141",
+      "2200": "0.100001",
+      "2475": "0.098888",
+      "2750": "0.098816",
+      "2757": "0.098780"
+    },
+    "overflow_location_match": true,
+    "observed_overflow": [
+      {
+        "step": 1836,
+        "scale_before": 131072,
+        "scale_after": 65536
+      }
+    ]
+  },
+  "validation_trace": {
+    "1": {
+      "mean_loss": 0.10993801802396774,
+      "rounded_6": "0.109938",
+      "match": true
+    },
+    "5": {
+      "mean_loss": 0.219662044942379,
+      "rounded_6": "0.219662",
+      "match": true
+    },
+    "10": {
+      "mean_loss": 0.16953128762543201,
+      "rounded_6": "0.169531",
+      "match": true
+    },
+    "15": {
+      "mean_loss": 0.22769347056746483,
+      "rounded_6": "0.227693",
+      "match": true
+    },
+    "20": {
+      "mean_loss": 0.20894407127052544,
+      "rounded_6": "0.208944",
+      "match": true
+    },
+    "25": {
+      "mean_loss": 0.2333342356979847,
+      "rounded_6": "0.233334",
+      "match": true
+    },
+    "30": {
+      "mean_loss": 0.23664792380247188,
+      "rounded_6": "0.236648",
+      "match": true
+    },
+    "35": {
+      "mean_loss": 0.22163892091609472,
+      "rounded_6": "0.221639",
+      "match": true
+    }
+  },
+  "first_nonfinite": {
+    "step": 36,
+    "sample_ids": [
+      "val/463.tif@x0_y0",
+      "val/464.tif@x0_y0",
+      "val/465.tif@x0_y0",
+      "val/466.tif@x0_y0",
+      "val/467.tif@x0_y0",
+      "val/468.tif@x0_y0",
+      "val/469.tif@x0_y0",
+      "val/47.tif@x0_y0",
+      "val/470.tif@x0_y0",
+      "val/471.tif@x0_y0",
+      "val/472.tif@x0_y0",
+      "val/473.tif@x0_y0",
+      "val/474.tif@x0_y0",
+      "val/475.tif@x0_y0",
+      "val/476.tif@x0_y0",
+      "val/477.tif@x0_y0",
+      "val/478.tif@x0_y0",
+      "val/479.tif@x0_y0",
+      "val/48.tif@x0_y0",
+      "val/480.tif@x0_y0",
+      "val/481.tif@x0_y0",
+      "val/482.tif@x0_y0",
+      "val/483.tif@x0_y0",
+      "val/484.tif@x0_y0",
+      "val/485.tif@x0_y0",
+      "val/486.tif@x0_y0",
+      "val/487.tif@x0_y0",
+      "val/488.tif@x0_y0",
+      "val/489.tif@x0_y0",
+      "val/49.tif@x0_y0",
+      "val/490.tif@x0_y0",
+      "val/491.tif@x0_y0"
+    ],
+    "amp_logits": {
+      "shape": [
+        32,
+        1,
+        256,
+        256
+      ],
+      "dtype": "torch.float16",
+      "finite_count": 2031616,
+      "nan_count": 65536,
+      "posinf_count": 0,
+      "neginf_count": 0,
+      "finite_min": -31.15625,
+      "finite_max": 4.78515625
+    },
+    "amp_losses": {
+      "total": "nan",
+      "bce": "nan",
+      "dice": "nan"
+    },
+    "fp32_logits": {
+      "shape": [
+        32,
+        1,
+        256,
+        256
+      ],
+      "dtype": "torch.float32",
+      "finite_count": 2097152,
+      "nan_count": 0,
+      "posinf_count": 0,
+      "neginf_count": 0,
+      "finite_min": -31.160429000854492,
+      "finite_max": 4.785181045532227
+    },
+    "fp32_losses": {
+      "total": 0.0666101798415184,
+      "bce": 0.004144331440329552,
+      "dice": 0.0624658465385437
+    }
+  }
+}

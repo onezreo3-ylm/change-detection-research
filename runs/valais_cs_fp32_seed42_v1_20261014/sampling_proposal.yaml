@@ -1,0 +1,79 @@
+# A reviewable proposal, not a runnable training configuration or launch permit.
+schema_version: 1
+status: proposal_prepared_not_launched
+name: valais_b0es_clean_sampling_candidate_seed42
+evidence:
+  error_report: ../runs/valais_matched_error_review_20261004/report.json
+  error_report_sha256: 5ef1456de930a65196e4189f17cbb6bd31941537cdd41f0bee263c80cdc5d197
+  train_label_report: ../runs/valais_class_balance_20260930/report.json
+  train_label_report_sha256: 687861cb1107ba76ce78af144ee1f82c3f4ceae13ba3c152fa955b8dfbfe7991
+  captured_data_audit: ../runs/valais_b0e_fp32_seed42_v1_20261002/data_audit.json
+  captured_data_audit_sha256: 670d7d29361125e291d637f9fb9be44df31b67912dc2af837d719f6c4ae2cd87
+  reference_validation: ../runs/valais_b0e_fp32_seed42_v1_20261002_val/summary.json
+  reference_validation_sha256: 84d761463a4542b563e5a81fa24ede37059c4c46ed8e3968c33f78fe0825e71e
+parent_base_config: ../runs/valais_corruption_protocol_v1_20261002/base_config.yaml
+parent_base_config_sha256: 795cbe8d8b05722b044f0b4ff8b634a3caf3be08ecd311de006d5c140472d768
+primary_reference: b0e_seed42
+ordinary_control: true
+research_hypothesis: Increasing train-positive tile exposure may improve clean recall; the effect and FP cost remain untested.
+intentional_protocol_change: train_source_sampling_only
+seed: 42
+sampling:
+  seed: 42
+  source_partition: all_train_tiles_from_captured_audit_positive_iff_train_label_pixels_gt_zero
+  train_positive_sources: 1046
+  train_empty_sources: 9979
+  source_batch_size: 4
+  full_batches_per_epoch: 2756
+  each_full_batch: {positive: 1, empty: 3}
+  final_batch: {positive: 1, empty: 0}
+  positive_draws_per_epoch: 2757
+  empty_draws_per_epoch: 8268
+  positive_draw_policy: concatenate_independent_shuffled_full_positive_cycles_then_take_2757
+  empty_draw_policy: shuffle_all_empty_sources_without_replacement_then_take_8268
+  random_generator: Python_random_Random_local_instances_version_2_string_seed
+  positive_cycle_seed_template: 'valais-b0es|42|{epoch}|positive|{cycle}'
+  empty_seed_template: 'valais-b0es|42|{epoch}|empty'
+  within_batch_seed_template: 'valais-b0es|42|{epoch}|batch|{batch}'
+  full_batch_order_seed_template: 'valais-b0es|42|{epoch}|full-batches'
+  index_convention: epoch_1_to_100_cycle_and_full_batch_0_based
+  batch_construction: pair_first_2756_positive_draws_with_consecutive_empty_triplets_then_shuffle_each_batch
+  full_batch_order: shuffle_the_2756_full_batches_then_append_the_remaining_positive_singleton
+  global_runtime_rng_modified_by_sampling: false
+  sampler_implemented: false
+matched_budget:
+  epochs: 100
+  source_draws_per_epoch: 11025
+  updates_per_epoch: 2757
+  source_draws_total: 1102500
+  successful_updates_total: 275700
+  pair_views_total: 2205000
+views:
+  primary: clean
+  secondary: clean
+  views_per_source: 2
+  batchnorm_update: single_forward_clean_then_secondary_then_temporal_concat
+fixed_settings:
+  initialization: random_seed42_same_initial_tensor_digest_as_b0e
+  dtype: fp32
+  loss: original_bce_plus_dice
+  threshold: 0.5
+  checkpoint_selection: first_highest_clean_val_f1
+  validation: unchanged_Sierre_clean_and_all_45_corruption_conditions
+  test_access: false
+proposed_screening_gates_vs_b0e:
+  minimum_clean_f1_gain: 0.01
+  minimum_clean_recall_gain: 0.02
+  maximum_corruption_mf1_drop: 0.005
+  maximum_corruption_recall_drop: 0.01
+  maximum_clean_empty_tile_fpr_increase: 0.0002
+  maximum_corruption_empty_tile_fpr_increase: 0.0002
+  status: proposed_after_current_results_not_applied_to_the_completed_study
+prerequisites:
+  - review_this_new_sampling_protocol_and_its_exposure_change
+  - implement_separate_sampler_with_source_order_and_repeat_count_checks
+  - verify_parent_initialization_and_all_unchanged_settings
+  - full_unittest_and_real_cuda_two_clean_view_smoke_with_one_bn_update
+  - new_input_seal_guard_and_explicit_launch_record
+training_started: false
+mechanism_training_authorized: false

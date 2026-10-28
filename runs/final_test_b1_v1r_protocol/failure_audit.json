@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "auditor_implementation_failed_before_certification",
+  "audit_version": "v1r",
+  "original_v1_valid": false,
+  "recovered_scores_certified": false,
+  "scores_reported_or_used_for_selection": false,
+  "new_test_inference": false,
+  "original_v1_output_mutated": false,
+  "failure": "ValueError: Source counts do not sum: clean",
+  "auditor_bug": "add_counts iterates a one-shot generator separately for TN, FP, FN, TP; the first pass consumes it, so later sums are zero. Synthetic tests used a materialized list and missed this case.",
+  "source_sha256": "d001ed2697c26a183a035b43836bbf9260350a15b2268332c0657ace7e9b69f7",
+  "preaudit_seal_sha256": "544bf807c53ae5b3a69310636805d9025299e970f8a416f4e65c4e44a73e8153",
+  "input_snapshot_sha256": "bd18699e847d0f26d67c786f4516a57b77055227f29270423fd0bc9b29e71ec1",
+  "disposition": "Preserve sealed V1R unchanged. A separately versioned, preapproved V1R2 auditor may correct only generator materialization and must independently seal its source/tests/config before another score-record pass."
+}

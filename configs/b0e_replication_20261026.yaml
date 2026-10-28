@@ -1,0 +1,30 @@
+schema_version: 1
+kind: missing_clean_exposure_matched_replications
+user_request: 持续改进并完善实验，直到证据链完善可达到能发表的论文
+protocol: docs/B0E_REPLICATION_PROTOCOL_2026-10-26.md
+output_dir: runs/b0e_replication_20261026
+shared_ledger: runs/managed_continuation_20261024/compute_ledger.json
+global_lease: runs/managed_continuation_20261024/gpu_study.lock
+seeds: [43, 44]
+reference_training: configs/robust_b0e_seed42.yaml
+epochs: 100
+attempts_per_run: 178000
+pair_views_per_run: 1424000
+pilot_steps: 32
+pilot_order: [43, 44, 43]
+evaluation_reserve_seconds: 3600
+single_training_limit_seconds: 86400
+pilot_wall_limit_seconds: 900
+bootstrap_replicates: 20000
+bootstrap_seed: 20261026
+test_or_martigny_access: false
+automatic_retry: false
+runs:
+  '43':
+    training_config: configs/b0e_replication_seed43_20261026.yaml
+    reference_b1: runs/levir_b1_augmented_seed43
+    initialization_sha256: a76b15a1d630d6b58a65b02d01e3920f4c06a87d5d8ceb57af76497cfb511942
+  '44':
+    training_config: configs/b0e_replication_seed44_20261026.yaml
+    reference_b1: runs/levir_b1_augmented_seed44
+    initialization_sha256: 843a030cb114ac82ee127e6bc6aa79b30e91dd0ad2da0cba986576115b5ee86c

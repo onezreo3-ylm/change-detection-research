@@ -1,0 +1,53 @@
+schema_version: 1
+kind: engineering_numeric_replay_only
+source_config: valais_clean_development_seed42.yaml
+source_config_sha256: 7a4931665591a24e005b7ea3b42b1cb88855accc52343c8642ad4efc5ceea6ab
+checkpoint: ../runs/valais_clean_development_seed42/last.pt
+checkpoint_sha256: 75bf25c9f50925ff889d029b5798efb212320a77b18e15ff6e10d27e556b64a4
+failure_audit: ../runs/valais_clean_failure_20260930/numerical_failure_audit.json
+failure_audit_sha256: 5978cf046aaa9d85553bfaa121b736582f0351e4755733636b3591c5fbcb2ab2
+source_data_audit: ../runs/valais_clean_development_seed42/data_audit.json
+source_data_audit_sha256: 670d7d29361125e291d637f9fb9be44df31b67912dc2af837d719f6c4ae2cd87
+output_dir: ../runs/valais_numeric_replay_epoch34_20260930
+replay_epoch: 34
+expected_train_loss_rounded_6: 0.098780
+expected_train_amp_skips: 1
+expected_train_optimizer_steps: 2756
+expected_train_trace:
+  1: 0.000086
+  275: 0.100919
+  550: 0.101703
+  825: 0.096255
+  1100: 0.097894
+  1375: 0.098901
+  1650: 0.099496
+  1925: 0.099141
+  2200: 0.100001
+  2475: 0.098888
+  2750: 0.098816
+  2757: 0.098780
+expected_amp_skip:
+  step: 1836
+  scale_before: 131072
+  scale_after: 65536
+expected_val_step35_loss_rounded_6: 0.221639
+expected_val_trace:
+  1: 0.109938
+  5: 0.219662
+  10: 0.169531
+  15: 0.227693
+  20: 0.208944
+  25: 0.233334
+  30: 0.236648
+  35: 0.221639
+first_possible_failure_step: 36
+last_possible_failure_step: 40
+guard:
+  gpu_index: 0
+  gpu_uuid: GPU-8ada1895-7628-bb88-1dda-c57679117fa2
+  confirmed_pause_c: 85
+  immediate_pause_c: 86
+  poll_seconds: 10
+  confirmation_seconds: 5
+  confirmation_samples: 3
+  max_sensor_failures: 3

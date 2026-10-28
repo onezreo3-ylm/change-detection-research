@@ -1,0 +1,52 @@
+{
+  "status": "reviewed_no_protocol_change",
+  "reviewed_utc": "2026-10-02T15:03:27.770178+00:00",
+  "reviewer": "Codex in the current user-authorized study chat",
+  "report_sha256": "4b2d25d84c6f48b720e3de00725f9f10c838dc4dc1cf422ca6fec39666a8b5bb",
+  "viewed_original_resolution_images": [
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_matched_study_v1_20261002\\train_diagnostic\\8002.png",
+      "sha256": "5f8c53a7b6b0c2e5b0c0f63e7fd3ab222eaa73efe6ec33c811d4a74bb28104a1"
+    },
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_matched_study_v1_20261002\\train_diagnostic\\3173.png",
+      "sha256": "c692742685f6a67559d9c0a28cf6afac54e1a5cccbd0dfc34a5897ba3487e97a"
+    },
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_matched_study_v1_20261002\\train_diagnostic\\9371.png",
+      "sha256": "5e8e67e693395ef75a1ccdf9e5c373735798d7985c96b2d61eb402633bc0dfd0"
+    },
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_matched_study_v1_20261002\\train_diagnostic\\3270.png",
+      "sha256": "ac4cdcdf5734416e5bb03bd35f63d56cf0d8cb2447a22ece99a90383ddfc6aee"
+    },
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_matched_study_v1_20261002\\train_diagnostic\\8807.png",
+      "sha256": "cc3dfc6f56e94b0c5360ff14af3e9963c6fbc69424a61210613afaed40b0fbc2"
+    },
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_matched_study_v1_20261002\\train_diagnostic\\8523.png",
+      "sha256": "a6a0d6efbf6409fd5e20b290a43276142a8a2b99013a9e7b440dae44bcf36c78"
+    },
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_matched_study_v1_20261002\\train_diagnostic\\6944.png",
+      "sha256": "1d295d12a7dcad768141c268cc063ba0ec2adf8671060854afbd2eb1c4982d4a"
+    },
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_matched_study_v1_20261002\\train_diagnostic\\2890.png",
+      "sha256": "ab18758b5a07da682f42a89a259e1e3bdb97c771c631a0e49d588d4e3b777c53"
+    }
+  ],
+  "raw_pixels_per_panel": 256,
+  "test_accessed": false,
+  "val_images_accessed": false,
+  "views_total_png_bytes": 2341834,
+  "findings": {
+    "8002.tif": "102 labeled pixels form a left-edge sliver (bbox y223..248 x0..7); the detector has no TP. Edge context limits interpretation.",
+    "3173.tif": "Only two foreground pixels, both at x255 y120..121. These cannot establish a visually recoverable semantic building change. Keep the original labels and disclose the boundary limitation.",
+    "9371.tif": "The model detects part of the labeled change and misses the roadside label region; another conspicuous roof difference receives FP. Whether this reflects roof-only appearance change, footprint label policy or a missing annotation is unresolved.",
+    "3270.tif": "Most labeled left-edge pixels are detected, with substantial predictions on unlabeled roofs. Visual difference alone does not prove label error.",
+    "empty_examples": "Four preselected forest/field/mixed scene empty tiles produce no positive predictions. This selection does not estimate population FPR."
+  },
+  "conclusion": "No gross A/B/mask dimensional misalignment observed in the eight panels; small/boundary ambiguity and semantic roof/footprint issues remain. Proceed with matched ordinary augmentation without relabeling, pruning, changing severity, sampling, threshold or loss. This is not a dataset-wide label acceptance."
+}

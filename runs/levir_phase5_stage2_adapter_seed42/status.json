@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "training_started": true,
+  "epochs": 100,
+  "best_epoch": 11,
+  "best_val_f1": 0.9000564658819357,
+  "initial_adapter_tensor_sha256": "c701148ce5419d14066a4691c484b0bc5014964c915e0166d2b6e08558ef1f42",
+  "optimizer_steps": 142350,
+  "amp_skipped_steps": 50,
+  "attempted_optimizer_steps": 142400,
+  "pair_views": 1139200,
+  "kind": "research",
+  "stage": "phase5_stage2_adapter",
+  "selection": "clean_corrected_val_f1",
+  "detector_frozen": true,
+  "actor_sources": 356,
+  "gate_sources": 89,
+  "test_evaluated": false,
+  "temperature_guard": {
+    "status": "completed",
+    "config_sha256": "0ee2d8259f4e74dd38bf329a890862fbaf6f53ee80a37884f517a28a84e45216",
+    "source_sha256": {
+      "scripts/__init__.py": "00241d069e1be186a6dd6f320846d7bb888099a977ef80a3c14021e1e0ee7f9f",
+      "scripts/evaluate_guarded.py": "ee204f3026208c9a9a6b39e3d23ba31bb559ca27b3a002e7ef9722d33b59eb80",
+      "scripts/temperature_guard.py": "f5693454ccbf3b1fa3188605a52b3363442432116c4958245615b2ecf9122763"
+    },
+    "state_path": "temperature_guard_resumes\\session_0001\\temperature_guard_state.json"
+  },
+  "guarded_completion_required": true
+}

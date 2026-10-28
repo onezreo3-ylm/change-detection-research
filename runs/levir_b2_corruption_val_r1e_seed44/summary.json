@@ -1,0 +1,107 @@
+{
+  "status": "completed",
+  "kind": "research",
+  "mode": "frozen_candidate_corruption_validation",
+  "candidate_mode": "b2",
+  "split": "val",
+  "batch": "R1E",
+  "r1e_approval_sha256": "b4e221b424286b12cdd49f97b4e5a66b3cf4cecaf9055efe0ab4ffb51a80feff",
+  "candidate_checkpoint_epoch": 66,
+  "selection": "clean_validation_f1_only",
+  "clean_f1": 0.9006669076235465,
+  "baseline_clean_f1": 0.9059754545786541,
+  "clean_f1_delta_candidate_minus_baseline": -0.005308546955107629,
+  "condition_count": 45,
+  "corruption_mf1": 0.8974146585825686,
+  "family_mf1": {
+    "brightness": 0.899598412410629,
+    "contrast": 0.8976493212069034,
+    "gamma": 0.8953272510512285,
+    "color_bias": 0.8929839699343791,
+    "haze": 0.8977577059817285,
+    "shadow": 0.8969326764673689,
+    "noise": 0.8999470956994022,
+    "blur": 0.8966406038102545,
+    "jpeg": 0.8998948906812256
+  },
+  "aggregation_rule": "Pool pixels within each condition, then average condition F1s equally.",
+  "baseline_corruption_mf1": 0.8794147982294924,
+  "corruption_mf1_delta_candidate_minus_baseline": 0.017999860353076214,
+  "clean_minus_corruption_mf1": 0.0032522490409778726,
+  "baseline_clean_minus_corruption_mf1": 0.026560656349161715,
+  "degradation_delta_candidate_minus_baseline": -0.023308407308183843,
+  "family_mf1_delta_candidate_minus_baseline": {
+    "brightness": -0.0045938498984986476,
+    "contrast": 0.014438817458507724,
+    "gamma": 0.015354279756060518,
+    "color_bias": 0.08435661531109273,
+    "haze": 0.03758955361461014,
+    "shadow": 0.00859552463590596,
+    "noise": -0.002535028806827655,
+    "blur": 0.013313062589905278,
+    "jpeg": -0.0045202314830672385
+  },
+  "candidate_diagnostics": {
+    "pooled_over_conditions": {
+      "counts": {
+        "tn": 2882296124,
+        "fp": 10871146,
+        "fn": 14733397,
+        "tp": 111998213
+      },
+      "pixels": 3019898880,
+      "foreground_pixels": 126731610,
+      "background_pixels": 2893167270,
+      "metrics": {
+        "precision": 0.9115227255315949,
+        "recall": 0.8837433139214439,
+        "f1": 0.8974180945587595,
+        "iou": 0.813924199308915,
+        "oa": 0.991521390610271,
+        "foreground_recall": 0.8837433139214439,
+        "background_fpr": 0.003757524189052505,
+        "foreground_fn_rate": 0.11625668607855609
+      }
+    },
+    "macro_condition_foreground_recall": 0.8837433139214437,
+    "macro_condition_background_fpr": 0.003757524189052504
+  },
+  "baseline_diagnostics": {
+    "pooled_over_conditions": {
+      "counts": {
+        "tn": 2880756144,
+        "fp": 12411126,
+        "fn": 17353176,
+        "tp": 109378434
+      },
+      "pixels": 3019898880,
+      "foreground_pixels": 126731610,
+      "background_pixels": 2893167270,
+      "metrics": {
+        "precision": 0.8980936789655862,
+        "recall": 0.8630714468158339,
+        "f1": 0.8802343397948754,
+        "iou": 0.7860879924051515,
+        "oa": 0.9901439408461253,
+        "foreground_recall": 0.8630714468158339,
+        "background_fpr": 0.0042898058915204025,
+        "foreground_fn_rate": 0.13692855318416614
+      }
+    },
+    "macro_condition_foreground_recall": 0.8630714468158343,
+    "macro_condition_background_fpr": 0.004289805891520404
+  },
+  "test_evaluated": false,
+  "training_started": false,
+  "guarded_completion_required": true,
+  "temperature_guard": {
+    "status": "completed",
+    "config_sha256": "0ee2d8259f4e74dd38bf329a890862fbaf6f53ee80a37884f517a28a84e45216",
+    "source_sha256": {
+      "scripts/__init__.py": "00241d069e1be186a6dd6f320846d7bb888099a977ef80a3c14021e1e0ee7f9f",
+      "scripts/evaluate_guarded.py": "ee204f3026208c9a9a6b39e3d23ba31bb559ca27b3a002e7ef9722d33b59eb80",
+      "scripts/temperature_guard.py": "f5693454ccbf3b1fa3188605a52b3363442432116c4958245615b2ecf9122763"
+    },
+    "completion_file": "guard_completion.json"
+  }
+}

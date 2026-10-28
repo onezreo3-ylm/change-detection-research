@@ -1,0 +1,64 @@
+{
+  "status": "completed",
+  "kind": "research",
+  "mode": "stratified_frozen_validation_v1",
+  "candidate_mode": "b1",
+  "candidate_role": "as",
+  "training_flavor": "stratified_two_view_baseline_v1",
+  "split": "val",
+  "candidate_checkpoint_epoch": 17,
+  "selection": "clean_validation_f1_only",
+  "clean_f1": 0.3623707017053397,
+  "condition_count": 45,
+  "corruption_mf1": 0.3415488874561004,
+  "family_mf1": {
+    "brightness": 0.35847899552629475,
+    "contrast": 0.33584723978157854,
+    "gamma": 0.3389993964139116,
+    "color_bias": 0.2869132309616416,
+    "haze": 0.3451159086669831,
+    "shadow": 0.3320245473664204,
+    "noise": 0.35983661799312766,
+    "blur": 0.3558650312284576,
+    "jpeg": 0.36085901916648816
+  },
+  "aggregation_rule": "Pool pixels within each condition, then average condition F1s equally.",
+  "candidate_diagnostics": {
+    "pooled_over_conditions": {
+      "counts": {
+        "tn": 5034632109,
+        "fp": 9359796,
+        "fn": 8978715,
+        "tp": 4770180
+      },
+      "pixels": 5057740800,
+      "foreground_pixels": 13748895,
+      "background_pixels": 5043991905,
+      "metrics": {
+        "precision": 0.33759293009414876,
+        "recall": 0.34695006398696043,
+        "f1": 0.34220754491815686,
+        "iou": 0.20642363515960294,
+        "oa": 0.9963741694710808,
+        "foreground_recall": 0.34695006398696043,
+        "background_fpr": 0.0018556326370630842,
+        "foreground_fn_rate": 0.6530499360130396
+      }
+    },
+    "macro_condition_foreground_recall": 0.3469500639869604,
+    "macro_condition_background_fpr": 0.0018556326370630846
+  },
+  "test_evaluated": false,
+  "training_started": false,
+  "guarded_completion_required": true,
+  "temperature_guard": {
+    "status": "completed",
+    "config_sha256": "0ee2d8259f4e74dd38bf329a890862fbaf6f53ee80a37884f517a28a84e45216",
+    "source_sha256": {
+      "scripts/__init__.py": "00241d069e1be186a6dd6f320846d7bb888099a977ef80a3c14021e1e0ee7f9f",
+      "scripts/evaluate_guarded.py": "ee204f3026208c9a9a6b39e3d23ba31bb559ca27b3a002e7ef9722d33b59eb80",
+      "scripts/temperature_guard.py": "f5693454ccbf3b1fa3188605a52b3363442432116c4958245615b2ecf9122763"
+    },
+    "completion_file": "guard_completion.json"
+  }
+}

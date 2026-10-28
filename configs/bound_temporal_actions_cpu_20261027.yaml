@@ -1,0 +1,17 @@
+kind: explicit_synthetic_bound_temporal_action_mechanism
+protocol: docs/BOUND_TEMPORAL_ACTIONS_ENGINEERING_2026-10-27.md
+output_dir: runs/bound_temporal_actions_cpu_20261027
+device: cpu
+dtype: float32
+amp: false
+engineering_only: true
+real_data_or_checkpoint: false
+seed: 20261027
+num_threads: 2
+batch_size: 1
+input_size: 256
+decoder_channels: 64
+normalization_groups: 8
+synthetic_adapter_final_weight_std: 0.01
+action_boxes: [[2, 8, 2, 8], [2, 8, 24, 30], [24, 30, 2, 8], [24, 30, 24, 30]]
+optimizer_updates: 0

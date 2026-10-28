@@ -1,0 +1,21 @@
+schema_version: 1
+scope: saved_development_results_only
+output_dir: runs/b0e_replication_analysis_20261026
+historical_r1_manifest: runs/r1e_protocol_20260926/analysis_manifest.yaml
+historical_b0e42: runs/levir_b0e_corruption_val_v1_seed42
+new_evaluation_root: runs/b0e_replication_evaluation_20261026
+seeds: [42, 43, 44]
+modes: [b0e, b1, b2]
+primary_contrast: b1_minus_b0e
+bootstrap_replicates: 20000
+bootstrap_seed: 20261026
+source_count: 64
+condition_count: 45
+test_or_martigny_access: false
+rules:
+  minimum_mean_mf1_delta: 0.005
+  minimum_positive_seeds: 2
+  minimum_mean_clean_f1_delta: -0.0005
+  minimum_mean_pooled_recall_delta: -0.001
+  maximum_mean_background_fpr_delta: 0.0001
+  require_source_paired_lower_above_zero: true

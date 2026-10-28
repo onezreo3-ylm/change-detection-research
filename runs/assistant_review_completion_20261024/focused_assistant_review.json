@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-24",
+  "reviewer": "same AI assistant, delegated completion",
+  "user_authorization": "请你直接代替我填写然后执行后续任务",
+  "independent_human": false,
+  "blind_to_prior_results": false,
+  "native_original_panels_actually_inspected": 9,
+  "cases": [
+    {"source_id": "train/8569.tif@x0_y0", "assistant_verdict": "tile_edge_context_insufficient", "evidence": "50个标注像素分为40与10两片，均触左边；第一片也触顶。两期块内主要建筑大体保留，极小边缘片段缺少完整对象上下文，不能认证为空标签或错标。", "changes_working_sheet_only": true},
+    {"source_id": "train/6514.tif@x0_y0", "assistant_verdict": "tile_edge_context_insufficient", "evidence": "8个像素位于x94—98、y0—1顶边。两期主体建筑虽大体保留，目标相关片段不具备块外上下文，无法确认新增或拆除。", "changes_working_sheet_only": true},
+    {"source_id": "train/291.tif@x0_y0", "assistant_verdict": "insufficient_visual_evidence", "evidence": "农田内部建筑群的两处标注小片位于x92—104/y45—56及x107—119/y68—82。2017可见亮色结构或施工表面，2023相应位置为较暗结构；两期都有结构迹象，现有三联图不能可靠区分新增、重建、施工完成或屋面外观差异。", "relation_to_human_verdict": "Human recorded gross consistency; assistant remains uncertain. Preserve both records; do not turn this into a confirmed false label or confirmed true omission."},
+    {"source_id": "train/3238.tif@x0_y0", "assistant_verdict": "insufficient_visual_evidence", "evidence": "公园两期植被/树冠与阴影差异显著，小区域部分遮挡。仅凭可见结构不足以确认该两片标签应清空，也不能确认是完整建筑新增/拆除。", "relation_to_human_verdict": "Human suspects label issue. No correction applied."},
+    {"source_id": "train/7284.tif@x0_y0", "assistant_verdict": "tile_edge_context_insufficient", "evidence": "65像素标签位于底边x61—75、y248—255，是裁切片段。缺少块外上下文，不能精确裁定用户所述范围错误。", "relation_to_human_verdict": "Human suspects inaccurate extent. Both are uncertainty observations."},
+    {"source_id": "train/9315.tif@x0_y0", "assistant_verdict": "suspected_image_label_timing_or_extent_disagreement", "evidence": "图块上方/右上住宅区域在2023出现不同的建筑结构与施工状态，而标签仅为左上角208像素片段。支持进一步核对影像/地图时点和标注覆盖，不能据图直接认证漏标。", "relation_to_human_verdict": "Human reports missing new buildings; the assistant records a suspected mismatch only."},
+    {"source_id": "train/7176.tif@x0_y0", "assistant_verdict": "suspected_image_label_timing_or_extent_disagreement", "evidence": "右下标注建筑在2017已可见相近轮廓或施工表面，2023屋面/周边完工程度不同。两期同轮廓不能排除施工完成或重建，故不采纳自动清空标签。", "relation_to_human_verdict": "Human proposes empty label; keep original unchanged."},
+    {"source_id": "train/3175.tif@x0_y0", "assistant_verdict": "tile_edge_context_insufficient", "evidence": "唯一标注像素在x0、y54左边界。它不能在本图内建立一个完整且可判读的建筑实例；无法以此为方法主线。", "relation_to_human_verdict": "Human recorded gross consistency; insufficient for whole-object certification."},
+    {"source_id": "train/6305.tif@x0_y0", "assistant_verdict": "tile_edge_context_insufficient", "evidence": "36像素标签位于右下角x248—255、y248—255，目标主体被截断。该图中的道路、树木和水体变化不能直接充当建筑变化真值。", "relation_to_human_verdict": "Human recorded gross consistency. C-S TP=36 is a saved prediction fact, not annotation truth."}
+  ],
+  "consensus_or_ground_truth_claim": false,
+  "original_labels_modified": false,
+  "original_human_22_verdicts_replaced": false,
+  "common_internal_omission_independently_confirmed": false,
+  "new_method_admitted": false
+}

@@ -1,0 +1,123 @@
+schema_version: 1
+date: '2026-10-25'
+workspace_root: ..
+status: frozen_protocol_implementation_pending
+protocol: docs/LEVIR_TILING_CONTEXT_PROBE_PROTOCOL_2026-10-25.md
+output_dir: runs/levir_tiling_context_probe_20261025
+managed_run_dir: runs/managed_continuation_20261024
+base_config: runs/phase2_protocol_v1_20260913/base_config.yaml
+prepared_inventory: runs/levir_region_diagnostic_20261024/prepared.json
+screen_config: configs/research_question_screen_20261025.yaml
+source_selection: reuse_exact_prepared_train16
+source_split: train
+source_count: 16
+source_size: 1024
+models:
+  b0e:
+    job_config: configs/evaluate_candidate_b0e_val_v1_seed42.yaml
+    prepared_key: b0e
+  b1_42:
+    job_config: configs/evaluate_candidate_b1_val_v1_seed42.yaml
+    prepared_key: b1_42
+runtime:
+  python: E:/Download/anaconda3/envs/geosa-basa/python.exe
+  device: cuda:0
+  gpu_uuid: GPU-8ada1895-7628-bb88-1dda-c57679117fa2
+  amp: true
+  amp_dtype: float16
+  memory_format: channels_last
+  model_mode: eval
+  batch_size_all_comparison_arms: 4
+  archived_grid_replay_batch_size: 32
+  automatic_batch_reduction_or_precision_fallback: false
+  max_concurrent_gpu_workers: 1
+arms:
+  grid256:
+    window_size: 256
+    origins_yx_1d: [0, 256, 512, 768]
+    aggregation: none_unique_coverage
+  alternate_origins256:
+    window_size: 256
+    origins_yx_1d: [128, 384, 640]
+    aggregation: none_unique_coverage
+    support_xyxy_exclusive: [128, 128, 896, 896]
+  overlap256:
+    window_size: 256
+    origins_yx_1d: [0, 128, 256, 384, 512, 640, 768]
+    aggregation: uniform_arithmetic_mean_probability_float32_before_threshold
+  context512:
+    window_size: 512
+    origins_yx_1d: [0, 256, 512]
+    aggregation: uniform_arithmetic_mean_probability_float32_before_threshold
+evaluation:
+  threshold: 0.5
+  threshold_comparison: greater_equal
+  probability_conversion: float32_logits_sigmoid_matching_archived_metric
+  common_support_xyxy_exclusive: [128, 128, 896, 896]
+  alternate_origins_outside_support_scored: false
+  report_full_support_for_full_coverage_arms_separately: true
+  primary_grid_binary_disagreement_fraction: true
+  probability_absolute_difference_mean_and_p99: true
+  report_all_pooled_tp_fp_fn_tn_f1_recall_fpr: true
+  paired_per_source_counts_and_all_arms_saved: true
+  zero_denominator: null
+  seed_or_geographic_independence_claim: false
+engineering:
+  exact_archived_grid_binary_and_confusion_replay_required: true
+  replay_batch4_and_batch32_difference_measured: true
+  same_batch4_across_all_primary_comparison_arms: true
+  temporal_swap_duplicate_checks: true
+  model_parameters_and_buffers_unchanged: true
+  input_pixels_sha256_and_absolute_coordinate_alignment_verified: true
+  coverage_counts_finite_probabilities_and_mean_before_threshold_verified: true
+  implementation_snapshot_and_tests_required_before_real_probe: true
+  largest_window_pilot_sources: 1
+  largest_window_pilot_pairs_upper_bound: 16
+resource_gate:
+  question: whether_window_placement_has_a_measurable_effect_beyond_numeric_batch_control
+  alternate_grid_disagreement_minimum_fraction: 0.001
+  numeric_control_multiple: 10.0
+  qualifying_source_count_minimum: 4
+  both_models_required: true
+  pass_only_admits_followup_protocol_discussion: true
+  no_pass_or_ordinary_control_explains_effect_stops_method_expansion: true
+  causal_attribution_to_groupnorm_allowed: false
+budget:
+  whole_new_probe_gpu_process_seconds_maximum: 3600
+  main_worker_seconds_maximum: 1800
+  engineering_pilot_seconds_maximum: 900
+  primary_patch_pair_predictions_maximum: 3168
+  tile256_pixel_equivalent_predictions: 4032
+  shared_ledger: runs/managed_continuation_20261024/compute_ledger.json
+  prior_charged_seconds_at_freeze: 30708.1026326
+  original_batch_upper_bound_seconds: 172800
+  reset_or_auto_extension: false
+temperature_guard:
+  schema_version: 1
+  nvidia_smi: C:/Windows/System32/nvidia-smi.exe
+  gpu_index: 0
+  gpu_uuid: GPU-8ada1895-7628-bb88-1dda-c57679117fa2
+  poll_seconds: 2
+  confirmation_seconds: 1
+  confirmation_samples: 3
+  max_sensor_failures: 3
+  sensor_timeout_seconds: 1
+  confirmed_pause_c: 85
+  immediate_pause_c: 86
+process_supervision:
+  independent_cpu_owner_required: true
+  independent_temperature_guard_required: true
+  bind_pid_and_creation_time: true
+  wall_budget_enforced_outside_gpu_worker: true
+  preserve_failure_scene_and_exit_code: true
+constraints:
+  optimizer_updates: 0
+  new_training_admitted: false
+  new_method_admitted: false
+  raw_splits_allowed: [train]
+  raw_validation_test_or_martigny_access: false
+  image_geometry_transform_or_resampling: false
+  same_absolute_coordinates_for_both_dates: true
+  normalization_architecture_or_weight_replacement: false
+  old_scores_protocol_or_failed_gates_overwritten: false
+  automatic_retry: false

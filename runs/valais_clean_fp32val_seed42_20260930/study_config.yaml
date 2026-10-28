@@ -1,0 +1,25 @@
+schema_version: 1
+kind: independent_clean_numeric_protocol
+name: valais_clean_amp_train_fp32_val_seed42
+base_config: valais_clean_development_seed42.yaml
+base_config_sha256: 7a4931665591a24e005b7ea3b42b1cb88855accc52343c8642ad4efc5ceea6ab
+source_data_audit: ../runs/valais_clean_development_seed42/data_audit.json
+source_data_audit_sha256: 670d7d29361125e291d637f9fb9be44df31b67912dc2af837d719f6c4ae2cd87
+numeric_replay_result: ../runs/valais_numeric_replay_epoch34_20260930/replay.json
+numeric_replay_result_sha256: be41f37c234f9bafbde5162cac926205178ff830c0662f231bdc5fd3c1ad629d
+output_dir: ../runs/valais_clean_fp32val_seed42_20260930
+training_amp: true
+validation_amp: false
+seed: 42
+epochs: 100
+selection: clean_val_f1_at_threshold_0_5
+test_access: forbidden
+guard:
+  gpu_index: 0
+  gpu_uuid: GPU-8ada1895-7628-bb88-1dda-c57679117fa2
+  confirmed_pause_c: 85
+  immediate_pause_c: 86
+  poll_seconds: 10
+  confirmation_seconds: 5
+  confirmation_samples: 3
+  max_sensor_failures: 3

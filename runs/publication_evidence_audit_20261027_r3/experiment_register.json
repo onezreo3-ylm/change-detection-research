@@ -1,0 +1,170 @@
+{
+  "kind": "retrospective_documented_experiment_family_register",
+  "created_date": "2026-10-27",
+  "complete_invocation_census": false,
+  "pre_registration_claim": false,
+  "raw_data_or_test_read": false,
+  "new_inference_or_resampling": false,
+  "families": [
+    {
+      "id": "levir_clean_baseline",
+      "report": "docs/EXPERIMENT_PLAN_2026-09-12.md",
+      "scope": "original LEVIR-CD; seed42; original clean model and historical test",
+      "data_role": "train445; development val64; test128 already consumed historically",
+      "disposition": "completed_historical_baseline",
+      "limit": "Original B0 exposure differs from matched B0-E; no new test comparison."
+    },
+    {
+      "id": "levir_seed42_frozen_baselines",
+      "report": "docs/STAGE4_FROZEN_BASELINE_RESULTS_2026-09-15.md",
+      "scope": "B0/B0-E/B1/B2; seed42; shared ResNet18",
+      "data_role": "original development val64; clean and45 fixed corruption conditions",
+      "disposition": "completed_B1_retained_for_development",
+      "limit": "Single seed does not establish augmentation repeatability or a new mechanism."
+    },
+    {
+      "id": "fixed_actual_action_utility",
+      "report": "docs/PHASE5_6_RESULTS_2026-09-22.md",
+      "scope": "actor356 sources; gate89 sources; one actor/adapter seed42",
+      "data_role": "actor train; gate diagnostic; clean val used for actor/adapter selection",
+      "disposition": "completed_action_space_screen_passed",
+      "limit": "Label-informed loss choice is diagnostic and not an F1 upper bound or deployable policy."
+    },
+    {
+      "id": "whole_tile_selectors",
+      "report": "docs/PHASE7_RESULTS_2026-09-23.md",
+      "scope": "four matched selector targets; U/H calibrations; eight policies",
+      "data_role": "gate fit71/calibration18; development val64",
+      "disposition": "completed_all_eight_failed_stop_rule",
+      "limit": "Better-constant rule was declared; selected G0 identity was not fixed in advance."
+    },
+    {
+      "id": "b1_b2_three_seed_replication",
+      "report": "docs/R1_R1E_REPLICATION_RESULT_2026-09-26.md",
+      "scope": "B1/B2 seeds42/43/44; four new trainings and archived seed42",
+      "data_role": "train445; development val64; no new test",
+      "disposition": "completed_retain_B1",
+      "limit": "Interval crossing zero does not show equivalence; only three seeds and conditional source interval."
+    },
+    {
+      "id": "final_preselected_b1_test",
+      "report": "docs/FINAL_B1_HELDOUT_TEST_V1R2_RECOVERED_RESULT_2026-09-26.md",
+      "scope": "one preselected B1 seed42 checkpoint; historical single inference",
+      "data_role": "consumed LEVIR-test128; closed to this continuation",
+      "disposition": "historical_V1_failed_bookkeeping_V1R2_read_only_recovery",
+      "limit": "Historical single-model description; no new inference or B0-E/B2 test comparison."
+    },
+    {
+      "id": "valais_clean_baseline",
+      "report": "docs/VALAIS_BASELINE_CORRUPTION_RESULTS_2026-10-02.md",
+      "scope": "original full FP32 baseline; seed42",
+      "data_role": "Sion train; Sierre development; Martigny closed",
+      "disposition": "completed_saved_audit_and_guarded_validation",
+      "limit": "Annotation ambiguity unresolved; low model scores do not establish label errors."
+    },
+    {
+      "id": "valais_matched_augmentation",
+      "report": "docs/VALAIS_MATCHED_RESULTS_AND_CLEAN_BASELINE_NEXT_2026-10-04.md",
+      "scope": "B0/B0-E/B1; seed42; original unscreened data",
+      "data_role": "Sion train; Sierre clean and45 conditions; Martigny closed",
+      "disposition": "completed_B1_joint_effectiveness_gates_failed",
+      "limit": "Empty-source FPR differs from all-background FPR used in LEVIR."
+    },
+    {
+      "id": "marginal_matched_pairing_probe",
+      "report": "docs/COUPLING_P0_RESULTS_2026-10-07.md",
+      "scope": "three frozen models;64 enriched train sources;four families at1/3/5",
+      "data_role": "Sion train-only diagnostic",
+      "disposition": "completed_screen_passed_not_method_admission",
+      "limit": "Empirical marginal matching and D/O contrasts do not prove a unique causal mechanism."
+    },
+    {
+      "id": "stratified_sampling_controls",
+      "report": "docs/P1_FEASIBILITY_RESULTS_2026-10-20.md",
+      "scope": "C-S/A-S each100epochs seed42; matched stratified stream",
+      "data_role": "Sion train; Sierre development45; fixed train residual probe",
+      "disposition": "completed_sampling_and_augmentation_joint_gates_failed",
+      "limit": "Sampling simultaneously changes exposure, batches and BN; no isolated causal attribution."
+    },
+    {
+      "id": "bn_statistics_intervention",
+      "report": "docs/FEASIBILITY_SCREEN_RESULTS_2026-10-20.md",
+      "scope": "B0-E/C-S/A-S; uniform and stratified BN calibration; no optimizer updates",
+      "data_role": "disjoint calibration/probe train file names;64 enriched probe sources",
+      "disposition": "completed_no_consistent_recovery",
+      "limit": "Name-disjoint train subsets are not independent geography; limited calibration does not rule out BN effects."
+    },
+    {
+      "id": "c5_r5_matched_feasibility",
+      "report": "docs/C5R5_FEASIBILITY_RESULTS_2026-10-22.md",
+      "scope": "two40epoch seed42 BF16 five-view controls",
+      "data_role": "Sion train; Sierre development45; fixed train residual diagnostic",
+      "disposition": "completed_R5_joint_effectiveness_gates_failed",
+      "limit": "Smaller all-pixel interaction does not offset worse foreground and task outcomes; no further mechanism admitted."
+    },
+    {
+      "id": "bounded_human_review_ingest",
+      "report": "docs/HUMAN_REVIEW_RESULTS_2026-10-24.md",
+      "scope": "24 fixed sources; user annotations and focused assistant review",
+      "data_role": "preserved train review package; no new raw validation/test read",
+      "disposition": "completed_not_independent_truth_certification",
+      "limit": "Reviewers had prior context; no independent building polygons or adjudicated new labels."
+    },
+    {
+      "id": "connected_label_region_diagnostic",
+      "report": "docs/LEVIR_REGION_DIAGNOSTIC_RESULTS_2026-10-24.md",
+      "scope": "frozen B0-E and three B1 seeds; label-region overlap",
+      "data_role": "saved train/development maps; original splits",
+      "disposition": "completed_resource_gate_failed",
+      "limit": "Label connected regions are not verified building instances; source spatial independence unknown."
+    },
+    {
+      "id": "conditional_tail_risk_control",
+      "report": "docs/LEVIR_TAIL_RISK_RESULTS_2026-10-25.md",
+      "scope": "one seed42 full matched tail-reweighting candidate",
+      "data_role": "original train445 and development val64; old test closed",
+      "disposition": "completed_clean_overall_tail_joint_gates_failed",
+      "limit": "Slight worst-condition point gains cannot rescue joint failure or refute CVaR generally."
+    },
+    {
+      "id": "source_metadata_admission",
+      "report": "docs/LEVIR_PROVENANCE_ADMISSION_RESULTS_2026-10-25.md",
+      "scope": "official fixed-commit metadata;509 train/val names",
+      "data_role": "public coordinate metadata only; no raw test",
+      "disposition": "nominal_mapping_retained_independent_parent_groups_not_admitted",
+      "limit": "Coordinates and distinct names do not establish parent-scene independence."
+    },
+    {
+      "id": "tiling_context_probe",
+      "report": "docs/LEVIR_TILING_CONTEXT_RESULTS_2026-10-25.md",
+      "scope": "B0-E/B1 seed42;16 fixed previously seen train sources",
+      "data_role": "train-only native grid/context/overlap/origin probe",
+      "disposition": "completed_context_difference_not_generalization_claim",
+      "limit": "Context and normalization statistics changed together; tiling phenomenon already has direct prior art."
+    },
+    {
+      "id": "native_window_training_controls",
+      "report": "docs/LEVIR_NATIVE_WINDOW_TRAINING_RESULTS_2026-10-26.md",
+      "scope": "native512/grouped256;two100epoch seed42 arms",
+      "data_role": "original train445 and unchanged256-input development val64",
+      "disposition": "completed_accuracy_and_FPR_gates_failed",
+      "limit": "One seed and native-window protocol; no positive context-method or GN causal claim."
+    },
+    {
+      "id": "missing_b0e_replication",
+      "report": "docs/B0E_REPLICATION_PROTOCOL_2026-10-26.md",
+      "scope": "B0-E seeds43/44; serial100epochs; identical reviewed baseline",
+      "data_role": "original train445 and development val64; no old test",
+      "disposition": "running_final_scores_pending",
+      "limit": "Intermediate epochs excluded; two final45-condition evaluations and original three-seed gate remain pending."
+    },
+    {
+      "id": "independent_dataset_admission_screen",
+      "report": "docs/SECOND_QUARANTINE_OUTCOME_2026-10-27.md",
+      "scope": "S2Looking/SECOND primary metadata; bounded author archive access",
+      "data_role": "public text/outer directory and partial train container; no image/label decode",
+      "disposition": "not_admitted_SECOND_transfer_quota_failure_preserved",
+      "limit": "Download/schema/usage/provenance/QA gaps open; not independent external model evidence."
+    }
+  ]
+}

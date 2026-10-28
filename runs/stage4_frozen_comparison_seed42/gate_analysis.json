@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "kind": "research_analysis",
+  "split": "val",
+  "seed": 42,
+  "test_evaluated": false,
+  "condition_count": 45,
+  "source_pair_count": 64,
+  "aggregation_rule": "Pool pixels within each condition, compute condition F1, then average the 45 condition F1 values equally.",
+  "visual_acceptance": {
+    "status": "approved",
+    "visual_review": "passed",
+    "approved_for": "validation_only",
+    "sha256": "02db3648fb34d8913f810ce51de98ade86f8448000a698f4bfdc23373d34b3dc"
+  },
+  "input_sha256": {
+    "B0": {
+      "summary.json": "24cfe590f4e2479a5566e8c491907466b4dd9950809c1de99f8c3223fc9ecaa6",
+      "conditions.json": "520995e8e33d195de87fd9aca5beef227a2d8a85e120f61990dc01e817aeeb40",
+      "clean_metrics.json": "d10258d7d655b52e62f1e39e6e6be0ac62f2df5c9f62cde41740dee9b4835b22",
+      "guard_completion.json": "a84e2f1469b0b4277e420397b09466d60e3343a3d941bd4372cec684c678d637"
+    },
+    "B1": {
+      "summary.json": "9c1b97ba4bd57d374fa9138a87e7ed9ff6c96a76d5cae1a18c9264462a03da5c",
+      "conditions.json": "7babceefab6ff8f8844ccd0b19ac74ac3cfaf333d28218d2c1c8b245e7bcb3e7",
+      "clean_metrics.json": "973e50bbb8c7cd54aef60cbb1cff13ab6c1784b0333e120cb42ee01ee470df2c",
+      "paired_by_source.json": "01ef1325c818a56a9de60c4e165e3a8eae6011808f52c426a25739b5cdb9323b",
+      "guard_completion.json": "27c7d508239dc23c9142488b32e9375a4b20f12e182cc79bdb5b14e2fbfc2cd1"
+    },
+    "B2": {
+      "summary.json": "531a212217968f18a16ccb7e02ed5d8f2196f1e579c5e14e9779d2d0e4cf4c81",
+      "conditions.json": "f92e0fa92eb97a272f73cbce145b94fc2ff0ddad49274ff3a4e91de2c425b057",
+      "clean_metrics.json": "fdc3ee42cecd532afda85f1ea268b59a8f2f4a1c47de08cb0c067fff828723a3",
+      "paired_by_source.json": "19ff89672463bffd23c9a96bf3ddd2276b6ffb0ff5f0c4b780de5c2ee9162e9b",
+      "guard_completion.json": "ece7506f8195eb826698a1b75497a96662627a724155e7403ff8b41715d552cd"
+    },
+    "B0-E": {
+      "summary.json": "2943b5fffc2745b671b9fffe81939b593f302d62e56e6c9287863edecebe17cc",
+      "conditions.json": "5f9482a0eab8ec9b635de9686d124c94983aaf169efd6dae755cd9e23e029d34",
+      "clean_metrics.json": "6bc10b6cca1670b4d7c2457533896c6f73f2c0a3a830953e1c30cc698de9d51b",
+      "paired_by_source.json": "31e45fd51658d1a55bd3ea2bac5084f705398f7e5f58c256b3dc19f663a5cee4",
+      "guard_completion.json": "36bdd4f0af08a2f544fb13b373d678bf7820485f947a199acf3a264df1c21a06"
+    }
+  },
+  "training_comparability": {
+    "initial_model_tensor_sha256": "eb4fa2550e47d732c5b21acb6899ba5539856bee35b532da58006f56108001a8",
+    "pair_views_each": 1424000,
+    "source_exposures_each": 712000,
+    "attempted_optimizer_steps_each": 178000,
+    "B1": {
+      "optimizer_steps": 177936,
+      "amp_skipped_steps": 64,
+      "combined_exposure_stream_sha256": "51f98534b6e01a4ff7a7ee0b6b308b70014739ff3edc00ff76348360eda91187"
+    },
+    "B2": {
+      "optimizer_steps": 177933,
+      "amp_skipped_steps": 67,
+      "combined_exposure_stream_sha256": "51f98534b6e01a4ff7a7ee0b6b308b70014739ff3edc00ff76348360eda91187"
+    },
+    "B0-E": {
+      "optimizer_steps": 177938,
+      "amp_skipped_steps": 62,
+      "combined_exposure_stream_sha256": "7127596456794ecb77a9bf789ddeed2778c18d75f6a247a759b6d523e0002492"
+    },
+    "B1_B2_same_corruption_stream": true,
+    "all_attempted_step_counts_equal": true,
+    "all_test_evaluated_false": true
+  },
+  "validation": {
+    "B0": {
+      "clean_f1": 0.9059754545786541,
+      "corruption_mf1": 0.8794147982294924,
+      "clean_minus_corruption_mf1": 0.026560656349161715,
+      "pooled_foreground_recall": 0.8630714468158339,
+      "pooled_background_fpr": 0.0042898058915204025,
+      "net_fp_vs_repeated_clean": 1638981,
+      "net_fn_vs_repeated_clean": 4490151
+    },
+    "B1": {
+      "clean_f1": 0.9060728685624768,
+      "corruption_mf1": 0.9023764360699057,
+      "clean_minus_corruption_mf1": 0.0036964324925711223,
+      "corruption_mf1_delta_vs_B0": 0.022961637840413274,
+      "pooled_foreground_recall": 0.896359148281948,
+      "pooled_background_fpr": 0.003955371719658643,
+      "net_fp_vs_repeated_clean": 413962,
+      "net_fn_vs_repeated_clean": 507167
+    },
+    "B2": {
+      "clean_f1": 0.9038268270904687,
+      "corruption_mf1": 0.900742077324794,
+      "clean_minus_corruption_mf1": 0.0030847497656746325,
+      "corruption_mf1_delta_vs_B0": 0.021327279095301632,
+      "pooled_foreground_recall": 0.8923001214929724,
+      "pooled_background_fpr": 0.003896136292181959,
+      "net_fp_vs_repeated_clean": 252889,
+      "net_fn_vs_repeated_clean": 497009
+    },
+    "B0-E": {
+      "clean_f1": 0.9039766971440153,
+      "corruption_mf1": 0.876716007244136,
+      "clean_minus_corruption_mf1": 0.027260689899879287,
+      "corruption_mf1_delta_vs_B0": -0.002698790985356414,
+      "pooled_foreground_recall": 0.8524890988128376,
+      "pooled_background_fpr": 0.003945219524068513,
+      "net_fp_vs_repeated_clean": 1384490,
+      "net_fn_vs_repeated_clean": 4760494
+    }
+  },
+  "B2_by_level": {
+    "1": {"mf1": 0.9036534917735148, "clean_minus_mf1": 0.00017333531695384874, "net_fp": 5961, "net_fn": 3033},
+    "2": {"mf1": 0.9029181118519509, "clean_minus_mf1": 0.0009087152385177655, "net_fp": 22889, "net_fn": 22793},
+    "3": {"mf1": 0.9015166941075452, "clean_minus_mf1": 0.002310132982923485, "net_fp": 44328, "net_fn": 69315},
+    "4": {"mf1": 0.8994561005766959, "clean_minus_mf1": 0.0043707265137727935, "net_fp": 75504, "net_fn": 137840},
+    "5": {"mf1": 0.8961659883142618, "clean_minus_mf1": 0.007660838776206935, "net_fp": 104207, "net_fn": 264028}
+  },
+  "B2_worst_conditions": [
+    {"condition": "color_bias_l5", "f1": 0.8900411311359405, "clean_minus_f1": 0.013785695954528165, "net_fp": 21868, "net_fn": 51832},
+    {"condition": "gamma_l5", "f1": 0.8918209989485907, "clean_minus_f1": 0.012005828141878006, "net_fp": 20220, "net_fn": 44236},
+    {"condition": "color_bias_l4", "f1": 0.8943142878803874, "clean_minus_f1": 0.009512539210081328, "net_fp": 23443, "net_fn": 29089},
+    {"condition": "blur_l5", "f1": 0.894974666366827, "clean_minus_f1": 0.0088521607236417, "net_fp": 7568, "net_fn": 38612},
+    {"condition": "shadow_l5", "f1": 0.895455205198085, "clean_minus_f1": 0.008371621892383718, "net_fp": 5705, "net_fn": 37706}
+  ],
+  "B2_source_spread": {
+    "sources_with_positive_net_fp": 42,
+    "sources_with_positive_net_fn": 49,
+    "sources_with_both": 38,
+    "highest_net_fp_sources": ["val/val_51.png", "val/val_21.png", "val/val_17.png", "val/val_13.png", "val/val_52.png"],
+    "highest_net_fn_sources": ["val/val_25.png", "val/val_17.png", "val/val_39.png", "val/val_38.png", "val/val_52.png"]
+  },
+  "paired_bootstrap": {
+    "unit": "original validation image pair",
+    "method": "Sample 64 source pairs with replacement using a multinomial draw; pool pixels within every resampled condition, compute each condition F1, and average conditions equally.",
+    "seed": 20260915,
+    "replicates": 20000,
+    "interval": "percentile 95%",
+    "B2_clean_minus_corruption_mf1": [0.0024114941808662223, 0.0030804172141805086, 0.0038990962799902106],
+    "B2_net_fp_vs_repeated_clean": [149902.5, 251150.5, 363414.6749999997],
+    "B2_net_fn_vs_repeated_clean": [356250.45, 493713.0, 652981.7999999999],
+    "B2_L1_L3_clean_minus_mf1": [0.0007771886061841676, 0.001128775723500841, 0.0015398858325206654],
+    "B2_L4_L5_clean_minus_mf1": [0.004718340051515721, 0.006008449634467894, 0.007598258592091408],
+    "B2_L5_clean_minus_mf1": [0.005847005943547615, 0.007658834295862782, 0.009789188218687765],
+    "B2_corruption_mf1_minus_B0": [0.016270950220897758, 0.02135602234071321, 0.027203949403353356],
+    "B2_corruption_mf1_minus_B0_E": [0.019058275124070066, 0.02403283436848841, 0.030149013393734783],
+    "B1_corruption_mf1_minus_B2": [-0.0008166181354806179, 0.001599952791603465, 0.004265561155662334]
+  },
+  "condition_comparison": {
+    "B1_wins_vs_B2": 43,
+    "B2_wins_vs_B1": 2,
+    "ties": 0,
+    "interpretation": "B2 reduces the clean-to-corruption gap slightly but does not improve absolute clean F1 or corruption mF1 over B1; the paired source CI for B1 minus B2 crosses zero."
+  },
+  "stage4_gate": {
+    "question": "Does B2 retain clear false-positive or false-negative degradation at visually accepted, non-geometric validation severities?",
+    "stable_positive_overall_gap": true,
+    "stable_positive_net_fp": true,
+    "stable_positive_net_fn": true,
+    "stable_positive_L4_L5_gap": true,
+    "decision": "pass_to_separately_reviewed_stage5_6_mechanism_protocol",
+    "reason": "The paired source intervals exclude zero for B2's overall, L4-L5, FP, and FN residuals; residuals are spread over many original image pairs and are not explained by clean double-view exposure.",
+    "scope": "This authorizes protocol design and a separately reviewed stage 5-6 action-benefit diagnostic only. It does not establish that a correction action is useful, does not authorize stage 7-10, and does not authorize held-out test evaluation."
+  }
+}

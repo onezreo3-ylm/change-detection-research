@@ -1,0 +1,81 @@
+{
+  "status": "first_epoch_train_val_and_checkpoint_commit_verified",
+  "checked_utc": "2026-10-25T08:31:41.553170+00:00",
+  "checked_beijing": "2026-10-25T16:31:41.553170+08:00",
+  "arm": "native512",
+  "first_epoch_training_attempts": 1780,
+  "first_epoch_successful_updates": 1780,
+  "first_epoch_amp_skips": 0,
+  "first_epoch_group_order_exact": true,
+  "first_epoch_tile256_equivalent_pair_views": 14240,
+  "original_val_samples": 1024,
+  "original_val_pixels": 67108864,
+  "val_f1": 0.6733628939366202,
+  "checkpoint_metadata": {
+    "best.pt": {
+      "bytes": 137281795,
+      "modified_unix": 1792916887.2100573
+    },
+    "last.pt": {
+      "bytes": 137281795,
+      "modified_unix": 1792916887.3403645
+    }
+  },
+  "checkpoint_verification_scope": "Complete trainer commit, file metadata and saved JSON counts; no concurrent model load or evaluation. Pilot already verified complete checkpoint restore exactly.",
+  "worker_identity_exact_int64": {
+    "process_id": 35656,
+    "creation_time_ticks": 134373901870793734,
+    "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+    "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision worker --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode native512",
+    "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+  },
+  "owner_identity_exact_int64": {
+    "process_id": 9584,
+    "creation_time_ticks": 134373901857985370,
+    "executable": "E:\\Download\\anaconda3\\envs\\geosa-basa\\python.exe",
+    "command_line": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -u -m scripts.native_window_supervision owner --runtime \"E:\\new research\\detection\\configs\\levir_native_window_runtime_20261025.yaml\" --mode native512",
+    "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+  },
+  "live_progress": {
+    "stage": "native512_train",
+    "epoch": 2,
+    "step": 1360,
+    "steps_in_stage": 1780,
+    "completed_training_attempts": 3140,
+    "amp_skips_in_stage": 3,
+    "consecutive_amp_skips": 0,
+    "amp_scale": 16384.0,
+    "numeric_alert": false,
+    "updated_utc": "2026-10-25T08:31:41.422510+00:00",
+    "stage_elapsed_seconds": 214.07800000000861,
+    "actual_source_batch_shape": [
+      1,
+      1,
+      512,
+      512
+    ]
+  },
+  "guard": {
+    "status": "monitoring",
+    "role": "guard",
+    "updated_utc": "2026-10-25T08:31:40.675791+00:00",
+    "gpu": {
+      "uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+      "temperature_c": 80,
+      "utilization_percent": 91,
+      "memory_used_mib": 2753
+    },
+    "temperature_c": 80,
+    "maximum_observed_temperature_c": 80,
+    "sensor_error": null,
+    "decision": "ok"
+  },
+  "watchdog": {
+    "status": "monitoring",
+    "role": "watchdog",
+    "updated_utc": "2026-10-25T08:31:41.179146+00:00"
+  },
+  "training_completed": false,
+  "new_training_gain_claim": false,
+  "test_or_martigny_access": false
+}

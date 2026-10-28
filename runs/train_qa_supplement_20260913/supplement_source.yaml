@@ -1,0 +1,23 @@
+# QA-only addition: original candidate settings and artifacts are never edited.
+# Prespecified filename/hash selection is independent of images, labels and scores.
+schema_version: 1
+name: train_qa_supplement_20260913
+status: awaiting_visual_review
+protocol_config: corruption_protocol_v1.yaml
+reference_preparation: ../runs/phase2_protocol_v1_20260913
+expected_protocol_sha256: 98f5e62efb60fa0cefd17c0191522cb11b0083755f1215484206a8b5e8469296
+expected_checkpoint_sha256: 033a0aa14becabc97c60b368b6d7c2e49bc8b386daa61dcc77e761c81ae747f3
+output_dir: ../runs/train_qa_supplement_20260913
+selection:
+  seed: 730194
+  skip_source_pairs: 4
+  source_pairs: 12
+  tiles_per_source: 16
+rendering:
+  group_size: 4
+  row_rotations: [0, 1]
+  preview_levels: [1, 3, 5]
+# Exact runtime versions/codec identities are required; no alternate-environment fallback.
+verification:
+  frozen_source_count: 15
+  prepare_environment_fields: [python, executable, platform, numpy, pillow, jpeg_codec, libjpeg_turbo]

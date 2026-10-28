@@ -1,0 +1,31 @@
+schema_version: 1
+kind: preliminary_natural_change_train_review
+workspace_root: ..
+observations: runs/natural_change_review_20261022/preliminary_observations.json
+previous_samples: runs/research_direction_screen_20261022/review_samples.json
+previous_preparation: runs/research_direction_screen_20261022/train_review_preparation.json
+previous_closeout: runs/research_direction_screen_20261022/screen_closeout.json
+previous_blind_template: runs/research_direction_screen_20261022/review_blind.csv
+output_dir: runs/natural_change_review_20261022
+expected_sources: 24
+expected_positive_sources: 16
+expected_empty_sources: 8
+allowed_preliminary_verdicts:
+  - observable_change_consistent_with_label
+  - suspected_image_label_timing_or_extent_disagreement
+  - tile_edge_context_insufficient
+  - insufficient_visual_evidence
+  - unchanged_consistent_with_empty_label
+reviewer_is_independent: false
+independent_annotation_verdict: pending
+model_counts_are_not_annotation_truth: true
+new_training: false
+new_model_inference: false
+raw_validation_or_test_access: false
+chat_transport:
+  max_images_per_call: 2
+  budget_data_url_bytes: 10485760
+  prior_estimated_bytes: 2368992
+  new_estimated_bytes: 6934460
+  cumulative_estimated_bytes: 9303452
+  add_more_images_in_current_history: false

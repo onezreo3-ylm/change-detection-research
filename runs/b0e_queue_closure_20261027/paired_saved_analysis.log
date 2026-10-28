@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\new research\detection\scripts\analyze_b0e_replication.py", line 256, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "E:\new research\detection\scripts\analyze_b0e_replication.py", line 252, in main
+    else:result=analyze(a.manifest)
+                ^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\scripts\analyze_b0e_replication.py", line 237, in analyze
+    write_new(out/'analysis.json',result)
+  File "E:\new research\detection\scripts\analyze_b0e_replication.py", line 32, in write_new
+    json.dump(value,f,indent=2,allow_nan=False);f.write('\n')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Download\anaconda3\envs\geosa-basa\Lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "E:\Download\anaconda3\envs\geosa-basa\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "E:\Download\anaconda3\envs\geosa-basa\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "E:\Download\anaconda3\envs\geosa-basa\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "E:\Download\anaconda3\envs\geosa-basa\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "E:\Download\anaconda3\envs\geosa-basa\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "E:\Download\anaconda3\envs\geosa-basa\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool_ is not JSON serializable

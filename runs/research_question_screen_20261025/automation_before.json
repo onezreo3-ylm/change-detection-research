@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "id": "levir-cd",
+  "kind": "heartbeat",
+  "name": "变化检测研究与训练托管",
+  "prompt": "接续当前聊天在 E:/new research/detection 的研究托管。用户已授权持续推进并每小时检查；不新建或返回旧聊天，用户最新指令优先。\n\n当前已授权的训练、评价和一次来源元数据审查均已完成，无活跃GPU worker。先紧凑读取 runs/managed_continuation_20261024/status.json；当前 phase=authorized_work_complete_waiting_verified_source_lineage。若没有用户新指令或新提供的可核实资源，直接安静结束；不为同一缺项重复检查、联网、写重复状态、重新选题或通知。保持每小时调度，不能把等待外部资源称为仍在训练，也不能为占用GPU追加实验。不要自行联系发布者或他人。\n\n最新完成的是 configs/levir_provenance_admission_screen_20261025.yaml 对应的有界元数据审查。需要回看时读 docs/LEVIR_PROVENANCE_ADMISSION_RESULTS_2026-10-25.md、runs/levir_provenance_admission_screen_20261025/admission.json、verification.json 和 artifact_sha256.json。官方STANet固定commit6152d72f55df00a43d341580970be7a58c6b0cd5，原train445/开发val64共509/509文件名精确对应官方JSON和GeoJSON，无缺失或重复。只准入名义位置查询表，不能把它当已核实的独立来源分组或新训练准入：没有采集区域ID、两期父场景ID、日期和切片血缘；GeoJSON Polygon还缺外层ring数组，坐标位数不是精度保证。公开合并元数据传输及哈希已披露，只保存/分析509白名单记录；未访问封闭本地test/Martigny原始数据或分析其空间关系。未聚类、重划、模型加载或GPU计算，项目源码无变更，未重复全量测试。\n\n唯一不可替代资源：由发布者或原始采集血缘保管者确认的509个原train/开发val文件名到原采集区域及两期父场景ID的对应表，说明共享父场景与切片关系，并附可追溯版本或确认依据。收到这份资源时，只按白名单做一次有界元数据真实性/schema/覆盖与歧义核查；不得由AI、位置聚类、编号相似或用户凭印象补造。未收到时不要反复尝试同一缺项。未来训练仍须有另一个可验证问题、合格数据、同架构普通对照、近邻差异和新的明确有限协议。\n\n旧固定q=0.5普通B1尾部控制已按原门正式结束；报告 docs/LEVIR_TAIL_RISK_RESULTS_2026-10-25.md、runs/levir_tail_risk_evaluation_20261025/verification_completed.json 和 analysis.json 均封存。100轮178000尝试=177934成功+66次原FP16 AMP跳步，1424000有效pair views；原45条件/64源/47104个真实pair预测和20000次共享源对bootstrap完成，worker/owner退出0，guard/watchdog正常结束。7项门仅召回保护通过：clean差-0.002035496、mean差-0.001350198、tail5差+0.000134989（需>=+0.002）、最差单条件差-0.000026632、FPR差+0.000113266（需<=+0.0001），tail5增量95%区间[-0.001697609,+0.001846092]跨0。471项全量测试和原架构CPU synthetic smoke通过。不得再启动、评分、bootstrap、q/λ/增强/阈值搜索或43/44复现，不再监控正常退出的旧PID。旧C5/R5及M5/K5/W5/P2保持结束。\n\nruns/managed_continuation_20261024/compute_ledger.json 仍保守累计30708.1026326秒约8.53小时（含CPU/测试/I/O，非纯kernel）；原48小时账本继续保留，同一候选24小时不重置。首次Windows共享竞争失败201步/47.906秒现场保留且计费，未并入有效模型。新元数据审查新增GPU为0，不把剩余预算当实验理由。\n\n保留原geosa-basa/PyTorch、RTX3060 Laptop、共享ResNet18与绝对差FPN；不得静默替换设备/权重/精度/数据/架构，不能加基础模型或几何扰动。原标签、原表、旧评分与封存成果不覆盖。旧LEVIR test及Martigny关闭；两条AI代填与291歧义仍不是独立真值；区域41/1242=3.30%未过5%门不重开。JSON状态使用scripts.windows_shared_json。无代码变化不重复全量测试、smoke或旧成果全量哈希；源码改变才按AGENTS做必要全量unittest和适当smoke。任何未来获准GPU任务必须独立秒级守卫85°C确认/86°C立即停、创建身份绑定、有限预算且不并发；异常保留诊断，不循环重启。仅在有新的完成、失败、显著证据或新的确需用户处理事项时简短中文通知，重复外部资源需求与无变化状态保持安静。",
+  "status": "ACTIVE",
+  "rrule": "FREQ=HOURLY;INTERVAL=1",
+  "target_thread_id": "01a1636c-d6e2-7f83-9fd3-5d68f7dfec2c",
+  "created_at": 1790178876857,
+  "updated_at": 1792895764007
+}

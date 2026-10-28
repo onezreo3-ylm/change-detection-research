@@ -1,0 +1,64 @@
+{
+  "status": "completed",
+  "kind": "research",
+  "mode": "stratified_frozen_validation_v1",
+  "candidate_mode": "b0e",
+  "candidate_role": "cs",
+  "training_flavor": "stratified_two_view_baseline_v1",
+  "split": "val",
+  "candidate_checkpoint_epoch": 36,
+  "selection": "clean_validation_f1_only",
+  "clean_f1": 0.374046867580929,
+  "condition_count": 45,
+  "corruption_mf1": 0.3363859171473405,
+  "family_mf1": {
+    "brightness": 0.35866746506449043,
+    "contrast": 0.3476975345809731,
+    "gamma": 0.3237910322573537,
+    "color_bias": 0.24424996862716775,
+    "haze": 0.32496008649463193,
+    "shadow": 0.32271378040032717,
+    "noise": 0.37299545582585614,
+    "blur": 0.3614718353142504,
+    "jpeg": 0.37092609576101376
+  },
+  "aggregation_rule": "Pool pixels within each condition, then average condition F1s equally.",
+  "candidate_diagnostics": {
+    "pooled_over_conditions": {
+      "counts": {
+        "tn": 5034663183,
+        "fp": 9328722,
+        "fn": 9453363,
+        "tp": 4295532
+      },
+      "pixels": 5057740800,
+      "foreground_pixels": 13748895,
+      "background_pixels": 5043991905,
+      "metrics": {
+        "precision": 0.315285666283086,
+        "recall": 0.31242743507750986,
+        "f1": 0.3138500433399168,
+        "iou": 0.186134122946923,
+        "oa": 0.9962864674678465,
+        "foreground_recall": 0.31242743507750986,
+        "background_fpr": 0.0018494720403402392,
+        "foreground_fn_rate": 0.6875725649224901
+      }
+    },
+    "macro_condition_foreground_recall": 0.31242743507750986,
+    "macro_condition_background_fpr": 0.0018494720403402388
+  },
+  "test_evaluated": false,
+  "training_started": false,
+  "guarded_completion_required": true,
+  "temperature_guard": {
+    "status": "completed",
+    "config_sha256": "0ee2d8259f4e74dd38bf329a890862fbaf6f53ee80a37884f517a28a84e45216",
+    "source_sha256": {
+      "scripts/__init__.py": "00241d069e1be186a6dd6f320846d7bb888099a977ef80a3c14021e1e0ee7f9f",
+      "scripts/evaluate_guarded.py": "ee204f3026208c9a9a6b39e3d23ba31bb559ca27b3a002e7ef9722d33b59eb80",
+      "scripts/temperature_guard.py": "f5693454ccbf3b1fa3188605a52b3363442432116c4958245615b2ecf9122763"
+    },
+    "completion_file": "guard_completion.json"
+  }
+}

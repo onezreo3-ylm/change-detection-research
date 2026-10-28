@@ -1,0 +1,31 @@
+{
+  "requested_by": "user: continue",
+  "started_local": "2026-09-12T14:49:10+08:00",
+  "process_id": 18396,
+  "resumed_checkpoint_epoch": 41,
+  "first_training_epoch": 42,
+  "total_epoch_budget": 100,
+  "config": "configs/levir_local_author_floor255_fast_stable_b4.yaml",
+  "source_fingerprint_matches": true,
+  "training_signature_matches": true,
+  "full_data_audit_matches": true,
+  "amp_scale_restored": 32768.0,
+  "preflight_gpu_temperature_c": 44,
+  "thermal_pause_policy": {
+    "user_requested_limit_c": 86,
+    "reported_gpu_target_temperature_c": 87,
+    "confirmed_pause_at_c": 85,
+    "confirmation_readings": 3,
+    "confirmation_interval_seconds": 5,
+    "immediate_pause_on_sample_at_c": 86,
+    "local_sensor_poll_seconds": 10,
+    "chat_report_interval_minutes": 60,
+    "max_sensor_failures_before_pause": 3,
+    "local_guard_config": "configs/temperature_guard.yaml",
+    "automatic_restart_after_thermal_pause": false,
+    "hardware_settings_changed": false
+  },
+  "stdout": "runs/levir_clean_r18_author_floor255_fast_stable_b4_seed42.resume_20260912.stdout.log",
+  "stderr": "runs/levir_clean_r18_author_floor255_fast_stable_b4_seed42.resume_20260912.stderr.log",
+  "note": "Existing model/optimizer/scheduler/scaler/RNG state resumed with no training-source or training-YAML changes. User subsequently allowed 86 C or a reasonable limit; software monitoring uses a conservative 85 C confirmation line and single-sample 86 C pause, superseding the initial 76 C rule. On user request, chat reporting is now hourly while a separate local process checks every 10 seconds and pauses locally; chat reports a pause at the next scheduled check. This is not a hard cap or a hardware safety specification. CPU, memory and whole-computer temperatures are not established."
+}

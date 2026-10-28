@@ -1,0 +1,39 @@
+{
+  "entries": [
+    {
+      "id": "local_composition_probe_cpu_prepare_20261027",
+      "phase": "prepare",
+      "charged_seconds": 5.8331068999978015,
+      "basis": "Measured CPU subprocess wall. Existing concurrent B0-E owner wall remains charged; this additional conservative engineering reservation will be settled only when all old owners are inactive.",
+      "recorded_utc": "2026-10-27T05:10:28.835248+00:00"
+    },
+    {
+      "id": "local_composition_probe_cpu_smoke_20261027",
+      "phase": "smoke",
+      "charged_seconds": 4.249344399999245,
+      "basis": "Measured CPU subprocess wall. Existing concurrent B0-E owner wall remains charged; this additional conservative engineering reservation will be settled only when all old owners are inactive.",
+      "recorded_utc": "2026-10-27T05:10:33.242990+00:00"
+    },
+    {
+      "id": "local_composition_probe_cpu_full_tests_20261027",
+      "phase": "full_tests",
+      "charged_seconds": 83.45433049999701,
+      "basis": "Actual full unittest subprocess wall plus2seconds coordination allowance. The probe additionally reserves this cost conservatively; the fixed-evaluation charge is not removed.",
+      "recorded_utc": "2026-10-27T05:43:24.365858+00:00"
+    },
+    {
+      "id": "local_composition_probe_cpu_seal_20261027",
+      "phase": "seal",
+      "charged_seconds": 3.4210000000020955,
+      "basis": "Actual CPU sealing wall plus1second import allowance; completed",
+      "recorded_utc": "2026-10-27T06:49:03.681649+00:00"
+    },
+    {
+      "id": "local_composition_probe_cpu_finalize_20261027",
+      "phase": "finalize",
+      "charged_seconds": 1.375,
+      "basis": "Actual final proof audit wall plus1second import allowance",
+      "recorded_utc": "2026-10-27T06:58:40.524705+00:00"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+schema_version: 1
+kind: train_only_fixed_local_action_composition_probe
+protocol: docs/LOCAL_COMPOSITION_REAL_PROBE_PROTOCOL_2026-10-27.md
+output_dir: runs/local_composition_probe_20261027
+phase56_config: configs/phase5_6_v1_seed42.yaml
+selector_partition: runs/phase7_descriptor_cache_seed42/selector_split_manifest.json
+historical_diagnostic: runs/levir_phase6_action_utility_seed42
+required_completed_analysis: runs/b0e_replication_analysis_20261026/analysis.json
+shared_ledger: runs/managed_continuation_20261024/compute_ledger.json
+global_lease: runs/managed_continuation_20261024/gpu_study.lock
+device: cuda:0
+amp: true
+amp_dtype: float16
+memory_format: channels_last
+threshold: 0.5
+original_eval_batch_size: 32
+selected_original_batches: 8
+calibration_containing_batches_first: 4
+minimum_fit_sources: 4
+minimum_calibration_sources: 4
+selection_salt: local_composition_mechanism_v1_20261027
+conditions: original_clean_and_all45
+edited_stage: 2
+action_boxes: [[2, 8, 2, 8], [2, 8, 24, 30], [24, 30, 2, 8], [24, 30, 24, 30]]
+action_subsets: all16_including_noop
+residuals: original_shared_adapter_computed_once_on_observed_features
+arms: [ordinary_GN_joint, ordinary_GN_joint_output_mask, ordinary_GN_singles_pasted, reference_replay_joint]
+whole_probe_limit_seconds: 3600
+engineering_reserve_seconds: 300
+postprocessing_reserve_seconds: 120
+pilot_original_batches: 1
+pilot_conditions: [clean, brightness_l1]
+pilot_wall_multiplier: 1.5
+main_fixed_overhead_reserve_seconds: 180
+require_exact_original_counts: true
+require_exact_noop_logits: true
+require_exact_joint_composition: true
+require_exact_per_sample_count_additivity: true
+minimum_oracle_mf1_gain_over_better_noop_or_full_adapter: 0.005
+minimum_positive_action_fraction: 0.05
+minimum_negative_action_fraction: 0.05
+minimum_families_each_sign: 3
+new_model_fitting: false
+test_or_martigny_access: false
+automatic_retry: false

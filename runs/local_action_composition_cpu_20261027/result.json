@@ -1,0 +1,168 @@
+{
+  "status": "passed_actual_joint_CPU_composition_engineering_only",
+  "seed": 20261027,
+  "explicit_synthetic_bias_shift_before_all_arms": -0.3053487241268158,
+  "shared_reference": true,
+  "influence_supports_disjoint": true,
+  "support_positions": [
+    2209,
+    2209
+  ],
+  "output_positions": 16384,
+  "actual_decoder_forwards": 8,
+  "original_decoder_GN_count": 6,
+  "arms": {
+    "ordinary_GN": {
+      "joint_equals_pasted_individuals": false,
+      "joint_minus_pasted_max_abs": 0.008058249950408936,
+      "joint_minus_pasted_changed_positions": 16384,
+      "count_increment_additivity": false,
+      "base_counts": [
+        6079,
+        6169,
+        2112,
+        2024
+      ],
+      "single_counts": [
+        [
+          6092,
+          6156,
+          2117,
+          2019
+        ],
+        [
+          6095,
+          6153,
+          2112,
+          2024
+        ]
+      ],
+      "joint_counts": [
+        6107,
+        6141,
+        2115,
+        2021
+      ],
+      "sum_of_individual_count_increments": [
+        6108,
+        6140,
+        2117,
+        2019
+      ],
+      "outside_joint_changed_positions": 11966,
+      "individual_locality": [
+        false,
+        false
+      ],
+      "hard_prediction_changes": [
+        126,
+        68
+      ]
+    },
+    "ordinary_GN_plus_output_support_mask": {
+      "joint_equals_pasted_individuals": false,
+      "joint_minus_pasted_max_abs": 0.003974780440330505,
+      "joint_minus_pasted_changed_positions": 4418,
+      "count_increment_additivity": false,
+      "base_counts": [
+        6079,
+        6169,
+        2112,
+        2024
+      ],
+      "single_counts": [
+        [
+          6089,
+          6159,
+          2117,
+          2019
+        ],
+        [
+          6098,
+          6150,
+          2112,
+          2024
+        ]
+      ],
+      "joint_counts": [
+        6105,
+        6143,
+        2117,
+        2019
+      ],
+      "sum_of_individual_count_increments": [
+        6108,
+        6140,
+        2117,
+        2019
+      ],
+      "outside_joint_changed_positions": 0,
+      "individual_locality": [
+        true,
+        true
+      ],
+      "hard_prediction_changes": [
+        113,
+        51
+      ]
+    },
+    "reference_statistics_all_six_GN": {
+      "joint_equals_pasted_individuals": true,
+      "joint_minus_pasted_max_abs": 0.0,
+      "joint_minus_pasted_changed_positions": 0,
+      "count_increment_additivity": true,
+      "base_counts": [
+        6079,
+        6169,
+        2112,
+        2024
+      ],
+      "single_counts": [
+        [
+          6086,
+          6162,
+          2117,
+          2019
+        ],
+        [
+          6097,
+          6151,
+          2112,
+          2024
+        ]
+      ],
+      "joint_counts": [
+        6104,
+        6144,
+        2117,
+        2019
+      ],
+      "sum_of_individual_count_increments": [
+        6104,
+        6144,
+        2117,
+        2019
+      ],
+      "outside_joint_changed_positions": 0,
+      "individual_locality": [
+        true,
+        true
+      ],
+      "hard_prediction_changes": [
+        112,
+        52
+      ]
+    }
+  },
+  "actual_device": "cpu",
+  "actual_dtype": "torch.float32",
+  "original_model_state_unchanged_after_fixture": true,
+  "hooks_removed": true,
+  "optimizer_updates": 0,
+  "real_data_or_checkpoint": false,
+  "method_effectiveness": false,
+  "method_novelty_verified": false,
+  "GPU_FP16_validated": false,
+  "full_project_tests_pending_gpu_idle": true,
+  "scope": "Same reference and weights; fixed residuals; disjoint propagated supports only; no overlapping-action guarantee."
+}

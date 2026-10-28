@@ -1,0 +1,19 @@
+kind: bound_local_actions_original_architecture_cpu_smoke
+protocol: docs/BOUND_LOCAL_ACTIONS_ENGINEERING_2026-10-27.md
+output_dir: runs/bound_local_actions_cpu_20261027
+device: cpu
+amp: false
+dtype: float32
+num_threads: 2
+seed: 20261027
+batch_size: 2
+input_size: 128
+decoder_channels: 64
+normalization_groups: 8
+synthetic_adapter_final_weight_std: 0.01
+action_boxes_stage2: [[1, 4, 1, 4], [12, 15, 12, 15]]
+arms: [ordinary_GN, ordinary_GN_output_mask, reference_replay]
+threshold: 0.5
+engineering_only: true
+real_data_or_checkpoint: false
+optimizer_updates: 0

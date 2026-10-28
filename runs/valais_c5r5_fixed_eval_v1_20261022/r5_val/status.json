@@ -1,0 +1,67 @@
+{
+  "status": "completed",
+  "kind": "research",
+  "mode": "explicit_40ep_bf16_fp32_validation_v1",
+  "candidate_mode": "r5",
+  "candidate_role": "r5",
+  "training_flavor": "matched_five_view_baseline_40ep_runtime_v1",
+  "split": "val",
+  "candidate_checkpoint_epoch": 21,
+  "selection": "clean_validation_f1_only",
+  "clean_f1": 0.32769892124259875,
+  "condition_count": 45,
+  "corruption_mf1": 0.30037528310673806,
+  "family_mf1": {
+    "brightness": 0.32633359422443337,
+    "contrast": 0.3029473657745471,
+    "gamma": 0.2914160878903425,
+    "color_bias": 0.24213179837482598,
+    "haze": 0.28695202122823366,
+    "shadow": 0.28021778919059426,
+    "noise": 0.3277862287738793,
+    "blur": 0.3182736793699627,
+    "jpeg": 0.3273189831338247
+  },
+  "aggregation_rule": "Pool pixels within each condition, then average condition F1s equally.",
+  "candidate_diagnostics": {
+    "pooled_over_conditions": {
+      "counts": {
+        "tn": 5035496834,
+        "fp": 8495071,
+        "fn": 9804097,
+        "tp": 3944798
+      },
+      "pixels": 5057740800,
+      "foreground_pixels": 13748895,
+      "background_pixels": 5043991905,
+      "metrics": {
+        "precision": 0.3171092878871956,
+        "recall": 0.2869174577302394,
+        "f1": 0.30125881465807247,
+        "iou": 0.1773423857957704,
+        "oa": 0.9963819482406058,
+        "foreground_recall": 0.2869174577302394,
+        "background_fpr": 0.0016841960018966367,
+        "foreground_fn_rate": 0.7130825422697605
+      }
+    },
+    "macro_condition_foreground_recall": 0.28691745773023947,
+    "macro_condition_background_fpr": 0.001684196001896636
+  },
+  "test_evaluated": false,
+  "training_started": false,
+  "guarded_completion_required": true,
+  "evaluation_amp": false,
+  "model_state_unchanged": true,
+  "elapsed_seconds": 936.6089999999967,
+  "temperature_guard": {
+    "status": "completed",
+    "config_sha256": "0ee2d8259f4e74dd38bf329a890862fbaf6f53ee80a37884f517a28a84e45216",
+    "source_sha256": {
+      "scripts/__init__.py": "00241d069e1be186a6dd6f320846d7bb888099a977ef80a3c14021e1e0ee7f9f",
+      "scripts/evaluate_guarded.py": "ee204f3026208c9a9a6b39e3d23ba31bb559ca27b3a002e7ef9722d33b59eb80",
+      "scripts/temperature_guard.py": "f5693454ccbf3b1fa3188605a52b3363442432116c4958245615b2ecf9122763"
+    },
+    "completion_file": "guard_completion.json"
+  }
+}

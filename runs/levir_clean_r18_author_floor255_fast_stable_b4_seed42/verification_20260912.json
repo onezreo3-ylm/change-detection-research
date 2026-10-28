@@ -1,0 +1,87 @@
+{
+  "test_confusion_and_all_metrics_match": true,
+  "val_confusion_and_all_metrics_match": true,
+  "checkpoint_sha256": "033a0aa14becabc97c60b368b6d7c2e49bc8b386daa61dcc77e761c81ae747f3",
+  "val_metrics": {
+    "precision": 0.9135744391099121,
+    "recall": 0.8985018418056868,
+    "f1": 0.9059754545786541,
+    "iou": 0.82811254863549,
+    "oa": 0.9921735227108002,
+    "tp": 2530413,
+    "fp": 239381,
+    "fn": 285845,
+    "tn": 64053225,
+    "pixels": 67108864
+  },
+  "test_metrics": {
+    "precision": 0.9139599557989772,
+    "recall": 0.8885048048691486,
+    "f1": 0.9010526362627779,
+    "iou": 0.8199233794042164,
+    "oa": 0.9900592118501663,
+    "tp": 6075005,
+    "fp": 571900,
+    "fn": 762330,
+    "tn": 126808493,
+    "pixels": 134217728
+  },
+  "train_end_test_seconds": 26.25,
+  "independent_val_seconds": 14.485000000000582,
+  "independent_test_seconds": 26.18699999999808,
+  "verification_local": "2026-09-12T17:22:47.9885568+08:00",
+  "kind": "research_verification_not_new_experiment",
+  "scope": "Phase 1 only",
+  "epochs_completed": 100,
+  "best_epoch": 69,
+  "threshold": 0.5,
+  "seed": 42,
+  "source_matches_training_snapshot": true,
+  "training_signature_matches": true,
+  "complete_checkpoint_history": true,
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 34,
+    "failures": 0,
+    "skipped": 0
+  },
+  "timing": {
+    "training_seconds": 13748.455000000022,
+    "validation_seconds": 1481.3619999999892,
+    "summed_completed_train_val_seconds": 15229.81700000001,
+    "mean_epoch_seconds": 152.2981700000001,
+    "old_fp32_completed_epoch_mean_seconds": 488.03451999999993,
+    "descriptive_runtime_ratio": 3.204467394453916,
+    "excludes": [
+      "overnight_pause",
+      "data_audits",
+      "checkpoint_io",
+      "discarded_incomplete_epoch",
+      "independent_evaluations",
+      "earlier_superseded_runs"
+    ],
+    "first_train_val_epoch_seconds": 162.625
+  },
+  "optimizer": {
+    "planned_steps": 178000,
+    "completed_steps": 177939,
+    "amp_skipped_steps": 61,
+    "skip_percentage": 0.034269662921348316
+  },
+  "limitations": [
+    "single seed only",
+    "explicit author_uint8_floor255 label decoding",
+    "not directly equivalent to old FP32/batch protocol",
+    "no robustness or PSE/PCDC/CPC claim",
+    "runtime ratio is descriptive rather than an isolated controlled timing study"
+  ],
+  "artifacts": {
+    "val": "val_independent_20260912.json",
+    "test": "test_independent_20260912.json",
+    "training_end_test": "test_metrics.json",
+    "checkpoint": "best.pt",
+    "smoke": "runs/smoke_final_verification_20260912/run/"
+  },
+  "final_smoke_passed": true,
+  "finalized_utc": "2026-09-12T09:26:10.570Z"
+}

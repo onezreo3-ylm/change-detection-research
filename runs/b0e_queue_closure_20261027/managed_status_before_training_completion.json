@@ -1,0 +1,129 @@
+{
+  "schema_version": 2,
+  "workspace": "E:\\new research\\detection",
+  "current_user_request": "持续改进并完善实验，直到证据链完善可达到能发表的论文",
+  "current_goal_status": "active",
+  "phase": "matched_controls_running_spatial_composition_preparation",
+  "last_checked_utc": "2026-10-27T04:34:35.300134+00:00",
+  "research_training_running": true,
+  "training_completed": false,
+  "evaluation_completed": false,
+  "active_training_worker": {
+    "pid": 21748,
+    "creation_time_ticks": 134374975675485631,
+    "active": true,
+    "owner": {
+      "pid": 26288,
+      "creation_time_ticks": 134374975662027145,
+      "active": true
+    }
+  },
+  "bound_processes": {
+    "owner": {
+      "pid": 26288,
+      "creation_time_ticks": 134374975662027145,
+      "active": true
+    },
+    "worker": {
+      "pid": 21748,
+      "creation_time_ticks": 134374975675485631,
+      "active": true
+    },
+    "guard": {
+      "pid": 7216,
+      "creation_time_ticks": 134374975678821875,
+      "active": true
+    },
+    "watchdog": {
+      "pid": 27804,
+      "creation_time_ticks": 134374975682158050,
+      "active": true
+    }
+  },
+  "latest_gpu": {
+    "uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+    "temperature_c": 75,
+    "utilization_percent": 93,
+    "memory_used_mib": 2612
+  },
+  "latest_committed_training": {
+    "status": "running",
+    "training_started": true,
+    "epoch": 85,
+    "epochs": 100,
+    "best_epoch": 58,
+    "best_val_f1": 0.9045247769062376,
+    "initial_model_tensor_sha256": "843a030cb114ac82ee127e6bc6aa79b30e91dd0ad2da0cba986576115b5ee86c",
+    "kind": "research",
+    "mode": "b0e",
+    "selection": "clean_val_f1",
+    "test_evaluated": false
+  },
+  "current_runtime_config": "configs/b0e_replication_runtime_20261026.yaml",
+  "current_authorization": "runs/b0e_replication_20261026/training_authorization.json",
+  "current_authorization_status": "running",
+  "current_study_protocol": "docs/B0E_REPLICATION_PROTOCOL_2026-10-26.md",
+  "shared_budget": {
+    "charged_seconds": 142104.12396399994,
+    "upper_bound_seconds": 172800,
+    "automatic_extension": false
+  },
+  "next_action": "Finish B0-E44 and actual fixed development evaluation/analysis; full suite only after GPU idle. Then seal the fixed train-only composition/actionability probe within the original budget. Passing its oracle gate does not automatically admit a pre-action predictor; include the equal-cost all-actions postselector.",
+  "monitor_command": "E:/Download/anaconda3/envs/geosa-basa/python.exe -X utf8 -m scripts.b0e_replication_supervision monitor --mode train",
+  "held_out_test_open": false,
+  "martigny_open": false,
+  "failed_candidates_reopened": false,
+  "new_dataset_admitted": false,
+  "current_independent_data_report": "docs/SECOND_QUARANTINE_OUTCOME_2026-10-27.md",
+  "same_archive_transfer_stopped": true,
+  "current_paper_evidence_package": "runs/publication_evidence_audit_20261027_r3",
+  "manuscript_working_draft": "runs/manuscript_working_draft_20261026/manuscript.md",
+  "manuscript_publication_ready": false,
+  "full_project_tests_pending_gpu_idle": true,
+  "minimum_evaluation_test_coverage_not_total": 546,
+  "automation_status": "DELETED",
+  "new_automation_created": false,
+  "historical_state_preserved": "runs/local_composition_equal_cost_control_20261027/managed_status_before_equal_cost_update.json",
+  "historical_state_sha256": "0d4c70822702f36a5053bfe81fdc69cd5fb741bf7c3484359b02019d4d75f545",
+  "current_user_preference": "优先提出并验证新方法",
+  "preference_source": "Direct user reply to the pending paper-route question",
+  "method_priority": true,
+  "last_method_update_utc": "2026-10-26T17:19:26.880559+00:00",
+  "method_continuation_report": "docs/SPATIAL_ACTION_EQUAL_COST_CONTROL_2026-10-27.md",
+  "method_feasibility_report": "docs/SPATIAL_ACTION_FEASIBILITY_RESULTS_2026-10-27.md",
+  "current_method_candidate": "Fixed local-action composability/actionability probe; pre-action decoder-count advantage withdrawn because all-actions-then-select is equal cost; no automatic head fitting",
+  "new_method_prototype_prepared": true,
+  "new_method_admitted": false,
+  "new_method_research_gpu_job_started": false,
+  "method_cpu_tests_passed": 47,
+  "method_full_project_tests_pending_gpu_idle": true,
+  "latest_observed_training_monitor": "runs/continuation_resume_20261027/training_monitor_20261027T043435169454Z.json",
+  "method_component_prior_art_result": "docs/LOCAL_FEATURE_REPLAY_PRIOR_ART_RESULT_2026-10-27.md",
+  "normalization_replay_formula_is_known_component": true,
+  "method_composition_cpu_checks_passed": true,
+  "seed43_completed": {
+    "status": "completed",
+    "training_started": true,
+    "epochs": 100,
+    "best_epoch": 69,
+    "best_val_f1": 0.9020110553169798,
+    "initial_model_tensor_sha256": "a76b15a1d630d6b58a65b02d01e3920f4c06a87d5d8ceb57af76497cfb511942",
+    "optimizer_steps": 177935,
+    "amp_skipped_steps": 65,
+    "pair_views": 1424000,
+    "kind": "research",
+    "mode": "b0e",
+    "selection": "clean_val_f1",
+    "test_evaluated": false
+  },
+  "auxiliary_process_identity_correction": {
+    "record": "runs/continuation_resume_20261027/process_identity_correction.json",
+    "reason": "An earlier JS Number round trip rounded large FILETIME integers in auxiliary summaries. Frozen runtime attachment/identity records are unchanged and exact. Current monitor is parsed with Python arbitrary precision ints."
+  },
+  "method_preaction_efficiency_claim_withdrawn": true,
+  "method_equal_cost_control": "runs/local_composition_equal_cost_control_20261027/result.json",
+  "method_fitting_requires_new_comparison_after_resource_gate": true,
+  "method_real_probe_metadata": "runs/local_composition_probe_20261027/prepared_metadata.json",
+  "method_real_probe_started": false,
+  "latest_method_handoff": "runs/local_composition_probe_engineering_20261027/HANDOFF.md"
+}

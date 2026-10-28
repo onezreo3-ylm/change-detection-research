@@ -1,0 +1,79 @@
+{
+  "status": "partial_p1_feasibility_audit_at_as_epoch96",
+  "recorded_utc": "2026-10-19T13:06:04.671623+00:00",
+  "rows": {
+    "as": {
+      "committed_epochs": 96,
+      "best_epoch": 17,
+      "selected_clean_val_metrics": {
+        "precision": 0.3448063866827851,
+        "recall": 0.3818205026658506,
+        "f1": 0.3623707017053397,
+        "iou": 0.22127761275564206,
+        "oa": 0.9963472861242711,
+        "tp": 116658,
+        "fp": 221671,
+        "fn": 188873,
+        "tn": 111867038,
+        "pixels": 112394240
+      },
+      "last_epoch_train_and_clean_val_seconds": 663.2029999999941
+    },
+    "cs": {
+      "committed_epochs": 100,
+      "best_epoch": 36,
+      "selected_clean_val_metrics": {
+        "precision": 0.4007825914550889,
+        "recall": 0.35065508900897124,
+        "f1": 0.374046867580929,
+        "iou": 0.23004775483560655,
+        "oa": 0.9968096585732508,
+        "tp": 107136,
+        "fp": 160181,
+        "fn": 198395,
+        "tn": 111928528,
+        "pixels": 112394240
+      },
+      "last_epoch_train_and_clean_val_seconds": 653.1100000000006
+    },
+    "b0e": {
+      "committed_epochs": 100,
+      "best_epoch": 53,
+      "selected_clean_val_metrics": {
+        "precision": 0.4161689501813568,
+        "recall": 0.4251057994115163,
+        "f1": 0.42058990678779773,
+        "iou": 0.2662955673104523,
+        "oa": 0.996816055698228,
+        "tp": 129883,
+        "fp": 182209,
+        "fn": 175648,
+        "tn": 111906500,
+        "pixels": 112394240
+      },
+      "last_epoch_train_and_clean_val_seconds": 644.625
+    }
+  },
+  "remaining_as_epochs": 4,
+  "remaining_as_updates": 11028,
+  "remaining_as_pair_views": 88200,
+  "estimated_remaining_train_clean_val_minutes": 44.21353333333294,
+  "cs_clean_improvement_gate_passed": false,
+  "as_current_clean_f1_delta_vs_cs": -0.011676165875589284,
+  "as_result_final": false,
+  "new_model_inference": false,
+  "test_accessed": false,
+  "source_history_sha256": {
+    "E:\\new research\\detection\\runs\\valais_p1_resume_as_epoch96_20261019\\saved_prefix\\as\\history.json": "88543722fad582c1c7a034701aa50df26704aa6e1a8011675cf8783b84e68805",
+    "E:\\new research\\detection\\runs\\valais_p1_resume_as_epoch96_20261019\\saved_prefix\\cs\\history.json": "c4b838e9a93d6c2416fd0478fa0e9f117145a04191449c6d4b50be1452f6f934",
+    "E:\\new research\\detection\\runs\\valais_b0e_fp32_seed42_v1_20261002\\history.json": "8fa955bf98293154f131fa13c63e8b0e2d0dd87265b4f07fb4ec6bbb5ac36cc0"
+  },
+  "pending": [
+    "finish_as_to_original_epoch100",
+    "frozen_45_condition_validation_with_explicit_stratified_flavor_identity",
+    "fixed_64_train_source_residual_coupling_diagnostic"
+  ],
+  "minimum_discarded_partial_epoch97_updates": 1100,
+  "exact_discarded_updates": null,
+  "physical_compute_matches_claim": false
+}

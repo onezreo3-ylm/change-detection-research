@@ -1,0 +1,19 @@
+E:\Download\anaconda3\envs\geosa-basa\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\new research\detection\scripts\evaluate_candidate_guarded.py", line 95, in <module>
+    main()
+  File "E:\new research\detection\scripts\evaluate_candidate_guarded.py", line 89, in main
+    result = guarded_candidate_evaluate(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\scripts\evaluate_candidate_guarded.py", line 58, in guarded_candidate_evaluate
+    result = evaluate(job, guard_callback=guard)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\pcdc\evaluate_candidate.py", line 432, in evaluate
+    expected_clean = _validate_checkpoints(job, metadata, best, last)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\pcdc\evaluate_candidate.py", line 326, in _validate_checkpoints
+    raise ValueError(f"Candidate {label} checkpoint differs from the frozen protocol")
+ValueError: Candidate best checkpoint differs from the frozen protocol

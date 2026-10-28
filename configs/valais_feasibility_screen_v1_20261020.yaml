@@ -1,0 +1,42 @@
+schema_version: 1
+output_dir: ../runs/valais_feasibility_screen_v1_20261020
+protocol_document: ../docs/FEASIBILITY_SCREEN_PROTOCOL_2026-10-20.md
+posttraining_dir: ../runs/valais_p1_posttraining_v1_20261019
+p0_manifest: ../runs/valais_coupling_p0_train_qa_v1r1_20261007/manifest.json
+p0_review: ../runs/valais_coupling_p0_train_qa_v1r1_20261007/visual_review.json
+p0_saved_audit: ../runs/valais_coupling_p0_diagnostic_20261007/audit.json
+b0e_evaluation: ../runs/valais_b0e_fp32_seed42_v1_20261002_val
+data_audit: ../runs/valais_b0e_fp32_seed42_v1_20261002/data_audit.json
+label_report: ../runs/valais_class_balance_20260930/report.json
+sampling_proposal: valais_b0es_candidate_proposal_20261004.yaml
+selection_seed: 2026102001
+calibration_sources_per_arm: 256
+source_batch_size: 4
+probe_sources: 64
+bn_arms: [original, uniform_clean, stratified_clean]
+bn_views_per_source: 2
+bn_max_seconds: 3600
+pilot_max_seconds: 600
+pilot_steps: 1
+pilot_condition: {family: gamma, level: 3}
+pilot_view_weights: [0.5, 0.125, 0.125, 0.125, 0.125]
+initial_model_tensor_sha256: eb4fa2550e47d732c5b21acb6899ba5539856bee35b532da58006f56108001a8
+models:
+  b0e:
+    base_config: ../runs/valais_b0e_fp32_seed42_v1_20261002/base_config.yaml
+    checkpoint: ../runs/valais_b0e_fp32_seed42_v1_20261002/best.pt
+    checkpoint_sha256: 9b86fc34e976945bec1cc4aefde779ee01103944db40ac7105c01fe71553a87b
+    history: ../runs/valais_b0e_fp32_seed42_v1_20261002/history.json
+    evaluation: ../runs/valais_b0e_fp32_seed42_v1_20261002_val
+  cs:
+    base_config: ../runs/valais_cs_fp32_seed42_v1_20261014/base_config.yaml
+    checkpoint: ../runs/valais_cs_fp32_seed42_v1_20261014/best.pt
+    checkpoint_sha256: dc1fbc43fb31154de6f73fbff89fd2b0f8d71c85a5b95ad9f5ad8b2a5d918da9
+    history: ../runs/valais_cs_fp32_seed42_v1_20261014/history.json
+    evaluation: ../runs/valais_p1_posttraining_v1_20261019/cs_val
+  as:
+    base_config: ../runs/valais_as_fp32_seed42_v1_20261014/base_config.yaml
+    checkpoint: ../runs/valais_as_fp32_seed42_v1_20261014/best.pt
+    checkpoint_sha256: cea40a786e7ebd7592b11497d89f282160137752ea1f04f36279b03b44c72724
+    history: ../runs/valais_as_fp32_seed42_v1_20261014/history.json
+    evaluation: ../runs/valais_p1_posttraining_v1_20261019/as_val

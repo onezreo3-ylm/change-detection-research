@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "type": "targeted_primary_source_screen_not_systematic_review",
+  "sources": [
+    {
+      "id": "bicc",
+      "title": "BiCC: Bidirectional Connected-Component Loss for Instance-Aware Segmentation",
+      "url": "https://arxiv.org/html/2609.30223v1",
+      "version": "v1; submitted 2026-09-24; preprint",
+      "read_scope": "Official abstract, introduction, method section 2, experimental setup and evaluation definitions.",
+      "finding": "Reference and prediction component partitions, including explicit false-positive scoring, already address instance recall/precision. Not a remote-sensing reproduction.",
+      "uncompleted": "No author-code commit pinning, installation, training or numerical reproduction."
+    },
+    {
+      "id": "blob_loss",
+      "title": "blob loss: instance imbalance aware loss functions for semantic segmentation",
+      "url": "https://arxiv.org/abs/2205.08209v3",
+      "version": "v3; revised 2023-06-06",
+      "read_scope": "Official abstract and version history.",
+      "finding": "Instance imbalance and instance-sensitive segmentation losses predate this candidate.",
+      "uncompleted": "Full paper and code not examined in this batch."
+    },
+    {
+      "id": "ocl_cd",
+      "title": "Object-Level Contrastive-Learning-Based Multi-Branch Network for Building Change Detection from Bi-Temporal Remote Sensing Images",
+      "url": "https://www.mdpi.com/2072-4292/17/2/217",
+      "version": "Remote Sensing 17(2), 217; 2025",
+      "read_scope": "Publisher-indexed abstract and section 3.3 text; direct full page returned 429.",
+      "finding": "Object-level contrastive optimization and auxiliary semantic features are established CD design elements.",
+      "uncompleted": "Full paper, code and protocol not verified."
+    },
+    {
+      "id": "unllnet",
+      "title": "Uncertainty-Aware Noisy Label Learning for Remote Sensing Change Detection",
+      "url": "https://ieeexplore.ieee.org/document/11129117/",
+      "version": "Publisher index: TGRS 63, 2025; DOI 10.1109/TGRS.2025.3600105",
+      "read_scope": "Publisher-indexed abstract; direct page required JavaScript verification.",
+      "finding": "Noisy-label correction, edge refinement and uncertainty-based robust supervision have direct CD neighbours.",
+      "uncompleted": "No full text, author-code verification or reproduction."
+    },
+    {
+      "id": "weak_temporal_supervision",
+      "title": "Remote Sensing Change Detection via Weak Temporal Supervision",
+      "url": "https://arxiv.org/html/2601.02126v1",
+      "version": "v1; submitted 2026-01-05; preprint version examined",
+      "read_scope": "Official abstract, introduction, related work and dataset section 3.1.",
+      "finding": "Single-date semantic labels plus new temporal acquisitions, real/artificial pairing and iterative refinement are already studied.",
+      "uncompleted": "Full training implementation and code not verified; required data not locally admitted."
+    },
+    {
+      "id": "feaspect",
+      "title": "Feature Spectrum Learning for Remote Sensing Change Detection",
+      "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Zang_Feature_Spectrum_Learning_for_Remote_Sensing_Change_Detection_CVPR_2025_paper.pdf",
+      "version": "CVPR 2025 publisher PDF",
+      "read_scope": "CVF-indexed abstract and introduction; HTML returned 403.",
+      "finding": "Learnable feature-spectrum alignment is an existing pseudo-change approach; not proposed for implementation here.",
+      "uncompleted": "No complete method/code or dataset adaptation."
+    },
+    {
+      "id": "valais_card",
+      "title": "ValaisCD dataset card",
+      "url": "https://huggingface.co/datasets/EPFL-ECEO/ValaisCD/blob/dbf58176968d17c964cfda960a314b243f73ca8b/README.md",
+      "version": "Fixed dataset revision dbf58176968d17c964cfda960a314b243f73ca8b",
+      "read_scope": "Label provenance, temporal discrepancy, pruning, split, released unpruned data and citation sections.",
+      "finding": "Vector/image timing discrepancies are acknowledged. Paper uses a pruned collection; this project uses the unpruned release. No new label error is thereby established.",
+      "uncompleted": "No unsafe pickle parsing, independent relabeling, noise-rate estimate or spatial-ID reconstruction."
+    }
+  ],
+  "claim_boundary": "No novelty certification, paper reproduction, scientific performance comparison or external code execution."
+}

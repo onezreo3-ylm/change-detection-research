@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "status": "accepted_train_only_sampled_visibility",
+  "date": "2026-10-07",
+  "reviewer": "Codex primary agent, direct original-resolution visual inspection",
+  "manifest_sha256": "2c32e831bb2b5cf82c19ee91ba4e45d46f5c1dbca19f758426d57d8a3659a4fe",
+  "scope": "P0 train-only sampled visibility permission, not acceptance of a complete robustness benchmark",
+  "reviewed_images": [
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_coupling_p0_train_qa_v1r1_20261007\\previews\\anchor_1_brightness.png",
+      "sha256": "b4b430e99b3b73a79cd6eb3fb4bb1df5aaad0e7ffa0d1346ff0a64a4c03050c6",
+      "findings": "Original 256px A/B tiles inspected. Bright/dark variants preserve house/tree context; bright roofs partially clip. Very small positive label cannot be independently localized semantically even in this clean overview; no claim of universal tiny-target observability."
+    },
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_coupling_p0_train_qa_v1r1_20261007\\previews\\anchor_2_contrast.png",
+      "sha256": "8cde57eb1fc0c2002b8c86bb8e6bedfbe26b4e47908f14fee75102d45fd1276a",
+      "findings": "Original 256px A/B tiles inspected. Both contrast directions preserve road/field and small roof footprints at labelled positions; reduction lowers contrast and increase clips light road pixels without deleting target geometry."
+    },
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_coupling_p0_train_qa_v1r1_20261007\\previews\\anchor_3_gamma.png",
+      "sha256": "ff2cafecfb872cbbc8566c558bc476bbe369dc52a64662e2823906fdd57e2ece",
+      "findings": "Original 256px A/B tiles inspected. Gamma 0.5 and 2.0 preserve the labelled lower-left building footprint; dark shadows lose fine texture but building outline remains visible. No geometry change observed."
+    },
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_coupling_p0_train_qa_v1r1_20261007\\previews\\anchor_4_color_bias.png",
+      "sha256": "0ef797e3f33ce25f7d491cc6a8a477d61f4398540b20e9ae54ee7a89073319ff",
+      "findings": "Original 256px A/B tiles inspected. All four color shifts retain industrial roofs and lower-right changed region geometry, including the clipped tile border; tint is artificial and not a claim of natural acquisition realism."
+    },
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_coupling_p0_train_qa_v1r1_20261007\\previews\\anchor_5_brightness.png",
+      "sha256": "d34d9df4d92dcc269c21f6c182431292798115219adee1216facfa80580fd969",
+      "findings": "Original 256px A/B tiles inspected. Multiple labelled new building footprints remain discernible in brighter and darker versions; brighter A construction area partly saturates, while principal outlines remain."
+    },
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_coupling_p0_train_qa_v1r1_20261007\\previews\\anchor_6_contrast.png",
+      "sha256": "d0d24b83ffa9c923a9a2d6e753f5fd9f17896d4714ade160037beef01be0813a",
+      "findings": "Original 256px A/B empty-label tiles inspected. Surface texture remains under both contrast directions; no geometry discontinuity or masked-region boundary was introduced. Empty label is inherited, not visually reannotated."
+    },
+    {
+      "path": "E:\\new research\\detection\\runs\\valais_coupling_p0_train_qa_v1r1_20261007\\previews\\anchor_large_color_bias.png",
+      "sha256": "fc615f314a584b9d20f0b64ada9c1567817bff5328703d0ce1d19e816c0fa324",
+      "findings": "Original 256px A/B large-positive tiles inspected. All four color shifts retain multiple construction/building footprints. Per-channel clipping/tint occurs; no disappearance of the main structures was observed."
+    }
+  ],
+  "limitations": [
+    "Seven original-resolution sheets; five positive-area strata plus an empty anchor, not exhaustive inspection of all 64 samples.",
+    "Strong tint/clipping and very small existing labels remain limitations. No guarantee of all targets being semantically recognizable.",
+    "Independent finite draws retain identical u/v; no score-conditioned resampling. Results are enriched-train diagnostics, not held-out scientific validation.",
+    "Cumulative new image payload base64 estimate 6500560 bytes; no additional images will be loaded in this turn."
+  ],
+  "model_scores_used_for_review": false,
+  "val_test_accessed": false
+}

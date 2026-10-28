@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "audit_date": "2026-09-22",
+  "scope": "user-approved frozen Phase 5-6 v1 batch only",
+  "frozen_inputs": {
+    "phase56_config_sha256": "12820dc7753884e54eda461e718fd3aad31f914dbf60333cfbabf413f28ebf40",
+    "protocol_document_sha256": "63acfd4815360fe6c732086c5d80dfebd6e85c136cbe43dc9555c6dd00ea11fa",
+    "phase56_fingerprint": "76bf9fde5c2be22f92d552be18be6f92398c539b4ccefc01c076a4e756377e89"
+  },
+  "actor": {
+    "status": "completed",
+    "epochs": 100,
+    "best_epoch": 45,
+    "best_clean_val_f1": 0.8997169052660828,
+    "status_sha256": "470bfd2d4661632a75adbee6db2ce6263b64bc546391a41d9e73a3fbe3778023",
+    "guard_completion_sha256": "0caf4fee738e104eab9173ff3a49f06c31ec6f5c96c35173af6f35eaeeee7c4a",
+    "best_checkpoint_sha256": "20e53ddc95a6e510c8ed988621112965f51669abdcb517bba858b5b8bb095de1",
+    "test_evaluated": false
+  },
+  "adapter": {
+    "status": "completed",
+    "epochs": 100,
+    "best_epoch": 11,
+    "best_clean_corrected_val_f1": 0.9000564658819357,
+    "status_sha256": "040bad7b42a53fe5df6195f9973ec1d9d92b8b8c68a5d64466ae4e6d1078ada8",
+    "guard_completion_sha256": "71cfc27e38d6f4768fce41eae73d93f7ba130a74c64d9906e103269b3ec5242b",
+    "best_checkpoint_sha256": "7447184bb1852cb03dd1bebe5e681ea2165d2fae2425348457ad820fe5e103dd",
+    "test_evaluated": false
+  },
+  "phase6": {
+    "status": "completed",
+    "conditions": 45,
+    "perturbed_instances": 64080,
+    "status_sha256": "1d708d03fd0432397add9274692a2a4fbfa5084482235b4da13bf120acab890e",
+    "guard_completion_sha256": "a5b11556d818a353bfc70b4e0cf694d50021922b9af0cd670a192a98c5cdcf77",
+    "gate_decision_sha256": "dc4307d215e5b7d513d98a922eee5cbaa2219f1715227fb76cecb800cee573fe",
+    "raw_action_utility_sha256": "0d6753a8e0fb7a85642f5614f642841a6d797e8fa6382856605e81c7a97fa3ce",
+    "sign_distribution_pass": true,
+    "actionable_margin_pass": true,
+    "decision": "pass_to_separately_reviewed_phase7_protocol",
+    "test_evaluated": false
+  },
+  "verification": {
+    "full_unittest_count": 168,
+    "full_unittest_result": "passed",
+    "full_unittest_seconds": 62.344,
+    "real_cuda_smoke_status": "completed",
+    "real_cuda_smoke_status_sha256": "fe24d4673d5da9611b04020f8244b12750f67925034c45bcec6b8521c8850612",
+    "real_cuda_smoke_guard_completion_sha256": "7ad632ccf52c6762b4d3e672a3c2d6f2a71a8d2b8b15f091219460765417463d",
+    "active_matching_python_processes": 0,
+    "held_out_test_evaluated": false
+  },
+  "report": {
+    "path": "docs/PHASE5_6_RESULTS_2026-09-22.md",
+    "sha256": "03e08686057315cfd58fc058e54774a65232cf1f8ca8ee84b47b701c4293c285"
+  },
+  "authorization_boundary": "Phase 7-10, learned gates, local actions, and held-out test access remain unauthorized pending a separately reviewed and frozen protocol."
+}

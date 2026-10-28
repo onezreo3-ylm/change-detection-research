@@ -1,0 +1,96 @@
+Traceback (most recent call last):
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 166, in _atomic_json
+    os.replace(temporary, path)
+PermissionError: [WinError 5] ¾Ü¾ø·ÃÎÊ¡£: 'E:\\new research\\detection\\runs\\levir_b2_consistency_seed43\\temperature_guard_state.json.guard-tmp' -> 'E:\\new research\\detection\\runs\\levir_b2_consistency_seed43\\temperature_guard_state.json'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 263, in __call__
+    self._persist()
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 205, in _persist
+    _atomic_json(self.output / "temperature_guard_state.json", self.state)
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 168, in _atomic_json
+    raise GuardPersistenceError(f"Cannot persist guard state: {path.name}") from error
+scripts.evaluate_guarded.GuardPersistenceError: Cannot persist guard state: temperature_guard_state.json
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 153, in _write_bytes
+    with path.open("xb") as stream:
+         ^^^^^^^^^^^^^^^
+  File "E:\Download\anaconda3\envs\geosa-basa\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: 'E:\\new research\\detection\\runs\\levir_b2_consistency_seed43\\temperature_guard_state.json.guard-tmp'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 164, in _atomic_json
+    _write_bytes(temporary, (json.dumps(value, indent=2, ensure_ascii=False,
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 158, in _write_bytes
+    raise GuardPersistenceError(f"Cannot persist guard artifact: {path.name}") from error
+scripts.evaluate_guarded.GuardPersistenceError: Cannot persist guard artifact: temperature_guard_state.json.guard-tmp
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\new research\detection\scripts\train_robust_guarded.py", line 95, in guarded_train
+    result = train_robust(config, resume=resume, guard_callback=guard)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\pcdc\robust_baselines.py", line 597, in train_robust
+    training = run_two_view_epoch(
+               ^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\pcdc\robust_baselines.py", line 365, in run_two_view_epoch
+    guard_callback()
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 273, in __call__
+    self.abort(error)
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 282, in abort
+    self._persist()
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 205, in _persist
+    _atomic_json(self.output / "temperature_guard_state.json", self.state)
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 168, in _atomic_json
+    raise GuardPersistenceError(f"Cannot persist guard state: {path.name}") from error
+scripts.evaluate_guarded.GuardPersistenceError: Cannot persist guard state: temperature_guard_state.json
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 153, in _write_bytes
+    with path.open("xb") as stream:
+         ^^^^^^^^^^^^^^^
+  File "E:\Download\anaconda3\envs\geosa-basa\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: 'E:\\new research\\detection\\runs\\levir_b2_consistency_seed43\\temperature_guard_state.json.guard-tmp'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 164, in _atomic_json
+    _write_bytes(temporary, (json.dumps(value, indent=2, ensure_ascii=False,
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 158, in _write_bytes
+    raise GuardPersistenceError(f"Cannot persist guard artifact: {path.name}") from error
+scripts.evaluate_guarded.GuardPersistenceError: Cannot persist guard artifact: temperature_guard_state.json.guard-tmp
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\new research\detection\scripts\train_robust_guarded.py", line 132, in <module>
+    main()
+  File "E:\new research\detection\scripts\train_robust_guarded.py", line 126, in main
+    result = guarded_train(args.config, args.guard_config, resume=args.resume,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\new research\detection\scripts\train_robust_guarded.py", line 113, in guarded_train
+    guard.abort(error)
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 282, in abort
+    self._persist()
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 205, in _persist
+    _atomic_json(self.output / "temperature_guard_state.json", self.state)
+  File "E:\new research\detection\scripts\evaluate_guarded.py", line 168, in _atomic_json
+    raise GuardPersistenceError(f"Cannot persist guard state: {path.name}") from error
+scripts.evaluate_guarded.GuardPersistenceError: Cannot persist guard state: temperature_guard_state.json

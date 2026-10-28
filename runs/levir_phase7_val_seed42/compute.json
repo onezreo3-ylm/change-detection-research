@@ -1,0 +1,171 @@
+{
+  "encoder_seconds": 46.60086689984746,
+  "descriptor_adapter_seconds": 10.525819300171861,
+  "four_selectors_seconds": 1.9638676998511073,
+  "both_decoders_seconds": 69.39163470025233,
+  "model_compute_seconds": 128.48218860012275,
+  "batches": 1472.0,
+  "wall_seconds": 1032.625,
+  "peak_gpu_memory_bytes": 1091890688,
+  "selector_parameters_each": 139970,
+  "descriptor_cache_bytes": 342688435,
+  "observations_including_clean": 47104,
+  "amortized_model_compute_ms_per_tile": 2.7276279848871168,
+  "selected_decoder_counts": {
+    "A0": {
+      "corruption": {
+        "a0": 46080,
+        "a1": 0
+      },
+      "clean": {
+        "a0": 1024,
+        "a1": 0
+      },
+      "total": {
+        "a0": 47104,
+        "a1": 0
+      }
+    },
+    "G0": {
+      "corruption": {
+        "a0": 0,
+        "a1": 46080
+      },
+      "clean": {
+        "a0": 0,
+        "a1": 1024
+      },
+      "total": {
+        "a0": 0,
+        "a1": 47104
+      }
+    },
+    "C1-U": {
+      "corruption": {
+        "a0": 14994,
+        "a1": 31086
+      },
+      "clean": {
+        "a0": 309,
+        "a1": 715
+      },
+      "total": {
+        "a0": 15303,
+        "a1": 31801
+      }
+    },
+    "C1-H": {
+      "corruption": {
+        "a0": 46080,
+        "a1": 0
+      },
+      "clean": {
+        "a0": 1024,
+        "a1": 0
+      },
+      "total": {
+        "a0": 47104,
+        "a1": 0
+      }
+    },
+    "G1-U": {
+      "corruption": {
+        "a0": 21663,
+        "a1": 24417
+      },
+      "clean": {
+        "a0": 470,
+        "a1": 554
+      },
+      "total": {
+        "a0": 22133,
+        "a1": 24971
+      }
+    },
+    "G1-H": {
+      "corruption": {
+        "a0": 43836,
+        "a1": 2244
+      },
+      "clean": {
+        "a0": 972,
+        "a1": 52
+      },
+      "total": {
+        "a0": 44808,
+        "a1": 2296
+      }
+    },
+    "G2-U": {
+      "corruption": {
+        "a0": 26007,
+        "a1": 20073
+      },
+      "clean": {
+        "a0": 567,
+        "a1": 457
+      },
+      "total": {
+        "a0": 26574,
+        "a1": 20530
+      }
+    },
+    "G2-H": {
+      "corruption": {
+        "a0": 44421,
+        "a1": 1659
+      },
+      "clean": {
+        "a0": 984,
+        "a1": 40
+      },
+      "total": {
+        "a0": 45405,
+        "a1": 1699
+      }
+    },
+    "G3-U": {
+      "corruption": {
+        "a0": 20097,
+        "a1": 25983
+      },
+      "clean": {
+        "a0": 454,
+        "a1": 570
+      },
+      "total": {
+        "a0": 20551,
+        "a1": 26553
+      }
+    },
+    "G3-H": {
+      "corruption": {
+        "a0": 45626,
+        "a1": 454
+      },
+      "clean": {
+        "a0": 1015,
+        "a1": 9
+      },
+      "total": {
+        "a0": 46641,
+        "a1": 463
+      }
+    },
+    "O": {
+      "corruption": {
+        "a0": 16241,
+        "a1": 29839
+      },
+      "clean": {
+        "a0": 376,
+        "a1": 648
+      },
+      "total": {
+        "a0": 16617,
+        "a1": 30487
+      }
+    }
+  },
+  "measurement_note": "The matched evaluator computes both frozen actions once per tile to score all policies and O; selected counts are whole-tile decisions. No compute-saving claim is made. Encoder, adapter descriptor, selector, and decoder costs are included."
+}

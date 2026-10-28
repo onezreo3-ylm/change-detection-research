@@ -1,0 +1,47 @@
+# Clean development protocol: train/clean-val only; test stays closed.
+# All learning/preprocessing settings match stable-b4. A new output directory
+# avoids overwriting or resuming the completed Phase 1 baseline.
+experiment:
+  name: levir_development_seed42
+  kind: research
+  seed: 42
+  output_dir: ../runs/levir_development_seed42
+runtime:
+  device: cuda
+  deterministic: true
+  num_threads: 4
+  memory_format: channels_last
+data:
+  root: ../../../thesis/datasets/LEVIR-CD
+  splits: {train: train, val: val, test: test}
+  folders: {image_a: A, image_b: B, mask: label}
+  extensions: [.png]
+  expected_pairs: {train: 445, val: 64, test: 128}
+  expected_image_size: 1024
+  tile_size: 256
+  label_values: [0, 255]
+  label_decode: author_uint8_floor255
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+model:
+  encoder_weights: null
+  weights_cache: ../weights/torch_hub
+  decoder_channels: 64
+  normalization_groups: 8
+research: {pse: false, pcdc: false, cpc: false}
+train:
+  epochs: 100
+  batch_size: 4
+  eval_batch_size: 32
+  num_workers: 4
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  adam_betas: [0.9, 0.999]
+  min_learning_rate: 0.000001
+  amp: true
+  grad_clip_norm: 1.0
+loss: {bce_weight: 1.0, dice_weight: 1.0, dice_smooth: 1.0}
+evaluation:
+  threshold: 0.5
+  checkpoint_metric: f1
+  run_test_after_training: false

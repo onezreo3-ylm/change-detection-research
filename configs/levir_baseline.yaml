@@ -1,0 +1,63 @@
+# All relative paths resolve against this YAML file, not the current directory.
+experiment:
+  name: levir_clean_r18
+  kind: research  # smoke results must never be presented as research results
+  seed: 42
+  output_dir: ../runs/levir_clean_r18_seed42
+
+runtime:
+  device: cuda  # explicitly change to cpu if CUDA is unavailable; no fallback
+  deterministic: true
+  num_threads: 4
+  memory_format: contiguous
+
+data:
+  root: ../data/LEVIR-CD
+  splits:
+    train: train
+    val: val
+    test: test
+  folders:
+    image_a: A
+    image_b: B
+    mask: label
+  extensions: [.png]
+  expected_pairs: {train: 445, val: 64, test: 128}
+  expected_image_size: 1024
+  tile_size: 256
+  label_values: [0, 255]  # background, foreground; use [0, 1] only for that encoding
+  label_decode: strict_values
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+
+model:
+  encoder_weights: null  # random; optional: IMAGENET1K_V1 (explicit download)
+  weights_cache: ../weights/torch_hub
+  decoder_channels: 64
+  normalization_groups: 8
+
+research:
+  pse: false
+  pcdc: false
+  cpc: false
+
+train:
+  epochs: 100
+  batch_size: 4
+  eval_batch_size: 4
+  num_workers: 0  # conservative, portable Windows default
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  adam_betas: [0.9, 0.999]
+  min_learning_rate: 0.000001
+  amp: false
+  grad_clip_norm: 1.0
+
+loss:
+  bce_weight: 1.0
+  dice_weight: 1.0
+  dice_smooth: 1.0
+
+evaluation:
+  threshold: 0.5
+  checkpoint_metric: f1

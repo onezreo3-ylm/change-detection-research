@@ -1,0 +1,99 @@
+{
+  "status": "algebraic_counterexamples_reproduced",
+  "witnesses": {
+    "full_vector": {
+      "projected_residual": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nonzero_feature_residual": true,
+      "all_linear_logits_unchanged": true
+    },
+    "mean_only": {
+      "mean_linear_logit_unchanged": true,
+      "individual_linear_logit_changes": [
+        -0.2,
+        0.2
+      ],
+      "before_counts": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "after_counts": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    "positive_mask": {
+      "predicted_positive_mask": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "truth_dependent_TP_mask": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "before_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_positive_protected_counts": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "GT_TP_protected_counts": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "GT_mask_is_deployment_input": false
+    },
+    "teacher_shift": {
+      "clean_linear_change_zero": true,
+      "observed_linear_change": [
+        1.0
+      ]
+    },
+    "finite_step": {
+      "first_order_change_zero": true,
+      "before_logit": -0.1,
+      "after_logit": 0.15,
+      "finite_step_changed_hard_prediction": true
+    },
+    "dense_size": {
+      "explicit_dense_gram_bytes": 17179869184,
+      "explicit_dense_jacobian_bytes": 34359738368,
+      "dense_gram_exceeds_specified_device": true,
+      "actual_measured_GPU_memory": false,
+      "does_not_rule_out_matrix_free_or_subset_methods": true
+    }
+  },
+  "research_result": false,
+  "method_effectiveness": false,
+  "novelty_verified": false,
+  "new_training_admitted": false,
+  "real_data_or_checkpoint": false,
+  "optimizer_updates": 0,
+  "device": "cpu",
+  "dtype": "float64",
+  "elapsed_seconds": 0.005426600007922389,
+  "source_sha256": {
+    "E:\\new research\\detection\\configs\\task_projection_screen_20261027.yaml": "7c27b6fa36679c97395da0f89d0805de26124048e6652cf420e7bfa87be375a4",
+    "E:\\new research\\detection\\scripts\\screen_task_projection.py": "f799da4e0ec365fc9b38058e0cc624e333d5bc17b06734fa3332f2d572e0efff",
+    "E:\\new research\\detection\\docs\\METHOD_SCREEN_PREPARATION_SCOPE_2026-10-27.md": "05ac3d5b63a64a8b0d9569e5877bc3478c951a8f1b84e69165819129de87b80f"
+  }
+}

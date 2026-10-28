@@ -1,0 +1,41 @@
+schema_version: 1
+name: valais_coupling_p0_v1
+base_config: valais_clean_full_fp32_seed42_20261002.yaml
+output_dir: ../runs/valais_coupling_p0_train_qa_v1r1_20261007
+label_report: ../runs/valais_class_balance_20260930/report.json
+label_report_sha256: 687861cb1107ba76ce78af144ee1f82c3f4ceae13ba3c152fa955b8dfbfe7991
+data_audit: ../runs/valais_clean_full_fp32_seed42_20261002/data_audit.json
+data_audit_sha256: 670d7d29361125e291d637f9fb9be44df31b67912dc2af837d719f6c4ae2cd87
+corruption_config: valais_corruption_protocol_v1_20261002.yaml
+corruption_config_sha256: 921c4b0a3958c0b89b4736c4772bd75b23d73d22ebe0536b18b36fa6985aa19a
+selection:
+  seed: 2026100701
+  positive_quotas: [4, 3, 3, 3, 3]
+  empty_count: 48
+  area_boundaries: [64, 256, 1024, 4096]
+families: [brightness, contrast, gamma, color_bias]
+levels: [1, 3, 5]
+instance_seed: 2026100702
+threshold: 0.5
+max_seconds: 21600
+gpu_uuid: GPU-8ada1895-7628-bb88-1dda-c57679117fa2
+temperature_stop_c: 85
+nvidia_smi: C:/Windows/System32/nvidia-smi.exe
+qa:
+  protocol: first_selected_each_positive_stratum_and_empty_worst_level_all_directions
+  level: 5
+  original_tile_pixels: 256
+  maximum_chat_base64_bytes: 9437184
+models:
+  b0:
+    config: valais_clean_full_fp32_seed42_20261002.yaml
+    checkpoint: ../runs/valais_clean_full_fp32_seed42_20261002/best.pt
+    checkpoint_sha256: de42460dfce94717a890ae359124c659ce57d7d396f44429ac370463e1991b7d
+  b1:
+    config: ../runs/valais_b1_fp32_seed42_v1_20261002/base_config.yaml
+    checkpoint: ../runs/valais_b1_fp32_seed42_v1_20261002/best.pt
+    checkpoint_sha256: cf1328824c4bac181841ef863f8ce7bf10d7eac8f7ee93edfc1c003ef22b5b9e
+  b0e:
+    config: ../runs/valais_b0e_fp32_seed42_v1_20261002/base_config.yaml
+    checkpoint: ../runs/valais_b0e_fp32_seed42_v1_20261002/best.pt
+    checkpoint_sha256: 9b86fc34e976945bec1cc4aefde779ee01103944db40ac7105c01fe71553a87b

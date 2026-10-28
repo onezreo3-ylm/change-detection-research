@@ -1,0 +1,181 @@
+{
+  "automation_id": "levir-cd",
+  "trigger_utc": "2026-10-24T19:15:56.860Z",
+  "checked_utc": "2026-10-24T19:16:39.358641+00:00",
+  "decision": "DONT_NOTIFY",
+  "assessment": "healthy_training_progress_no_action_required",
+  "issues": [],
+  "snapshot": {
+    "mode": "train",
+    "gpu": {
+      "uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+      "temperature_c": 74,
+      "utilization_percent": 88,
+      "memory_used_mib": 3013
+    },
+    "checked_utc": "2026-10-24T19:16:39.358641+00:00",
+    "owner_state": {
+      "status": "running",
+      "mode": "train",
+      "updated_utc": "2026-10-24T19:16:39.163400+00:00",
+      "automatic_retry": false,
+      "owner_pid": 3304,
+      "owner_creation_ticks": 134373339538919093,
+      "worker_pid": 11252,
+      "worker_creation_ticks": 134373339547696568,
+      "guard_pid": 22856,
+      "watchdog_pid": 32092,
+      "allowed_wall_seconds": 86352.09400000001,
+      "elapsed_seconds": 9045.141000000003
+    },
+    "progress": {
+      "stage": "candidate_train",
+      "epoch": 32,
+      "step": 265,
+      "steps_in_stage": 1780,
+      "completed_training_attempts": 55445,
+      "amp_skips_in_stage": 0,
+      "consecutive_amp_skips": 0,
+      "amp_scale": 32768.0,
+      "numeric_alert": false,
+      "updated_utc": "2026-10-24T19:16:39.314495+00:00",
+      "stage_elapsed_seconds": 48.125,
+      "actual_source_batch_shape": [
+        4,
+        1,
+        256,
+        256
+      ]
+    },
+    "guard_state": {
+      "status": "monitoring",
+      "role": "guard",
+      "pid": 22856,
+      "updated_utc": "2026-10-24T19:16:38.771296+00:00",
+      "elapsed_seconds": 9042.108999999997,
+      "gpu": {
+        "uuid": "GPU-8ada1895-7628-bb88-1dda-c57679117fa2",
+        "temperature_c": 74,
+        "utilization_percent": 90,
+        "memory_used_mib": 3013
+      },
+      "temperature_c": 74,
+      "maximum_observed_temperature_c": 77,
+      "decision": "ok",
+      "sensor_error": null
+    },
+    "watchdog_state": {
+      "status": "monitoring",
+      "role": "watchdog",
+      "pid": 32092,
+      "updated_utc": "2026-10-24T19:16:39.308458+00:00",
+      "elapsed_seconds": 9042.64
+    },
+    "processes": {
+      "owner": {
+        "pid": 3304,
+        "creation_time_ticks": 134373339538919093,
+        "active": true
+      },
+      "worker": {
+        "pid": 11252,
+        "creation_time_ticks": 134373339547696568,
+        "active": true
+      },
+      "guard": {
+        "pid": 22856,
+        "creation_time_ticks": 134373339551558587,
+        "active": true
+      },
+      "watchdog": {
+        "pid": 32092,
+        "creation_time_ticks": 134373339555115385,
+        "active": true
+      }
+    },
+    "committed_training": {
+      "status": "running",
+      "epoch": 31,
+      "epochs": 100,
+      "best_epoch": 30,
+      "best_val_f1": 0.8972204985617525,
+      "updated_utc": "2026-10-24T19:15:51.186905+00:00",
+      "optimizer_steps": 55158,
+      "amp_skipped_steps": 22,
+      "training_flavor": "b1_secondary_empirical_tail_v1",
+      "test_evaluated": false
+    },
+    "best.pt": {
+      "bytes": 137655171,
+      "modified_unix": 1792869061.1873133
+    },
+    "last.pt": {
+      "bytes": 137667523,
+      "modified_unix": 1792869351.160859
+    },
+    "worker.stdout.log": [
+      "risk/epoch=26 val_f1=0.88656180 best=0.89571809",
+      "risk/epoch=27 val_f1=0.89394722 best=0.89571809",
+      "risk/epoch=28 val_f1=0.89432198 best=0.89571809",
+      "risk/epoch=29 val_f1=0.89303495 best=0.89571809",
+      "risk/epoch=30 val_f1=0.89722050 best=0.89722050",
+      "risk/epoch=31 val_f1=0.89581072 best=0.89722050"
+    ],
+    "worker.stderr.log": [],
+    "charged_seconds": 9632.414632599997,
+    "batch_budget_seconds": 172800
+  },
+  "progress": {
+    "stage": "candidate_train",
+    "epoch": 32,
+    "step": 265,
+    "steps_in_stage": 1780,
+    "completed_training_attempts": 55445,
+    "amp_skips_in_stage": 0,
+    "consecutive_amp_skips": 0,
+    "amp_scale": 32768.0,
+    "numeric_alert": false,
+    "updated_utc": "2026-10-24T19:16:39.314495+00:00",
+    "stage_elapsed_seconds": 48.125,
+    "actual_source_batch_shape": [
+      4,
+      1,
+      256,
+      256
+    ]
+  },
+  "checkpoints": {
+    "best": {
+      "bytes": 137655171,
+      "modified_unix": 1792869061.1873133
+    },
+    "last": {
+      "bytes": 137667523,
+      "modified_unix": 1792869351.160859
+    }
+  },
+  "previous_check": "runs/managed_continuation_20261024/checks/20261024T181725Z.json",
+  "previous_progress": {
+    "epoch": 20,
+    "step": 192,
+    "committed_epochs": 19
+  },
+  "budget": {
+    "shared_charged_seconds": 9632.414632599997,
+    "batch_upper_bound_seconds": 172800,
+    "active_worker_charged_seconds": 9045.141000000003,
+    "active_worker_upper_bound_seconds": 86352.09400000001,
+    "prior_discarded_prefix_seconds": 47.906,
+    "prior_discarded_prefix_updates": 201,
+    "original_candidate_24h_cap_retained": true
+  },
+  "operations": {
+    "monitor_only": true,
+    "new_gpu_worker_started": false,
+    "model_loaded": false,
+    "tests_or_smoke_rerun": false,
+    "full_hash_repeated": false,
+    "source_changed": false,
+    "held_out_test_or_martigny_opened": false
+  }
+}

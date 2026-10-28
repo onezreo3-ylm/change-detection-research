@@ -1,0 +1,14 @@
+schema_version: 1
+kind: completed_b0e_replication_fixed_validation
+training_study: configs/b0e_replication_20261026.yaml
+protocol: docs/B0E_FIXED_VALIDATION_PROTOCOL_2026-10-26.md
+benchmark_config: configs/evaluate_corruptions_val_v1.yaml
+candidate_template: configs/evaluate_candidate_b0e_val_v1_seed42.yaml
+output_dir: runs/b0e_replication_evaluation_20261026
+analysis_config: configs/b0e_replication_analysis_20261026.yaml
+seeds: [43, 44]
+whole_evaluation_limit_seconds: 3600
+postprocessing_reserve_seconds: 120
+threshold: 0.5
+test_or_martigny_access: false
+automatic_retry: false

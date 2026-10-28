@@ -1,0 +1,19 @@
+{
+  "approved": true,
+  "numerical_protocol": "bf16_training_fp32_validation",
+  "human_answer": "采用BF16方案并启动（推荐）",
+  "human_question": "407项测试及真实 CUDA 预检已通过。BF16 训练方案预计两行合计约10.15小时，原全FP32约45小时；40轮、五视图保持，参数/优化器/损失/验证仍为FP32。是否采用这个独立数值协议并启动？",
+  "question_item_id": "[\"request_user_input_async\",\"call_ae76610b78ad48aa8fd0f689fe39734a\",0]",
+  "source": "Direct human response in this chat",
+  "client_date": "2026-10-21",
+  "recorded_utc": "2026-10-21T07:41:08.435106+00:00",
+  "study_config_sha256": "56003d25dc42b6e95d014d27b2e6628a7f0267726dcb16ff81af2a70da65dee9",
+  "protocol_sha256": "fdd711c024e636b957dbcaaa7e84e355e70e6f7ce6b723e40ff81ea03afec7fc",
+  "epochs": 40,
+  "cosine_tmax": 40,
+  "maximum_role_seconds_including_engineering": 86400,
+  "train_autocast_dtype": "bfloat16",
+  "parameter_optimizer_loss_dtype": "float32",
+  "validation_dtype": "float32",
+  "new_method_or_test_authorized": false
+}

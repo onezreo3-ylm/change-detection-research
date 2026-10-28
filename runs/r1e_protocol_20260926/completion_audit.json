@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "batch": "R1_training_plus_R1E_evaluation",
+  "status": "completed_with_peak_gpu_memory_reporting_gap",
+  "completed_utc": "2026-09-25T20:25:26.4997021Z",
+  "original_r1_evaluation": "closed_before_scoring_due_to_seed_compatibility_failure",
+  "original_r1_prevalidation_seal_sha256": "55a4454f2c34162871f4f7082e7282c57a27eaae347ef79547e4eae21743edbf",
+  "r1e_prevalidation_seal_sha256": "78632392842ccf4298db7fac28e27797cac5b7dddcf5b651f2fe705f2510b9b0",
+  "r1e_approval_sha256": "b4e221b424286b12cdd49f97b4e5a66b3cf4cecaf9055efe0ab4ffb51a80feff",
+  "analysis_manifest_sha256": "104a414e6ba3ec9c1394d9125cb1629cb94a6414b44a97bde7f52680fb264390",
+  "analysis_source_sha256": "bbebdbda1acf647dfabb5ee718b21e24672380e742e47c2b38639177f6a8d81c",
+  "analysis_result_sha256": "71909cac24279f5803c30d11494d61ef823e9539a99cd5a00fc77a8ed1a8df09",
+  "report_sha256": "4cc6b8204a1b9a4dae2ea74c89910f04f36277fe54a8582aa1a44786d2136798",
+  "evaluation_verification": {
+    "new_runs_completed": 4,
+    "conditions_per_run": 45,
+    "same_64_source_pairs_and_condition_order": true,
+    "clean_checkpoint_replay_exact": true,
+    "analysis_load_run_all_six_passed": true,
+    "r1e_provenance_input_hashes_verified": true,
+    "original_evaluation_sources_unchanged": true,
+    "guard_completion_all_four": true,
+    "maximum_observed_gpu_temperature_c": {
+      "b1_43": 62,
+      "b2_43": 60,
+      "b1_44": 61,
+      "b2_44": 61
+    },
+    "test_evaluated": false
+  },
+  "analysis_verification": {
+    "fresh_deterministic_replay_matches_saved_json": true,
+    "bootstrap_replicates": 20000,
+    "bootstrap_seed": 20260923,
+    "selection_decision": "retain_b1",
+    "b2_selection_checks_passed": 0,
+    "b2_selection_checks_total": 5,
+    "cross_seed_instability_stop": false,
+    "test_evaluated": false
+  },
+  "tests": {
+    "full_unittest_after_r1e_source_freeze": "189 passed in 72.404s",
+    "full_unittest_after_analysis": "189 passed in 65.494s",
+    "non_research_smoke": "Included synthetic CUDA train/resume and full 45-condition CPU evaluation smoke; four real-artifact R1E metadata preflights passed before scoring"
+  },
+  "known_reporting_gap": {
+    "field": "peak_gpu_memory",
+    "reason": "The frozen R1 training implementation did not instrument per-run peak GPU memory",
+    "substitution_performed": false,
+    "effect_on_predeclared_selection_gate": "none"
+  },
+  "active_research_process": false,
+  "held_out_test_closed": true,
+  "test_evaluated": false
+}

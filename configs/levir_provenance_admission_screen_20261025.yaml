@@ -1,0 +1,36 @@
+schema_version: 1
+kind: metadata_only_future_study_admission_not_new_training
+status: proposed_next_screen_not_executed
+workspace_root: ..
+output_dir: runs/levir_provenance_admission_screen_20261025
+trusted_inventory: runs/levir_tail_risk_control_20261025_iofix/data_audit.json
+question: Can official source metadata map the existing train and development-val IDs to reliable geographic or original-scene groups for a future study?
+allowed_splits: [train, val]
+expected_sources: {train: 445, val: 64}
+primary_sources:
+  - https://justchenhao.github.io/LEVIR/
+  - https://github.com/justchenhao/STANet
+actions:
+  - Inventory local metadata filenames and publisher schemas before any download.
+  - Read primary publisher metadata documentation and identify exact provenance and license.
+  - If metadata is available, map only trusted train/val IDs; do not guess renamed source identities.
+  - Report coverage, ambiguous mappings, missing fields, geographic precision and scene-group availability.
+  - Record one bounded admission conclusion and exact unresolved resource; do not loop over the same missing item.
+mapping_admission:
+  require_publisher_traceability: true
+  require_unambiguous_id_mapping: true
+  require_documented_coordinate_or_scene_id_semantics: true
+  do_not_infer_leakage_from_proximity_alone: true
+  do_not_assume_independent_scenes_from_unique_tile_ids: true
+boundaries:
+  raw_images_or_labels_read: false
+  model_loading_or_inference: false
+  gpu_compute: false
+  training: false
+  held_out_test_or_martigny_access: false
+  current_split_repartition: false
+  current_bootstrap_or_gates_changed: false
+  new_dataset_admitted: false
+  new_architecture_or_geometry: false
+  automatic_download_of_images_or_weights: false
+  failed_tail_control_reopened: false

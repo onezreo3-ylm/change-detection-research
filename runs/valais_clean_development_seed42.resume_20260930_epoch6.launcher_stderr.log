@@ -1,0 +1,12 @@
+E:\Download\anaconda3\envs\geosa-basa\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\new research\detection\scripts\resume_valais_clean_guarded.py", line 200, in <module>
+    main()
+  File "E:\new research\detection\scripts\resume_valais_clean_guarded.py", line 196, in main
+    run(args.config, args.checkpoint_sha256, args.epoch, args.session)
+  File "E:\new research\detection\scripts\resume_valais_clean_guarded.py", line 175, in run
+    raise RuntimeError("Training or guard did not complete normally")
+RuntimeError: Training or guard did not complete normally

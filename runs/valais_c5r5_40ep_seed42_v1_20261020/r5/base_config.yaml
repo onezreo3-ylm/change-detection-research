@@ -1,0 +1,70 @@
+experiment:
+  name: valais_uniform_c5r5_40ep_seed42_v1_20261020_r5
+  kind: research
+  seed: 42
+  output_dir: E:\new research\detection\runs\valais_c5r5_40ep_seed42_v1_20261020\r5
+runtime:
+  device: cuda
+  deterministic: true
+  num_threads: 4
+  memory_format: channels_last
+data:
+  root: E:\thesis\datasets\ValaisCD-candidate\prepared_v2
+  splits:
+    train: train
+    val: val
+    test: test
+  folders:
+    image_a: A
+    image_b: B
+    mask: label
+  extensions:
+  - .tif
+  expected_pairs:
+    train: 11025
+    val: 1715
+    test: null
+  expected_image_size: 256
+  tile_size: 256
+  label_values:
+  - 0
+  - 1
+  label_decode: strict_values
+  mean:
+  - 0.485
+  - 0.456
+  - 0.406
+  std:
+  - 0.229
+  - 0.224
+  - 0.225
+model:
+  encoder_weights: null
+  weights_cache: E:\new research\detection\weights\torch_hub
+  decoder_channels: 64
+  normalization_groups: 8
+research:
+  pse: false
+  pcdc: false
+  cpc: false
+train:
+  epochs: 40
+  batch_size: 4
+  eval_batch_size: 32
+  num_workers: 4
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  adam_betas:
+  - 0.9
+  - 0.999
+  min_learning_rate: 1.0e-06
+  amp: false
+  grad_clip_norm: 1.0
+loss:
+  bce_weight: 1.0
+  dice_weight: 1.0
+  dice_smooth: 1.0
+evaluation:
+  threshold: 0.5
+  checkpoint_metric: f1
+  run_test_after_training: false
