@@ -66,12 +66,15 @@ Git commit 自身锚定清单文件；清单不自包含其自身哈希。
 python -m scripts.repository_snapshot restore --path runs/valais_p1_posttraining_v1_20261019/cs_val/conditions.json
 ```
 
-具体可恢复路径以清单的 `compressed_records[].original_path` 为准；上面的文件
-若已原样包含则无需恢复。`restore --all` 可恢复全部大型文本，需要约 3 GiB
+具体可恢复路径以清单的 `compressed_records[].original_path` 为准。
+`restore --all` 可恢复全部大型文本，需要约 3 GiB
 额外空间。恢复器核验压缩与解压哈希，拒绝覆盖不同内容，也拒绝越出仓库路径。
 它不恢复数据、模型、数组或图片，不执行任何归档命令或进程。
 
 ## 工程验证
+
+CPU smoke 不需要解压历史证据。完整测试会读取部分历史审计 JSON，应先执行
+`python -m scripts.repository_snapshot restore --all`。
 
 ```text
 python -m unittest discover -s tests -v
@@ -85,9 +88,17 @@ train/val、best checkpoint 保存和独立 val 重载。`run_test_after_trainin
 输出 `runs/smoke_cpu_portable/` 必须尚不存在；重跑应在新的独立 YAML 中指定
 新的输出和数据路径，保留旧记录。
 
-完整测试包含显式 CUDA 检查，CPU 机器会按原声明跳过相应项目；若有依赖本地
-绝对路径、Windows 进程工具或未恢复记录的失败，逐项报告，不能假称全量通过。
-仓库发布时的真实独立检出结果见 `docs/GITHUB_PUBLICATION_2026-10-28.md`。
+完整测试包含显式 CUDA 检查，CPU 机器会按原声明跳过相应项目。
+**当前完整测试不能在新路径直接全绿。** 发布时的独立 Windows 检出恢复全部
+454 份文本后运行 641 项，仍有 20 个错误，均由冻结 robust 协议绑定原机绝对
+`base_config` 路径触发：`Robust training must use the exact base config archived by the protocol`。
+原工作区同一套 641 项通过，独立检出的 CPU smoke 和所有发布字节校验通过。
+这些事实区分记录，不能把原机通过说成任意机器全量通过。
+
+这次交接保留了科学身份保护；未改原路径、重算旧协议指纹或放宽校验来消除错误。
+若下一步确需移机执行这些冻结流程，须单独设计并审查迁移配置及身份绑定，保留
+原记录。完整失败和修复缺失文本后的复测日志见 `evidence/release_checks/`，
+汇总见 `docs/GITHUB_PUBLICATION_2026-10-28.md`。Linux/其他依赖环境未实测。
 
 ## 真实研究迁移
 
